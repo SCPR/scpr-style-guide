@@ -35,7 +35,7 @@ require('scpr-style-guide');
 Images that are part of the scpr-style-guide project are available as one central svg sprite with each image consisting of a svg `<symbol>`. To use these images, you can use the svg `xlink` attribute as follows:
 ```
   <svg class="icon">
-    <use xlink:href="/public/img/cloudgov-sprite.svg#i-agreement"/>
+    <use xlink:href="/public/img/scpr-sprite.svg#i-share"/>
   </svg>
 ```
 
@@ -44,6 +44,5 @@ The styleguide allows you to see changes to components from the scpr-style-guide
 
 - Ensure you have ruby and bundler installed
 - Install ruby gems by running `bundle install`
-- Configure jekyll to use the local gem by running `bundle config local.scpr-style-guide ./gem/`
 - Build and run the jekyll server by running `bundle exec jekyll serve`
 

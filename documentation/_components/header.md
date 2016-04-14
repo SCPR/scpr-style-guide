@@ -11,33 +11,11 @@ title: Header
       <a href="https://cloud.gov" class="logo" title="Home">
         <svg class="logo">
           <use xmlns:xlink="http://www.w3.org/1999/xlink"
-          xlink:href="/assets/img/cloudgov-sprite.svg#logo"></use>
+          xlink:href="/assets/img/scpr-sprite.svg#logo"></use>
         </svg>
       </a>
     </h2>
     
-    <nav class="header-side">
-      <ul class="nav">
-        <li class="nav-link">
-          <a href="https://cloud.gov/#about">About</a> 
-        </li>
-        <li class="nav-link usa-current">
-          <a href="/">Documentation</a> 
-        </li>
-        <li class="nav-link">
-          <a href="https://cloud.gov/updates/">Updates</a> 
-        </li>
-        <li class="nav-link">
-          <a href="https://cloudgov.statuspage.io/">Status</a> 
-        </li>
-        <li class="nav-link">
-          <a href="https://console.cloud.gov/">Deck</a> 
-        </li>
-        <li class="nav-link">
-          <a href="https://cloud.gov/#contact">Contact</a> 
-        </li>
-      </ul>
-    </nav>
   </div>
 </header>
 
@@ -50,7 +28,7 @@ title: Header
           &lt;a href="https://cloud.gov" class="logo" title="Home">
             &lt;svg class="logo">
               &lt;use xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/assets/img/cloudgov-sprite.svg#logo"></use>
+              xlink:href="/assets/img/scpr-sprite.svg#logo"></use>
             &lt;/svg>
           &lt;/a>
         &lt;/h2>

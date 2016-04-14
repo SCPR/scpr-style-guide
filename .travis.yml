@@ -7,10 +7,8 @@ before_install:
 - npm install gulp-cli
 - cd node_modules/uswds && gem install scss-lint && npm install && gulp no-test copy-vendor-sass && cd ../../
 - npm run build
-- bundle config local.cloudgov-style ./gem/
 install:
 - bundle install
-- bundle config local.cloudgov-style ./gem/
 script: bundle exec jekyll build
 after_script:
 - gem install percy-cli
