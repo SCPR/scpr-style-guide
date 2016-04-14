@@ -1,0 +1,9 @@
+
+documentation
+node_modules
+gem
+Gemfile
+Gemfile.lock
+_config.yml
+_site
+

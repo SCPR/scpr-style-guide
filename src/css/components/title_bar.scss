@@ -1,0 +1,21 @@
+
+.title_bar {
+  background-color: $color-primary-darkest;
+  margin: 0 auto;
+  max-width: $site-max-width;
+  padding: 0 .5rem 0 0;
+
+  & > * {
+    display: inline-block;
+    margin-left: 1em;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.title_bar-title {
+  color: $color-white;
+  font-size: 1rem;
+}

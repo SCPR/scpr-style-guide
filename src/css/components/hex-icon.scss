@@ -1,0 +1,22 @@
+
+.hex_icon {
+  align-items: center;
+  color: $color-white;
+  display: flex;
+  font-size: 78px;
+  justify-content: center;
+}
+
+.hex_icon-i {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+
+.hex_icon-primary {
+  background-image: url("#{$static-img-path}/icon-hex-primary.svg");
+}
+
+.hex_icon-alt {
+  background-image: url("#{$static-img-path}/icon-hex-alt.svg");
+}
