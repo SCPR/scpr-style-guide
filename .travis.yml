@@ -15,7 +15,7 @@ after_script:
 - percy snapshot _site/
 deploy:
   provider: npm
-  email: msegreto@miceover.com
+  email: sdillingham@kpcc.org
   on:
     tags: true
   api_key:

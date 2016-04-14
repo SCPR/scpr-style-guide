@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/SCPR/scpr-style-guide/badges/gpa.svg)](https://codeclimate.com/github/SCPR/scpr-style-guide)
+
 # KPCC Style Guide
 This repository houses scpr-style-guide, a shared style library for KPCC web products. Major HT to the [US Web Design Standards](https://github.com/18F/web-design-standards) project and their [cg-style](https://github.com/18F/cg-style) project; the code and structure for KPCC's style guide are based in large part on their work.
 
