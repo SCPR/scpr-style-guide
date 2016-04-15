@@ -12,7 +12,7 @@
     "build-img": "mkdir -p ./img && npm run copy-img && npm run svg",
     "compile-css": "cleancss ./css/scpr-style.css -o ./css/scpr-style-min.css",
     "compile-js": "uglifyjs ./js/scpr-style.js -o ./js/scpr-style-min.js",
-    "copy-img": "cp -r ./src/img/* ./img",
+    "copy-img": "cp -r ./img",
     "lint": "scss-lint -c t .scss-lint.yml",
     "svg": "gulp --gulpfile build/gulpfile.js svg-sprite",
     "test": "npm run test",
