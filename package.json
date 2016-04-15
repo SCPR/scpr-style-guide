@@ -14,7 +14,6 @@
     "compile-css": "cleancss ./css/scpr-style.css -o ./css/scpr-style-min.css",
     "compile-js": "uglifyjs ./js/scpr-style.js -o ./js/scpr-style-min.js",
     "copy-img": "cp -r ./src/img/* ./img",
-    "copy-font": "mkdir -p ./font && cp ./src/font/* ./font",
     "lint": "scss-lint -c t .scss-lint.yml",
     "svg": "gulp --gulpfile build/gulpfile.js svg-sprite",
     "test": "npm run test",
