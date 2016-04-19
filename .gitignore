@@ -2,9 +2,6 @@
 npm-debug.log
 /node_modules/
 
-/img/
-/font/
-/js/
-/css/
+/public/
 /gem/
 /_site/
