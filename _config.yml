@@ -25,7 +25,7 @@ repos:
   url: https://github.com/SCPR/scpr-style-guide
 
 sass:
-  sass_dir: documentation/assets/css
+  sass_dir: documentation/css
 #  style: :compressed
 
 collections:
