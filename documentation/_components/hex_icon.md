@@ -8,7 +8,7 @@ title: Hex icons
   <i class="hexagon hexagon-alt hex_icon">
     <div class="hexagon-content">
       <svg class="icon">
-        <use xlink:href="{{ '/assets/img/scpr-sprite.svg#i-plan' |
+        <use xlink:href="{{ '/img/scpr-sprite.svg#i-plan' |
            prepend: site.baseurl }}"/>
       </svg>
     </div>
@@ -19,7 +19,7 @@ title: Hex icons
   <i class="hexagon hex_icon">
     <div class="hexagon-content">
       <svg class="icon">
-        <use xlink:href="{{ '/assets/img/scpr-sprite.svg#i-download' |
+        <use xlink:href="{{ '/img/scpr-sprite.svg#i-download' |
            prepend: site.baseurl }}"/>
       </svg>
     </div>
@@ -30,7 +30,7 @@ title: Hex icons
   <i class="hexagon hexagon-alt hex_icon">
     <div class="hexagon-content">
       <svg class="icon">
-        <use xlink:href="{{ '/assets/img/scpr-sprite.svg#i-checked' |
+        <use xlink:href="{{ '/img/scpr-sprite.svg#i-checked' |
           prepend: site.baseurl }}"/>
       </svg>
     </div>
@@ -41,7 +41,7 @@ title: Hex icons
   <i class="hexagon hex_icon">
     <div class="hexagon-content">
       <svg class="icon">
-        <use xlink:href="{{ '/assets/img/scpr-sprite.svg#i-court' |
+        <use xlink:href="{{ '/img/scpr-sprite.svg#i-court' |
            prepend: site.baseurl }}"/>
       </svg>
     </div>
@@ -53,7 +53,7 @@ title: Hex icons
   &lt;i class="hexagon hexagon-alt hex_icon">
     &lt;div class="hexagon-content">
       &lt;svg class="icon">
-        &lt;use xlink:href="{{ '/assets/img/scpr-sprite.svg#i-checked' |
+        &lt;use xlink:href="{{ '/img/scpr-sprite.svg#i-checked' |
           prepend: site.baseurl }}"/>
       &lt;/svg>
    &lt;/div>

@@ -8,7 +8,7 @@ title: Logo
   <h2 class="header-title">
     <a href="/" class="logo" title="Home">
       <svg class="logo">
-        <use xlink:href="{{ '/assets/img/scpr-sprite.svg#logo' |
+        <use xlink:href="{{ '/img/scpr-sprite.svg#logo' |
            prepend: site.baseurl }}"/>
       </svg>
     </a>
@@ -20,7 +20,7 @@ title: Logo
     &lt;h2 class="header-title">
       &lt;a href="/" class="logo" title="Home">
         &lt;svg class="logo">
-          &lt;use xlink:href="/assets/img/scpr-sprite.svg#logo" />
+          &lt;use xlink:href="/img/scpr-sprite.svg#logo" />
         &lt;/svg>
       &lt;/a>
     &lt;/h2>
