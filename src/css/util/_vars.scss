@@ -29,3 +29,10 @@ $font-sans-base:              "franklin-gothic-urw", "Avenir Next", "Avenir", Ar
 $font-sans-alt:               "fira-sans", Arial, sans-serif;
 $font-serif-text:             "abril-text", Georgia, serif;
 $font-serif-titling:          "abril-titling", Georgia, serif;
+
+
+// MODULAR SCALE
+// set overrides for Modular Scale (docs at https://github.com/modularscale/modularscale-sass)
+
+$ms-base: 18px;
+$ms-ratio: 1.2;
