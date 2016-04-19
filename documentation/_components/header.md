@@ -11,7 +11,7 @@ title: Header
       <a href="https://cloud.gov" class="logo" title="Home">
         <svg class="logo">
           <use xmlns:xlink="http://www.w3.org/1999/xlink"
-          xlink:href="/assets/img/scpr-sprite.svg#logo"></use>
+          xlink:href="/img/scpr-sprite.svg#logo"></use>
         </svg>
       </a>
     </h2>
@@ -28,7 +28,7 @@ title: Header
           &lt;a href="https://cloud.gov" class="logo" title="Home">
             &lt;svg class="logo">
               &lt;use xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/assets/img/scpr-sprite.svg#logo"></use>
+              xlink:href="/img/scpr-sprite.svg#logo"></use>
             &lt;/svg>
           &lt;/a>
         &lt;/h2>

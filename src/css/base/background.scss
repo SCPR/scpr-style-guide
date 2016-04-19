@@ -1,18 +1,8 @@
 
 body {
-  background-color: $color-primary-darkest;
+  background-color: $color-white;
 }
 
 main {
   position: relative;
-}
-
-main:before {
-  background: url("#{$static-img-path}/cg-bg-a.png") no-repeat 0 0;
-  content: '';
-  height: 19.3rem;
-  right: 100%;
-  position: absolute;
-  top: 15vh;
-  width: 9.85rem;
 }
