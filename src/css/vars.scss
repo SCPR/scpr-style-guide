@@ -1,4 +1,31 @@
 
-// Path
-$static-font-path: '../font' !default;
-$static-img-path: '../img' !default;
+// COLOR VARIABLES
+
+$color-primary:               #F87E21; // KPCC brand orange
+$color-primary-alt:           #D15904; // dark orange
+
+$color-secondary:             #31ABD4; // bright blue
+$color-secondary-dark:        #007397; // dark blue
+$color-secondary-darkest:     #0F1620; // midnight blue
+$color-secondary-light:       #CCEDF8; // light blue
+
+$color-link:                  #01AED5; // link blue
+$color-hover:                 $color-secondary-dark; // dark blue
+
+$color-gray:                  #B5BEC0;
+$color-gray-light:            #DEE4E5;
+$color-gray-lightest:         #EDF2F4;
+$color-gray-dark:             #6C7579;
+$color-gray-darkest:          #222628;
+
+$color-base:                  #212121;
+$color-white:                 #FFFFFF;
+$color-black:                 #000000;
+
+
+// FONT STACKS
+
+$font-sans-base:              "franklin-gothic-urw", "Avenir Next", "Avenir", Arial, sans-serif;
+$font-sans-alt:               "fira-sans", Arial, sans-serif;
+$font-serif-text:             "abril-text", Georgia, serif;
+$font-serif-titling:          "abril-titling", Georgia, serif;
