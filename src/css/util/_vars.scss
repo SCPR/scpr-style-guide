@@ -12,15 +12,18 @@ $color-secondary-light:       #CCEDF8; // light blue
 $color-link:                  #01AED5; // link blue
 $color-hover:                 $color-secondary-dark; // dark blue
 
-$color-gray:                  #B5BEC0;
-$color-gray-light:            #DEE4E5;
-$color-gray-lightest:         #EDF2F4;
-$color-gray-dark:             #6C7579;
-$color-gray-darkest:          #222628;
+$color-gray:                  #898989;
+$color-gray-light:            #E8E8E8;
+$color-gray-lightest:         #F6F6F6;
+$color-gray-dark:             #363636;
+$color-gray-darkest:          #212121;
 
 $color-base:                  #212121; // base "black" for typesetting text
 $color-white:                 #FFFFFF;
 $color-black:                 #000000;
+
+$color-alert:                 #D31D1D;
+$color-success:               #07C571;
 
 
 // FONT STACKS
@@ -36,3 +39,7 @@ $font-serif-titling:          "abril-titling", Georgia, serif;
 
 $ms-base: 18px;
 $ms-ratio: 1.2;
+
+// BASE SIZES
+
+$line-height: 31px;
