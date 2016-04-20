@@ -6,7 +6,7 @@
 var fs = require('fs');
 var postcss = require('postcss');
 
-var css = fs.readFileSync('./css/scpr_style.css', 'utf8');
+var css = fs.readFileSync('./public/css/scpr_style.css', 'utf8');
 
 var opts = {
   filterBy: function(image) {
@@ -16,15 +16,15 @@ var opts = {
 
     return Promise.resolve();
   },
-  stylesheetPath: './css',
-  spritePath: './img'
+  stylesheetPath: './public/css',
+  spritePath: './public/img'
 };
 
 postcss([ require('postcss-sprites').default(opts) ])
     .process(css, { 
-      from: './css/scpr_style.css',
-      to: './css/scpr_style.css',
+      from: './public/css/scpr_style.css',
+      to: './public/css/scpr_style.css',
     })
     .then(function (result) {
-      fs.writeFileSync('./css/scpr_style.css', result.css);
+      fs.writeFileSync('./public/css/scpr_style.css', result.css);
     });
