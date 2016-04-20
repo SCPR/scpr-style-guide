@@ -17,7 +17,7 @@ var config = {
 gulp.task('svg-sprite', function() {
   return gulp.src(base + './src/img/**/*.svg')
     .pipe(svgSprite(config))
-    .pipe(gulp.dest(base + './img'));
+    .pipe(gulp.dest(base + './public/img'));
 });
 
 gulp.task('default', function() {
