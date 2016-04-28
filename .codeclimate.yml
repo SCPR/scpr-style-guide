@@ -23,11 +23,12 @@ engines:
         enabled: false
       HexLength:
         enabled: false
+      LeadingZero:
+        enabled: false
   fixme:
     enabled: true
 ratings:
   paths:
-  - documentation/**
   - src/**
   - Gemfile.lock
   - "**.js"

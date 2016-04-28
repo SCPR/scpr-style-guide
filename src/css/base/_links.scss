@@ -1,0 +1,16 @@
+
+// Links: Styling for hyperlinks.
+// Excludes hyperlinks inside articles, whose appearence are scoped to content styling.
+//
+//
+// Styleguide 0.1.0
+
+.link {
+  color: $color-base;
+
+  &:hover {
+    @include link-underline($color-link);
+    color: $color-base;
+  }
+
+}

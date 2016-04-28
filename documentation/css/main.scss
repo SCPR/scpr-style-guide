@@ -19,7 +19,7 @@ pre {
 }
 
 .header-title {
-  span { 
+  span {
     display: inline-block;
     margin-left: 10px;
     margin-top: 6px;
@@ -45,7 +45,7 @@ pre {
     }
 
     .force-inline {
-      display: initial; 
+      display: initial;
       margin-bottom: 0;
       margin-right: 0;
       text-align: initial;
@@ -64,6 +64,12 @@ pre {
 
   pre {
     margin-top: 3rem;
+  }
+
+  > h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    margin: 2em 0;
+    text-transform: uppercase;
   }
 }
 
@@ -92,4 +98,3 @@ pre {
   background-color: #1F2C38;
   margin-top: 6rem
 }
-
