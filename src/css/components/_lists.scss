@@ -1,0 +1,25 @@
+
+// Lists: a set of links with a common theme, grouped together.
+// Useful for related links, episode rundowns, trending topics, etc.
+//
+// .c-list--vert       - Styles list for block display.
+// .c-list--horiz      - Styles list for inline display.
+//
+// Styleguide 0.1.0
+
+.c-list {
+
+  &--vert {
+    > * {
+      display: block;
+      margin-bottom: 1em;
+    }
+  }
+
+  &--horiz {
+    > * {
+      display: inline-block;
+      margin-right: $base-line-height;
+    }
+  }
+}

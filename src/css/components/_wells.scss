@@ -2,15 +2,15 @@
 // Wells: enclose a block of content in a container with a solid background.
 // Useful for alerts, ticker-style bars
 //
-// .well--info        - Adds a bottom border with our brand color.
-// .well--alert       - Adds a red bottom border.
+// .c-well--info        - Adds a bottom border with our brand color.
+// .c-well--alert       - Adds a red bottom border.
 //
 // Styleguide 0.1.0
 
 .c-well {
   background: $color-gray-lightest;
   display:  block;
-  padding: $ms-base $line-height;
+  padding: $ms-base $base-line-height;
 
   &--info {
     border-bottom: 1px solid $color-primary;
