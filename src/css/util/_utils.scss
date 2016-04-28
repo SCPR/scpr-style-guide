@@ -1,0 +1,29 @@
+
+// Utilities: utility classes for abstracting common styling needs.
+//
+// .u-text-size--sm       - Sizes text one step down the modular scale.
+//
+// .u-text-color--white   - Set text color to white.
+// .u-text-color--sec-dk  - Set text color to dark blue.
+//
+// Styleguide 0.1.0
+
+.u-text-size {
+
+  &--sm {
+    font-size: ms(-1);
+  }
+
+}
+
+.u-text-color {
+
+  &--white {
+    color: $color-white;
+  }
+
+  &--sec-dk {
+    color: $color-secondary-dark;
+  }
+
+}
