@@ -32,14 +32,18 @@ $font-sans-base:              "franklin-gothic-urw", "Avenir Next", "Avenir", Ar
 $font-sans-alt:               "fira-sans", Arial, sans-serif;
 $font-serif-text:             "abril-text", Georgia, serif;
 $font-serif-titling:          "abril-titling", Georgia, serif;
+$font-family-default:         $font-sans-base;
+
+
+// BASE SIZES
+
+$font-size-root: 16px; // Root size, only for html tag.
+$font-size-default: 1.125rem;
+$base-line-height: 2rem;
 
 
 // MODULAR SCALE
 // set overrides for Modular Scale (docs at https://github.com/modularscale/modularscale-sass)
 
-$ms-base: 18px;
+$ms-base: $font-size-default;
 $ms-ratio: 1.2;
-
-// BASE SIZES
-
-$line-height: 31px;
