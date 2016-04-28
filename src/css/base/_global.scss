@@ -4,19 +4,19 @@ html {
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
   background-color: $color-white;
   color: $color-base;
   font-family: $font-family-default;
   font-size: $font-size-default;
+  -webkit-font-smoothing: antialiased;
 }
 
 // Reset some basic elements
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 // Unstyle lists
@@ -49,8 +49,8 @@ p {
 }
 
 q {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: ''; // Removes automatic quotation marks
   }
 }
@@ -58,8 +58,8 @@ q {
 blockquote {
   font-style: italic;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: ''; // Removes automatic quotation marks
   }
 }
