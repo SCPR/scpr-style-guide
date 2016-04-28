@@ -1,0 +1,75 @@
+
+html {
+  font-size: $font-size-root;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: $color-white;
+  color: $color-base;
+  font-family: $font-family-default;
+  font-size: $font-size-default;
+}
+
+// Reset some basic elements
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+// Unstyle lists
+ul, ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-default;
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  font-family: $font-family-default;
+  font-size: 1.125rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+q {
+  &:before,
+  &:after {
+    content: ''; // Removes automatic quotation marks
+  }
+}
+
+blockquote {
+  font-style: italic;
+
+  &:before,
+  &:after {
+    content: ''; // Removes automatic quotation marks
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
