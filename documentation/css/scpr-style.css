@@ -116,3 +116,24 @@ a {
   .c-well--alert {
     border-bottom: 1px solid #D31D1D;
     border-top: 1px solid #FFFFFF; }
+
+.c-ad {
+  display: block;
+  padding: 1rem; }
+  .c-ad--x-pad {
+    padding: 2rem; }
+  .c-ad--xx-pad {
+    padding: 4rem; }
+  .c-ad__container {
+    display: block;
+    margin: 0 auto;
+    text-align: center; }
+  .c-ad__banner {
+    display: block;
+    margin: 0 auto; }
+  .c-ad__attribution {
+    color: #898989;
+    display: inline-block;
+    font-size: 0.65104rem; }
+    .c-ad__attribution:hover {
+      text-decoration: underline; }

@@ -1,0 +1,44 @@
+
+// Ads: a component that wraps around display ads and provides .
+// Useful for related links, episode rundowns, trending topics, etc.
+//
+// .c-ad--x-pad        - Doubles the default padding around a display ad.
+// .c-ad--xx-pad       - Quadruples the default padding around a display ad.
+// .c-ad__container    - Wrapper that encloses an ad tag ad attribution.
+// .c-ad__attribution  - Text/link attribution identifying display ad as sponsored.
+//
+// Styleguide 0.1.0
+
+.c-ad {
+  display: block;
+  padding: ($base-line-height / 2);
+
+  &--x-pad {
+    padding: $base-line-height;
+  }
+
+  &--xx-pad {
+    padding: ($base-line-height * 2);
+  }
+
+  &__container {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__banner {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__attribution {
+    color: $color-gray;
+    display: inline-block;
+    font-size: ms(-3);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
