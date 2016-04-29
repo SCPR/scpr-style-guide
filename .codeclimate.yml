@@ -25,6 +25,8 @@ engines:
         enabled: false
       LeadingZero:
         enabled: false
+      SelectorFormat:
+        enabled: false
   fixme:
     enabled: true
 ratings:
