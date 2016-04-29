@@ -37,3 +37,4 @@ ratings:
 exclude_paths:
 - build/**/*
 - _site/**/*
+- src/css/util/modular-scale/*
