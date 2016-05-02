@@ -68,7 +68,7 @@ a {
   .link:hover {
     background: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#01AED5, #01AED5);
     background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#01AED5, #01AED5);
-    background-position: 0 95%, 100% 95%, 0 95%;
+    background-position: 0 90%, 100% 90%, 0 90%;
     background-repeat: no-repeat, no-repeat, repeat-x;
     background-size: .05em 1px, .05em 1px, 1px 1px;
     text-shadow: .03em 0 #fff, -.03em 0 #fff, 0 .03em #fff, 0 -.03em #fff, .06em 0 #fff, -.06em 0 #fff, .09em 0 #fff, -.09em 0 #fff, .12em 0 #fff, -.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
@@ -99,11 +99,15 @@ a {
   font-weight: 600; }
 
 .icon {
-  vertical-align: bottom; }
+  vertical-align: text-bottom; }
   .icon--line {
     fill: transparent !important; }
   .icon--fill {
     stroke: transparent !important; }
+  .icon--left {
+    margin-right: 0.25rem; }
+  .icon--right {
+    margin-left: 0.25rem; }
   .icon--size-sm {
     width: 1rem;
     height: 1rem; }
@@ -195,6 +199,13 @@ svg path, svg g {
     .media__headline--h4 {
       font-size: 1.125rem;
       line-height: 1.222222222em; }
+    .media__headline a:hover {
+      background: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#cfcfcf, #cfcfcf);
+      background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#cfcfcf, #cfcfcf);
+      background-position: 0 90%, 100% 90%, 0 90%;
+      background-repeat: no-repeat, no-repeat, repeat-x;
+      background-size: .05em 1px, .05em 1px, 1px 1px;
+      text-shadow: .03em 0 #fff, -.03em 0 #fff, 0 .03em #fff, 0 -.03em #fff, .06em 0 #fff, -.06em 0 #fff, .09em 0 #fff, -.09em 0 #fff, .12em 0 #fff, -.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff; }
   .media__title {
     color: #363636;
     line-height: 1.1em;
@@ -222,10 +233,11 @@ svg path, svg g {
     display: block;
     font-size: 0.78125rem;
     font-weight: 500; }
-  .media__timestamp {
-    color: #565656;
+  .media__timestamp, .media__source {
+    color: #898989;
     font-size: 0.78125rem;
-    font-style: italic; }
+    font-weight: 500;
+    text-transform: uppercase; }
   .media__teaser {
     color: #363636;
     font-size: 0.9375rem;
@@ -271,7 +283,7 @@ svg path, svg g {
     margin: 0; }
 
 .media--block .media__figure {
-  border-bottom: 6px solid #F87E21; }
+  border-bottom: 4px solid #F87E21; }
 
 .media--blockSimple .media__headline {
   margin-top: 0.5rem; }
