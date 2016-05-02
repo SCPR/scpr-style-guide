@@ -37,7 +37,7 @@ pre {
   // Attempt a very clean test environment for visual regression testing
   &.testable {
     pre {
-      display: none;
+      // display: none;
     }
 
     .example {
@@ -62,11 +62,19 @@ pre {
   @include clearfix;
   margin-top: 1.5rem;
 
+  &__container-lg {
+    max-width: 52rem;
+  }
+
+  &__container-med {
+    max-width: 30rem;
+  }
+
   pre {
     margin-top: 3rem;
   }
 
-  > h1, h2, h3, h4, h5, h6 {
+  > h1, > h2, > h3, > h4, > h5, > h6 {
     font-weight: 500;
     margin: 2em 0;
     text-transform: uppercase;
