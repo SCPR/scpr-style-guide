@@ -13,7 +13,7 @@ title: Media Object
   </div>
   <div class="media__content">
     <div class="media__meta">
-      <span class="media__label">Higher Education</span>
+      <span class="media__label">Audio</span>
     </div>
     <h3 class="media__headline media__headline--h3">
       <a href="#">The reasons why USC's tuition is now over $50k per year</a>
@@ -31,7 +31,7 @@ title: Media Object
       &lt;/div>
       &lt;div class="media__content">
         &lt;div class="media__meta">
-          &lt;span class="media__label">Higher Education&lt;/span>
+          &lt;span class="media__label">Audio&lt;/span>
         &lt;/div>
         &lt;h3 class="media__headline media__headline--h3">
           &lt;a href="#">The reasons why USC's tuition is now over $50k per year&lt;/a>
