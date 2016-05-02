@@ -14,7 +14,7 @@
     "compile-js": "uglifyjs ./public/js/scpr-style.js -o ./public/js/scpr-style-min.js",
     "copy-css": "cp ./public/css/scpr-style.css ./documentation/css/scpr-style.css",
     "copy-js": "cp ./public/js/scpr-style.js ./documentation/js/scpr-style.js",
-    "copy-img": "cp -r ./src/img/* ./public/img && cp ./public/img/scpr-sprite.svg ./documentation/img",
+    "copy-img": "cp -r ./src/img/* ./public/img && cp ./src/img/scpr-sprite.svg ./documentation/img",
     "lint": "scss-lint -c t .scss-lint.yml",
     "svg": "gulp --gulpfile build/gulpfile.js svg-sprite",
     "test": "npm run test",
