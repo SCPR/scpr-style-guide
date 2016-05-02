@@ -54,6 +54,14 @@
       line-height: 1.222222222em;
     }
 
+    a {
+
+      &:hover {
+        @include link-underline(darken($color-gray-light, 10%));
+      }
+
+    }
+
   }
 
   &__title {
@@ -99,10 +107,11 @@
     font-weight: 500;
   }
 
-  &__timestamp {
-    color: darken($color-gray, 20%);
+  &__timestamp, &__source {
+    color: $color-gray;
     font-size: ms(-2);
-    font-style: italic;
+    font-weight: 500;
+    text-transform: uppercase;
   }
 
   &__teaser {
@@ -165,7 +174,7 @@
 .media--block {
 
   .media__figure {
-    border-bottom: 6px solid $color-primary;
+    border-bottom: 4px solid $color-primary;
   }
 
 }
