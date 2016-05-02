@@ -98,6 +98,29 @@ a {
   font-size: 0.9375rem;
   font-weight: 600; }
 
+.icon {
+  vertical-align: bottom; }
+  .icon--line {
+    fill: transparent !important; }
+  .icon--fill {
+    stroke: transparent !important; }
+  .icon--size-sm {
+    width: 1rem;
+    height: 1rem; }
+  .icon--size-med {
+    width: 1.5rem;
+    height: 1.5rem; }
+  .icon--color-primary {
+    fill: #F87E21;
+    stroke: #F87E21; }
+  .icon--color-gray {
+    fill: #898989;
+    stroke: #898989; }
+
+svg path, svg g {
+  fill: inherit;
+  stroke: inherit; }
+
 .c-list--vert > * {
   display: block;
   margin-bottom: 1em; }
