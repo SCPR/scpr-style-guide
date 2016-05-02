@@ -1,0 +1,51 @@
+
+// Icons: Styling for icons.
+//
+// .icon--line                - overrides the global "fill: inherit;" SVG declaration
+// .icon--fill                - overrides the global "stroke: inherit;" SVG declaration
+// .icon--size-sm             - sets icon size to 16px square
+// .icon--size-med            - sets icon size to 24px square
+// .icon--color-primary       - sets icon color to orange
+// .icon--color-gray          - sets icon color to gray
+//
+// Styleguide 0.1.0
+
+.icon {
+  vertical-align: bottom;
+
+  &--line {
+    fill: transparent !important;
+  }
+
+  &--fill {
+    stroke: transparent !important;
+  }
+
+  &--size-sm {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &--size-med {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &--color-primary {
+    fill: $color-primary;
+    stroke: $color-primary;
+  }
+
+  &--color-gray {
+    fill: $color-gray;
+    stroke: $color-gray;
+  }
+
+}
+
+// In order to style SVG that are loaded into the Shadow DOM with the <use> tag,
+// we need to set SVG paths to inherit their color values from their parents.
+svg path, svg g {
+  fill: inherit;
+  stroke: inherit;
+}
