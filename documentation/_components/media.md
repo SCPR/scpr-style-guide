@@ -13,10 +13,15 @@ title: Media Object
   </div>
   <div class="media__content">
     <div class="media__meta">
-      <span class="media__label">Audio</span>
+      <span class="media__label">
+        <svg class="icon icon--size-sm">
+          <use class="icon--line icon--color-primary" xlink:href="#icon_line-audio"/>
+        </svg>
+        Audio
+      </span>
     </div>
     <h3 class="media__headline media__headline--h3">
-      <a href="#">The reasons why USC's tuition is now over $50k per year</a>
+      <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
     </h3>
     <p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
   </div>
@@ -31,10 +36,15 @@ title: Media Object
       &lt;/div>
       &lt;div class="media__content">
         &lt;div class="media__meta">
-          &lt;span class="media__label">Audio&lt;/span>
+          &lt;span class="media__label">
+            &lt;svg class="icon icon--size-sm">
+              &lt;use class="icon--line icon--color-primary" xlink:href="#icon_line-audio"/>
+            &lt;/svg>
+            Audio
+          &lt;/span>
         &lt;/div>
         &lt;h3 class="media__headline media__headline--h3">
-          &lt;a href="#">The reasons why USC's tuition is now over $50k per year&lt;/a>
+          &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
         &lt;/h3>
         &lt;p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
@@ -51,10 +61,10 @@ title: Media Object
   </div>
   <div class="media__content">
     <div class="media__meta">
-      <span class="media__label">Higher Education</span>
+      <span class="media__label">Label Ipsum</span>
     </div>
     <h3 class="media__headline media__headline--h3">
-      <a href="#">The reasons why USC's tuition is now over $50k per year</a>
+      <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
     </h3>
     <p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
   </div>
@@ -69,10 +79,10 @@ title: Media Object
       &lt;/div>
       &lt;div class="media__content">
         &lt;div class="media__meta">
-          &lt;span class="media__label">Higher Education&lt;/span>
+          &lt;span class="media__label">Label Ipsum&lt;/span>
         &lt;/div>
         &lt;h3 class="media__headline media__headline--h3">
-          &lt;a href="#">The reasons why USC's tuition is now over $50k per year&lt;/a>
+          &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
         &lt;/h3>
         &lt;p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
