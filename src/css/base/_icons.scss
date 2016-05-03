@@ -1,0 +1,79 @@
+
+// Icons: Styling for icons.
+//
+// .icon--line                - overrides the global "fill: inherit;" SVG declaration
+// .icon--fill                - overrides the global "stroke: inherit;" SVG declaration
+// .icon--left                - adds a right margin when an icon is to the left of a label
+// .icon--right               - adds a left margin when an icon is to the right of a label
+// .icon--size-xs             - sets icon size to 10px square
+// .icon--size-sm             - sets icon size to 16px square
+// .icon--size-med            - sets icon size to 24px square
+// .icon--color-primary       - sets icon color to orange
+// .icon--color-link          - sets icon color to link blue
+// .icon--color-gray          - sets icon color to gray
+// .icon--color-white         - sets icon color to white
+//
+// Styleguide 0.1.0
+
+.icon {
+  vertical-align: text-bottom;
+
+  &--line {
+    fill: transparent !important;
+  }
+
+  &--fill {
+    stroke: transparent !important;
+  }
+
+  &--left {
+    margin-right: 0.25rem;
+  }
+
+  &--right {
+    margin-left: 0.25rem;
+  }
+
+  &--size-xs {
+    height: 0.625rem;
+    width: 0.625rem;
+  }
+
+  &--size-sm {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  &--size-med {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  &--color-primary {
+    fill: $color-primary;
+    stroke: $color-primary;
+  }
+
+  &--color-link {
+    fill: $color-link;
+    stroke: $color-link;
+  }
+
+  &--color-gray {
+    fill: $color-gray;
+    stroke: $color-gray;
+  }
+
+  &--color-white {
+    fill: $color-white;
+    stroke: $color-white;
+  }
+
+}
+
+// In order to style SVG that are loaded into the Shadow DOM with the <use> tag,
+// we need to set SVG paths to inherit their color values from their parents.
+svg path, svg g {
+  fill: inherit;
+  stroke: inherit;
+}

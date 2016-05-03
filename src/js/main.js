@@ -1,2 +1,2 @@
 
-// require('./somefile.js');
+ require('./loadSvg.js');

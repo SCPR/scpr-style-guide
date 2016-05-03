@@ -22,4 +22,25 @@
       margin-right: $base-line-height;
     }
   }
+
+  &--bullet {
+    padding-left: $font-size-default;
+
+    > * {
+      position: relative;
+
+      &::before {
+        background-color: $color-gray-light;
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: .375rem;
+        left: ($font-size-default * -1);
+        position: absolute;
+        top: 0.6em;
+        width: .375rem;
+      }
+    }
+
+  }
 }

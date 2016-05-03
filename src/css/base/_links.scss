@@ -2,6 +2,7 @@
 // Links: Styling for hyperlinks.
 // Excludes hyperlinks inside articles, whose appearence are scoped to content styling.
 //
+// .link--callout       - Styles a link
 //
 // Styleguide 0.1.0
 
@@ -9,8 +10,20 @@
   color: $color-base;
 
   &:hover {
-    @include link-underline($color-link);
+    @include link-underline($color-gray-light);
     color: $color-base;
+  }
+
+  &--callout {
+    color: $color-link;
+    font-size: ms(0);
+    font-weight: 500;
+
+    &:hover {
+      @include link-underline($color-hover);
+      color: $color-hover;
+    }
+
   }
 
 }

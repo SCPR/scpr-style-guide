@@ -8,6 +8,7 @@
 // Styleguide 0.1.0
 
 .heading {
+  margin: 0 0 1em;
 
   &--h1 {
     font-size: ms(4);
@@ -36,7 +37,11 @@
 
   &--h6 {
     font-size: ms(-1);
-    font-weight: 600;
+    font-weight: 500;
   }
-  
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
 }
