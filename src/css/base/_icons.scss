@@ -9,7 +9,9 @@
 // .icon--size-sm             - sets icon size to 16px square
 // .icon--size-med            - sets icon size to 24px square
 // .icon--color-primary       - sets icon color to orange
+// .icon--color-link          - sets icon color to link blue
 // .icon--color-gray          - sets icon color to gray
+// .icon--color-white         - sets icon color to white
 //
 // Styleguide 0.1.0
 
@@ -50,6 +52,11 @@
   &--color-primary {
     fill: $color-primary;
     stroke: $color-primary;
+  }
+
+  &--color-link {
+    fill: $color-link;
+    stroke: $color-link;
   }
 
   &--color-gray {

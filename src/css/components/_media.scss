@@ -2,6 +2,14 @@
 // Media Objects: Media objects wrap up a global design pattern for
 // image + copy used to represent a piece of content.
 //
+// .media--last                 - utility to remove bottom marging from the last media object in a list
+// .media--hp                   - a media object optimized for our homepage layout
+// .media--hp-large             - homepage media object with large image asset
+// .media--new-and-unread       - marks a media object as new and unread
+// .media--block                - block asset with full media content details
+// .media--blockSimple          - block asset with short headline
+// .media--horizontal           - float left asset with full media content details
+// .media--horizontalSmall      - small float left asset with short headline
 //
 // Styleguide 0.1.0
 
