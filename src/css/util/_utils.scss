@@ -8,10 +8,14 @@
 //
 // Styleguide 0.1.0
 
-.u-text-size {
+.u-text-align {
 
-  &--sm {
-    font-size: ms(-1);
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
   }
 
 }
@@ -28,6 +32,14 @@
 
   &--sec-dk {
     color: $color-secondary-dark;
+  }
+
+}
+
+.u-text-size {
+
+  &--sm {
+    font-size: ms(-1);
   }
 
 }

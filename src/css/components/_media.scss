@@ -46,9 +46,8 @@
     margin: 0 0 1.125rem;
 
     &--h1 {
-      font-size: ms(5);
-      font-style: italic;
-      font-weight: 600;
+      font-size: ms(6);
+      font-weight: 800;
     }
 
     &--h2 {
@@ -228,7 +227,6 @@
 }
 
 .media--hp-large {
-  border-top: 1px solid $color-gray-light;
   margin-top: $base-line-height;
 
   > .media__content {

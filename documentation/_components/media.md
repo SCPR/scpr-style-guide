@@ -244,6 +244,45 @@ title: Media Objects
   </code>
 </pre>
 
+#### Homepage Media - Large Asset, Top Story
+
+<div class="example__container-lg">
+<div class="media media--hp-large">
+<h1 class="media__headline media__headline--h1 u-text-align--center">
+  <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend</a>
+</h1>
+  <div class="media__figure">
+    <a href="#">
+      <img class="media__img" src="http://placehold.it/1024x576">
+    </a>
+  </div>
+  <div class="media__content">
+    <div class="media__meta">
+      <span class="media__timestamp">Last updated 30 minutes ago</span>
+    </div>
+    <p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio. Deleniti patrioque eu pro, esse graeco imperdiet est ex, nam stet recteque in.</p>
+  </div>
+</div>
+</div>
+
+<pre>
+  <code>
+    &lt;div class="media media--hp-large">
+      &lt;div class="media__figure">
+        &lt;a href="#">
+          &lt;img class="media__img" src="http://placehold.it/1024x576">
+        &lt;/a>
+      &lt;/div>
+      &lt;div class="media__content">
+        &lt;h3 class="media__headline media__headline--h3">
+          &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
+        &lt;/h3>
+        &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  </code>
+</pre>
+
 #### Homepage Media - No Asset, Visited
 
 <div class="example__container-lg">
