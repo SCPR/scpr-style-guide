@@ -7,7 +7,7 @@ var base = '../';
 var config = {
   mode: {
     symbol: {
-      dest: '', 
+      dest: '',
       sprite: 'scpr-sprite.svg'
     }
   }
@@ -17,11 +17,11 @@ var config = {
 gulp.task('svg-sprite', function() {
   return gulp.src(base + './src/img/**/*.svg')
     .pipe(svgSprite(config))
-    .pipe(gulp.dest(base + './public/img'));
+    .pipe(gulp.dest(base + './public/img'))
+    .pipe(gulp.dest(base + './documentation/img'));
 });
 
 gulp.task('default', function() {
   // Will perform any build tasks that require the gulp build system.
   gulp.start('svg-sprite');
 });
-
