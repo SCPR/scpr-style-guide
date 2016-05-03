@@ -44,6 +44,26 @@ title: Lists
   </code>
 </pre>
 
+#### Vertical Bulleted List
+
+<ul class="c-list c-list--vert c-list--bullet">
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+  <li>List Item 4</li>
+</ul>
+
+<pre>
+  <code>
+    &lt;ul class="c-list c-list--vert">
+      &lt;li>List Item 1&lt;/li>
+      &lt;li>List Item 2&lt;/li>
+      &lt;li>List Item 3&lt;/li>
+      &lt;li>List Item 4&lt;/li>
+    &lt;/ul>
+  </code>
+</pre>
+
 #### Horizontal List
 
 <ul class="c-list c-list--horiz">
