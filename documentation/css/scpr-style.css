@@ -108,6 +108,9 @@ a {
     margin-right: 0.25rem; }
   .icon--right {
     margin-left: 0.25rem; }
+  .icon--size-xs {
+    width: 0.625rem;
+    height: 0.625rem; }
   .icon--size-sm {
     width: 1rem;
     height: 1rem; }
@@ -120,6 +123,9 @@ a {
   .icon--color-gray {
     fill: #898989;
     stroke: #898989; }
+  .icon--color-white {
+    fill: #FFFFFF;
+    stroke: #FFFFFF; }
 
 svg path, svg g {
   fill: inherit;
@@ -182,6 +188,10 @@ svg path, svg g {
   .media__meta {
     display: block;
     margin: 0 0 0.25rem; }
+  .media__indicator-visited {
+    position: absolute;
+    left: -1rem;
+    top: 1rem; }
   .media__headline {
     font-family: "abril-titling", Georgia, serif;
     line-height: 1.1em;
@@ -199,13 +209,18 @@ svg path, svg g {
     .media__headline--h4 {
       font-size: 1.125rem;
       line-height: 1.222222222em; }
-    .media__headline a:hover {
-      background: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#cfcfcf, #cfcfcf);
-      background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#cfcfcf, #cfcfcf);
-      background-position: 0 90%, 100% 90%, 0 90%;
-      background-repeat: no-repeat, no-repeat, repeat-x;
-      background-size: .05em 1px, .05em 1px, 1px 1px;
-      text-shadow: .03em 0 #fff, -.03em 0 #fff, 0 .03em #fff, 0 -.03em #fff, .06em 0 #fff, -.06em 0 #fff, .09em 0 #fff, -.09em 0 #fff, .12em 0 #fff, -.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff; }
+    .media__headline a {
+      position: relative; }
+      .media__headline a:hover {
+        background: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#cfcfcf, #cfcfcf);
+        background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#cfcfcf, #cfcfcf);
+        background-position: 0 90%, 100% 90%, 0 90%;
+        background-repeat: no-repeat, no-repeat, repeat-x;
+        background-size: .05em 1px, .05em 1px, 1px 1px;
+        text-shadow: .03em 0 #fff, -.03em 0 #fff, 0 .03em #fff, 0 -.03em #fff, .06em 0 #fff, -.06em 0 #fff, .09em 0 #fff, -.09em 0 #fff, .12em 0 #fff, -.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff; }
+      .media__headline a:visited .media__indicator-visited path {
+        fill: #898989;
+        stroke: #898989; }
   .media__title {
     color: #363636;
     line-height: 1.1em;
@@ -244,6 +259,22 @@ svg path, svg g {
     line-height: 1.666666667em; }
     .media__teaser--small {
       font-size: 0.78125rem; }
+
+.media--new-and-unread .media__headline {
+  position: relative; }
+  .media--new-and-unread .media__headline::before {
+    background-color: #F87E21;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 0.5rem;
+    left: -1rem;
+    position: absolute;
+    top: 1rem;
+    width: 0.5rem; }
+
+.media--new-and-unread .media__indicator-visited {
+  display: none; }
 
 .media--hp {
   border-top: 1px solid #E8E8E8;
