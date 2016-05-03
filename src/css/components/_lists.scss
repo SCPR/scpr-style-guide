@@ -32,13 +32,13 @@
       &::before {
         background-color: $color-gray-light;
         border-radius: 50%;
-        content: "";
+        content: '';
         display: block;
         height: .375rem;
         left: ($font-size-default * -1);
         position: absolute;
-        width: .375rem;
         top: 0.6em;
+        width: .375rem;
       }
     }
 

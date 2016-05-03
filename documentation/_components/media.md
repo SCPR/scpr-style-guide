@@ -23,7 +23,7 @@ title: Media Objects
       </span>
     </div>
     <h3 class="media__headline media__headline--h3">
-      <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+      <a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
     </h3>
     <p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
   </div>
@@ -48,7 +48,7 @@ title: Media Objects
           &lt;/span>
         &lt;/div>
         &lt;h3 class="media__headline media__headline--h3">
-          &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
+          &lt;a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
         &lt;/h3>
         &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
@@ -75,7 +75,7 @@ title: Media Objects
       </span>
     </div>
     <h3 class="media__headline media__headline--h3">
-      <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+      <a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
     </h3>
     <p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
   </div>
@@ -119,7 +119,7 @@ title: Media Objects
           &lt;/span>
         &lt;/div>
         &lt;h3 class="media__headline media__headline--h3">
-          &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
+          &lt;a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
         &lt;/h3>
         &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
@@ -165,7 +165,7 @@ title: Media Objects
       </span>
     </div>
     <h3 class="media__headline media__headline--h3">
-      <a href="#">
+      <a class="headline__link" href="#">
         Headline ipsum sit amet dolor quando nonumy quaerend tortor
         <svg class="icon icon--size-xs media__indicator-visited icon--fill icon--color-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path d="M23.576.183a1 1 0 0 0-1.393.242L7.367 21.452l-5.66-5.659a.999.999 0 1 0-1.414 1.413l6.5 6.5a1 1 0 0 0 1.524-.13l15.5-22a1 1 0 0 0-.241-1.393z"/>
@@ -195,7 +195,7 @@ title: Media Objects
           &lt;/span>
         &lt;/div>
         &lt;h3 class="media__headline media__headline--h3">
-          &lt;a href="#">
+          &lt;a class="headline__link" href="#">
             Headline ipsum sit amet dolor quando nonumy quaerend tortor
             &lt;svg class="icon icon--size-xs media__indicator-visited icon--fill icon--color-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               &lt;path d="M23.576.183a1 1 0 0 0-1.393.242L7.367 21.452l-5.66-5.659a.999.999 0 1 0-1.414 1.413l6.5 6.5a1 1 0 0 0 1.524-.13l15.5-22a1 1 0 0 0-.241-1.393z"/>
@@ -219,7 +219,7 @@ title: Media Objects
   </div>
   <div class="media__content">
     <h3 class="media__headline media__headline--h2">
-      <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+      <a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
     </h3>
     <p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
   </div>
@@ -236,7 +236,7 @@ title: Media Objects
       &lt;/div>
       &lt;div class="media__content">
         &lt;h3 class="media__headline media__headline--h3">
-          &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
+          &lt;a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
         &lt;/h3>
         &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
@@ -249,7 +249,7 @@ title: Media Objects
 <div class="example__container-lg">
 <div class="media media--hp-large">
 <h1 class="media__headline media__headline--h1 u-text-align--center">
-  <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend</a>
+  <a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend</a>
 </h1>
   <div class="media__figure">
     <a href="#">
@@ -275,7 +275,7 @@ title: Media Objects
       &lt;/div>
       &lt;div class="media__content">
         &lt;h3 class="media__headline media__headline--h3">
-          &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
+          &lt;a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
         &lt;/h3>
         &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
@@ -289,7 +289,7 @@ title: Media Objects
 <div class="media media--hp">
   <div class="media__content">
     <h3 class="media__headline media__headline--h3">
-      <a href="http://www.scpr.org/">
+      <a class="headline__link" href="http://www.scpr.org/">
         Headline ipsum sit amet dolor quando nonumy quaerend tortor
         <svg class="icon icon--size-xs media__indicator-visited icon--fill icon--color-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path d="M23.576.183a1 1 0 0 0-1.393.242L7.367 21.452l-5.66-5.659a.999.999 0 1 0-1.414 1.413l6.5 6.5a1 1 0 0 0 1.524-.13l15.5-22a1 1 0 0 0-.241-1.393z"/>
@@ -306,7 +306,7 @@ title: Media Objects
     &lt;div class="media media--hp">
       &lt;div class="media__content">
         &lt;h3 class="media__headline media__headline--h3">
-          &lt;a href="#">
+          &lt;a class="headline__link" href="#">
             Headline ipsum sit amet dolor quando nonumy quaerend tortor
             &lt;svg class="icon icon--size-xs media__indicator-visited icon--fill icon--color-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               &lt;path d="M23.576.183a1 1 0 0 0-1.393.242L7.367 21.452l-5.66-5.659a.999.999 0 1 0-1.414 1.413l6.5 6.5a1 1 0 0 0 1.524-.13l15.5-22a1 1 0 0 0-.241-1.393z"/>
@@ -328,7 +328,7 @@ title: Media Objects
       <span class="media__timestamp">Last updated 30 minutes ago</span>
     </div>
     <h3 class="media__headline media__headline--h3">
-      <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+      <a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
     </h3>
     <p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
   </div>
@@ -343,7 +343,7 @@ title: Media Objects
           &lt;span class="media__timestamp">Last updated 30 minutes ago&lt;/span>
         &lt;/div>
         &lt;h3 class="media__headline media__headline--h3">
-          &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
+          &lt;a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
         &lt;/h3>
         &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
@@ -365,7 +365,7 @@ title: Media Objects
       </span>
     </div>
     <h3 class="media__headline media__headline--h3">
-      <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+      <a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
     </h3>
     <ul class="c-list c-list--vert c-list--bullet">
       <li class="media__teaser media__teaser--bullet">Luvaret noluisse accusata cu sea, illum possit impedit has ad. Qui putant dissentias te, ea vim dolore dicunt platonem.</li>
@@ -388,7 +388,7 @@ title: Media Objects
           </span>
         &lt;/div>
         &lt;h3 class="media__headline media__headline--h3">
-          &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
+          &lt;a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
         &lt;/h3>
         &lt;ul class="c-list c-list--vert c-list--bullet">
           &lt;li class="media__teaser media__teaser--bullet">Luvaret noluisse accusata cu sea, illum possit impedit has ad. Qui putant dissentias te, ea vim dolore dicunt platonem.&lt;/li>
@@ -408,7 +408,7 @@ title: Media Objects
       <span class="media__timestamp">Last updated 30 minutes ago</span>
     </div>
     <h3 class="media__headline media__headline--h3">
-      <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+      <a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
     </h3>
     <p class="media__dek">Dek suas mandamus ut, illum legere at per, consul insolens nam te. Ut duo wisi appetere, debet volutpat in nec. Ex vidit vituperata posidonium has, cum movet nemore no.</p>
     <p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
@@ -424,7 +424,7 @@ title: Media Objects
           &lt;span class="media__timestamp">Last updated 30 minutes ago&lt;/span>
         &lt;/div>
         &lt;h3 class="media__headline media__headline--h3">
-          &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
+          &lt;a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
         &lt;/h3>
         &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
@@ -446,7 +446,7 @@ title: Media Objects
       <span class="media__label">Label Ipsum</span>
     </div>
     <h3 class="media__headline media__headline--h3">
-      <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+      <a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
     </h3>
     <p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
   </div>
@@ -466,7 +466,7 @@ title: Media Objects
           &lt;span class="media__label">Label Ipsum&lt;/span>
         &lt;/div>
         &lt;h3 class="media__headline media__headline--h3">
-          &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
+          &lt;a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
         &lt;/h3>
         &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
