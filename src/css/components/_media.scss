@@ -23,6 +23,12 @@
     display: block;
   }
 
+  &__related-content {
+    border-top: 1px solid lighten($color-primary, 30%);
+    margin: $base-line-height 0 0;
+    padding: $base-line-height 0 0;
+  }
+
   &__meta {
     display: block;
     margin: 0 0 0.25rem;
@@ -56,6 +62,13 @@
     }
 
     &--h4 {
+      font-family: $font-sans-base;
+      font-size: ms(1);
+      line-height: 1.222222222em;
+    }
+
+    &--h5 {
+      font-family: $font-sans-base;
       font-size: ms(0);
       line-height: 1.222222222em;
     }
@@ -128,6 +141,13 @@
     text-transform: uppercase;
   }
 
+  &__dek {
+    color: $color-gray;
+    font-size: ms(0);
+    line-height: 1.470588235em;
+    margin-bottom: 1em;
+  }
+
   &__teaser {
     color: $color-gray-dark;
     font-size: ms(-1);
@@ -152,6 +172,10 @@
 //
 // We're bending some BEM rules here by having 1-deep nested selectors, but in
 // exchange for that we get a single common markup pattern for media objects.
+
+.media--last {
+  margin-bottom: 0;
+}
 
 .media--new-and-unread {
 
@@ -180,19 +204,25 @@
 
 .media--hp {
   border-top: 1px solid $color-gray-light;
-  box-shadow: inset 17em 0 0 $color-gray-lightest;
-  padding: $base-line-height 0 $base-line-height 19em;
+  box-shadow: inset 17rem 0 0 $color-gray-lightest;
+  padding: $base-line-height 0 $base-line-height 19rem;
 
-  .media__figure {
+  > .media__figure {
     margin: 0 0 $base-line-height;
   }
 
-  .media__headline {
+  > .media__headline {
     margin: 0 0 $base-line-height;
   }
 
-  .media__label {
+  > .media__label {
     font-size: ms(-2);
+  }
+
+  .media__related-content {
+    margin-left: -2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
 }
@@ -201,17 +231,17 @@
   border-top: 1px solid $color-gray-light;
   margin-top: $base-line-height;
 
-  .media__content {
+  > .media__content {
     box-shadow: inset 17em 0 0 $color-gray-lightest;
     padding: $base-line-height 0 $base-line-height 19em;
   }
 
-  .media__figure {
+  > .media__figure {
     border-bottom: 6px solid $color-primary-alt;
     margin: 0 ($base-line-height * -1);
   }
 
-  .media__headline {
+  > .media__headline {
     margin: 0 0 $base-line-height;
   }
 
@@ -243,7 +273,7 @@
 
   .media__figure {
     margin-right: 1.125rem;
-    max-width: 5.625rem;
+    max-width: 5rem;
   }
 
   .media__headline, .media__title {

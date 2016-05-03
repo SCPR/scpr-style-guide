@@ -25,7 +25,7 @@ title: Media Objects
     <h3 class="media__headline media__headline--h3">
       <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
     </h3>
-    <p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
+    <p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
   </div>
 </div>
 </div>
@@ -50,7 +50,78 @@ title: Media Objects
         &lt;h3 class="media__headline media__headline--h3">
           &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
         &lt;/h3>
-        &lt;p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
+        &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  </code>
+</pre>
+
+#### Homepage Media - Standard + Related Content
+
+<div class="example__container-lg">
+<div class="media media--hp">
+  <div class="media__figure">
+    <a href="#">
+      <img class="media__img" src="http://placehold.it/640x360">
+    </a>
+  </div>
+  <div class="media__content">
+    <div class="media__meta">
+      <span class="media__label">
+        <svg class="icon icon--size-sm icon--left">
+          <use class="icon--line icon--color-primary" xlink:href="#icon_line-audio"/>
+        </svg>
+        Audio
+      </span>
+    </div>
+    <h3 class="media__headline media__headline--h3">
+      <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+    </h3>
+    <p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
+  </div>
+  <div class="media__related-content">
+    <h6 class="heading heading--h6 heading--uppercase u-text-color--gray">More in Arts and Entertainment</h6>
+    <div class="media media--horizontal media--horizontalSmall">
+      <div class="media__figure">
+        <img class="media__img" src="http://placehold.it/450x338">
+      </div>
+      <div class="media__content">
+        <h4 class="media__headline media__headline--h5"><a href="#">Related headline ipsum sit amet dolor quando nonumy</a></h4>
+      </div>
+    </div>
+    <div class="media media--horizontal media--horizontalSmall media--last">
+      <div class="media__figure">
+        <img class="media__img" src="http://placehold.it/450x338">
+      </div>
+      <div class="media__content">
+        <h4 class="media__headline media__headline--h5"><a href="#">Related headline ipsum sit amet dolor quando nonumy</a></h4>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<pre>
+  <code>
+    &lt;div class="media media--hp">
+      &lt;div class="media__figure">
+        &lt;a href="#">
+          &lt;img class="media__img" src="http://placehold.it/640x360">
+        &lt;/a>
+      &lt;/div>
+      &lt;div class="media__content">
+        &lt;div class="media__meta">
+          &lt;span class="media__label">
+            &lt;svg class="icon icon--size-sm">
+              &lt;use class="icon--line icon--color-primary" xlink:href="#icon_line-audio"/>
+            &lt;/svg>
+            Audio
+          &lt;/span>
+        &lt;/div>
+        &lt;h3 class="media__headline media__headline--h3">
+          &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
+        &lt;/h3>
+        &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
     &lt;/div>
   </code>
@@ -82,7 +153,7 @@ title: Media Objects
         </svg>
       </a>
     </h3>
-    <p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
+    <p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
   </div>
 </div>
 </div>
@@ -112,7 +183,7 @@ title: Media Objects
             &lt;/svg>
           &lt;/a>
         &lt;/h3>
-        &lt;p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
+        &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
     &lt;/div>
   </code>
@@ -131,7 +202,7 @@ title: Media Objects
     <h3 class="media__headline media__headline--h2">
       <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
     </h3>
-    <p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
+    <p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
   </div>
 </div>
 </div>
@@ -148,7 +219,7 @@ title: Media Objects
         &lt;h3 class="media__headline media__headline--h3">
           &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
         &lt;/h3>
-        &lt;p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
+        &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
     &lt;/div>
   </code>
@@ -167,7 +238,7 @@ title: Media Objects
         </svg>
       </a>
     </h3>
-    <p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
+    <p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
   </div>
 </div>
 </div>
@@ -184,7 +255,7 @@ title: Media Objects
             &lt;/svg>
           &lt;/a>
         &lt;/h3>
-        &lt;p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
+        &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
     &lt;/div>
   </code>
@@ -201,7 +272,7 @@ title: Media Objects
     <h3 class="media__headline media__headline--h3">
       <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
     </h3>
-    <p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
+    <p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
   </div>
 </div>
 </div>
@@ -216,7 +287,7 @@ title: Media Objects
         &lt;h3 class="media__headline media__headline--h3">
           &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
         &lt;/h3>
-        &lt;p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
+        &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
     &lt;/div>
   </code>
@@ -270,6 +341,39 @@ title: Media Objects
   </code>
 </pre>
 
+#### Homepage Media - No Asset, Dek + Teaser
+
+<div class="example__container-lg">
+<div class="media media--hp">
+  <div class="media__content">
+    <div class="media__meta">
+      <span class="media__timestamp">Last updated 30 minutes ago</span>
+    </div>
+    <h3 class="media__headline media__headline--h3">
+      <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+    </h3>
+    <p class="media__dek">Dek suas mandamus ut, illum legere at per, consul insolens nam te. Ut duo wisi appetere, debet volutpat in nec. Ex vidit vituperata posidonium has, cum movet nemore no.</p>
+    <p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
+  </div>
+</div>
+</div>
+
+<pre>
+  <code>
+    &lt;div class="media media--hp">
+      &lt;div class="media__content">
+        &lt;div class="media__meta">
+          &lt;span class="media__timestamp">Last updated 30 minutes ago&lt;/span>
+        &lt;/div>
+        &lt;h3 class="media__headline media__headline--h3">
+          &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
+        &lt;/h3>
+        &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  </code>
+</pre>
+
 #### Block Media - Standard
 
 <div class="example__container-med">
@@ -286,7 +390,7 @@ title: Media Objects
     <h3 class="media__headline media__headline--h3">
       <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
     </h3>
-    <p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
+    <p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
   </div>
 </div>
 </div>
@@ -306,7 +410,7 @@ title: Media Objects
         &lt;h3 class="media__headline media__headline--h3">
           &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
         &lt;/h3>
-        &lt;p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
+        &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
     &lt;/div>
   </code>
