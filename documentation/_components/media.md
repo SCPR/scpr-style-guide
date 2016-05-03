@@ -123,6 +123,25 @@ title: Media Objects
         &lt;/h3>
         &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
+      &lt;div class="media__related-content">
+        &lt;h6 class="heading heading--h6 heading--uppercase u-text-color--gray">More in Arts and Entertainment&lt;/h6>
+        &lt;div class="media media--horizontal media--horizontalSmall">
+          &lt;div class="media__figure">
+            &lt;img class="media__img" src="http://placehold.it/450x338">
+          &lt;/div>
+          &lt;div class="media__content">
+            &lt;h4 class="media__headline media__headline--h5">&lt;a href="#">Related headline ipsum sit amet dolor quando nonumy&lt;/a>&lt;/h4>
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="media media--horizontal media--horizontalSmall media--last">
+          &lt;div class="media__figure">
+            &lt;img class="media__img" src="http://placehold.it/450x338">
+          &lt;/div>
+          &lt;div class="media__content">
+            &lt;h4 class="media__headline media__headline--h5">&lt;a href="#">Related headline ipsum sit amet dolor quando nonumy&lt;/a>&lt;/h4>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
     &lt;/div>
   </code>
 </pre>
