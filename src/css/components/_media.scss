@@ -28,6 +28,12 @@
     margin: 0 0 0.25rem;
   }
 
+  &__indicator-visited {
+    position: absolute;
+    left: ($base-line-height / -2);
+    top: 1rem;
+  }
+
   &__headline {
     font-family: $font-serif-titling;
     line-height: 1.1em;
@@ -55,9 +61,17 @@
     }
 
     a {
+      position: relative;
 
       &:hover {
         @include link-underline(darken($color-gray-light, 10%));
+      }
+
+      &:visited {
+        .media__indicator-visited path {
+          fill: $color-gray;
+          stroke: $color-gray;
+        }
       }
 
     }
@@ -126,6 +140,39 @@
 
 }
 
+// MEDIA OBJECT MODIFIERS
+//
+// Breaking out modifiers into their own SCSS blocks and selectively overriding
+// element styles to create different flavors of our media object.
+//
+// We're bending some BEM rules here by having 1-deep nested selectors, but in
+// exchange for that we get a single common markup pattern for media objects.
+
+.media--new-and-unread {
+
+  .media__headline {
+    position: relative;
+
+    &::before {
+      background-color: $color-primary;
+      border-radius: 50%;
+      content: "";
+      display: block;
+      height: 0.5rem;
+      left: ($base-line-height / -2);
+      position: absolute;
+      top: 1rem;
+      width: 0.5rem;
+    }
+
+  }
+
+  .media__indicator-visited {
+    display: none;
+  }
+
+}
+
 .media--hp {
   border-top: 1px solid $color-gray-light;
   box-shadow: inset 17em 0 0 $color-gray-lightest;
@@ -138,6 +185,7 @@
   .media__figure {
     margin: 0 0 $base-line-height;
   }
+
 }
 
 .media--horizontal {

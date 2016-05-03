@@ -1,7 +1,7 @@
 ---
 layout: component
 type: component
-title: Media Object
+title: Media Objects
 ---
 
 #### Homepage Media - Standard
@@ -56,7 +56,105 @@ title: Media Object
   </code>
 </pre>
 
-#### Homepage Media - Standard (Recently Published)
+#### Homepage Media - Standard, New and Unread
+
+<div class="example__container-lg">
+<div class="media media--hp media--new-and-unread">
+  <div class="media__figure">
+    <a href="#">
+      <img class="media__img" src="http://placehold.it/640x360">
+    </a>
+  </div>
+  <div class="media__content">
+    <div class="media__meta">
+      <span class="media__label">
+        <svg class="icon icon--size-sm icon--left">
+          <use class="icon--line icon--color-primary" xlink:href="#icon_line-audio"/>
+        </svg>
+        Audio
+      </span>
+    </div>
+    <h3 class="media__headline media__headline--h3">
+      <a href="#">
+        Headline ipsum sit amet dolor quando nonumy quaerend tortor
+        <svg class="icon icon--size-xs media__indicator-visited icon--fill icon--color-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M23.576.183a1 1 0 0 0-1.393.242L7.367 21.452l-5.66-5.659a.999.999 0 1 0-1.414 1.413l6.5 6.5a1 1 0 0 0 1.524-.13l15.5-22a1 1 0 0 0-.241-1.393z"/>
+        </svg>
+      </a>
+    </h3>
+    <p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
+  </div>
+</div>
+</div>
+
+<pre>
+  <code>
+    &lt;div class="media media--hp">
+      &lt;div class="media__figure">
+        &lt;a href="#">
+          &lt;img class="media__img" src="http://placehold.it/640x360">
+        &lt;/a>
+      &lt;/div>
+      &lt;div class="media__content">
+        &lt;div class="media__meta">
+          &lt;span class="media__label">
+            &lt;svg class="icon icon--size-sm">
+              &lt;use class="icon--line icon--color-primary" xlink:href="#icon_line-audio"/>
+            &lt;/svg>
+            Audio
+          &lt;/span>
+        &lt;/div>
+        &lt;h3 class="media__headline media__headline--h3">
+          &lt;a href="#">
+            Headline ipsum sit amet dolor quando nonumy quaerend tortor
+            &lt;svg class="icon icon--size-xs media__indicator-visited icon--fill icon--color-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              &lt;path d="M23.576.183a1 1 0 0 0-1.393.242L7.367 21.452l-5.66-5.659a.999.999 0 1 0-1.414 1.413l6.5 6.5a1 1 0 0 0 1.524-.13l15.5-22a1 1 0 0 0-.241-1.393z"/>
+            &lt;/svg>
+          &lt;/a>
+        &lt;/h3>
+        &lt;p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  </code>
+</pre>
+
+#### Homepage Media - No Asset, Visited
+
+<div class="example__container-lg">
+<div class="media media--hp">
+  <div class="media__content">
+    <h3 class="media__headline media__headline--h3">
+      <a href="http://www.scpr.org/">
+        Headline ipsum sit amet dolor quando nonumy quaerend tortor
+        <svg class="icon icon--size-xs media__indicator-visited icon--fill icon--color-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M23.576.183a1 1 0 0 0-1.393.242L7.367 21.452l-5.66-5.659a.999.999 0 1 0-1.414 1.413l6.5 6.5a1 1 0 0 0 1.524-.13l15.5-22a1 1 0 0 0-.241-1.393z"/>
+        </svg>
+      </a>
+    </h3>
+    <p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
+  </div>
+</div>
+</div>
+
+<pre>
+  <code>
+    &lt;div class="media media--hp">
+      &lt;div class="media__content">
+        &lt;h3 class="media__headline media__headline--h3">
+          &lt;a href="#">
+            Headline ipsum sit amet dolor quando nonumy quaerend tortor
+            &lt;svg class="icon icon--size-xs media__indicator-visited icon--fill icon--color-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              &lt;path d="M23.576.183a1 1 0 0 0-1.393.242L7.367 21.452l-5.66-5.659a.999.999 0 1 0-1.414 1.413l6.5 6.5a1 1 0 0 0 1.524-.13l15.5-22a1 1 0 0 0-.241-1.393z"/>
+            &lt;/svg>
+          &lt;/a>
+        &lt;/h3>
+        &lt;p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  </code>
+</pre>
+
+#### Homepage Media - No Asset, Recently Published
 
 <div class="example__container-lg">
 <div class="media media--hp">
@@ -88,7 +186,7 @@ title: Media Object
   </code>
 </pre>
 
-#### Homepage Media - Standard (Curated Content)
+#### Homepage Media - No Asset, Curated Content
 
 <div class="example__container-lg">
 <div class="media media--hp">
