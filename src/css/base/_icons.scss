@@ -5,6 +5,7 @@
 // .icon--fill                - overrides the global "stroke: inherit;" SVG declaration
 // .icon--left                - adds a right margin when an icon is to the left of a label
 // .icon--right               - adds a left margin when an icon is to the right of a label
+// .icon--size-xs             - sets icon size to 10px square
 // .icon--size-sm             - sets icon size to 16px square
 // .icon--size-med            - sets icon size to 24px square
 // .icon--color-primary       - sets icon color to orange
@@ -31,6 +32,11 @@
     margin-left: 0.25rem;
   }
 
+  &--size-xs {
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+
   &--size-sm {
     width: 1rem;
     height: 1rem;
@@ -49,6 +55,11 @@
   &--color-gray {
     fill: $color-gray;
     stroke: $color-gray;
+  }
+
+  &--color-white {
+    fill: $color-white;
+    stroke: $color-white;
   }
 
 }
