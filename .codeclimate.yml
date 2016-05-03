@@ -38,5 +38,6 @@ ratings:
   - "**.rb"
 exclude_paths:
 - build/**/*
+- documentation/**/*
 - _site/**/*
 - src/css/util/modular-scale/*
