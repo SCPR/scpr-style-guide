@@ -238,7 +238,10 @@ title: Media Objects
     <h3 class="media__headline media__headline--h3">
       <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
     </h3>
-    <p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
+    <ul class="c-list c-list--vert c-list--bullet">
+      <li class="media__teaser media__teaser--bullet">Luvaret noluisse accusata cu sea, illum possit impedit has ad. Qui putant dissentias te, ea vim dolore dicunt platonem.</li>
+      <li class="media__teaser media__teaser--bullet">Pri sumo habeo ancillae in, cu vim cibo posse, has ei novum sadipscing. Te sed sale adolescens, no per prima copiosae.</li>
+    </ul>
   </div>
 </div>
 </div>
@@ -248,12 +251,20 @@ title: Media Objects
     &lt;div class="media media--hp">
       &lt;div class="media__content">
         &lt;div class="media__meta">
-          &lt;span class="media__timestamp">Last updated 30 minutes ago&lt;/span>
+          &lt;span class="media__source">
+            From LAist
+            &lt;svg class="icon icon--size-sm icon--right">
+              &lt;use class="icon--line icon--color-gray" xlink:href="#icon_line-outbound-link"/>
+            &lt;/svg>
+          </span>
         &lt;/div>
         &lt;h3 class="media__headline media__headline--h3">
           &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
         &lt;/h3>
-        &lt;p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
+        &lt;ul class="c-list c-list--vert c-list--bullet">
+          &lt;li class="media__teaser media__teaser--bullet">Luvaret noluisse accusata cu sea, illum possit impedit has ad. Qui putant dissentias te, ea vim dolore dicunt platonem.&lt;/li>
+          &lt;li class="media__teaser media__teaser--bullet">Pri sumo habeo ancillae in, cu vim cibo posse, has ei novum sadipscing. Te sed sale adolescens, no per prima copiosae.&lt;/li>
+        &lt;/ul>
       &lt;/div>
     &lt;/div>
   </code>
