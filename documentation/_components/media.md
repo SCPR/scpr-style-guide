@@ -118,6 +118,42 @@ title: Media Objects
   </code>
 </pre>
 
+#### Homepage Media - Large Asset
+
+<div class="example__container-lg">
+<div class="media media--hp-large">
+  <div class="media__figure">
+    <a href="#">
+      <img class="media__img" src="http://placehold.it/1024x576">
+    </a>
+  </div>
+  <div class="media__content">
+    <h3 class="media__headline media__headline--h2">
+      <a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+    </h3>
+    <p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</p>
+  </div>
+</div>
+</div>
+
+<pre>
+  <code>
+    &lt;div class="media media--hp-large">
+      &lt;div class="media__figure">
+        &lt;a href="#">
+          &lt;img class="media__img" src="http://placehold.it/1024x576">
+        &lt;/a>
+      &lt;/div>
+      &lt;div class="media__content">
+        &lt;h3 class="media__headline media__headline--h3">
+          &lt;a href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
+        &lt;/h3>
+        &lt;p class="media__teaser">Dek ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  </code>
+</pre>
+
 #### Homepage Media - No Asset, Visited
 
 <div class="example__container-lg">
@@ -186,7 +222,7 @@ title: Media Objects
   </code>
 </pre>
 
-#### Homepage Media - No Asset, Curated Content
+#### Homepage Media - No Asset, Curated Content, Bulleted Summary
 
 <div class="example__container-lg">
 <div class="media media--hp">

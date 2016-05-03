@@ -46,8 +46,8 @@
     }
 
     &--h2 {
-      font-size: ms(3);
-      font-weight: 600;
+      font-size: ms(4);
+      font-weight: 800;
     }
 
     &--h3 {
@@ -184,6 +184,26 @@
 
   .media__figure {
     margin: 0 0 $base-line-height;
+  }
+
+}
+
+.media--hp-large {
+  border-top: 1px solid $color-gray-light;
+  margin-top: $base-line-height;
+
+  .media__content {
+    box-shadow: inset 17em 0 0 $color-gray-lightest;
+    padding: $base-line-height 0 $base-line-height 19em;
+  }
+
+  .media__label {
+    font-size: ms(-2);
+  }
+
+  .media__figure {
+    border-bottom: 6px solid $color-primary-alt; 
+    margin: 0 ($base-line-height * -1);
   }
 
 }
