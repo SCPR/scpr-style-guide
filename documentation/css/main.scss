@@ -17,8 +17,37 @@
 pre {
   background: #F1F1F1;
   font-size: 0.75em;
-  max-width: 100em;
+  max-width: 90%;
   overflow: scroll;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.header {
+  background-color: #efefef;
+  flex: 1 0 0;
+}
+
+.header-title {
+  text-align: center;
+}
+
+.header-side {
+  padding-top: 2em;
+
+  .nav {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .page-link {
+    border-top: 1px solid #ddd;
+    display: block;
+    font-size: 0.75em;
+    padding: 1em;
+    text-transform: uppercase;
+  }
 }
 
 .header-title {
@@ -28,6 +57,16 @@ pre {
     margin-top: 6px;
     vertical-align: top;
   }
+}
+
+.logo {
+  height: 30px;
+  margin: 0 1em;
+  width: 160px;
+}
+
+.content {
+  flex: 5 0 0;
 }
 
 .component {
@@ -79,7 +118,7 @@ pre {
 
   > h1, > h2, > h3, > h4, > h5, > h6 {
     font-weight: 500;
-    margin: 2em 0;
+    margin: 6em 0 3em;
     text-transform: uppercase;
   }
 }
