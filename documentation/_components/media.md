@@ -8,10 +8,8 @@ title: Media Objects
 
 <div class="example__container-lg">
 <div class="media media--hp">
-  <div class="media__figure">
-    <a href="#">
-      <img class="media__img" src="http://placehold.it/640x360">
-    </a>
+  <div class="media__figure media__figure--widescreen">
+      <img class="media__img" src="http://placehold.it/640x426">
   </div>
   <div class="media__content">
     <div class="media__meta">
@@ -33,9 +31,9 @@ title: Media Objects
 <pre>
   <code>
     &lt;div class="media media--hp">
-      &lt;div class="media__figure">
+      &lt;div class="media__figure media__figure--widescreen">
         &lt;a href="#">
-          &lt;img class="media__img" src="http://placehold.it/640x360">
+          &lt;img class="media__img" src="http://placehold.it/640x426">
         &lt;/a>
       &lt;/div>
       &lt;div class="media__content">
@@ -60,9 +58,9 @@ title: Media Objects
 
 <div class="example__container-lg">
 <div class="media media--hp">
-  <div class="media__figure">
+  <div class="media__figure media__figure--widescreen">
     <a href="#">
-      <img class="media__img" src="http://placehold.it/640x360">
+      <img class="media__img" src="http://placehold.it/640x426">
     </a>
   </div>
   <div class="media__content">
@@ -104,9 +102,9 @@ title: Media Objects
 <pre>
   <code>
     &lt;div class="media media--hp">
-      &lt;div class="media__figure">
+      &lt;div class="media__figure media__figure--widescreen">
         &lt;a href="#">
-          &lt;img class="media__img" src="http://placehold.it/640x360">
+          &lt;img class="media__img" src="http://placehold.it/640x426">
         &lt;/a>
       &lt;/div>
       &lt;div class="media__content">
@@ -150,7 +148,7 @@ title: Media Objects
 
 <div class="example__container-lg">
 <div class="media media--hp media--new-and-unread">
-  <div class="media__figure">
+  <div class="media__figure media__figure--widescreen">
     <a href="#">
       <img class="media__img" src="http://placehold.it/640x360">
     </a>
@@ -180,7 +178,7 @@ title: Media Objects
 <pre>
   <code>
     &lt;div class="media media--hp">
-      &lt;div class="media__figure">
+      &lt;div class="media__figure media__figure--widescreen">
         &lt;a href="#">
           &lt;img class="media__img" src="http://placehold.it/640x360">
         &lt;/a>
@@ -212,7 +210,7 @@ title: Media Objects
 
 <div class="example__container-lg">
 <div class="media media--hp-large">
-  <div class="media__figure">
+  <div class="media__figure media__figure--widescreen">
     <a href="#">
       <img class="media__img" src="http://placehold.it/1024x576">
     </a>
@@ -229,7 +227,7 @@ title: Media Objects
 <pre>
   <code>
     &lt;div class="media media--hp-large">
-      &lt;div class="media__figure">
+      &lt;div class="media__figure media__figure--widescreen">
         &lt;a href="#">
           &lt;img class="media__img" src="http://placehold.it/1024x576">
         &lt;/a>
@@ -251,7 +249,7 @@ title: Media Objects
 <h1 class="media__headline media__headline--h1 u-text-align--center">
   <a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend</a>
 </h1>
-  <div class="media__figure">
+  <div class="media__figure media__figure--widescreen">
     <a href="#">
       <img class="media__img" src="http://placehold.it/1024x576">
     </a>
@@ -268,15 +266,18 @@ title: Media Objects
 <pre>
   <code>
     &lt;div class="media media--hp-large">
-      &lt;div class="media__figure">
+      &lt;h3 class="media__headline media__headline--h1 u-text-align--center">
+        &lt;a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend&lt;/a>
+      &lt;/h3>
+      &lt;div class="media__figure media__figure--widescreen">
         &lt;a href="#">
           &lt;img class="media__img" src="http://placehold.it/1024x576">
         &lt;/a>
       &lt;/div>
       &lt;div class="media__content">
-        &lt;h3 class="media__headline media__headline--h3">
-          &lt;a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor&lt;/a>
-        &lt;/h3>
+        &lt;div class="media__meta">
+          &lt;span class="media__timestamp">Last updated 30 minutes ago&lt;/span>
+        &lt;/div>
         &lt;p class="media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.&lt;/p>
       &lt;/div>
     &lt;/div>

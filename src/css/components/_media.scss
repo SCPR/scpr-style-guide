@@ -11,6 +11,8 @@
 // .media--horizontal           - float left asset with full media content details
 // .media--horizontalSmall      - small float left asset with short headline
 //
+// .media__img--widescreen   - 16:9 aspect ratio images
+//
 // Styleguide 0.1.0
 
 .media {
@@ -19,12 +21,40 @@
   margin: 0 0 $base-line-height;
 
   &__figure {
+    box-sizing: border-box;
     display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &::before {
+      position: relative;
+      display: block;
+      content: "";
+      padding-top: 66.6666667%; // 3:2 by default
+      box-sizing: border-box;
+    }
+
+    &--cinematic::before {
+      padding-top: 42.5531915%;
+    }
+
+    &--four-by-three::before {
+      padding-top: 75%;
+    }
+
+    &--widescreen::before {
+      padding-top: 56.25%;
+    }
+
   }
 
   &__img {
-    display: block;
-    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
   }
 
   &__content {

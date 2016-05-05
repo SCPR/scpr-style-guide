@@ -217,10 +217,30 @@ svg path, svg g {
     content: '';
     display: block; }
   .media__figure {
-    display: block; }
-  .media__img {
+    box-sizing: border-box;
     display: block;
+    overflow: hidden;
+    position: relative;
     width: 100%; }
+    .media__figure::before {
+      position: relative;
+      display: block;
+      content: "";
+      padding-top: 66.6666667%;
+      box-sizing: border-box; }
+    .media__figure--cinematic::before {
+      padding-top: 42.5531915%; }
+    .media__figure--four-by-three::before {
+      padding-top: 75%; }
+    .media__figure--widescreen::before {
+      padding-top: 56.25%; }
+  .media__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    box-sizing: border-box; }
   .media__content {
     display: block; }
   .media__related-content {
