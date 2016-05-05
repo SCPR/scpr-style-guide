@@ -223,11 +223,11 @@ svg path, svg g {
     position: relative;
     width: 100%; }
     .media__figure::before {
-      position: relative;
+      box-sizing: border-box;
+      content: '';
       display: block;
-      content: "";
       padding-top: 66.6666667%;
-      box-sizing: border-box; }
+      position: relative; }
     .media__figure--cinematic::before {
       padding-top: 42.5531915%; }
     .media__figure--four-by-three::before {

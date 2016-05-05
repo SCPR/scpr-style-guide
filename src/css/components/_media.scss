@@ -28,11 +28,11 @@
     width: 100%;
 
     &::before {
-      position: relative;
-      display: block;
-      content: "";
-      padding-top: 66.6666667%; // 3:2 by default
       box-sizing: border-box;
+      content: '';
+      display: block;
+      padding-top: 66.6666667%; // 3:2 by default
+      position: relative;
     }
 
     &--cinematic::before {
@@ -50,11 +50,11 @@
   }
 
   &__img {
+    box-sizing: border-box;
+    left: 50%;
     position: absolute;
     top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
-    box-sizing: border-box;
   }
 
   &__content {
