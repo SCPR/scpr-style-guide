@@ -261,6 +261,9 @@ svg path, svg g {
     .media__headline--h1 {
       font-size: 3.35923rem;
       font-weight: 800; }
+    .media__headline--h1-verbose {
+      font-size: 2.79936rem;
+      font-weight: 800; }
     .media__headline--h2 {
       font-size: 2.3328rem;
       font-weight: 800; }
@@ -374,7 +377,8 @@ svg path, svg g {
     padding: 2rem 0 2rem 19em; }
   .media--hp-large > .media__figure {
     border-bottom: 6px solid #D15904;
-    margin: 0 -2rem; }
+    margin: 0 -2rem;
+    width: auto; }
   .media--hp-large > .media__headline {
     margin: 0 0 2rem; }
   .media--hp-large .media__label {

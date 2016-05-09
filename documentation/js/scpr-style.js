@@ -1,19 +1,46 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
-window.onload = function() {
+window.onload = function () {
+
+  // Collect large headlines that might need resizing.
+  var headlines = document.getElementsByClassName("media__headline--h1");
+  console.log(headlines);
+
+  function checkLengthAndResize(headline, index) {
+
+    // Look inside the headline's hyperlink to get the text
+    // character count.
+    var charCount = headline.getElementsByTagName("a")[0].textContent.length;
+    console.log(charCount);
+
+    // If this is a headline likely to wrap to three lines,
+    // let's add a class to typeset it smaller.
+    if (charCount > 60) {
+      headline.classList.add("media__headline--h1-verbose");
+    }
+  }
+
+  // Iterate through large headlines and resize where appropriate.
+  Array.from(headlines).forEach(checkLengthAndResize);
+};
+
+},{}],2:[function(require,module,exports){
+
+window.onload = function () {
   var ajax = new XMLHttpRequest();
   ajax.open("GET", "/img/scpr-sprite.svg", true);
   ajax.send();
-  ajax.onload = function(e) {
+  ajax.onload = function (e) {
     var div = document.createElement("div");
     div.style.display = "none";
     div.innerHTML = ajax.responseText;
     document.body.insertBefore(div, document.body.childNodes[0]);
-  }
-}
+  };
+};
 
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 
- require('./loadSvg.js');
+require('./loadSvg.js');
+require('./fitText.js');
 
-},{"./loadSvg.js":1}]},{},[2]);
+},{"./fitText.js":1,"./loadSvg.js":2}]},{},[3]);
