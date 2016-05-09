@@ -246,7 +246,7 @@ title: Media Objects
 
 <div class="example__container-lg">
 <div class="media media--hp-large">
-<h1 class="media__headline media__headline--h1 u-text-align--center">
+<h1 class="media__headline media__headline--h1-verbose u-text-align--center">
   <a class="headline__link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend</a>
 </h1>
   <div class="media__figure media__figure--widescreen">
