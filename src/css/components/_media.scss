@@ -22,7 +22,7 @@
 .media {
   @include clearfix();
   display: block;
-  margin: 0 0 $base-line-height;
+  margin: 0;
 
   &__figure {
     box-sizing: border-box;
@@ -277,8 +277,8 @@
   margin-top: $base-line-height;
 
   > .media__content {
-    box-shadow: inset 17em 0 0 $color-gray-lightest;
-    padding: $base-line-height 0 $base-line-height 19em;
+    box-shadow: inset 17rem 0 0 $color-gray-lightest;
+    padding: $base-line-height 0 ($base-line-height * 2) 19rem;
   }
 
   > .media__figure {
@@ -316,6 +316,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  margin: 0 0 $base-line-height;
 
   .media__figure {
     margin-right: 1.125rem;

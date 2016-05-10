@@ -10,12 +10,42 @@
 }
 
 // UNDERLINES
-
 // Sweet, sexy underlines for hyperlinks
+
 @mixin link-underline($underline-color) {
   background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient($underline-color, $underline-color);
   background-position: 0 90%, 100% 90%, 0 90%;
   background-repeat: no-repeat, no-repeat, repeat-x;
   background-size: .05em 1px, .05em 1px, 1px 1px;
   text-shadow: .03em 0 #fff, -.03em 0 #fff, 0 .03em #fff, 0 -.03em #fff, .06em 0 #fff, -.06em 0 #fff, .09em 0 #fff, -.09em 0 #fff, .12em 0 #fff, -.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+}
+
+
+// CONTAINER WIDTHS
+// Calculate max-widths for grid containers.
+
+@mixin container-width($rems) {
+
+  // Calculate max-width using gutter as an important number,
+  // and adding two extra gutters equal to the standard
+  // padding given to containers.
+  $max-container-width: ($rems * $gutter) + ($gutter * 2);
+
+  max-width: $max-container-width;
+}
+
+// MEDIA QUERIES
+
+// Min-width media queries
+@mixin media-min($query) {
+  @media ('min-width:' + $query) {
+    @content;
+  }
+}
+
+// Max-width media queries
+@mixin media-max($query) {
+  @media ('max-width:' + $query) {
+    @content;
+  }
 }
