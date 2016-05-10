@@ -1,6 +1,4 @@
 
-window.onload = function() {
-
   // Collect large headlines that might need resizing.
   var headlines = document.getElementsByClassName("media__headline--h1");
 
@@ -19,4 +17,3 @@ window.onload = function() {
 
   // Iterate through large headlines and resize where appropriate.
   Array.from(headlines).forEach(checkLengthAndResize);
-}

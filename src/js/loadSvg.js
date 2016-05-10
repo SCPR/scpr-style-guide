@@ -1,5 +1,4 @@
 
-window.onload = function() {
   var ajax = new XMLHttpRequest();
   ajax.open("GET", "/img/scpr-sprite.svg", true);
   ajax.send();
@@ -9,4 +8,3 @@ window.onload = function() {
     div.innerHTML = ajax.responseText;
     document.body.insertBefore(div, document.body.childNodes[0]);
   }
-}
