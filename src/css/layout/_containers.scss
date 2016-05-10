@@ -1,0 +1,37 @@
+
+// Containers: Horizontal blocks that hold content or grid elements.
+// Size modifiers are used to achieve containers of different widths.
+//
+// .container--sm         - 640px max-width; good for article body
+// .container--med        - 832px max-width
+// .container--lg         - 960px max-width
+// .container--xl         - 1280px max-width
+//
+// Styleguide 0.1.0
+
+.container {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding: $base-line-height $gutter;
+
+  @include media-max($media-mobile) {
+    padding: ($base-line-height / 2) ($gutter / 2);
+  }
+
+  &--sm {
+    @include container-width(20);
+  }
+
+  &--med {
+    @include container-width(26);
+  }
+
+  &--lg {
+    @include container-width(30);
+  }
+
+  &--xl {
+    @include container-width(40);
+  }
+}
