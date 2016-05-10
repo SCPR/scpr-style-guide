@@ -17,6 +17,7 @@
 pre {
   background: #F1F1F1;
   font-size: 0.75em;
+  margin: 3rem 0;
   max-width: 90%;
   overflow: scroll;
 }
@@ -147,4 +148,17 @@ pre {
 .section_container {
   background-color: #1F2C38;
   margin-top: 6rem
+}
+
+// OVERRIDES
+// These styles override source styling for components in order to better
+// document the styling and behavior of components.
+
+.container {
+  background-color: DodgerBlue;
+  color: white;
+
+  & > {
+    background-color: DeepSkyBlue;
+  }
 }
