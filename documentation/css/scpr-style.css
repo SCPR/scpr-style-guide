@@ -278,9 +278,15 @@ svg path, svg g {
     .media__headline--h1 {
       font-size: 3.35923rem;
       font-weight: 800; }
+      @media (max-width: 30rem) {
+        .media__headline--h1 {
+          font-size: 2.3328rem; } }
     .media__headline--h1-verbose {
       font-size: 2.79936rem;
       font-weight: 800; }
+      @media (max-width: 30rem) {
+        .media__headline--h1-verbose {
+          font-size: 2.3328rem; } }
     .media__headline--h2 {
       font-size: 2.3328rem;
       font-weight: 800; }
@@ -376,6 +382,10 @@ svg path, svg g {
   border-top: 1px solid #E8E8E8;
   box-shadow: inset 17rem 0 0 #F6F6F6;
   padding: 2rem 0 2rem 19rem; }
+  @media (max-width: 56rem) {
+    .media--hp {
+      box-shadow: none;
+      padding-left: 0; } }
   .media--hp > .media__figure {
     margin: 0 0 2rem; }
   .media--hp > .media__headline {
@@ -386,16 +396,28 @@ svg path, svg g {
     margin-left: -2rem;
     padding-left: 2rem;
     padding-right: 2rem; }
+    @media (max-width: 56rem) {
+      .media--hp .media__related-content {
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0; } }
 
 .media--hp-large {
   margin-top: 2rem; }
   .media--hp-large > .media__content {
     box-shadow: inset 17rem 0 0 #F6F6F6;
     padding: 2rem 0 4rem 19rem; }
+    @media (max-width: 56rem) {
+      .media--hp-large > .media__content {
+        box-shadow: none;
+        padding-left: 0; } }
   .media--hp-large > .media__figure {
     border-bottom: 6px solid #D15904;
     margin: 0 -2rem;
     width: auto; }
+    @media (max-width: 30rem) {
+      .media--hp-large > .media__figure {
+        margin: 0 -1rem; } }
   .media--hp-large > .media__headline {
     margin: 0 0 2rem; }
   .media--hp-large .media__label {
@@ -419,10 +441,6 @@ svg path, svg g {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 0 0 2rem; }
   .media--horizontalSmall .media__figure {
     margin-right: 1.125rem;
