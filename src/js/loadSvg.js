@@ -1,6 +1,7 @@
 
+  var spritePath = ASSETS_PATH + "img/scpr-sprite.svg";
   var ajax = new XMLHttpRequest();
-  ajax.open("GET", "/img/scpr-sprite.svg", true);
+  ajax.open("GET", spritePath, true);
   ajax.send();
   ajax.onload = function(e) {
     var div = document.createElement("div");
