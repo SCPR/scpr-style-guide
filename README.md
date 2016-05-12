@@ -14,7 +14,7 @@ The best way to install scpr-style-guide is with the node package manager or [np
 npm install scpr-style-guide --save
 ```
 
-Once installed, all the assets from scpr-style-guide have to be consumed by your project. This can be done in multiple ways depending on what assets and your project setup. For example, a simple site could copy over the relevant assets with build commands and include them from the html with link tags. 
+Once installed, all the assets from scpr-style-guide have to be consumed by your project. This can be done in multiple ways depending on what assets and your project setup. For example, a simple site could copy over the relevant assets with build commands and include them from the html with link tags.
 
 ```
 # build commands
@@ -34,6 +34,17 @@ require('scpr-style-guide');
 @import './node_modules/scpr-style-guide/src/css/main.scss';
 ```
 
+### Configuring asset paths for your project
+scpr-style-guide sometimes references relative paths to assets in its javascript modules, and has a configuration variable set up to allow you to define the relative path to assets, since your relative asset paths will likely vary depending on your project/framework. Somewhere in your project before you load `scpr-style.js`, you'll want to declare the local path to assets in your project, which will look something like:
+
+```html
+<script>
+  ASSETS_PATH = "<your-path-to-scpr-style-guide-assets>";
+</script>
+```
+
+If `ASSETS_PATH` isn't defined anywhere in your project, then scpr-style-guide sets a default path of `/`.
+
 ## Using svg images
 Images that are part of the scpr-style-guide project are available as one central svg sprite with each image consisting of a svg `<symbol>`. To use these images, you can use the svg `xlink` attribute as follows:
 ```
@@ -48,4 +59,3 @@ The styleguide allows you to see changes to components from the scpr-style-guide
 - Ensure you have ruby and bundler installed
 - Install ruby gems by running `bundle install`
 - Build and run the jekyll server by running `bundle exec jekyll serve`
-
