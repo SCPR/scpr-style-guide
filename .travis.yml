@@ -17,7 +17,6 @@ deploy:
   email: scprdev@scpr.org
   on:
     tags: true
-    branch: master
   api_key:
     secure: u6NrJ1+5eL4XjFpvYN5la8SOhUQ/KAutJNkzRCbiAtNGi8f0oCSSwozoRJxZowrTeXWCcbc9ZPqI0IXMLD0JFz4exF2tTZ60IDbEjU84ze4atxKcR5N0xS6sIFiYftAMzZ6on7pLZweFjaLCg/Yge9AAP/US12cF/5QAvpJQFI+EdhzMNntLKoWXaZzZZEglPu5OLYV9xQCeq6W5rDvq01jbkWwN4CfLp6o3+uMCQkZX/rm6XGBT/QdnCC/I9zKe5Ion4HswJ6rFJLlNscWa1K7p7uRxx3kR233qSB2mnyq7SXSOBffaJKAJt37/xBNrogCf6SE4pidjsLjpKgOeFEwPb1DmcFTW0p8bm6mPM+H5uoHG1UYpGj8Ayrz7KNy6KnCxNhBi4tGYhjqSV0Y07lbxVLwmW7n/d/EIWKvz4YCFpmnXzSIghwfcZjzuBYADc2eFZb8gudQlHERX14sGKZTGMrKWt7qmvs4/QJhdNlluPkXlpu/aEdrmDTc8Hz/FHuFelULdNIH6tl7uoBX4miotgsGJhizN66pvWogr7Kz6783QI6F5H+iTywEmU2VfEZS6pd8NVRogxF1FGt+SM3APs0C1xEaOwUhIO5UP952OT3R4r4KGy+h8XDpVJ/8zqAIcZFZN83LKv3W01s/Gppjat7ronne3EriEDZ/rxQw=
 env:
