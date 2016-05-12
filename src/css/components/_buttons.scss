@@ -1,0 +1,102 @@
+
+// Buttons: a component for defining the look and behavior of UI buttons.
+//
+// .btn                 - A gray outline button for default actions.
+// .btn--primary        - A solid orange button for primary actions.
+// .btn--secondary      - A solid blue button for primary actions.
+// .btn--large          - A larger button.
+// .btn--small          - A smaller button.
+//
+// Styleguide 0.2.0
+
+.btn {
+  border: 1px solid $color-gray;
+  background: $color-gray;
+  color: $color-white;
+  display: inline-block;
+  font-size: modular-scale(-1);
+  font-weight: 500;
+  padding: 0.875rem 1.125rem;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $color-gray-dark;
+    border-color: $color-gray-dark;
+    color: $color-white;
+  }
+
+  &--primary {
+    background: $color-primary;
+    border: 1px solid $color-primary;
+
+    &:hover {
+      background: $color-primary-alt;
+      border: 1px solid $color-primary-alt;
+    }
+  }
+
+  &--secondary {
+    background: $color-secondary;
+    border: 1px solid $color-secondary;
+
+    &:hover {
+      background: $color-secondary-dark;
+      border: 1px solid $color-secondary-dark;
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    border: 1px solid $color-gray;
+    color: $color-gray;
+
+    &:hover {
+      background: $color-gray-dark;
+      border: 1px solid $color-gray-dark;
+      color: $color-white;
+    }
+
+  }
+
+  &--outline-primary {
+    background: transparent;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+
+    &:hover {
+      background: $color-primary-alt;
+      border: 1px solid $color-primary-alt;
+      color: $color-white;
+    }
+
+  }
+
+  &--outline-secondary {
+    background: transparent;
+    border: 1px solid $color-secondary;
+    color: $color-secondary;
+
+    &:hover {
+      background: $color-secondary-dark;
+      border: 1px solid $color-secondary-dark;
+      color: $color-white;
+    }
+
+  }
+
+  &--rounded {
+    border-radius: 100px; // set the number high enough that we'll always deliver a round button
+  }
+
+  &--large {
+    font-size: modular-scale(0);
+    padding: 1.125rem 2.25rem;
+  }
+
+  &--small {
+    font-size: modular-scale(-2);
+    padding: 0.5rem 0.625rem;
+  }
+
+}
