@@ -171,6 +171,65 @@ svg path, svg g {
   .container--xl {
     max-width: 84rem; }
 
+.btn {
+  background: #898989;
+  border: 1px solid #898989;
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  padding: 0.875rem 1.125rem;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .btn:hover {
+    background: #363636;
+    border-color: #363636;
+    color: #FFFFFF; }
+  .btn--primary {
+    background: #F87E21;
+    border: 1px solid #F87E21; }
+    .btn--primary:hover {
+      background: #D15904;
+      border: 1px solid #D15904; }
+  .btn--secondary {
+    background: #31ABD4;
+    border: 1px solid #31ABD4; }
+    .btn--secondary:hover {
+      background: #007397;
+      border: 1px solid #007397; }
+  .btn--outline {
+    background: transparent;
+    border: 1px solid #898989;
+    color: #898989; }
+    .btn--outline:hover {
+      background: #363636;
+      border: 1px solid #363636;
+      color: #FFFFFF; }
+  .btn--outline-primary {
+    background: transparent;
+    border: 1px solid #F87E21;
+    color: #F87E21; }
+    .btn--outline-primary:hover {
+      background: #D15904;
+      border: 1px solid #D15904;
+      color: #FFFFFF; }
+  .btn--outline-secondary {
+    background: transparent;
+    border: 1px solid #31ABD4;
+    color: #31ABD4; }
+    .btn--outline-secondary:hover {
+      background: #007397;
+      border: 1px solid #007397;
+      color: #FFFFFF; }
+  .btn--rounded {
+    border-radius: 100px; }
+  .btn--large {
+    font-size: 1.125rem;
+    padding: 1.125rem 2.25rem; }
+  .btn--small {
+    font-size: 0.78125rem;
+    padding: 0.5rem 0.625rem; }
+
 .c-list--vert > * {
   display: block;
   margin-bottom: 1em; }
