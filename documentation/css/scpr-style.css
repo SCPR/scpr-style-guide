@@ -172,8 +172,8 @@ svg path, svg g {
     max-width: 84rem; }
 
 .btn {
-  border: 1px solid #898989;
   background: #898989;
+  border: 1px solid #898989;
   color: #FFFFFF;
   display: inline-block;
   font-size: 0.9375rem;
