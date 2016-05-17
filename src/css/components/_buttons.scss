@@ -14,7 +14,7 @@
   border: 1px solid $color-gray;
   color: $color-white;
   display: inline-block;
-  font-size: modular-scale(-1);
+  font-size: ms(-1);
   font-weight: 500;
   padding: 0.875rem 1.125rem;
   text-decoration: none;
@@ -90,12 +90,12 @@
   }
 
   &--large {
-    font-size: modular-scale(0);
+    font-size: ms(0);
     padding: 1.125rem 2.25rem;
   }
 
   &--small {
-    font-size: modular-scale(-2);
+    font-size: ms(-2);
     padding: 0.5rem 0.625rem;
   }
 
