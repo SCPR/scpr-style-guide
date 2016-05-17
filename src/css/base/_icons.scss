@@ -16,7 +16,7 @@
 // Styleguide 0.1.0
 
 .icon {
-  vertical-align: text-bottom;
+  vertical-align: middle;
 
   &--line {
     fill: transparent !important;
@@ -45,8 +45,13 @@
   }
 
   &--size-med {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1.375rem;
+    width: 1.375rem;
+  }
+
+  &--size-lg {
+    height: 1.75rem;
+    width: 1.75rem;
   }
 
   &--color-primary {
