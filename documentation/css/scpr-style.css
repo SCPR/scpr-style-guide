@@ -143,6 +143,95 @@ a {
   .rule--primary {
     background: #F87E21; }
 
+.input-text {
+  border: 0;
+  border-bottom: 1px solid #898989;
+  background: transparent;
+  color: #212121;
+  font-size: 1.125rem;
+  padding: 0.25rem 0;
+  width: 15rem; }
+  .input-text::-webkit-input-placeholder {
+    color: #898989;
+    font-size: 0.9375rem;
+    font-style: italic; }
+  .input-text::-moz-placeholder {
+    color: #898989;
+    font-size: 0.9375rem;
+    font-style: italic; }
+  .input-text:-ms-input-placeholder {
+    color: #898989;
+    font-size: 0.9375rem;
+    font-style: italic; }
+  .input-text::placeholder {
+    color: #898989;
+    font-size: 0.9375rem;
+    font-style: italic; }
+  .input-text:focus {
+    border-bottom-color: #31ABD4;
+    outline: 0; }
+    .input-text:focus::-webkit-input-placeholder {
+      opacity: 0; }
+    .input-text:focus::-moz-placeholder {
+      opacity: 0; }
+    .input-text:focus:-ms-input-placeholder {
+      opacity: 0; }
+    .input-text:focus::placeholder {
+      opacity: 0; }
+
+.input--wide {
+  width: 22rem; }
+
+.input--narrow {
+  width: 10rem; }
+
+.input--error, .input .input--error:focus {
+  border-bottom: 1px solid #D31D1D; }
+
+.input--align-bottom {
+  vertical-align: bottom; }
+
+.input--focused-placeholder:focus::-webkit-input-placeholder {
+  opacity: 1; }
+
+.input--focused-placeholder:focus::-moz-placeholder {
+  opacity: 1; }
+
+.input--focused-placeholder:focus:-ms-input-placeholder {
+  opacity: 1; }
+
+.input--focused-placeholder:focus::placeholder {
+  opacity: 1; }
+
+.input-label {
+  color: #898989;
+  display: block;
+  font-size: 0.9375rem;
+  font-style: italic; }
+  .input-label--hidden {
+    display: none; }
+
+.input-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse; }
+  .input-group .input-text:placeholder-shown + .input-label {
+    opacity: 0; }
+  .input-group .input-text:focus + .input-label {
+    opacity: 1; }
+
+.input-help {
+  font-size: 0.78125rem;
+  margin-top: 3px; }
+  .input-help--error {
+    color: #D31D1D; }
+
 .icon {
   vertical-align: middle; }
   .icon--line {
@@ -203,6 +292,7 @@ svg path, svg g {
   background: #898989;
   border: 1px solid #898989;
   color: #FFFFFF;
+  cursor: pointer;
   display: inline-block;
   font-size: 0.9375rem;
   font-weight: 500;
@@ -257,6 +347,11 @@ svg path, svg g {
   .btn--small {
     font-size: 0.78125rem;
     padding: 0.5rem 0.625rem; }
+  .btn--icon {
+    padding: 0.4rem; }
+    .btn--icon:hover > svg * {
+      fill: currentColor;
+      stroke: currentColor; }
 
 .c-list--vert > * {
   display: block;
@@ -410,6 +505,9 @@ svg path, svg g {
     font-size: 0.9375rem;
     font-weight: 400;
     text-transform: none; }
+
+.js-search--hidden {
+  display: none; }
 
 .media {
   display: block;

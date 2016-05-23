@@ -111,3 +111,66 @@ title: Masthead
     &lt;/div>
   </code>
 </pre>
+
+#### Masthead - Search Active
+
+<div class="mast">
+  <div class="mast__branding">
+    <a href="/" class="mast__logo-link">
+      <svg class="mast__logo">
+        <use class="" xlink:href="/img/scpr-sprite.svg#logo_kpcc-black"/>
+      </svg>
+    </a>
+    <span class="mast__divider"></span>
+    <ul class="nav js-search--hide">
+      <li class="nav__item">
+        <a class="nav__link nav__link--action nav__link--inline" href="#">
+          <svg class="icon icon--size-lg icon--left">
+            <use class="icon--line icon--color-link" xlink:href="#icon_line-listen-live"/>
+          </svg>
+          Listen Live
+          <span class="mast__currently-airing">- A Prairie Home Companion</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <nav class="mast__nav">
+    <ul class="nav mast__nav-sections js-search--hide">
+      <li class="nav__item"><a class="nav__link" href="#">News</a></li>
+      <li class="nav__item"><a class="nav__link" href="#">Programs</a></li>
+      <li class="nav__item"><a class="nav__link" href="#">Events</a></li>
+      <li class="nav__item"><a class="nav__link" href="#">Support</a></li>
+      <li class="nav__item"><a class="nav__link" href="#">About</a></li>
+    </ul>
+    <ul class="nav mast__nav-actions">
+      <li class="nav__item">
+        <div class="c-search js-search js-search--hidden">
+          <form method="get" action="/search/" id="site-search">
+            <input type="text" class=" input-text input--wide input--align-bottom input--focused-placeholder" placeholder="Enter your search here" name="q" id="q" />
+            <button type="submit" class="btn btn--icon btn--outline-secondary">
+              <svg class="icon icon--size-med">
+                <use class="icon--line icon--color-link icon--inherit-hover" xlink:href="#icon_line-search"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+        <a class="nav__link js-search--toggle js-search--hide" href="#">
+          <svg class="icon icon--size-med">
+            <use class="icon--line icon--color-gray" xlink:href="#icon_line-search"/>
+          </svg>
+        </a>
+      </li>
+      <li class="nav__item">
+        <span class="mast__divider mast__divider--margin-sm"></span>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link nav__link--action" href="#">
+          <svg class="icon icon--size-med icon--left">
+            <use class="icon--line icon--color-link" xlink:href="#icon_line-donate"/>
+          </svg>
+          Donate
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
