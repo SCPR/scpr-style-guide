@@ -44,6 +44,16 @@
     border-bottom: 1px solid $color-alert;
   }
 
+  &--align-bottom {
+    vertical-align: bottom;
+  }
+
+  &--focused-placeholder {
+    &:focus::placeholder {
+      opacity: 1;
+    }
+  }
+
 }
 
 .input-label {

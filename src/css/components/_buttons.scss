@@ -13,6 +13,7 @@
   background: $color-gray;
   border: 1px solid $color-gray;
   color: $color-white;
+  cursor: pointer;
   display: inline-block;
   font-size: ms(-1);
   font-weight: 500;
@@ -97,6 +98,20 @@
   &--small {
     font-size: ms(-2);
     padding: 0.5rem 0.625rem;
+  }
+
+  &--icon {
+    padding: 0.4rem;
+
+    &:hover > {
+
+      svg * {
+        fill: currentColor;
+        stroke: currentColor;
+      }
+
+    }
+
   }
 
 }
