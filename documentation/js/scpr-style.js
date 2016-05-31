@@ -36,12 +36,15 @@ var s,
     mast = {
 
   settings: {
+    mobileMenu: document.getElementsByClassName("js-mast__menu-mobile"),
+    mobileMenuToggleBtn: document.getElementsByClassName("js-mast__menu-toggler"),
+    mobileMenuCloseBtn: document.getElementsByClassName("js-mast__menu-close"),
     search: document.getElementsByClassName("js-search"),
     searchForm: document.getElementById("site-search"),
     searchFormInput: document.getElementById("q"),
     searchToggleBtn: document.getElementsByClassName("js-search--toggle"),
     searchElementsToHide: document.getElementsByClassName("js-search--hide"),
-    searchHiddenElements: document.getElementsByClassName("js-search--hidden")
+    searchHiddenElements: document.getElementsByClassName("js--hidden")
   },
 
   init: function () {
@@ -56,6 +59,20 @@ var s,
   },
 
   bindUIActions: function () {
+    s.mobileMenuToggleBtn[0].addEventListener("click", function (event) {
+      mast.showMobileMenu();
+      mast.hideElement(this);
+      mast.showElement(s.mobileMenuCloseBtn[0]);
+      event.preventDefault();
+    }, false);
+
+    s.mobileMenuCloseBtn[0].addEventListener("click", function (event) {
+      mast.hideMobileMenu();
+      mast.hideElement(this);
+      mast.showElement(s.mobileMenuToggleBtn[0]);
+      event.preventDefault();
+    }, false);
+
     s.searchToggleBtn[0].addEventListener("click", function (event) {
       mast.hideAdjacentElements();
       mast.showSearchForm();
@@ -70,6 +87,28 @@ var s,
           mast.hideSearchForm();
         }
       }, 10);
+    }, false);
+  },
+
+  showMobileMenu: function () {
+    mast.forEach(s.mobileMenu, function (index, element) {
+      element.classList.add("js-mast__nav--active");
+    });
+
+    // Prevent content underneath menu from scrolling when menu is engaged
+    document.addEventListener('touchmove', function (e) {
+      e.preventDefault();
+    }, false);
+  },
+
+  hideMobileMenu: function () {
+    mast.forEach(s.mobileMenu, function (index, element) {
+      element.classList.remove("js-mast__nav--active");
+    });
+
+    // Reset document scrolling
+    document.addEventListener('touchmove', function (e) {
+      return true;
     }, false);
   },
 
@@ -102,11 +141,12 @@ var s,
   },
 
   hideElement: function (element, index) {
-    element.classList.add("js-search--hidden");
+    element.classList.add("js--hidden");
+    element.blur();
   },
 
   showElement: function (element, index) {
-    element.classList.remove("js-search--hidden");
+    element.classList.remove("js--hidden");
   }
 
 };

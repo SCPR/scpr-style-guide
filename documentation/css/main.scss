@@ -23,12 +23,14 @@ pre {
 }
 
 .wrapper {
-  display: flex;
+  // display: flex;
+  display: block;
 }
 
 .header {
-  background-color: #efefef;
-  flex: 1 0 0;
+  // background-color: #efefef;
+  // flex: 1 0 0;
+  display: none;
 }
 
 .header-title {
