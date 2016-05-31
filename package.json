@@ -1,6 +1,6 @@
 {
   "name": "scpr-style-guide",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Product Style Guide for KPCC (Southern California Public Radio).",
   "main": "src/js/main.js",
   "scripts": {
@@ -25,7 +25,7 @@
     "url": "git+https://github.com/SCPR/scpr-style-guide.git"
   },
   "author": "Southern California Public Radio",
-  "license": "SEE LICENSE in LICENSE.md",
+  "license": "CC0-1.0",
   "bugs": {
     "url": "https://github.com/SCPR/scpr-style-guide/issues"
   },
