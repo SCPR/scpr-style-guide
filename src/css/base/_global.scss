@@ -21,7 +21,7 @@ textarea,
 button,
 select,
 a {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 // Reset some basic elements
@@ -92,7 +92,7 @@ button {
   border: 0;
 
   &:focus {
-    outline:0;
+    outline: 0;
   }
 
 }

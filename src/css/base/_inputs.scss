@@ -5,10 +5,10 @@
 // Styleguide 0.2.0
 
 .input-text {
-  border:0;
+  background: transparent;
+  border: 0;
   border-bottom: 1px solid $color-gray;
   border-radius: 0;
-  background: transparent;
   color: $color-gray-darkest;
   font-size: ms(0);
   padding: 0.25rem 0;
