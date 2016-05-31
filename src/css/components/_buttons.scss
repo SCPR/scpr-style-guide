@@ -1,15 +1,15 @@
 
 // Buttons: a component for defining the look and behavior of UI buttons.
 //
-// .btn                 - A gray outline button for default actions.
-// .btn--primary        - A solid orange button for primary actions.
-// .btn--secondary      - A solid blue button for primary actions.
-// .btn--large          - A larger button.
-// .btn--small          - A smaller button.
+// .c-btn                 - A gray outline button for default actions.
+// .c-btn--primary        - A solid orange button for primary actions.
+// .c-btn--secondary      - A solid blue button for primary actions.
+// .c-btn--large          - A larger button.
+// .c-btn--small          - A smaller button.
 //
 // Styleguide 0.1.1
 
-.btn {
+.c-btn {
   background: $color-gray;
   border: 1px solid $color-gray;
   color: $color-white;

@@ -13,8 +13,7 @@
   position: relative;
 
   @include media-max($media-tablet) {
-    height: ($base-line-height * 2) - 1rem;
-    padding: 0 ($base-line-height / 2);
+    min-height: ($base-line-height * 2) - 1rem;
   }
 
   &--top {
@@ -28,7 +27,13 @@
     margin-left: auto;
 
     @include media-max($media-tablet) {
+      background-color: $color-gray-lightest;
+      bottom: 0;
       display: none;
+      left: 0;
+      position: fixed;
+      right: 0;
+      top: 2.6rem;
     }
 
   }
@@ -36,7 +41,7 @@
   &__nav-sections {
 
     @include media-max($media-wide) {
-      border-bottom: 1px solid darken($color-gray-light, 15%);
+      border-bottom: 1px solid darken($color-gray-light, 10%);
       left: 0;
       position: absolute;
       right: 0;
@@ -45,7 +50,41 @@
       a {
         padding-bottom: 0.5rem;
         padding-top: 0.5rem;
+
+        @include media-max($media-tablet) {
+          border-bottom: 1px solid $color-gray-light;
+          font-size: ms(0);
+          padding-bottom: ($base-line-height / 1.5);
+          padding-top: ($base-line-height / 1.5);
+
+          &:hover {
+            background-color: $color-white;
+          }
+
+        }
+
       }
+
+      @include media-max($media-tablet) {
+        border-bottom: 0;
+      }
+
+    }
+
+    @include media-max($media-tablet) {
+      border-bottom-color: $color-gray-light;
+      top: 0;
+    }
+
+  }
+
+  &__nav-actions {
+
+    @include media-max($media-tablet) {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
     }
 
   }
@@ -54,7 +93,9 @@
     margin-left: ($base-line-height / 2);
 
     @include media-max($media-tablet) {
-      margin: 0 auto;
+      margin-left: 0;
+      text-align: center;
+      width: 100%
     }
 
   }
@@ -63,6 +104,13 @@
     display: inline-block;
     margin-top: .1875rem;
     vertical-align: middle;
+
+    @include media-max($media-tablet) {
+      border-bottom: 1px solid $color-gray-light;
+      display: block;
+      padding: 0.5rem 0;
+    }
+
   }
 
   &__logo {
@@ -71,8 +119,8 @@
     height: 22px;
 
     @include media-max($media-tablet) {
-      width: 150px;
-      height: 19px;
+      width: 107px;
+      height: 16px;
     }
 
   }
@@ -85,17 +133,94 @@
     vertical-align: middle;
     width: 1px;
 
+    @include media-max($media-tablet) {
+      display: none;
+    }
+
     &--margin-sm {
       margin: 0 0.5rem;
     }
 
   }
 
+  &__search-link {
+
+    @include media-max($media-tablet) {
+      padding: 0;
+      position: fixed;
+      right: 0.5rem;
+      top: 0.6rem;
+    }
+
+  }
+
+  &__donate-link {
+
+    @include media-max($media-tablet) {
+      background-color: $color-secondary-light;
+      border-top: 1px solid $color-secondary;
+      font-size: ms(0);
+      text-align: center;
+    }
+
+  }
+
   &__currently-airing {
+    font-size: ms(-1);
+
+    @include media-max($media-tablet) {
+      background-color: $color-gray-lightest;
+      display: block;
+      font-size: ms(-2);
+      padding: 0.5rem 0.25rem;
+    }
+  }
+
+  &__currently-airing-label {
+
+    @include media-max($media-tablet) {
+      font-size: ms(-2);
+    }
+
+  }
+
+  &__currently-airing-program {
     color: $color-gray-dark;
     font-size: ms(-1);
     font-weight: 400;
     text-transform: none;
+
+    @include media-max($media-tablet) {
+      font-size: ms(-2);
+    }
+
+  }
+
+  &__mobile-menu-toggler {
+    border: 0;
+    color: $color-gray;
+    display: none;
+    font-weight: 500;
+    left: 0.25rem;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0.6rem;
+
+    @include media-max($media-tablet) {
+      display: block;
+    }
+
+  }
+
+}
+
+.js-mast {
+
+  &__nav--active {
+    display: block;
+    z-index: 200;
   }
 
 }

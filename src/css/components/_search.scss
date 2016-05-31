@@ -6,8 +6,19 @@
 
 .c-search {
 
+  @include media-max($media-mobile) {
+    background-color: $color-white;
+    left: 0;
+    padding: 0.5rem 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+  }
+
 }
 
-.js-search--hidden {
+// TODO: Find a better location for these JS utility classes
+.js--hidden {
   display: none;
 }

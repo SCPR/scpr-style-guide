@@ -7,6 +7,7 @@
 .input-text {
   border:0;
   border-bottom: 1px solid $color-gray;
+  border-radius: 0;
   background: transparent;
   color: $color-gray-darkest;
   font-size: ms(0);
@@ -34,6 +35,11 @@
 .input {
   &--wide {
     width: 22rem;
+
+    @include media-max($media-mobile) {
+      width: 16rem;
+    }
+
   }
 
   &--narrow {
