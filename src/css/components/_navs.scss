@@ -1,0 +1,57 @@
+
+// Navs: Collection of links used for site navigation.
+//
+//
+// Styleguide 0.2.0
+
+.c-nav {
+  display: inline-block;
+}
+
+.c-nav__item {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+
+  @include media-max($media-tablet) {
+    display: block;
+  }
+
+}
+
+.c-nav__link {
+  color: $color-gray-warm;
+  display: block;
+  font-size: ms(-1);
+  font-weight: 500;
+  min-height: 1.375rem;
+  padding: 1rem ($base-line-height / 2);
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $color-gray-lightest;
+    color: $color-primary;
+  }
+
+  &:active {
+    color: $color-black;
+  }
+
+  &--inline {
+    padding: 0;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+  }
+
+  &--action {
+    color: $color-secondary;
+
+    &:hover {
+      color: $color-secondary-dark;
+    }
+  }
+}

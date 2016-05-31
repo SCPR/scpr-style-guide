@@ -2,5 +2,6 @@
 // REQUIRE MODULES
 
  require('./configAssetPaths.js');
- require('./loadSvg.js');
- require('./fitText.js');
+ require('./icons.js');
+ require('./mast.js');
+ require('./media.js');

@@ -9,6 +9,7 @@
   }
 }
 
+
 // UNDERLINES
 // Sweet, sexy underlines for hyperlinks
 
@@ -34,6 +35,7 @@
   max-width: $max-container-width;
 }
 
+
 // MEDIA QUERIES
 
 // Min-width media queries
@@ -48,4 +50,12 @@
   @media ('max-width:' + $query) {
     @content;
   }
+}
+
+
+// ANIMATIONS & TRANSITIONS
+
+// Fade anything in or out
+@mixin transition-fade() {
+  // styles here
 }

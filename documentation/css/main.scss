@@ -23,12 +23,14 @@ pre {
 }
 
 .wrapper {
-  display: flex;
+  // display: flex;
+  display: block;
 }
 
 .header {
-  background-color: #efefef;
-  flex: 1 0 0;
+  // background-color: #efefef;
+  // flex: 1 0 0;
+  display: none;
 }
 
 .header-title {
@@ -40,6 +42,7 @@ pre {
 
   .nav {
     border-bottom: 1px solid #ddd;
+    display: block;
   }
 
   .page-link {
@@ -72,7 +75,6 @@ pre {
 
 .component {
   @include clearfix;
-  border: 1px solid #eeeeee;
   margin-top: 2em;
   margin-bottom: 2em;
   padding: 1em 3rem;
@@ -114,7 +116,7 @@ pre {
   }
 
   pre {
-    margin-top: 3rem;
+    margin-top: 5rem;
   }
 
   > h1, > h2, > h3, > h4, > h5, > h6 {

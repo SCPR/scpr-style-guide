@@ -9,6 +9,156 @@ if (typeof ASSETS_PATH === "undefined") {
 
 },{}],2:[function(require,module,exports){
 
+var spritePath = ASSETS_PATH + "img/scpr-sprite.svg";
+var ajax = new XMLHttpRequest();
+ajax.open("GET", spritePath, true);
+ajax.send();
+ajax.onload = function (e) {
+  var div = document.createElement("div");
+  div.style.display = "none";
+  div.innerHTML = ajax.responseText;
+  document.body.insertBefore(div, document.body.childNodes[0]);
+};
+
+},{}],3:[function(require,module,exports){
+
+// REQUIRE MODULES
+
+require('./configAssetPaths.js');
+require('./icons.js');
+require('./mast.js');
+require('./media.js');
+
+},{"./configAssetPaths.js":1,"./icons.js":2,"./mast.js":4,"./media.js":5}],4:[function(require,module,exports){
+
+// Masthead JS goes here.
+var s,
+    mast = {
+
+  settings: {
+    mobileMenu: document.getElementsByClassName("js-mast__menu-mobile"),
+    mobileMenuToggleBtn: document.getElementsByClassName("js-mast__menu-toggler"),
+    mobileMenuCloseBtn: document.getElementsByClassName("js-mast__menu-close"),
+    search: document.getElementsByClassName("js-search"),
+    searchForm: document.getElementById("site-search"),
+    searchFormInput: document.getElementById("q"),
+    searchToggleBtn: document.getElementsByClassName("js-search--toggle"),
+    searchElementsToHide: document.getElementsByClassName("js-search--hide"),
+    searchHiddenElements: document.getElementsByClassName("js--hidden")
+  },
+
+  init: function () {
+    s = this.settings;
+    this.bindUIActions();
+  },
+
+  forEach: function (array, callback, scope) {
+    for (var i = 0; i < array.length; i++) {
+      callback.call(scope, i, array[i]); // passes back stuff we need
+    }
+  },
+
+  bindUIActions: function () {
+    s.mobileMenuToggleBtn[0].addEventListener("click", function (event) {
+      mast.showMobileMenu();
+      mast.hideElement(this);
+      mast.showElement(s.mobileMenuCloseBtn[0]);
+      event.preventDefault();
+    }, false);
+
+    s.mobileMenuCloseBtn[0].addEventListener("click", function (event) {
+      mast.hideMobileMenu();
+      mast.hideElement(this);
+      mast.showElement(s.mobileMenuToggleBtn[0]);
+      event.preventDefault();
+    }, false);
+
+    s.searchToggleBtn[0].addEventListener("click", function (event) {
+      mast.hideAdjacentElements();
+      mast.showSearchForm();
+      mast.focusSearchForm();
+      event.preventDefault();
+    }, false);
+
+    s.searchForm.addEventListener("focusout", function (event) {
+      setTimeout(function () {
+        if (!s.searchForm.contains(document.activeElement)) {
+          mast.showAdjacentElements();
+          mast.hideSearchForm();
+        }
+      }, 10);
+    }, false);
+  },
+
+  showMobileMenu: function () {
+    mast.forEach(s.mobileMenu, function (index, element) {
+      element.classList.add("js-mast__nav--active");
+    });
+
+    // Prevent content underneath menu from scrolling when menu is engaged
+    document.addEventListener('touchmove', function (e) {
+      e.preventDefault();
+    }, false);
+  },
+
+  hideMobileMenu: function () {
+    mast.forEach(s.mobileMenu, function (index, element) {
+      element.classList.remove("js-mast__nav--active");
+    });
+
+    // Reset document scrolling
+    document.addEventListener('touchmove', function (e) {
+      return true;
+    }, false);
+  },
+
+  hideAdjacentElements: function () {
+    mast.forEach(s.searchElementsToHide, function (index, value) {
+      mast.hideElement(value);
+    });
+  },
+
+  showAdjacentElements: function () {
+    mast.forEach(s.searchElementsToHide, function (index, value) {
+      mast.showElement(value);
+    });
+  },
+
+  showSearchForm: function () {
+    mast.forEach(s.search, function (index, value) {
+      mast.showElement(value);
+    });
+  },
+
+  hideSearchForm: function () {
+    mast.forEach(s.search, function (index, value) {
+      mast.hideElement(value);
+    });
+  },
+
+  focusSearchForm: function () {
+    s.searchFormInput.focus();
+  },
+
+  hideElement: function (element, index) {
+    element.classList.add("js--hidden");
+    element.blur();
+  },
+
+  showElement: function (element, index) {
+    element.classList.remove("js--hidden");
+  }
+
+};
+
+(function () {
+  if (document.getElementsByClassName("mast").length) {
+    mast.init();
+  }
+})();
+
+},{}],5:[function(require,module,exports){
+
 // Collect large headlines that might need resizing.
 var headlines = document.getElementsByClassName("media__headline--h1");
 
@@ -28,25 +178,4 @@ function checkLengthAndResize(headline, index) {
 // Iterate through large headlines and resize where appropriate.
 Array.from(headlines).forEach(checkLengthAndResize);
 
-},{}],3:[function(require,module,exports){
-
-var spritePath = ASSETS_PATH + "img/scpr-sprite.svg";
-var ajax = new XMLHttpRequest();
-ajax.open("GET", spritePath, true);
-ajax.send();
-ajax.onload = function (e) {
-  var div = document.createElement("div");
-  div.style.display = "none";
-  div.innerHTML = ajax.responseText;
-  document.body.insertBefore(div, document.body.childNodes[0]);
-};
-
-},{}],4:[function(require,module,exports){
-
-// REQUIRE MODULES
-
-require('./configAssetPaths.js');
-require('./loadSvg.js');
-require('./fitText.js');
-
-},{"./configAssetPaths.js":1,"./fitText.js":2,"./loadSvg.js":3}]},{},[4]);
+},{}]},{},[3]);

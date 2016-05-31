@@ -1,0 +1,21 @@
+
+.rule {
+  background: $color-gray-light;
+  border: 0;
+  height: 1px;
+
+  &--vertical {
+    display: inline-block;
+    height: 2rem;
+    vertical-align: middle;
+    width: 1px;
+  }
+
+  &--dark {
+    background: $color-gray-dark;
+  }
+
+  &--primary {
+    background: $color-primary;
+  }
+}
