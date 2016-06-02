@@ -5,3 +5,4 @@
  require('./icons.js');
  require('./mast.js');
  require('./media.js');
+ require('./wells.js');
