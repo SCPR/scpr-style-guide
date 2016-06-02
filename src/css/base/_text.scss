@@ -1,0 +1,52 @@
+
+// Text: base copy styles.
+// Text styles are used exclusively outside articles; articles have their own
+// content styling for body copy
+//
+//
+// Styleguide 0.2.1
+
+.text {
+  font-size: modular-scale(-1);
+  line-height: 1.466666667em;
+
+  &--light {
+    font-weight: 300;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--large {
+    font-size: modular-scale(1);
+
+    @include media-max($media-tablet) {
+        font-size: modular-scale(0);
+    }
+
+  }
+
+  &--small {
+    font-size: modular-scale(-2);
+  }
+
+  &--serif {
+    font-family: $font-serif-text;
+    font-size: modular-scale(0);
+
+    &.text--large {
+      font-size: modular-scale(2);
+    }
+
+    &.text--small {
+      font-size: modular-scale(-1);
+    }
+
+  }
+
+  &--sans-alt {
+    font-family: $font-sans-alt;
+  }
+
+}
