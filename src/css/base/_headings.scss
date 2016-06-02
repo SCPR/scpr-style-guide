@@ -44,4 +44,16 @@
     text-transform: uppercase;
   }
 
+  &--italic {
+    font-style: italic;
+  }
+
+  &--extrabold {
+    font-weight: 800;
+  }
+
+  &--serif {
+    font-family: $font-serif-titling;
+  }
+
 }

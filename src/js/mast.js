@@ -1,5 +1,5 @@
 
-// Masthead JS goes here.
+// Masthead JS
 var s,
 mast = {
 

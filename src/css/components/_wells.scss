@@ -4,6 +4,7 @@
 //
 // .c-well--info        - Adds a bottom border with our brand color.
 // .c-well--alert       - Adds a red bottom border.
+// .c-well--dark        - A wel with a dark gray background.
 //
 // Styleguide 0.1.0
 
@@ -20,5 +21,25 @@
   &--alert {
     border-bottom: 1px solid $color-alert;
     border-top: 1px solid $color-white;
+  }
+
+  &--dark {
+    background-color: $color-gray-darkest;
+    color: $color-white;
+  }
+
+  &--xl-padding {
+    padding: $base-line-height;
+  }
+
+  &--dismissible {
+    position: relative;
+  }
+
+  &__dismiss-btn {
+    cursor: pointer;
+    position: absolute;
+    right: $ms-base;
+    top: $ms-base;
   }
 }

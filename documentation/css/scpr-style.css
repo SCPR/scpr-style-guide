@@ -119,6 +119,30 @@ button {
       text-shadow: .03em 0 #fff, -.03em 0 #fff, 0 .03em #fff, 0 -.03em #fff, .06em 0 #fff, -.06em 0 #fff, .09em 0 #fff, -.09em 0 #fff, .12em 0 #fff, -.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
       color: #007397; }
 
+.text {
+  font-size: 0.9375rem;
+  line-height: 1.466666667em; }
+  .text--light {
+    font-weight: 300; }
+  .text--bold {
+    font-weight: 700; }
+  .text--large {
+    font-size: 1.35rem; }
+    @media (max-width: 56rem) {
+      .text--large {
+        font-size: 1.125rem; } }
+  .text--small {
+    font-size: 0.78125rem; }
+  .text--serif {
+    font-family: "abril-text", Georgia, serif;
+    font-size: 1.125rem; }
+    .text--serif.text--large {
+      font-size: 1.62rem; }
+    .text--serif.text--small {
+      font-size: 0.9375rem; }
+  .text--sans-alt {
+    font-family: "fira-sans", Arial, sans-serif; }
+
 .heading {
   margin: 0 0 1em; }
   .heading--h1 {
@@ -141,6 +165,12 @@ button {
     font-weight: 500; }
   .heading--uppercase {
     text-transform: uppercase; }
+  .heading--italic {
+    font-style: italic; }
+  .heading--extrabold {
+    font-weight: 800; }
+  .heading--serif {
+    font-family: "abril-titling", Georgia, serif; }
 
 .rule {
   background: #E8E8E8;
@@ -314,6 +344,9 @@ svg path, svg g {
   .container--xl {
     max-width: 84rem; }
 
+.section {
+  margin-bottom: 2rem; }
+
 .c-btn {
   background: #898989;
   border: 1px solid #898989;
@@ -412,6 +445,18 @@ svg path, svg g {
   .c-well--alert {
     border-bottom: 1px solid #D31D1D;
     border-top: 1px solid #FFFFFF; }
+  .c-well--dark {
+    background-color: #212121;
+    color: #FFFFFF; }
+  .c-well--xl-padding {
+    padding: 2rem; }
+  .c-well--dismissible {
+    position: relative; }
+  .c-well__dismiss-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 1.125rem;
+    top: 1.125rem; }
 
 .c-ad {
   display: block;
