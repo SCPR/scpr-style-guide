@@ -73,7 +73,7 @@ wells = {
       var wellElement = element;
     }
     else {
-      var wellElement = element.parentNode;
+      wellElement = element.parentNode;
     }
     var name = wellElement.getAttribute("data-name");
 

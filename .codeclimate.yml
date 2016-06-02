@@ -12,6 +12,9 @@ engines:
     enabled: true
   eslint:
     enabled: true
+    checks:
+      wrap-iife:
+        enabled: false
   scss-lint:
     enabled: true
     checks:

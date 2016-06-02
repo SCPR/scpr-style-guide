@@ -252,7 +252,7 @@ var s,
     if (element.classList.contains("js-well")) {
       var wellElement = element;
     } else {
-      var wellElement = element.parentNode;
+      wellElement = element.parentNode;
     }
     var name = wellElement.getAttribute("data-name");
 
