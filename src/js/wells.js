@@ -5,7 +5,7 @@ wells = {
 
   settings: {
     well: document.getElementsByClassName("js-well"),
-    wellDismissBtn: document.getElementsByClassName("js-well--dismiss-btn"),
+    wellDismissBtn: document.getElementsByClassName("js-well--dismiss-btn")
   },
 
   init: function() {
@@ -52,10 +52,8 @@ wells = {
   },
 
   createOrUpdateCookie: function(name, viewsLeft, element) {
-    var name = name;
-    var viewsLeft = viewsLeft;
     var cookie = wells.getCookie(name);
-    var cookieValue = parseInt(cookie);
+    var cookieValue = parseInt(cookie, 10);
 
     if (cookie === null) {
       wells.setCookie(name, viewsLeft);
@@ -78,8 +76,6 @@ wells = {
       var wellElement = element.parentNode;
     }
     var name = wellElement.getAttribute("data-name");
-    console.log(wellElement);
-    console.log("Element Name: " + name);
 
     wellElement.classList.add("js--hidden");
     wells.setCookie(name, 0);

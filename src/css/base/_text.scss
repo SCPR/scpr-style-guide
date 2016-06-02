@@ -22,7 +22,7 @@
     font-size: modular-scale(1);
 
     @include media-max($media-tablet) {
-        font-size: modular-scale(0);
+      font-size: modular-scale(0);
     }
 
   }
