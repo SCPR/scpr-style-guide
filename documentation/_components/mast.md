@@ -9,13 +9,13 @@ title: Masthead
 <div class="mast">
   <button class="mast__mobile-menu-toggler js-mast__menu-toggler">
     <svg class="icon icon--size-med">
-      <use class="icon--line icon--color-gray-dark icon--inherit-hover" xlink:href="#icon_line-menu"/>
+      <use class="icon--line icon--color-gray-dark " xlink:href="#icon_line-menu"/>
     </svg>
     <label>Menu</label>
   </button>
   <button class="mast__mobile-menu-toggler js-mast__menu-close js--hidden">
     <svg class="icon icon--size-med">
-      <use class="icon--line icon--color-gray-dark icon--inherit-hover" xlink:href="#icon_line-close"/>
+      <use class="icon--line icon--color-gray-dark " xlink:href="#icon_line-close"/>
     </svg>
     <label>Close</label>
   </button>
@@ -53,7 +53,7 @@ title: Masthead
             <input type="text" class=" input-text input--wide input--align-bottom input--focused-placeholder" placeholder="Enter your search here" name="q" id="q" />
             <button type="submit" class="c-btn c-btn--icon c-btn--outline-secondary">
               <svg class="icon icon--size-med">
-                <use class="icon--line icon--color-link icon--inherit-hover" xlink:href="#icon_line-search"/>
+                <use class="icon--line icon--color-link" xlink:href="#icon_line-search"/>
               </svg>
             </button>
           </form>
@@ -84,13 +84,13 @@ title: Masthead
     &lt;div class="mast">
       &lt;button class="mast__mobile-menu-toggler js-mast__menu-toggler">
         &lt;svg class="icon icon--size-med">
-          &lt;use class="icon--line icon--color-gray-dark icon--inherit-hover" xlink:href="#icon_line-menu"/>
+          &lt;use class="icon--line icon--color-gray-dark " xlink:href="#icon_line-menu"/>
         &lt;/svg>
         &lt;label>Menu&lt;/label>
       &lt;/button>
       &lt;button class="mast__mobile-menu-toggler js-mast__menu-close js--hidden">
         &lt;svg class="icon icon--size-med">
-          &lt;use class="icon--line icon--color-gray-dark icon--inherit-hover" xlink:href="#icon_line-close"/>
+          &lt;use class="icon--line icon--color-gray-dark " xlink:href="#icon_line-close"/>
         &lt;/svg>
         &lt;label>Close&lt;/label>
       &lt;/button>
@@ -128,7 +128,7 @@ title: Masthead
                 &lt;input type="text" class=" input-text input--wide input--align-bottom input--focused-placeholder" placeholder="Enter your search here" name="q" id="q" />
                 &lt;button type="submit" class="c-btn c-btn--icon c-btn--outline-secondary">
                   &lt;svg class="icon icon--size-med">
-                    &lt;use class="icon--line icon--color-link icon--inherit-hover" xlink:href="#icon_line-search"/>
+                    &lt;use class="icon--line icon--color-link " xlink:href="#icon_line-search"/>
                   &lt;/svg>
                 &lt;/button>
               &lt;/form>
