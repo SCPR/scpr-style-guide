@@ -48,11 +48,12 @@
   }
 
 }
+
 .l-col {
   box-sizing: border-box;
   flex: 0 0 auto;
-  flex-grow: 1;
   flex-basis: 0;
+  flex-grow: 1;
   max-width: 100%;
 }
 
