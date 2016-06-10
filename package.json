@@ -1,6 +1,6 @@
 {
   "name": "scpr-style-guide",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Product Style Guide for KPCC (Southern California Public Radio).",
   "main": "src/js/main.js",
   "scripts": {
@@ -46,5 +46,5 @@
     "sass-lint": "^1.4.0",
     "uglify-js": "^2.6.1",
     "watch": "^0.17.1"
-  } 
+  }
 }
