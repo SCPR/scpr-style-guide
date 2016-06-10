@@ -4,6 +4,10 @@
 //
 // Styleguide 0.2.1
 
-.section {
+.l-section {
   margin-bottom: $base-line-height;
+
+  &--margin-sm {
+    margin-bottom: ($base-line-height / 2);
+  }
 }
