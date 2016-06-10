@@ -1,0 +1,66 @@
+
+// Footer: Wraps branding and navigation elements for site footer.
+//
+//
+// Styleguide 0.2.2
+
+.footer {
+  background-color: $color-gray-darkest;
+  color: $color-white;
+  padding: $base-line-height $gutter;
+
+  @include media-max($media-mobile) {
+    padding: $base-line-height ($gutter / 2);
+  }
+
+  &__logo {
+    height: 24px;
+    width: 167px;
+  }
+
+  &__tagline {
+    @include media-max($media-desktop) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    margin: $base-line-height 0 ($base-line-height * 2);
+
+    &--expanded {
+      display: block;
+
+      @include media-max($media-tablet) {
+        display: none;
+      }
+
+    }
+
+    &--compact {
+      display: none;
+
+      @include media-max($media-tablet) {
+        display: block;
+        margin-bottom: $base-line-height;
+      }
+
+    }
+  }
+
+  &__partner {
+    @include media-max($media-tablet) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__partner-label {
+    @include media-max($media-tablet) {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__partner-logo {
+    height: 20px;
+  }
+}
