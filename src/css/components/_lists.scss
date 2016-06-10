@@ -2,8 +2,10 @@
 // Lists: a set of links with a common theme, grouped together.
 // Useful for related links, episode rundowns, trending topics, etc.
 //
-// .c-list--vert       - Styles list for block display.
-// .c-list--horiz      - Styles list for inline display.
+// .c-list--vert                - Styles list for block display.
+// .c-list--horiz               - Styles list for inline display.
+// .c-list--horiz-compact       - Inline list with tigher spacing between items.
+// .c-list--bullet              - Adds bullets to list items.
 //
 // Styleguide 0.1.0
 
@@ -20,6 +22,20 @@
     > * {
       display: inline-block;
       margin-right: $base-line-height;
+
+      @include media-max($media-mobile) {
+        margin-right: ($base-line-height / 4);
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &--horiz-compact {
+    > * {
+      margin-right: 1rem;
     }
   }
 
