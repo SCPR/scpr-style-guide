@@ -14,6 +14,26 @@
     color: $color-base;
   }
 
+  &--white-dark-bg {
+    color: $color-white;
+
+    &:hover {
+      @include link-underline($color-white, $color-gray-darkest);
+      color: $color-white;
+    }
+
+  }
+
+  &--gray-dark-bg {
+    color: $color-gray;
+
+    &:hover {
+      @include link-underline($color-gray, $color-gray-darkest);
+      color: $color-gray;
+    }
+
+  }
+
   &--callout {
     color: $color-link;
     font-size: ms(0);

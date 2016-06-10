@@ -1,7 +1,17 @@
 
+// Rules: Horizontal dividers between blocks of content.
+//
+// .rule--vertical      - A vertical rule.
+// .rule--dark          - A dark gray horizontal rule.
+// .rule--darker        - A near-black horizontal rule. It's like, how much more black could this be? and the answer is none. None more black.
+// .rule--primary       - An orange horizontal rule.
+//
+// Styleguide 0.2.0
+
 .rule {
   background: $color-gray-light;
   border: 0;
+  display: block;
   height: 1px;
 
   &--vertical {
@@ -13,6 +23,10 @@
 
   &--dark {
     background: $color-gray-dark;
+  }
+
+  &--dark {
+    background: $color-gray-darkest;
   }
 
   &--primary {
