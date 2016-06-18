@@ -257,13 +257,28 @@
 }
 
 .media--hp {
-  border-top: 1px solid $color-gray-light;
   box-shadow: inset 17rem 0 0 $color-gray-lightest;
   padding: $base-line-height 0 $base-line-height 19rem;
+  position: relative;
+
+  &:after {
+    border-top: 1px solid $color-gray-light;
+    content: '';
+    display: block;
+    left: 17rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 
   @include media-max($media-tablet) {
+    border-top: 1px solid $color-gray-light;
     box-shadow: none;
     padding-left: 0;
+
+    &:after {
+      display: none;
+    }
   }
 
   > .media__figure {
