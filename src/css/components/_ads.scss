@@ -4,6 +4,7 @@
 //
 // .c-ad--x-pad        - Doubles the default padding around a display ad.
 // .c-ad--xx-pad       - Quadruples the default padding around a display ad.
+// .c-ad--hp           - Optimizes ad layout to be in sync with our homepage layout.
 // .c-ad__container    - Wrapper that encloses an ad tag ad attribution.
 // .c-ad__attribution  - Text/link attribution identifying display ad as sponsored.
 //
@@ -21,15 +22,60 @@
     padding: ($base-line-height * 2);
   }
 
+  &--hp {
+    box-shadow: inset 17rem 0 0 $color-gray-lightest;
+    padding: $base-line-height 0 $base-line-height 19rem;
+    position: relative;
+
+    @include media-max($media-tablet) {
+      border-top: 1px solid $color-gray-light;
+      box-shadow: none;
+      padding-left: 0;
+    }
+
+    &::after {
+      border-top: 1px solid $color-gray-light;
+      content: '';
+      display: block;
+      left: 17rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      @include media-max($media-tablet) {
+        display: none;
+      }
+    }
+
+  }
+
   &__container {
     display: block;
     margin: 0 auto;
     text-align: center;
+
+    &--hp {
+      margin: 0;
+      text-align: left;
+
+      @include media-max($media-tablet) {
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
   }
 
   &__banner {
     display: block;
     margin: 0 auto;
+
+    &--align-left {
+      margin: 0;
+
+      @include media-max($media-tablet) {
+        margin: 0 auto;
+      }
+    }
   }
 
   &__attribution {

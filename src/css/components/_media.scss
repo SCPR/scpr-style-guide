@@ -73,7 +73,7 @@
 
   &__meta {
     display: block;
-    margin: 0 0 0.25rem;
+    margin: 1rem 0 0.25rem;
   }
 
   &__indicator-visited {
@@ -173,6 +173,19 @@
 
   }
 
+  &__overline {
+    color: $color-primary;
+    display: block;
+    font-size: ms(-1);
+    font-weight: 500;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+
+    &--block {
+      margin-top: 0.25rem;
+    }
+  }
+
   &__label {
     color: $color-primary;
     display: inline-block;
@@ -257,13 +270,28 @@
 }
 
 .media--hp {
-  border-top: 1px solid $color-gray-light;
   box-shadow: inset 17rem 0 0 $color-gray-lightest;
   padding: $base-line-height 0 $base-line-height 19rem;
+  position: relative;
 
   @include media-max($media-tablet) {
+    border-top: 1px solid $color-gray-light;
     box-shadow: none;
     padding-left: 0;
+  }
+
+  &::after {
+    border-top: 1px solid $color-gray-light;
+    content: '';
+    display: block;
+    left: 17rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @include media-max($media-tablet) {
+      display: none;
+    }
   }
 
   > .media__figure {
@@ -276,6 +304,10 @@
 
   > .media__label {
     font-size: ms(-2);
+  }
+
+  .media__overline {
+    color: $color-secondary;
   }
 
   .media__related-content {
@@ -323,6 +355,10 @@
 
   .media__label {
     font-size: ms(-2);
+  }
+
+  .media__overline {
+    color: $color-secondary;
   }
 
 }

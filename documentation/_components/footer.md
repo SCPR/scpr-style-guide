@@ -9,9 +9,11 @@ title: Footer
 <footer class="footer">
   <div class="l-section--margin-sm l-row l-row--lg l-between l-bottom">
     <div class="l-col l-center@media-desktop">
-      <svg class="footer__logo icon--left">
-        <use class="" xlink:href="/img/scpr-sprite.svg#logo_kpcc-white"/>
-      </svg>
+      <a href="/">
+        <svg class="footer__logo icon--left">
+          <use class="" xlink:href="/img/scpr-sprite.svg#logo_kpcc-white"/>
+        </svg>
+      </a>
       <span class="footer__tagline text text--semibold u-text-color--gray">The Voice of Southern California</span>
     </div>
     <div class="l-col l-end l-center@media-desktop">
@@ -117,9 +119,11 @@ title: Footer
     &lt;footer class="footer">
       &lt;div class="l-section--margin-sm l-row l-row--lg l-between l-bottom">
         &lt;div class="l-col l-center@media-desktop">
-          &lt;svg class="footer__logo icon--left">
-            &lt;use class="" xlink:href="/img/scpr-sprite.svg#logo_kpcc-white"/>
-          &lt;/svg>
+          &lt;a href="/">
+            &lt;svg class="footer__logo icon--left">
+              &lt;use class="" xlink:href="/img/scpr-sprite.svg#logo_kpcc-white"/>
+            &lt;/svg>
+          &lt;/a>
           &lt;span class="footer__tagline text text--semibold u-text-color--gray">The Voice of Southern California&lt;/span>
         &lt;/div>
         &lt;div class="l-col l-end l-center@media-desktop">

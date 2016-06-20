@@ -92,10 +92,3 @@
   }
 
 }
-
-// In order to style SVG that are loaded into the Shadow DOM with the <use> tag,
-// we need to set SVG paths to inherit their color values from their parents.
-svg path, svg g {
-  fill: inherit;
-  stroke: inherit;
-}
