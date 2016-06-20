@@ -73,7 +73,7 @@
 
   &__meta {
     display: block;
-    margin: 0 0 0.25rem;
+    margin: 1rem 0 0.25rem;
   }
 
   &__indicator-visited {
@@ -171,6 +171,19 @@
       font-size: ms(-2);
     }
 
+  }
+
+  &__overline {
+    color: $color-primary;
+    display: block;
+    font-size: ms(-1);
+    font-weight: 500;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+
+    &--block {
+      margin-top: 0.25rem;
+    }
   }
 
   &__label {
@@ -293,6 +306,10 @@
     font-size: ms(-2);
   }
 
+  .media__overline {
+    color: $color-secondary;
+  }
+
   .media__related-content {
     margin-left: -2rem;
     padding-left: 2rem;
@@ -338,6 +355,10 @@
 
   .media__label {
     font-size: ms(-2);
+  }
+
+  .media__overline {
+    color: $color-secondary;
   }
 
 }
