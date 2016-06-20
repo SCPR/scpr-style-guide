@@ -274,7 +274,13 @@
   padding: $base-line-height 0 $base-line-height 19rem;
   position: relative;
 
-  &:after {
+  @include media-max($media-tablet) {
+    border-top: 1px solid $color-gray-light;
+    box-shadow: none;
+    padding-left: 0;
+  }
+
+  &::after {
     border-top: 1px solid $color-gray-light;
     content: '';
     display: block;
@@ -282,14 +288,8 @@
     position: absolute;
     right: 0;
     top: 0;
-  }
 
-  @include media-max($media-tablet) {
-    border-top: 1px solid $color-gray-light;
-    box-shadow: none;
-    padding-left: 0;
-
-    &:after {
+    @include media-max($media-tablet) {
       display: none;
     }
   }
