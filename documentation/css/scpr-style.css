@@ -811,13 +811,16 @@ button {
     font-size: 1.125rem;
     line-height: 1.470588235em;
     margin-bottom: 1em; }
-  .media__teaser, .media__teaser > * {
+  .media__teaser {
     color: #363636;
     font-size: 0.9375rem;
     line-height: 1.666666667em; }
-    .media__teaser--small, .media__teaser > *--small {
+    .media__teaser > * {
+      font-size: 0.9375rem;
+      line-height: 1.666666667em; }
+    .media__teaser--small {
       font-size: 0.78125rem; }
-    .media__teaser--bullet, .media__teaser > *--bullet {
+    .media__teaser--bullet {
       margin-bottom: 1em; }
 
 .media--last {
