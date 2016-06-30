@@ -195,6 +195,9 @@ button {
     font-weight: 800; }
   .heading--serif {
     font-family: "abril-titling", Georgia, serif; }
+  .heading--inline {
+    display: inline-block;
+    margin-bottom: 0; }
 
 .rule {
   background: #E8E8E8;
@@ -638,31 +641,28 @@ button {
     position: relative; }
     @media (max-width: 56rem) {
       .c-ad--hp {
-        border-top: 1px solid #E8E8E8;
+        border-top: 4px solid #E8E8E8;
         box-shadow: none;
         padding-left: 0; } }
     .c-ad--hp::after {
-      border-top: 1px solid #E8E8E8;
+      border-top: 3px solid #E8E8E8;
+      bottom: 0; }
+    .c-ad--hp::before {
+      border-top: 4px solid #E8E8E8;
+      top: 0; }
+    .c-ad--hp::before, .c-ad--hp::after {
       content: '';
       display: block;
       left: 17rem;
       position: absolute;
-      right: 0;
-      top: 0; }
+      right: 0; }
       @media (max-width: 56rem) {
-        .c-ad--hp::after {
+        .c-ad--hp::before, .c-ad--hp::after {
           display: none; } }
   .c-ad__container {
     display: block;
     margin: 0 auto;
     text-align: center; }
-    .c-ad__container--hp {
-      margin: 0;
-      text-align: left; }
-      @media (max-width: 56rem) {
-        .c-ad__container--hp {
-          margin: 0 auto;
-          text-align: center; } }
   .c-ad__banner {
     display: block;
     margin: 0 auto; }
@@ -811,13 +811,13 @@ button {
     font-size: 1.125rem;
     line-height: 1.470588235em;
     margin-bottom: 1em; }
-  .media__teaser {
+  .media__teaser, .media__teaser > * {
     color: #363636;
     font-size: 0.9375rem;
     line-height: 1.666666667em; }
-    .media__teaser--small {
+    .media__teaser--small, .media__teaser > *--small {
       font-size: 0.78125rem; }
-    .media__teaser--bullet {
+    .media__teaser--bullet, .media__teaser > *--bullet {
       margin-bottom: 1em; }
 
 .media--last {
@@ -843,7 +843,12 @@ button {
   box-shadow: inset 17rem 0 0 #F6F6F6;
   padding: 2rem 0 2rem 19rem;
   position: relative; }
-  .media--hp:after {
+  @media (max-width: 56rem) {
+    .media--hp {
+      border-top: 1px solid #E8E8E8;
+      box-shadow: none;
+      padding-left: 0; } }
+  .media--hp::after {
     border-top: 1px solid #E8E8E8;
     content: '';
     display: block;
@@ -851,12 +856,8 @@ button {
     position: absolute;
     right: 0;
     top: 0; }
-  @media (max-width: 56rem) {
-    .media--hp {
-      border-top: 1px solid #E8E8E8;
-      box-shadow: none;
-      padding-left: 0; }
-      .media--hp:after {
+    @media (max-width: 56rem) {
+      .media--hp::after {
         display: none; } }
   .media--hp > .media__figure {
     margin: 0 0 2rem; }
@@ -976,8 +977,12 @@ button {
   display: flex;
   min-height: 3rem;
   position: relative; }
+  @media (max-width: 84rem) {
+    .mast {
+      margin-bottom: 2.5rem; } }
   @media (max-width: 56rem) {
     .mast {
+      margin-bottom: 0;
       min-height: 3rem; } }
   .mast--top {
     left: 0;
