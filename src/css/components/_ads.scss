@@ -28,19 +28,27 @@
     position: relative;
 
     @include media-max($media-tablet) {
-      border-top: 1px solid $color-gray-light;
+      border-top: 4px solid $color-gray-light;
       box-shadow: none;
       padding-left: 0;
     }
 
     &::after {
-      border-top: 1px solid $color-gray-light;
+      border-top: 3px solid $color-gray-light;
+      bottom: 0;
+    }
+
+    &::before {
+      border-top: 4px solid $color-gray-light;
+      top: 0;
+    }
+
+    &::before, &::after {
       content: '';
       display: block;
       left: 17rem;
       position: absolute;
       right: 0;
-      top: 0;
 
       @include media-max($media-tablet) {
         display: none;
@@ -53,16 +61,6 @@
     display: block;
     margin: 0 auto;
     text-align: center;
-
-    &--hp {
-      margin: 0;
-      text-align: left;
-
-      @include media-max($media-tablet) {
-        margin: 0 auto;
-        text-align: center;
-      }
-    }
   }
 
   &__banner {

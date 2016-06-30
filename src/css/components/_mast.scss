@@ -12,7 +12,12 @@
   min-height: $base-line-height * 1.5;
   position: relative;
 
+  @include media-max($media-wide) {
+    margin-bottom: (1rem * 2.5);
+  }
+
   @include media-max($media-tablet) {
+    margin-bottom: 0;
     min-height: ($base-line-height * 2) - 1rem;
   }
 

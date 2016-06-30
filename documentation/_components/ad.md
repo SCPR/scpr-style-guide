@@ -67,8 +67,8 @@ title: Ads
 #### Homepage Ad
 
 <aside class="c-ad c-ad--hp">
-  <div class="c-ad__container c-ad__container--hp">
-    <img class="c-ad__banner c-ad__banner--align-left" src="http://placehold.it/300x250" />
+  <div class="c-ad__container">
+    <img class="c-ad__banner" src="http://placehold.it/300x250" />
     <a class="c-ad__attribution" href="http://www.scpr.org/support/underwriting/">Become a KPCC Sponsor</a>
   </div>
 </aside>
@@ -77,7 +77,7 @@ title: Ads
   <code>
     &lt;aside class="c-ad c-ad--hp">
       &lt;div class="c-ad__container">
-        &lt;img class="c-ad__banner c-ad__banner--align-left" src="http://placehold.it/300x250" />
+        &lt;img class="c-ad__banner" src="http://placehold.it/300x250" />
         &lt;a class="c-ad__attribution" href="http://www.scpr.org/support/underwriting/">Become a KPCC Sponsor&lt;/a>
       &lt;/div>
     &lt;/aside>

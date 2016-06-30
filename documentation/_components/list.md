@@ -87,7 +87,7 @@ title: Lists
 #### Horizontal List with Heading
 
 <ul class="c-list c-list--horiz u-text-size--sm">
-  <li><h5 class="heading heading--h5 u-text-color--sec-dk">List Heading</h5></li>
+  <li><h5 class="heading heading--h5 heading--inline u-text-color--sec-dk">List Heading</h5></li>
   <li><a href="#" class="link link--small">List Item 1</a></li>
   <li><a href="#" class="link link--small">List Item 2</a></li>
   <li><a href="#" class="link link--small">List Item 3</a></li>
@@ -97,7 +97,7 @@ title: Lists
 <pre>
   <code>
     &lt;ul class="c-list c-list--horiz u-text-size--sm">
-      &lt;li>&lt;h5 class="heading heading--h5 u-text-color--sec-dk">List Heading&lt;/h5>&lt;/li>
+      &lt;li>&lt;h5 class="heading heading--h5 heading--inline u-text-color--sec-dk">List Heading&lt;/h5>&lt;/li>
       &lt;li>&lt;a href="#" class="link">List Item 1&lt;/a>&lt;/li>
       &lt;li>&lt;a href="#" class="link">List Item 2&lt;/a>&lt;/li>
       &lt;li>&lt;a href="#" class="link">List Item 3&lt;/a>&lt;/li>
