@@ -23,8 +23,10 @@
       display: inline-block;
       margin-right: $base-line-height;
 
-      @include media-max($media-mobile) {
-        margin-right: ($base-line-height / 4);
+      @include media-max($media-tablet) {
+        display: block;
+        margin-bottom: 1em;
+        margin-right: 0;
       }
 
       &:last-child {
@@ -46,14 +48,14 @@
       position: relative;
 
       &::before {
-        background-color: $color-gray-light;
+        background-color: $color-gray;
         border-radius: 50%;
         content: '';
         display: block;
         height: .375rem;
         left: ($font-size-default * -1);
         position: absolute;
-        top: 0.6em;
+        top: 0.5em;
         width: .375rem;
       }
     }
