@@ -581,9 +581,11 @@ button {
 .c-list--horiz > * {
   display: inline-block;
   margin-right: 2rem; }
-  @media (max-width: 30rem) {
+  @media (max-width: 56rem) {
     .c-list--horiz > * {
-      margin-right: 0.5rem; } }
+      display: block;
+      margin-right: 0;
+      margin-bottom: 1em; } }
   .c-list--horiz > *:last-child {
     margin-right: 0; }
 
@@ -595,14 +597,14 @@ button {
   .c-list--bullet > * {
     position: relative; }
     .c-list--bullet > *::before {
-      background-color: #E8E8E8;
+      background-color: #898989;
       border-radius: 50%;
       content: '';
       display: block;
       height: .375rem;
       left: -1.125rem;
       position: absolute;
-      top: 0.6em;
+      top: 0.5em;
       width: .375rem; }
 
 .c-well {
