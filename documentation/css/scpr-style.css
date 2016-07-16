@@ -584,8 +584,8 @@ button {
   @media (max-width: 56rem) {
     .c-list--horiz > * {
       display: block;
-      margin-right: 0;
-      margin-bottom: 1em; } }
+      margin-bottom: 1em;
+      margin-right: 0; } }
   .c-list--horiz > *:last-child {
     margin-right: 0; }
 
