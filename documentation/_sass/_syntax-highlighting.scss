@@ -3,10 +3,10 @@
  */
 .highlight {
     background: #fff;
-    @extend %vertical-rhythm;
 
     .highlighter-rouge & {
-      background: #eef;
+      background: $color-gray-lightest;
+      padding: $base-line-height;
     }
 
     .c     { color: #998; font-style: italic } // Comment
