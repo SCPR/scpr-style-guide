@@ -1,6 +1,10 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
+@import "vars";
+@import "syntax-highlighting";
+
 @charset "utf-8";
 
 // Clearfix helper
@@ -16,10 +20,15 @@
 
 pre {
   background: #F1F1F1;
-  font-size: 0.75em;
+  font-size: 0.8em;
+  line-height: 1.5em;
   margin: 3rem 0;
   max-width: 90%;
   overflow: scroll;
+}
+
+code {
+  font-family: Menlo, monospace;
 }
 
 .wrapper {
