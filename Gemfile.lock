@@ -62,7 +62,6 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
-    redcarpet (3.3.4)
     rouge (1.10.1)
     safe_yaml (1.0.4)
     sass (3.4.22)
@@ -83,5 +82,9 @@ DEPENDENCIES
   about_yml
   html-proofer
   jekyll
-  redcarpet
+  kramdown
+  rouge
   sass
+
+BUNDLED WITH
+   1.12.5
