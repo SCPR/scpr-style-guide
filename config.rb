@@ -5,7 +5,7 @@
 config[:source]       = 'documentation'
 config[:build_dir]    = '_site'
 config[:layouts_dir]  = '_layouts'
-config[:css_dir]      = 'sass'
+config[:css_dir]      = 'css'
 config[:images_dir]   = 'img'
 config[:js_dir]       = 'js'
 
@@ -57,4 +57,9 @@ configure :build do
 
   # Minify Javascript on build
   # activate :minify_javascript
+end
+
+# Deploy to Github Pages
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
 end

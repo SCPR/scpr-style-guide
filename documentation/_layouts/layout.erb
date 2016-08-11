@@ -10,9 +10,9 @@
     <title><%= current_page.data.title || "KPCC Design System" %></title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-    <link rel="stylesheet" href="/css/scpr-style.css">
-    <link rel="stylesheet" href="/css/scpr-docs.css">
-    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+    <%= stylesheet_link_tag 'scpr-style.css' %>
+    <%= stylesheet_link_tag 'scpr-docs.css' %>
+    <%= favicon_tag 'favicon.png' %>
 
     <script src="https://use.typekit.net/cka2qre.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -55,6 +55,6 @@
     </footer>
   </body>
 
-  <script async="true" src="/js/scpr-docs.js"></script>
-  <script async="true" src="/js/scpr-style.js"></script>
+  <%= javascript_include_tag 'scpr-docs.js' %>
+  <%= javascript_include_tag 'scpr-style.js' %>
 </html>
