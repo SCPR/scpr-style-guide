@@ -52,7 +52,6 @@ end
 
 # Build-specific configuration
 configure :build do
-  activate :syntax
   # Minify CSS on build
   # activate :minify_css
 
