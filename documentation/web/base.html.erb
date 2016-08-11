@@ -1,0 +1,6 @@
+<h1>Web: Base Styles</h1>
+
+<% blog.articles.each do |article| %>
+  <% next unless article.tags.include? "base" %>
+  <%= partial("_partials/component", :locals => { :article => article} ) %>
+<% end %>

@@ -1,0 +1,108 @@
+.content {
+  flex: 5 0 0;
+}
+
+pre {
+  background: #F1F1F1;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin: 3rem 0;
+  max-width: 90%;
+  overflow: scroll;
+}
+
+code {
+  font-family: Menlo, monospace;
+}
+
+.component {
+  @include clearfix;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em 3rem;
+
+  // Attempt a very clean test environment for visual regression testing
+  &.testable {
+    pre {
+      // display: none;
+    }
+
+    .example {
+      margin-top: 0;
+    }
+
+    .force-inline {
+      display: initial;
+      margin-bottom: 0;
+      margin-right: 0;
+      text-align: initial;
+
+      & > .hexagon {
+        display: block;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.example {
+  @include clearfix;
+  margin-top: 1.5rem;
+
+  &__container-lg {
+    max-width: 52rem;
+  }
+
+  &__container-med {
+    max-width: 30rem;
+  }
+
+  pre {
+    margin-top: 5rem;
+  }
+
+  > h1, > h2, > h3, > h4, > h5, > h6 {
+    font-weight: 500;
+    margin: 6em 0 3em;
+    text-transform: uppercase;
+  }
+}
+
+.force-inline {
+  display: inline-block;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+  text-align: center;
+
+  & > .hexagon {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.force-clear {
+  @include clearfix;
+  clear: both;
+}
+
+.section_container {
+  background-color: #1F2C38;
+  margin-top: 6rem
+}
+
+// OVERRIDES
+// These styles override source styling for components in order to better
+// document the styling and behavior of components.
+
+.container {
+  //background-color: DodgerBlue;
+  //color: white;
+
+  & > {
+    background-color: DeepSkyBlue;
+  }
+}

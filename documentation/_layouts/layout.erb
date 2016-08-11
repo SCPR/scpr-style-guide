@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "KPCC Design System" %></title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    <link rel="stylesheet" href="/css/scpr-style.css">
+    <link rel="stylesheet" href="/css/scpr-docs.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+
+    <script src="https://use.typekit.net/cka2qre.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  </head>
+
+  <body class="<%= page_classes %>">
+    <header class="header">
+      <div class="header-wrap">
+
+        <!-- start logo -->
+        <h3 class="header-title">
+          <a href="/" title="Home">
+            <svg class="logo">
+              <use xlink:href="/img/scpr-sprite.svg#logo_kpcc-black"/>
+            </svg>
+          </a>
+          <span>style guide</span>
+        </h3>
+        <!--end logo -->
+
+        <!-- start top navigation -->
+        <nav class="header-side">
+          <ul class="nav">
+              <li class="nav-link">
+                <a class="page-link" href="#page_url">Page Title</a>
+              </li>
+          </ul>
+        </nav>
+        <!-- end top navigation -->
+      </div>
+    </header>
+
+    <%= yield %>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+        <p class="footer-heading">SCPR Style Guide</p>
+      </div>
+    </footer>
+  </body>
+
+  <script async="true" src="/js/scpr-docs.js"></script>
+  <script async="true" src="/js/scpr-style.js"></script>
+</html>

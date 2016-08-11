@@ -1,0 +1,10 @@
+<article class="component testable">
+<h3><%= article.title %></h3>
+<% if article.data.description %>
+<p><em><%= article.data.description %></em></p>
+<% end %>
+<%= article.body %>
+<% code("html") do %>
+<%= article.body %>
+<% end %>
+</article>
