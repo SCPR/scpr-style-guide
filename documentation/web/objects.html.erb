@@ -1,6 +1,6 @@
 <h1>Web: Objects</h1>
 
-<% blog.articles.each do |article| %>
+<% blog.articles.sort_by{ |a| a.data.pattern_number.to_f }.each do |article| %>
   <% next unless article.tags.include? "object" %>
   <%= partial("_partials/component", :locals => { :article => article} ) %>
 <% end %>
