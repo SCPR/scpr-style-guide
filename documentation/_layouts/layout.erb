@@ -20,37 +20,35 @@
   </head>
 
   <body class="<%= page_classes %>">
-    <header class="header">
-      <div class="header-wrap">
-
+    <header class="sg-header">
         <!-- start logo -->
-        <h3 class="header-title">
+        <div class="sg-header__title">
           <a href="/" title="Home">
-            <svg class="logo">
+            <svg class="sg-header__logo">
               <use xlink:href="<%= url_for "/img/scpr-sprite.svg#logo_kpcc-black" %>"/>
             </svg>
           </a>
-          <span>style guide</span>
-        </h3>
+        </div>
         <!--end logo -->
 
-        <!-- start top navigation -->
-        <nav class="header-side">
-          <ul class="nav">
-              <li class="nav-link">
-                <a class="page-link" href="#page_url">Page Title</a>
+        <!-- start main navigation -->
+        <nav class="sg-header__nav">
+          <ul class="sg-nav">
+              <li class="sg-nav__item">
+                <a class="sg-nav__link" href="#page_url">Page Title</a>
               </li>
           </ul>
         </nav>
-        <!-- end top navigation -->
-      </div>
+        <!-- end main navigation -->
     </header>
 
-    <%= yield %>
+    <article class="sg-content">
+      <%= yield %>
+    </article>
 
-    <footer class="site-footer">
-      <div class="wrapper">
-        <p class="footer-heading">SCPR Style Guide</p>
+    <footer class="sg-footer">
+      <div class="sg-wrapper">
+        <p class="sg-footer__heading">SCPR Style Guide</p>
       </div>
     </footer>
   </body>

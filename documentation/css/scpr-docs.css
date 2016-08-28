@@ -1,34 +1,55 @@
-.wrapper {
+.sg-content {
+  margin-left: 240px; }
+  @media (max-width: 84rem) {
+    .sg-content {
+      margin-left: 0;
+      padding-top: 48px; } }
+  .sg-content__container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px; }
+    @media (max-width: 64rem) {
+      .sg-content__container {
+        padding-left: 20px;
+        padding-right: 20px; } }
+
+.sg-header {
+  background-color: #FFFFFF;
+  border-right: 1px solid #E7ECEE;
+  height: 100vh;
+  position: fixed;
+  width: 240px; }
+  @media (max-width: 84rem) {
+    .sg-header {
+      border-bottom: 1px solid #E7ECEE;
+      border-right: 0;
+      height: 48px;
+      overflow: hidden;
+      width: 100vw; } }
+  .sg-header__title {
+    text-align: center; }
+  .sg-header__logo {
+    height: 30px;
+    margin: 0 1em;
+    width: 160px; }
+  .sg-header__nav {
+    padding-top: 2em; }
+
+.sg-nav {
+  border-bottom: 1px solid #ddd;
   display: block; }
-
-.header {
-  display: none; }
-
-.header-title {
-  text-align: center; }
-
-.header-side {
-  padding-top: 2em; }
-  .header-side .nav {
-    border-bottom: 1px solid #ddd;
-    display: block; }
-  .header-side .page-link {
+  .sg-nav__link {
     border-top: 1px solid #ddd;
     display: block;
     font-size: 0.75em;
     padding: 1em;
     text-transform: uppercase; }
 
-.header-title span {
-  display: inline-block;
-  margin-left: 10px;
-  margin-top: 6px;
-  vertical-align: top; }
-
-.logo {
-  height: 30px;
-  margin: 0 1em;
-  width: 160px; }
+.sg-content__header {
+  background-color: #0F1620;
+  color: #FFFFFF;
+  min-height: 16rem; }
 
 .content {
   flex: 5 0 0; }
@@ -46,14 +67,11 @@ code {
 
 .component {
   margin-top: 2em;
-  margin-bottom: 2em;
-  padding: 1em 3rem; }
-  .component:after {
-    content: ".";
-    display: block;
-    height: 0;
+  margin-bottom: 2em; }
+  .component::after {
     clear: both;
-    visibility: hidden; }
+    content: '';
+    display: block; }
   .component.testable .example {
     margin-top: 0; }
   .component.testable .force-inline {
@@ -67,12 +85,10 @@ code {
 
 .example {
   margin-top: 1.5rem; }
-  .example:after {
-    content: ".";
-    display: block;
-    height: 0;
+  .example::after {
     clear: both;
-    visibility: hidden; }
+    content: '';
+    display: block; }
   .example__container-lg {
     max-width: 52rem; }
   .example__container-med {
@@ -97,12 +113,10 @@ code {
 
 .force-clear {
   clear: both; }
-  .force-clear:after {
-    content: ".";
-    display: block;
-    height: 0;
+  .force-clear::after {
     clear: both;
-    visibility: hidden; }
+    content: '';
+    display: block; }
 
 .section_container {
   background-color: #1F2C38;

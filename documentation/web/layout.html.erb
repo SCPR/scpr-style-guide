@@ -1,6 +1,12 @@
-<h1>Web: Layout</h1>
+<header class="sg-content__header">
+  <div class="sg-content__container">
+    <h1>Web: Layout</h1>
+  </div>
+</header>
 
-<% blog.articles.sort_by{ |a| a.data.pattern_number.to_f }.each do |article| %>
-  <% next unless article.tags.include? "layout" %>
-  <%= partial("_partials/component", :locals => { :article => article} ) %>
-<% end %>
+<div class="sg-content__container">
+  <% blog.articles.sort_by{ |a| a.data.pattern_number.to_f }.each do |article| %>
+    <% next unless article.tags.include? "layout" %>
+    <%= partial("_partials/component", :locals => { :article => article} ) %>
+  <% end %>
+</div>
