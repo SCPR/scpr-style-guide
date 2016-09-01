@@ -1,15 +1,53 @@
-.sg-content__header {
-  background-color: $color-secondary-darkest;
-  color: $color-white;
-  min-height: ($base-line-height * 8);
+.sg-content {
+
+    &__header {
+      align-items: flex-end;
+      background-color: $color-secondary-darkest;
+      box-sizing: border-box;
+      color: $color-white;
+      display: flex;
+      min-height: ($base-line-height * 8);
+      padding: 2em 0;
+    }
+
+    &__page-title {
+      font-size: 2.25rem;
+      font-weight: 300;
+    }
+
+    &__page-description {
+      color: #B5BEC0;
+      font-size: 1.125rem;
+      font-weight: 300;
+      margin-top: 0.25em;
+    }
+
+    &__main {
+      padding-top: 3em;
+    }
 }
+
+.sg-pattern {
+  margin: 5em 0;
+
+  &__heading {
+    border-bottom: 1px solid $color-gray-light;
+    color: $color-secondary-dark;
+    font-size: 1.75rem;
+    font-weight: 300;
+    margin-bottom: 1.5em;
+    padding-bottom: 0.5em;
+  }
+
+}
+
 
 .content {
   flex: 5 0 0;
 }
 
 pre {
-  background: #F1F1F1;
+  background: $color-gray-lightest;
   font-size: 0.8em;
   line-height: 1.5em;
   margin: 3rem 0;
@@ -21,34 +59,7 @@ code {
   font-family: Menlo, monospace;
 }
 
-.component {
-  @include clearfix;
-  margin-top: 2em;
-  margin-bottom: 2em;
 
-  // Attempt a very clean test environment for visual regression testing
-  &.testable {
-    pre {
-      // display: none;
-    }
-
-    .example {
-      margin-top: 0;
-    }
-
-    .force-inline {
-      display: initial;
-      margin-bottom: 0;
-      margin-right: 0;
-      text-align: initial;
-
-      & > .hexagon {
-        display: block;
-        margin-right: 0;
-      }
-    }
-  }
-}
 
 .example {
   @include clearfix;
