@@ -44,11 +44,19 @@ end
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def nav_active(path)
+    if current_page.path == path
+      return "is-active"
+    end
+  end
+
+  def is_current_section(section)
+    unless current_page.path.start_with?(section)
+      return "checked"
+    end
+  end
+end
 
 # Build-specific configuration
 configure :build do
