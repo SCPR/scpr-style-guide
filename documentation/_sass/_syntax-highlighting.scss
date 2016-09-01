@@ -2,12 +2,8 @@
  * Syntax highlighting styles
  */
 .highlight {
-    background: #fff;
-
-    .highlighter-rouge & {
-      background: $color-gray-lightest;
-      padding: $base-line-height;
-    }
+  background: $color-gray-lightest;
+  padding: $base-line-height $base-line-height ($base-line-height / 3);
 
     .c     { color: #998; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error
