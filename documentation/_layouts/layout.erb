@@ -23,7 +23,7 @@
     <header class="sg-header">
         <!-- start logo -->
         <div class="sg-header__title">
-          <a href="/" title="Home">
+          <a href="/" title="Home" class="sg-header__home-link">
             <svg class="sg-header__logo">
               <use xlink:href="<%= url_for "/img/scpr-sprite.svg#logo_kpcc-black" %>"/>
             </svg>
@@ -33,11 +33,57 @@
 
         <!-- start main navigation -->
         <nav class="sg-header__nav">
-          <ul class="sg-nav">
-              <li class="sg-nav__item">
-                <a class="sg-nav__link" href="#page_url">Page Title</a>
-              </li>
-          </ul>
+          <dl class="sg-nav">
+            <dt class="sg-nav__heading">Design System</dt>
+            <dd class="sg-nav__menu">
+              <a class="sg-nav__link <%= nav_active('index.html') %>" href="/">Introduction</a>
+            </dd>
+          </dl>
+          <dl class="sg-nav">
+            <input type="checkbox" class="sg-nav__accordion-trigger" <%= is_current_section('branding') %> >
+            <dt class="sg-nav__heading">Branding</dt>
+            <dd class="sg-nav__menu">
+              <a class="sg-nav__link <%= nav_active('branding/resources.html') %>" href="/branding/resources/">Resources</a>
+              <a class="sg-nav__link <%= nav_active('branding/logos.html') %>" href="/branding/logos/">Logos</a>
+              <a class="sg-nav__link <%= nav_active('branding/colors.html') %>" href="/branding/colors/">Colors</a>
+              <a class="sg-nav__link <%= nav_active('branding/typography.html') %>" href="/branding/typography/">Typography</a>
+              <a class="sg-nav__link <%= nav_active('branding/voice.html') %>" href="/branding/voice/">Voice &amp; Tone</a>
+            </dd>
+          </dl>
+          <dl class="sg-nav">
+            <input type="checkbox" class="sg-nav__accordion-trigger" <%= is_current_section('web') %>>
+            <dt class="sg-nav__heading">Web</dt>
+            <dd class="sg-nav__menu">
+              <a class="sg-nav__link <%= nav_active('web/index.html') %>" href="/web/">Resources</a>
+              <a class="sg-nav__link <%= nav_active('web/base.html') %>" href="/web/base/">Base</a>
+              <a class="sg-nav__link <%= nav_active('web/layout.html') %>" href="/web/layout/">Layout</a>
+              <a class="sg-nav__link <%= nav_active('web/components.html') %>" href="/web/components/">Components</a>
+              <a class="sg-nav__link <%= nav_active('web/objects.html') %>" href="/web/objects/">Objects</a>
+              <a class="sg-nav__link <%= nav_active('web/utilities.html') %>" href="/web/utilities/">Utilities</a>
+              <a class="sg-nav__link <%= nav_active('web/motion.html') %>" href="/web/motion/">Motion</a>
+            </dd>
+          </dl>
+          <dl class="sg-nav">
+            <input type="checkbox" class="sg-nav__accordion-trigger" <%= is_current_section('native') %>>
+            <dt class="sg-nav__heading">Native</dt>
+            <dd class="sg-nav__menu">
+              <span class="sg-nav__footnote">(Coming Soon)</span>
+            </dd>
+          </dl>
+          <dl class="sg-nav">
+            <input type="checkbox" class="sg-nav__accordion-trigger" <%= is_current_section('email') %>>
+            <dt class="sg-nav__heading">Email</dt>
+            <dd class="sg-nav__menu">
+              <span class="sg-nav__footnote">(Signs Point To Yes)</span>
+            </dd>
+          </dl>
+          <dl class="sg-nav">
+            <input type="checkbox" class="sg-nav__accordion-trigger" <%= is_current_section('marketing') %>>
+            <dt class="sg-nav__heading">Marketing</dt>
+            <dd class="sg-nav__menu">
+              <span class="sg-nav__footnote">(Reply Hazy, Try Later)</span>
+            </dd>
+          </dl>
         </nav>
         <!-- end main navigation -->
     </header>
