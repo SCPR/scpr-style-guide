@@ -4,7 +4,7 @@
 # KPCC Style Guide
 This repository houses scpr-style-guide, a shared style library for KPCC web products. Major HT to the [US Web Design Standards](https://github.com/18F/web-design-standards) project and their [cg-style](https://github.com/18F/cg-style) project; the code and structure for KPCC's style guide are based in large part on their work.
 
-The scpr-style-guide provides the assets (CSS, SCSS, JS, images and font declarations) to design a KPCC-branded website. This allows multiple sites built in separate repositories and with different languages to share a global style without repeating styling code. The scpr-style-guide library is primarily distributed on the node/npm ecosystem but also includes a ruby jekyll package.
+The scpr-style-guide provides the assets (CSS, SCSS, JS, images and font declarations) to design a KPCC-branded website. This allows multiple sites built in separate repositories and with different languages to share a global style without repeating styling code. The scpr-style-guide library is primarily distributed on the node/npm ecosystem but also includes a ruby Middleman package.
 
 ## Install and use
 ### node/npm
@@ -54,8 +54,8 @@ Images that are part of the scpr-style-guide project are available as one centra
 ```
 
 ## Running the styleguide
-The styleguide allows you to see changes to components from the scpr-style-guide project rather then another site and is used for visual regression testing of components. To get the jekyll styleguide site working:
+The styleguide allows you to see changes to components from the scpr-style-guide project rather then another site and is used for visual regression testing of components. To get the Middleman styleguide site working:
 
 - Ensure you have ruby and bundler installed
 - Install ruby gems by running `bundle install`
-- Build and run the jekyll server by running `bundle exec jekyll serve`
+- Build and run the Middleman server by running `bundle exec middleman serve`

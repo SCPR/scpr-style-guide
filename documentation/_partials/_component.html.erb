@@ -1,0 +1,10 @@
+<article class="sg-pattern">
+<h3 class="sg-pattern__heading"><%= article.title %></h3>
+<% if article.data.description %>
+<p><em><%= article.data.description %></em></p>
+<% end %>
+<%= article.body %>
+<% code("html") do %>
+<%= article.body %>
+<% end %>
+</article>

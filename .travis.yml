@@ -8,7 +8,7 @@ before_install:
 - npm run build
 install:
 - bundle install
-script: bundle exec jekyll build
+script: bundle exec middleman build
 after_script:
 - gem install percy-cli
 - percy snapshot _site/

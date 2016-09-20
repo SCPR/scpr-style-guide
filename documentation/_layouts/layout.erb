@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "KPCC Design System" %></title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    <%= stylesheet_link_tag 'scpr-style.css' %>
+    <%= stylesheet_link_tag 'scpr-docs.css' %>
+    <%= favicon_tag 'favicon.png' %>
+
+    <script src="https://use.typekit.net/cka2qre.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  </head>
+
+  <body class="<%= page_classes %>">
+    <header class="sg-header">
+        <!-- start logo -->
+        <div class="sg-header__title">
+          <a href="/" title="Home" class="sg-header__home-link">
+            <svg class="sg-header__logo">
+              <use xlink:href="<%= url_for "/img/scpr-sprite.svg#logo_kpcc-black" %>"/>
+            </svg>
+          </a>
+        </div>
+        <!--end logo -->
+
+        <!-- start mobile menu button -->
+        <input type="checkbox" class="sg-nav__menu-trigger">
+        <button class="sg-nav__hamburger sg-nav__hamburger--spin" type="button">
+          <span class="sg-nav__hamburger-box">
+            <span class="sg-nav__hamburger-inner"></span>
+          </span>
+        </button>
+        <!-- end mobile menu button -->
+
+        <!-- start main navigation -->
+        <nav class="sg-header__nav">
+          <dl class="sg-nav">
+            <dt class="sg-nav__heading">Design System</dt>
+            <dd class="sg-nav__menu">
+              <a class="sg-nav__link <%= nav_active('index.html') %>" href="/">Introduction</a>
+            </dd>
+          </dl>
+          <dl class="sg-nav">
+            <input type="checkbox" class="sg-nav__accordion-trigger" <%= is_current_section('branding') %> >
+            <dt class="sg-nav__heading">Branding</dt>
+            <div class="sg-nav__menu-wrapper">
+              <dd class="sg-nav__menu">
+                <a class="sg-nav__link <%= nav_active('branding/resources.html') %>" href="/branding/resources/">Resources</a>
+                <a class="sg-nav__link <%= nav_active('branding/logos.html') %>" href="/branding/logos/">Logos</a>
+                <a class="sg-nav__link <%= nav_active('branding/colors.html') %>" href="/branding/colors/">Colors</a>
+                <a class="sg-nav__link <%= nav_active('branding/typography.html') %>" href="/branding/typography/">Typography</a>
+                <a class="sg-nav__link <%= nav_active('branding/voice.html') %>" href="/branding/voice/">Voice &amp; Tone</a>
+              </dd>
+            </div>
+          </dl>
+          <dl class="sg-nav">
+            <input type="checkbox" class="sg-nav__accordion-trigger" <%= is_current_section('web') %>>
+            <dt class="sg-nav__heading">Web</dt>
+            <div class="sg-nav__menu-wrapper">
+              <dd class="sg-nav__menu">
+                <a class="sg-nav__link <%= nav_active('web/index.html') %>" href="/web/">Resources</a>
+                <a class="sg-nav__link <%= nav_active('web/base.html') %>" href="/web/base/">Base</a>
+                <a class="sg-nav__link <%= nav_active('web/layout.html') %>" href="/web/layout/">Layout</a>
+                <a class="sg-nav__link <%= nav_active('web/components.html') %>" href="/web/components/">Components</a>
+                <a class="sg-nav__link <%= nav_active('web/objects.html') %>" href="/web/objects/">Objects</a>
+                <a class="sg-nav__link <%= nav_active('web/utilities.html') %>" href="/web/utilities/">Utilities</a>
+                <a class="sg-nav__link <%= nav_active('web/motion.html') %>" href="/web/motion/">Motion</a>
+              </dd>
+            </div>
+          </dl>
+          <dl class="sg-nav">
+            <input type="checkbox" class="sg-nav__accordion-trigger" <%= is_current_section('native') %>>
+            <dt class="sg-nav__heading">Native</dt>
+            <div class="sg-nav__menu-wrapper">
+              <dd class="sg-nav__menu">
+                <span class="sg-nav__footnote">(Coming Soon)</span>
+              </dd>
+            </div>
+          </dl>
+          <dl class="sg-nav">
+            <input type="checkbox" class="sg-nav__accordion-trigger" <%= is_current_section('email') %>>
+            <dt class="sg-nav__heading">Email</dt>
+            <div class="sg-nav__menu-wrapper">
+              <dd class="sg-nav__menu">
+                <span class="sg-nav__footnote">(Signs Point To Yes)</span>
+              </dd>
+            </div>
+          </dl>
+          <dl class="sg-nav">
+            <input type="checkbox" class="sg-nav__accordion-trigger" <%= is_current_section('marketing') %>>
+            <dt class="sg-nav__heading">Marketing</dt>
+            <div class="sg-nav__menu-wrapper">
+              <dd class="sg-nav__menu">
+                <span class="sg-nav__footnote">(Reply Hazy, Try Later)</span>
+              </dd>
+            </div>
+          </dl>
+        </nav>
+        <!-- end main navigation -->
+    </header>
+
+    <article class="sg-content">
+      <%= yield %>
+    </article>
+
+    <footer class="sg-footer">
+      <div class="sg-wrapper">
+        <p class="sg-footer__heading">SCPR Style Guide</p>
+      </div>
+    </footer>
+  </body>
+
+  <%= javascript_include_tag 'scpr-docs.js' %>
+  <%= javascript_include_tag 'scpr-style.js' %>
+</html>
