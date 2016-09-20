@@ -3,7 +3,14 @@
 // Headings are used exclusively outside articles; articles have their own
 // content styling for headlines and subheads
 //
-// .heading--inline     - Sets the headline to inline-block and remove the bottom margin.
+// .heading--uppercase    - Sets the headline to all uppercase text.
+// .heading--italic       - Sets the headline to be italicized.
+// .heading--light        - Sets the headline to a light (300) font weight.
+// .heading--medium       - Sets the headline to a medium (500) font weight.
+// .heading--bold         - Sets the headline to a bold (700) weight.
+// .heading--extrabold    - Sets the headline to an extrabold (800) font weight.
+// .heading--serif        - Sets the headline to use our serif titling font.
+// .heading--inline       - Sets the headline to inline-block and remove the bottom margin.
 //
 // Styleguide 0.1.0
 
@@ -11,32 +18,32 @@
   margin: 0 0 1em;
 
   &--h1 {
-    font-size: ms(4);
+    font-size: ms(5);
     font-weight: 300;
   }
 
   &--h2 {
-    font-size: ms(3);
+    font-size: ms(4);
     font-weight: 300;
   }
 
   &--h3 {
+    font-size: ms(3);
+    font-weight: 300;
+  }
+
+  &--h4 {
     font-size: ms(2);
     font-weight: 400;
   }
 
-  &--h4 {
-    font-size: ms(1);
-    font-weight: 400;
-  }
-
   &--h5 {
-    font-size: ms(0);
+    font-size: ms(1);
     font-weight: 500;
   }
 
   &--h6 {
-    font-size: ms(-1);
+    font-size: ms(0);
     font-weight: 500;
   }
 
@@ -46,6 +53,18 @@
 
   &--italic {
     font-style: italic;
+  }
+
+  &--light {
+    font-weight: 300;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--bold {
+    font-weight: 700;
   }
 
   &--extrabold {

@@ -38,16 +38,17 @@ $font-family-default:         $font-sans-base;
 
 // BASE SIZES
 
-$font-size-root: 16px; // Root size, only for html tag.
-$font-size-default: 1.125rem;
-$base-line-height: 2rem;
+$base-number: 0.375rem;                   // Important Number is 6px
+$base-line-height: ($base-number * 5);    // Equivalent to 30px line height
+$font-size-root: 16px;                    // Root size, only for html tag.
+$font-size-default: 1.125rem;             // Equivalent to 18px
 
 
 // MODULAR TYPE SCALE
 // set overrides for Modular Scale (docs at https://github.com/modularscale/modularscale-sass)
 
 $ms-base: $font-size-default;
-$ms-ratio: 1.2;
+$ms-ratio: 1.2;   // Sets a "minor thid" modular scale
 
 
 // LAYOUT UNITS
