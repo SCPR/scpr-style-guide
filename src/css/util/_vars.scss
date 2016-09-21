@@ -49,15 +49,15 @@ $base-line-height: 2rem;
 $ms-base: $font-size-default;
 $ms-ratio: 1.2;
 
-
-// LAYOUT UNITS
-
-$gutter: $base-line-height;
-
-
 // MEDIA QUERIES
 
 $media-mobile: 30rem;
 $media-tablet: 56rem;
 $media-desktop: 64rem;
 $media-wide: 84rem;
+
+// LAYOUT UNITS
+
+$gutter: 2.625rem;
+$grid-columns: 12;
+$grid-breakpoints: (sm: 0, med: $media-tablet, lg: $media-desktop, xl: $media-wide);

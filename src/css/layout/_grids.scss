@@ -1,161 +1,149 @@
-// Variables
-$grid-columns: 12 !default;
-$grid-breakpoints: (xs: false, sm: $media-tablet, md: $media-desktop, lg: $media-wide) !default;
-$grid-containers: (xs: false, sm: $media-tablet - $gutter, md: $media-desktop - $gutter, lg: $media-wide - $gutter) !default;
+// Grids: Classes for creating layouts.
+// Size modifiers are used to determine how big the contents of a row
+// are at different container sizes.
+//
+// .l-row                               - Creates a responsive row using flexbox
+// .l-row--reverse                      - Reverses the display direction of child columns.
+// .l-row--nowrap                       - Resizes child columns proportionally instead of clearing them to the next line.
+// .l-row--wrap-reverse                 - Reverses the display direction of child columns that are wrapped.
+//
+// .l-row--(sm|med|lg|xl)-*             - Container size-specific classes.
+// .l-row--*-start                      - Justifies columns to the beginning of the row.
+// .l-row--*-end                        - Justifies columns to the end of the row.
+// .l-row--*-center                     - Centers child columns.
+// .l-row--*-top                        - Justifies columns to the top of the row.
+// .l-row--*-bottom                     - Justifies columns to the bottom of the row.
+// .l-row--*-middle                     - Vertically centers columns.
+// .l-row--*-around                     - Puts space around each column.
+// .l-row--*-between                    - Put space between each column.
+// .l-row--*-noflex                     - Make the row `display: block`, disabling flexbox features.
+//
+// .l-col                               - Creates a row column that "flexes" with a row.
+// .l-col--(sm|med|lg|xl)-(1-12)        - Container size-specific classes, determining how large the column should be.
+// .l-col--(sm|med|lg|xl)-offset-(1-12) - Creates a column-sized offset, or margin, for the column.
+// .l-col--*-first                      - Reorders the display of the columns to appear first in the row.
+// .l-col--*-last                       - Reorders the display of the columns to appear last in the row.
+//
+// Styleguide 0.3.0
 
-// Mixins
-@mixin breakpoint($breakpoint, $breakpoint-size) {
-  @if $breakpoint == xs {
-    @content;
+
+// Rows
+.l-row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &--reverse {
+    flex-direction: row-reverse;
   }
-  @else {
-    // Add breakpoints for larger screens
-    @media only screen and (min-width: $breakpoint-size) {
-      // Static grid
-      & {
-        width: map-get($grid-containers, $breakpoint);
+
+  &--nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &--wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  @each $breakpoint, $breakpoint-size in $grid-breakpoints {
+    @include media-min($breakpoint-size) {
+      &--#{$breakpoint}-start {
+        justify-content: flex-start;
+        text-align: start;
       }
 
-      @content;
+      &--#{$breakpoint}-center {
+        justify-content: center;
+        text-align: center;
+      }
+
+      &--#{$breakpoint}-end {
+        justify-content: flex-end;
+        text-align: end;
+      }
+
+      &--#{$breakpoint}-top {
+        align-items: flex-start;
+      }
+
+      &--#{$breakpoint}-middle {
+        align-items: center;
+      }
+
+      &--#{$breakpoint}-bottom {
+        align-items: flex-end;
+      }
+
+      &--#{$breakpoint}-around {
+        justify-content: space-around;
+      }
+
+      &--#{$breakpoint}-between {
+        justify-content: space-between;
+      }
+
+      &--#{$breakpoint}-noflex {
+        display: block;
+      }
     }
   }
 }
 
-// Grid
-.grid {
-  &, &--fluid {
-    margin: 0 auto;
+// Columns
+.l-col {
+  flex-grow: 1;
+  flex-basis: 100%;
+  max-width: 100%;
+
+  &--reverse {
+    flex-direction: column-reverse;
   }
 
-  &--fluid {
-    padding-right: $gutter;
-    padding-left: $gutter;
-  }
+  @each $breakpoint, $breakpoint-size in $grid-breakpoints {
+    @include media-min($breakpoint-size) {
+      $col-selectors: "#{&}--#{$breakpoint}";
 
-  // Rows
-  &__row {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 1 auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-right: $gutter / -4;
-    margin-left: $gutter / -4;
-
-    &--reverse {
-      flex-direction: row-reverse;
-    }
-
-    &--nowrap {
-      flex-wrap: nowrap;
-    }
-
-    &--wrap-reverse {
-      flex-wrap: wrap-reverse;
-    }
-
-    @each $breakpoint, $breakpoint-size in $grid-breakpoints {
-      @include breakpoint($breakpoint, $breakpoint-size) {
-        &--#{$breakpoint}-start {
-          justify-content: flex-start;
-          text-align: start;
-        }
-
-        &--#{$breakpoint}-center {
-          justify-content: center;
-          text-align: center;
-        }
-
-        &--#{$breakpoint}-end {
-          justify-content: flex-end;
-          text-align: end;
-        }
-
-        &--#{$breakpoint}-top {
-          align-items: flex-start;
-        }
-
-        &--#{$breakpoint}-middle {
-          align-items: center;
-        }
-
-        &--#{$breakpoint}-bottom {
-          align-items: flex-end;
-        }
-
-        &--#{$breakpoint}-around {
-          justify-content: space-around;
-        }
-
-        &--#{$breakpoint}-between {
-          justify-content: space-between;
-        }
-
-        &--#{$breakpoint}-noflex {
-          display: block;
-
-          //min-width: 100%
-       
-        }
+      @for $col-num from 1 through $grid-columns {
+        $col-selector: unquote("#{&}--#{$breakpoint}-#{$col-num}");
+        $col-selectors: append($col-selectors, $col-selector, comma);
+        $col-offset-selector: unquote("#{&}--#{$breakpoint}-offset-#{$col-num}");
+        $col-selectors: append($col-selectors, $col-offset-selector, comma);
       }
-    }
-  }
 
-  // Columns
-  &__col {
-    &--reverse {
-      flex-direction: column-reverse;
-    }
+      #{$col-selectors} {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+      }
 
-    @each $breakpoint, $breakpoint-size in $grid-breakpoints {
-      @include breakpoint($breakpoint, $breakpoint-size) {
-        $col-selectors: "#{&}--#{$breakpoint}";
+      &--#{$breakpoint} {
+        flex-grow: 1;
+        flex-basis: 100%;
+        max-width: 100%;
 
-        @for $col from 1 through $grid-columns {
-          $col-selector: unquote("#{&}--#{$breakpoint}-#{$col}");
-          $col-selectors: append($col-selectors, $col-selector, comma);
-        }
+        @for $col-num from 1 through $grid-columns {
+          $column-width: $col-num / $grid-columns * 100%;
 
-        @for $col from 1 through $grid-columns {
-          $col-offset-selector: unquote("#{&}--#{$breakpoint}-offset-#{$col}");
-          $col-selectors: append($col-selectors, $col-offset-selector, comma);
-        }
-
-        #{$col-selectors} {
-          box-sizing: border-box;
-          flex: 0 0 auto;
-          padding-right: $gutter / 4;
-          padding-left: $gutter / 4;
-        }
-
-        &--#{$breakpoint} {
-          flex-grow: 1;
-          flex-basis: 0;
-          max-width: 100%;
-
-          @for $col from 1 through $grid-columns {
-            &-#{$col} {
-              flex-basis: 100% / $grid-columns * $col;
-              max-width: 100% / $grid-columns * $col;
-            }
+          &-#{$col-num} {
+            flex-basis: $column-width;
+            max-width: $column-width;
           }
 
-          @for $col from 1 through $grid-columns {
-            &-offset-#{$col} {
-              margin-left: 100% / $grid-columns * $col;
-            }
+          &-offset-#{$col-num} {
+            margin-left: $column-width;
           }
         }
       }
+    }
 
 
-      &--#{$breakpoint}-first {
-        order: -1;
-      }
+    &--#{$breakpoint}-first {
+      order: -1;
+    }
 
-      &--#{$breakpoint}-last {
-        order: 1;
-      }
+    &--#{$breakpoint}-last {
+      order: 1;
     }
   }
 }

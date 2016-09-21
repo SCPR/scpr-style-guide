@@ -122,3 +122,15 @@ code {
     background-color: DeepSkyBlue;
   }
 }
+
+.l-col {
+  min-height: 1rem;
+  background: $color-secondary;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  box-shadow:inset 0px 0px 0px 1px #fff;
+  &.large {
+    height: 8rem;
+  }
+}
