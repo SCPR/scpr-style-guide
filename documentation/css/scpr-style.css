@@ -558,7 +558,7 @@ button {
 
 .c-list--vert > * {
   display: block;
-  margin-bottom: 1em; }
+  margin-bottom: 0.9375rem; }
 
 .c-list--horiz > * {
   display: inline-block;
@@ -572,7 +572,7 @@ button {
     margin-right: 0; }
 
 .c-list--horiz-compact > * {
-  margin-right: 1rem; }
+  margin-right: 0.9375rem; }
 
 .c-list--bullet {
   padding-left: 1.125rem; }

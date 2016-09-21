@@ -14,7 +14,7 @@
   &--vert {
     > * {
       display: block;
-      margin-bottom: 1em;
+      margin-bottom: ($base-line-height / 2);
     }
   }
 
@@ -37,7 +37,7 @@
 
   &--horiz-compact {
     > * {
-      margin-right: 1rem;
+      margin-right: ($base-line-height / 2);
     }
   }
 
