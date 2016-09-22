@@ -22,20 +22,6 @@
 }
 
 
-// CONTAINER WIDTHS
-// Calculate max-widths for grid containers.
-
-@mixin container-width($rems) {
-
-  // Calculate max-width using gutter as an important number,
-  // and adding two extra gutters equal to the standard
-  // padding given to containers.
-  $max-container-width: ($rems * $gutter) + ($gutter * 2);
-
-  max-width: $max-container-width;
-}
-
-
 // MEDIA QUERIES
 
 // Min-width media queries

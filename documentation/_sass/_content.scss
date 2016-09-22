@@ -117,17 +117,28 @@ code {
 .l-container {
   background-color: DodgerBlue;
   color: white;
+  text-align: center;
 }
 
 .l-col {
-  background: DeepSkyBlue;
-  color: #fff;
-  margin-bottom: 1rem;
-  min-height: 1rem;
   overflow: hidden;
-  padding: 1rem 0;
+  padding-top: 1rem;
   text-align: center;
+
   &.large {
     height: 8rem;
+
+    > * {
+      height: 5rem;
+    }
   }
+
+  .l-section {
+    background: MediumBlue;
+    color: #fff;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
 }

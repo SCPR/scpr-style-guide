@@ -34,6 +34,8 @@
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-left: ($gutter-in-rems / -2);
+  margin-right: ($gutter-in-rems / -2);
 
   &--reverse {
     flex-direction: row-reverse;
@@ -126,8 +128,11 @@
           $column-width: $col-num / $grid-columns * 100%;
 
           &-#{$col-num} {
+            box-sizing: border-box;
             flex-basis: $column-width;
             max-width: $column-width;
+            padding-left: ($gutter-in-rems / 2);
+            padding-right: ($gutter-in-rems / 2);
           }
 
           &-offset-#{$col-num} {
