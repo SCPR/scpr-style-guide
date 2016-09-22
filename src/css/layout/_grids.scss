@@ -35,8 +35,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-left: ($gutter / 4);
-  margin-right: ($gutter / 4);
+  margin-left: -($gutter / 4);
+  margin-right: -($gutter / 4);
 
   @each $breakpoint, $breakpoint-size in $grid-breakpoints {
     @include media-min($breakpoint-size) {
