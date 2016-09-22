@@ -456,8 +456,6 @@ button {
     .l-row--xl-wrap-reverse {
       flex-wrap: wrap-reverse; } }
 
-.l-col--reverse {
-  flex-direction: column-reverse; }
 @media (min-width: 0) {
   .l-col .l-col--sm, .l-col .l-col--sm-1, .l-col .l-col--sm-offset-1, .l-col .l-col--sm-2, .l-col .l-col--sm-offset-2, .l-col .l-col--sm-3, .l-col .l-col--sm-offset-3, .l-col .l-col--sm-4, .l-col .l-col--sm-offset-4, .l-col .l-col--sm-5, .l-col .l-col--sm-offset-5, .l-col .l-col--sm-6, .l-col .l-col--sm-offset-6, .l-col .l-col--sm-7, .l-col .l-col--sm-offset-7, .l-col .l-col--sm-8, .l-col .l-col--sm-offset-8, .l-col .l-col--sm-9, .l-col .l-col--sm-offset-9, .l-col .l-col--sm-10, .l-col .l-col--sm-offset-10, .l-col .l-col--sm-11, .l-col .l-col--sm-offset-11, .l-col .l-col--sm-12, .l-col .l-col--sm-offset-12 {
     box-sizing: border-box;
