@@ -3,11 +3,11 @@
 // are at different container sizes.
 //
 // .l-row                               - Creates a responsive row using flexbox
-// .l-row--reverse                      - Reverses the display direction of child columns.
-// .l-row--nowrap                       - Resizes child columns proportionally instead of clearing them to the next line.
-// .l-row--wrap-reverse                 - Reverses the display direction of child columns that are wrapped.
 //
 // .l-row--(sm|med|lg|xl)-*             - Container size-specific classes.
+// .l-row--*-reverse                    - Reverses the display direction of child columns.
+// .l-row--*-nowrap                     - Resizes child columns proportionally instead of clearing them to the next line.
+// .l-row--*-wrap-reverse               - Reverses the display direction of child columns that are wrapped.
 // .l-row--*-start                      - Justifies columns to the beginning of the row.
 // .l-row--*-end                        - Justifies columns to the end of the row.
 // .l-row--*-center                     - Centers child columns.
@@ -17,6 +17,8 @@
 // .l-row--*-around                     - Puts space around each column.
 // .l-row--*-between                    - Put space between each column.
 // .l-row--*-noflex                     - Make the row `display: block`, disabling flexbox features.
+// .l-row--*-nogutter                   - Disables gutters.
+// .l-row--*-vertical                   - Displays columns vertically and wraps vertically.
 //
 // .l-col                               - Creates a row column that "flexes" with a row.
 // .l-col--(sm|med|lg|xl)-(1-12)        - Container size-specific classes, determining how large the column should be.
@@ -29,25 +31,12 @@
 
 // Rows
 .l-row {
-  box-sizing: border-box;
   display: flex;
-  flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: ($gutter-in-rems / -2);
-  margin-right: ($gutter-in-rems / -2);
-
-  &--reverse {
-    flex-direction: row-reverse;
-  }
-
-  &--nowrap {
-    flex-wrap: nowrap;
-  }
-
-  &--wrap-reverse {
-    flex-wrap: wrap-reverse;
-  }
+  justify-content: space-around;
+  margin-left: ($gutter / 4);
+  margin-right: ($gutter / 4);
 
   @each $breakpoint, $breakpoint-size in $grid-breakpoints {
     @include media-min($breakpoint-size) {
@@ -86,18 +75,42 @@
         justify-content: space-between;
       }
 
+      &--#{$breakpoint}-vertical {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+
       &--#{$breakpoint}-noflex {
         display: block;
       }
+
+      &--#{$breakpoint}-nogutter {
+        justify-content: initial;
+      }
+
+      &--#{$breakpoint}-reverse {
+        flex-direction: row-reverse;
+      }
+
+      &--#{$breakpoint}-nowrap {
+        flex-wrap: nowrap;
+      }
+
+      &--#{$breakpoint}-wrap-reverse {
+        flex-wrap: wrap-reverse;
+      }
+
     }
   }
 }
 
 // Columns
 .l-col {
-  flex-grow: 1;
-  flex-basis: 100%;
-  max-width: 100%;
+  // flex-grow: 1;
+  // flex-basis: 100%;
+  // max-width: 100%;
+  // flex: 1;
+  // padding-top: 1rem;
 
   &--reverse {
     flex-direction: column-reverse;
@@ -120,19 +133,12 @@
       }
 
       &--#{$breakpoint} {
-        flex-grow: 1;
-        flex-basis: 100%;
-        max-width: 100%;
 
         @for $col-num from 1 through $grid-columns {
-          $column-width: $col-num / $grid-columns * 100%;
+          $column-width: ($col-num / $grid-columns * 100%) - ($gutter / 2);
 
           &-#{$col-num} {
-            box-sizing: border-box;
-            flex-basis: $column-width;
-            max-width: $column-width;
-            padding-left: ($gutter-in-rems / 2);
-            padding-right: ($gutter-in-rems / 2);
+            width: $column-width;
           }
 
           &-offset-#{$col-num} {

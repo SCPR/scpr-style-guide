@@ -122,9 +122,13 @@ code {
 
 .l-col {
   overflow: hidden;
+  margin-top: 0.5rem;
   padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: center;
-
+  background: MediumBlue;
+  color: #fff;
   &.large {
     height: 8rem;
 
@@ -132,13 +136,4 @@ code {
       height: 5rem;
     }
   }
-
-  .l-section {
-    background: MediumBlue;
-    color: #fff;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-  }
-
 }

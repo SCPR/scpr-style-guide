@@ -197,17 +197,14 @@
   display: flex;
   min-height: 16rem;
   padding: 2em 0; }
-
 .sg-content__page-title {
   font-size: 2.25rem;
   font-weight: 300; }
-
 .sg-content__page-description {
   color: #B5BEC0;
   font-size: 1.125rem;
   font-weight: 300;
   margin-top: 0.25em; }
-
 .sg-content__main {
   padding-top: 3em; }
 
@@ -281,18 +278,17 @@ code {
 
 .l-col {
   overflow: hidden;
+  margin-top: 0.5rem;
   padding-top: 1rem;
-  text-align: center; }
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  background: MediumBlue;
+  color: #fff; }
   .l-col.large {
     height: 8rem; }
     .l-col.large > * {
       height: 5rem; }
-  .l-col .l-section {
-    background: MediumBlue;
-    color: #fff;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem; }
 
 /**
  * Syntax highlighting styles
