@@ -93,6 +93,7 @@ scpr-style-guide uses Travis CI to test builds, and also can publish passing bui
 5. Push the tag to Github: `git push origin v1.4`.
 6. The push to Github will kick off a new build on Travis CI. Once that succeeds, Travis should automatically publish the new version to npm.
 7. Verify that your new version has published to npm: https://www.npmjs.com/package/scpr-style-guide.
+8. Create a new Release in Github that corresponds to your tag: https://github.com/SCPR/scpr-style-guide/releases/new
 
 ## Running the style guide documentation
 
