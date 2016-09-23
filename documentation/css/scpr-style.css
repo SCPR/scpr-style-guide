@@ -924,14 +924,16 @@ button {
       box-sizing: border-box;
       content: '';
       display: block;
-      padding-top: 66.6666667%;
       position: relative; }
     .o-media__figure--cinematic::before {
       padding-top: 42.5531915%; }
     .o-media__figure--four-by-three::before {
       padding-top: 75%; }
-    .o-media__figure--widescreen::before {
-      padding-top: 56.25%; }
+    .o-media__figure--widescreen {
+      margin-right: 3.1250rem;
+      float: left;
+      width: 298px;
+      height: 180px; }
   .o-media__img {
     box-sizing: border-box;
     left: 50%;
@@ -940,6 +942,10 @@ button {
     transform: translate(-50%, -50%); }
   .o-media__content {
     display: block; }
+    .o-media__content::after {
+      content: '';
+      display: table;
+      clear: both; }
   .o-media__related-content {
     border-top: 1px solid #fdd4b5;
     margin: 1.875rem 0 0;
@@ -1069,19 +1075,18 @@ button {
   display: none; }
 
 .o-media--hp {
-  box-shadow: inset 17rem 0 0 #F6F6F6;
-  padding: 1.875rem 0 1.875rem 19rem;
-  position: relative; }
+  position: relative;
+  padding-top: 4.25rem; }
   @media (max-width: 56rem) {
     .o-media--hp {
       border-top: 1px solid #E8E8E8;
       box-shadow: none;
       padding-left: 0; } }
   .o-media--hp::after {
-    border-top: 1px solid #E8E8E8;
+    border-top: 2px solid #F6F6F6;
     content: '';
     display: block;
-    left: 17rem;
+    left: 0;
     position: absolute;
     right: 0;
     top: 0; }
@@ -1105,16 +1110,15 @@ button {
         margin-left: 0;
         padding-left: 0;
         padding-right: 0; } }
+    .o-media--hp .o-media__related-content .heading {
+      margin-bottom: 1.75rem; }
 
 .o-media--hp-large {
   margin-top: 1.875rem; }
-  .o-media--hp-large > .o-media__content {
-    box-shadow: inset 17rem 0 0 #F6F6F6;
-    padding: 1.875rem 0 3.75rem 19rem; }
-    @media (max-width: 56rem) {
-      .o-media--hp-large > .o-media__content {
-        box-shadow: none;
-        padding-left: 0; } }
+  @media (max-width: 56rem) {
+    .o-media--hp-large > .o-media__content {
+      box-shadow: none;
+      padding-left: 0; } }
   .o-media--hp-large > .o-media__figure {
     border-bottom: 6px solid #D15904;
     margin: 0 -3.16742%;

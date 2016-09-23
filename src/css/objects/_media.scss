@@ -35,7 +35,7 @@
       box-sizing: border-box;
       content: '';
       display: block;
-      padding-top: 66.6666667%; // 3:2 by default
+      // padding-top: 66.6666667%; // 3:2 by default
       position: relative;
     }
 
@@ -48,7 +48,15 @@
     }
 
     &--widescreen::before {
-      padding-top: 56.25%;
+      //NOTE: We don't seem to need this now?
+      // padding-top: 56.25%;
+    }
+
+    &--widescreen {
+      margin-right: 3.1250rem;
+      float: left;
+      width: 298px;
+      height: 180px;
     }
 
   }
@@ -63,6 +71,14 @@
 
   &__content {
     display: block;
+    //NOTE: Commented out for the read/unread icon
+    // overflow: hidden;
+    &::after {
+      //NOTE: This is to fix the clear at the bottom so that subsequent elements don't overlap
+      content: '';
+      display: table;
+      clear: both;
+    }
   }
 
   &__related-content {
@@ -275,9 +291,10 @@
 }
 
 .o-media--hp {
-  box-shadow: inset 17rem 0 0 $color-gray-lightest;
-  padding: $base-line-height 0 $base-line-height 19rem;
+  // box-shadow: inset 17rem 0 0 $color-gray-lightest;
+  // padding: $base-line-height 0 $base-line-height 19rem;
   position: relative;
+  padding-top: 4.25rem;
 
   @include media-max($media-tablet) {
     border-top: 1px solid $color-gray-light;
@@ -286,10 +303,11 @@
   }
 
   &::after {
-    border-top: 1px solid $color-gray-light;
+    border-top: 2px solid $color-gray-lightest;
     content: '';
     display: block;
-    left: 17rem;
+    //NOTE: Was 17rem
+    left: 0;
     position: absolute;
     right: 0;
     top: 0;
@@ -326,6 +344,10 @@
       padding-right: 0;
     }
 
+    .heading {
+      margin-bottom: 1.75rem;
+    }
+
   }
 
 }
@@ -334,8 +356,8 @@
   margin-top: $base-line-height;
 
   > .o-media__content {
-    box-shadow: inset 17rem 0 0 $color-gray-lightest;
-    padding: $base-line-height 0 ($base-line-height * 2) 19rem;
+    // box-shadow: inset 17rem 0 0 $color-gray-lightest;
+    // padding: $base-line-height 0 ($base-line-height * 2) 19rem;
 
     @include media-max($media-tablet) {
       box-shadow: none;
