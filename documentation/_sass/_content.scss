@@ -114,11 +114,26 @@ code {
 // These styles override source styling for components in order to better
 // document the styling and behavior of components.
 
-.container {
-  //background-color: DodgerBlue;
-  //color: white;
+.l-container {
+  background-color: DodgerBlue;
+  color: white;
+  text-align: center;
+}
 
-  & > {
-    background-color: DeepSkyBlue;
+.l-col {
+  overflow: hidden;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  background: MediumBlue;
+  color: #fff;
+  &.large {
+    height: 8rem;
+
+    > * {
+      height: 5rem;
+    }
   }
 }
