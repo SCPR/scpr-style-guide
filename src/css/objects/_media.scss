@@ -272,27 +272,14 @@
   //NOTE: Re-add the following padding as part of the CSS specific to the homepage rather than here.
   // padding-top: 4.25rem
 
-  @include media-max($media-tablet) {
-    border-top: 1px solid $color-gray-light;
-    box-shadow: none;
-    padding-left: 0;
-  }
-
-  [class*='o-media__figure--'] {
-    .o-media__img {
-      box-sizing: border-box;
-      left: 50%;
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-
   .o-media__figure {
     margin-bottom: 1.375rem;    
   }
 
-  @include media-max($media-tablet){
+  @include media-max($media-tablet) {
+    border-top: 1px solid $color-gray-light;
+    box-shadow: none;
+    padding-left: 0;
 
     .o-media__content {
       // If flex is available, and we are on mobile,
@@ -309,21 +296,21 @@
       margin: 0 auto;
     }
 
-    .o-media__figure--cinematic {
-      height: $media-tablet / 2.35;
-    }
-
-    .o-media__figure--four-by-three {
-      height: $media-tablet / 1.33333;
-    }
-
-    .o-media__figure--widescreen {
-      height: $media-tablet / 1.77778;
-    }
   }
 
   @include media-min($media-tablet){
     $width: 18.625rem;
+
+    [class*='o-media__figure--'] {
+      .o-media__img {
+        box-sizing: border-box;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
     .o-media__figure {
       margin-right: 3.125rem;
       float: left;
