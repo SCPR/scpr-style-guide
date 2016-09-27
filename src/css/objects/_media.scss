@@ -40,12 +40,6 @@
     }
   }
 
-  &__content {
-    @include clearfix;
-
-    display: block;
-  }
-
   &__related-content {
     border-top: 2px solid lighten($color-primary, 40%);
     margin: $base-line-height 0 0;
@@ -281,19 +275,18 @@
     box-shadow: none;
     padding-left: 0;
 
-    .o-media__content {
-      // If flex is available, and we are on mobile,
-      // use this to position the figure before the 
-      // rest of the media content.
-      display: flex;
-      flex-direction: column;
-      .o-media__figure {
-        order: -1
+    // If flex is available, and we are on mobile,
+    // use this to position the figure before the 
+    // rest of the media content.
+    display: flex;
+    flex-direction: column;
+    .o-media__figure {
+      order: -1;
+      width: 100%;
+      .o-media__img {
+        margin: 0 auto;
+        width: 100%;
       }
-    }
-
-    .o-media__img {
-      margin: 0 auto;
     }
 
   }
@@ -342,6 +335,8 @@
     @include media-max($media-tablet) {
       box-shadow: none;
       padding-left: 0;
+      max-height: 11.25rem;
+      width: 100%;
     }
   }
 
@@ -422,9 +417,10 @@
   //   +media-max($media-tablet)
   //     display: none
 
-  > .o-media__figure {
-    margin: 0 0 $base-line-height;
-  }
+  //NOTE: Not clear why we would need to only apply this to new/unread
+  // > .o-media__figure {
+  //   margin: 0 0 $base-line-height;
+  // }
 
   > .o-media__headline {
     margin: 0 0 $base-line-height;
