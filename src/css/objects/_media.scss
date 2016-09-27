@@ -3,7 +3,7 @@
 //
 // .o-media                           - a media object
 // .o-media--sm                       - a media object with a small float-left asset & short headline
-// .o-media--med                      - a media object with a medium float-left asset & full content details
+// .o-media--med                      - a media object with a medium float-left asset & full content details, and adapts to screen width
 // .o-media--lg                       - a media object with a large full-width asset & full content details
 //
 // .o-media--last                     - utility to remove bottom marging from the last media object in a list
@@ -278,27 +278,6 @@
     padding-left: 0;
   }
 
-
-  $width: 18.625rem;
-
-  .o-media__figure {
-    margin-right: 3.125rem;
-    float: left;
-    max-width: $width;
-  }
-
-  .o-media__figure--cinematic {
-    height: $width / 2.35;
-  }
-
-  .o-media__figure--four-by-three {
-    height: $width / 1.33333;
-  }
-
-  .o-media__figure--widescreen {
-    height: $width / 1.77778;
-  }
-
   [class*='o-media__figure--'] {
     .o-media__img {
       box-sizing: border-box;
@@ -308,6 +287,62 @@
       transform: translate(-50%, -50%);
     }
   }
+
+  .o-media__figure {
+    margin-bottom: 1.375rem;    
+  }
+
+  @include media-max($media-tablet){
+
+    .o-media__content {
+      // If flex is available, and we are on mobile,
+      // use this to position the figure before the 
+      // rest of the media content.
+      display: flex;
+      flex-direction: column;
+      .o-media__figure {
+        order: -1
+      }
+    }
+
+    .o-media__img {
+      margin: 0 auto;
+    }
+
+    .o-media__figure--cinematic {
+      height: $media-tablet / 2.35;
+    }
+
+    .o-media__figure--four-by-three {
+      height: $media-tablet / 1.33333;
+    }
+
+    .o-media__figure--widescreen {
+      height: $media-tablet / 1.77778;
+    }
+  }
+
+  @include media-min($media-tablet){
+    $width: 18.625rem;
+    .o-media__figure {
+      margin-right: 3.125rem;
+      float: left;
+      max-width: $width;
+    }
+
+    .o-media__figure--cinematic {
+      height: $width / 2.35;
+    }
+
+    .o-media__figure--four-by-three {
+      height: $width / 1.33333;
+    }
+
+    .o-media__figure--widescreen {
+      height: $width / 1.77778;
+    }
+  }
+
 }
 
 .o-media--lg {
