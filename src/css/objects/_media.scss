@@ -4,7 +4,7 @@
 // .o-media                           - a media object
 // .o-media--sm                       - a media object with a small float-left asset & short headline
 // .o-media--med                      - a media object with a medium float-left asset & full content details
-// .o-media--large                    - a media object with a large full-width asset & full content details
+// .o-media--lg                       - a media object with a large full-width asset & full content details
 //
 // .o-media--last                     - utility to remove bottom marging from the last media object in a list
 // .o-media--new-and-unread           - marks a media object as new and unread
@@ -310,7 +310,7 @@
   }
 }
 
-.o-media--large {
+.o-media--lg {
   margin-top: $base-line-height;
 
   > .o-media__content {
@@ -426,7 +426,6 @@
       padding-left: 0;
       padding-right: 0;
     }
-
 
     .heading {
       margin-bottom: 1.75rem;

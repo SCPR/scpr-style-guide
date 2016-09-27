@@ -1081,9 +1081,9 @@ button {
   .o-media--med .o-media__figure--cinematic {
     height: 7.92553rem; }
   .o-media--med .o-media__figure--four-by-three {
-    height: 13.96875rem; }
+    height: 13.96878rem; }
   .o-media--med .o-media__figure--widescreen {
-    height: 10.47656rem; }
+    height: 10.47655rem; }
   .o-media--med [class*='o-media__figure--'] .o-media__img {
     box-sizing: border-box;
     left: 50%;
@@ -1091,30 +1091,30 @@ button {
     top: 50%;
     transform: translate(-50%, -50%); }
 
-.o-media--large {
+.o-media--lg {
   margin-top: 1.875rem; }
   @media (max-width: 56rem) {
-    .o-media--large > .o-media__content {
+    .o-media--lg > .o-media__content {
       box-shadow: none;
       padding-left: 0; } }
-  .o-media--large .o-media__figure {
+  .o-media--lg .o-media__figure {
     border-bottom: 6px solid #D15904;
     width: auto;
     margin-bottom: 2.5rem; }
     @media (max-width: 30rem) {
-      .o-media--large .o-media__figure {
+      .o-media--lg .o-media__figure {
         margin: 0 -1.58371%; } }
-  .o-media--large > .o-media__headline {
+  .o-media--lg > .o-media__headline {
     margin: 0 0 1.875rem; }
-  .o-media--large .o-media__label {
+  .o-media--lg .o-media__label {
     font-size: 0.78125rem; }
-  .o-media--large .o-media__overline {
+  .o-media--lg .o-media__overline {
     color: #31ABD4; }
 
 .o-media--block .o-media__figure {
   border-bottom: 4px solid #F87E21; }
 
-.o-media--blockSimple .o-media__headline {
+.o-media--block-simple .o-media__headline {
   margin-top: 0.5rem; }
 
 .o-media--last {
