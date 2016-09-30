@@ -1080,7 +1080,7 @@ button {
 .o-media--med {
   position: relative; }
   @media (min-width: 56rem) {
-    .o-media--med .o-media__teaser, .o-media--med .o-media__meta {
+    .o-media--med .o-media__figure + .o-media__teaser, .o-media--med .o-media__meta {
       float: right;
       width: 57.434%; } }
   @media (max-width: 56rem) {
