@@ -64,7 +64,7 @@
 
     &-light {
       > * {
-        &:before {
+        &::before {
           background-color: $color-gray-light;
         }
       }
