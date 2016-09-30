@@ -1079,6 +1079,10 @@ button {
 
 .o-media--med {
   position: relative; }
+  @media (min-width: 56rem) {
+    .o-media--med .o-media__teaser, .o-media--med .o-media__meta {
+      float: right;
+      width: 57.434%; } }
   @media (max-width: 56rem) {
     .o-media--med {
       border-top: 1px solid #E8E8E8;
@@ -1094,7 +1098,7 @@ button {
     margin-bottom: 1.375rem; }
     @media (min-width: 56rem) {
       .o-media--med .o-media__figure {
-        margin-right: 3.125rem;
+        margin-right: 6.5%;
         max-width: 35.817%; }
         .o-media--med .o-media__figure--cinematic {
           padding-top: 15.24128%; }
