@@ -264,7 +264,6 @@
   > .o-media__figure {
     margin-right: 1.125rem;
     max-width: 5rem;
-    float: left;
     margin-right: 3.55505%;
     width: 4.5rem;
   }
@@ -283,7 +282,6 @@
     @include media-min($media-tablet){
       $width: 35.817%;
       margin-right: 3.125rem;
-      float: left;
       max-width: $width;
 
       &--cinematic {

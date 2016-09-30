@@ -1072,7 +1072,6 @@ button {
   .o-media--sm > .o-media__figure {
     margin-right: 1.125rem;
     max-width: 5rem;
-    float: left;
     margin-right: 3.55505%;
     width: 4.5rem; }
   .o-media--sm .o-media__bylineText {
@@ -1086,7 +1085,6 @@ button {
     @media (min-width: 56rem) {
       .o-media--med .o-media__figure {
         margin-right: 3.125rem;
-        float: left;
         max-width: 35.817%; }
         .o-media--med .o-media__figure--cinematic {
           padding-top: 15.24128%; }
