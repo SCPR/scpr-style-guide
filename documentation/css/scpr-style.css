@@ -786,7 +786,7 @@ button {
       position: absolute;
       top: 0.5em;
       width: .375rem; }
-  .c-list--bullet-light > *:before {
+  .c-list--bullet-light > *::before {
     background-color: #E8E8E8; }
   @media (min-width: 56rem) {
     .c-list--bullet-offset {
@@ -1070,8 +1070,8 @@ button {
   .o-media--sm .o-media__headline, .o-media--sm .o-media__title {
     margin: 0; }
   .o-media--sm > .o-media__figure {
-    max-width: 5rem;
     margin-right: 3.55505%;
+    max-width: 5rem;
     width: 4.5rem; }
   .o-media--sm .o-media__bylineText {
     border-bottom: 4px solid #E8E8E8;
