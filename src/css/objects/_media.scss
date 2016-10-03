@@ -260,12 +260,27 @@
 
   .o-media__headline, .o-media__title {
     margin: 0;
+    width: 80%;
   }
 
   > .o-media__figure {
+    $width: 4.5rem;
+    min-width: $width;
+    width: $width;
     margin-right: 3.55505%;
-    max-width: 5rem;
-    width: 4.5rem;
+
+    &--cinematic {
+      padding-top: $width / 2.35;
+    }
+
+    &--four-by-three {
+      padding-top: $width / 1.33333;
+    }
+
+    &--widescreen {
+      padding-top: $width / 1.77778;
+    }
+
   }
 
   .o-media__bylineText {

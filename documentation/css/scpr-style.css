@@ -1068,11 +1068,18 @@ button {
   display: flex;
   margin: 0 0 1.875rem; }
   .o-media--sm .o-media__headline, .o-media--sm .o-media__title {
-    margin: 0; }
+    margin: 0;
+    width: 80%; }
   .o-media--sm > .o-media__figure {
-    margin-right: 3.55505%;
-    max-width: 5rem;
-    width: 4.5rem; }
+    min-width: 4.5rem;
+    width: 4.5rem;
+    margin-right: 3.55505%; }
+    .o-media--sm > .o-media__figure--cinematic {
+      padding-top: 1.91489rem; }
+    .o-media--sm > .o-media__figure--four-by-three {
+      padding-top: 3.37501rem; }
+    .o-media--sm > .o-media__figure--widescreen {
+      padding-top: 2.53125rem; }
   .o-media--sm .o-media__bylineText {
     border-bottom: 4px solid #E8E8E8;
     padding-bottom: 0.5rem; }
