@@ -1430,32 +1430,35 @@ button {
     .o-mast {
       margin-bottom: 0;
       min-height: 2.75rem; } }
-  .o-mast--top {
+
+.o-mast--top {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.o-mast__nav {
+  margin-left: auto; }
+  @media (max-width: 56rem) {
+    .o-mast__nav {
+      background-color: #F6F6F6;
+      bottom: 0;
+      display: none;
+      left: 0;
+      position: fixed;
+      right: 0;
+      top: 2.6rem; } }
+
+@media (max-width: 84rem) {
+  .o-mast__nav-sections {
+    border-bottom: 1px solid #cfcfcf;
     left: 0;
     position: absolute;
     right: 0;
-    top: 0; }
-  .o-mast__nav {
-    margin-left: auto; }
-    @media (max-width: 56rem) {
-      .o-mast__nav {
-        background-color: #F6F6F6;
-        bottom: 0;
-        display: none;
-        left: 0;
-        position: fixed;
-        right: 0;
-        top: 2.6rem; } }
-  @media (max-width: 84rem) {
-    .o-mast__nav-sections {
-      border-bottom: 1px solid #cfcfcf;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 3.5rem; }
-      .o-mast__nav-sections a {
-        padding-bottom: 0.5rem;
-        padding-top: 0.5rem; } }
+    top: 3.5rem; }
+    .o-mast__nav-sections a {
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem; } }
     @media (max-width: 84rem) and (max-width: 56rem) {
       .o-mast__nav-sections a {
         border-bottom: 1px solid #E8E8E8;
@@ -1464,97 +1467,109 @@ button {
         padding-top: 1.25rem; }
         .o-mast__nav-sections a:hover {
           background-color: #FFFFFF; } }
-  @media (max-width: 56rem) {
-    .o-mast__nav-sections {
-      border-bottom-color: #E8E8E8;
-      top: 0; } }
-  @media (max-width: 56rem) {
-    .o-mast__nav-actions {
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      right: 0; } }
-  .o-mast__branding {
-    margin-left: 0.9375rem; }
-    @media (max-width: 56rem) {
-      .o-mast__branding {
-        margin-left: 0;
-        text-align: center;
-        width: 100%; } }
-  .o-mast__logo-link {
-    display: inline-block;
-    margin-top: .1875rem;
-    vertical-align: middle; }
-    @media (max-width: 56rem) {
-      .o-mast__logo-link {
-        border-bottom: 1px solid #E8E8E8;
-        display: block;
-        padding: 0.5rem 0; } }
-  .o-mast__logo {
-    display: inline-block;
-    height: 22px;
-    width: 150px; }
-    @media (max-width: 56rem) {
-      .o-mast__logo {
-        height: 16px;
-        width: 107px; } }
-  .o-mast__divider {
-    background-color: #E8E8E8;
-    display: inline-block;
-    height: 1.875rem;
-    margin: 0 1.125rem;
-    vertical-align: middle;
-    width: 1px; }
-    @media (max-width: 56rem) {
-      .o-mast__divider {
-        display: none; } }
-    .o-mast__divider--margin-sm {
-      margin: 0 0.5rem; }
-  @media (max-width: 56rem) {
-    .o-mast__search-link {
-      padding: 0;
-      position: fixed;
-      right: 0.5rem;
-      top: 0.6rem; } }
-  @media (max-width: 56rem) {
-    .o-mast__donate-link {
-      background-color: #CCEDF8;
-      border-top: 1px solid #31ABD4;
-      font-size: 1.125rem;
-      text-align: center; } }
-  .o-mast__currently-airing {
-    font-size: 0.9375rem; }
-    @media (max-width: 56rem) {
-      .o-mast__currently-airing {
-        background-color: #F6F6F6;
-        display: block;
-        font-size: 0.78125rem;
-        padding: 0.5rem 0.25rem; } }
-  @media (max-width: 56rem) {
-    .o-mast__currently-airing-label {
-      font-size: 0.78125rem; } }
-  .o-mast__currently-airing-program {
-    color: #363636;
-    font-size: 0.9375rem;
-    font-weight: 400;
-    text-transform: none; }
-    @media (max-width: 56rem) {
-      .o-mast__currently-airing-program {
-        font-size: 0.78125rem; } }
-  .o-mast__mobile-menu-toggler {
-    border: 0;
-    color: #898989;
-    display: none;
-    font-weight: 500;
-    left: 0.25rem;
-    margin: 0;
-    padding: 0;
+
+@media (max-width: 56rem) {
+  .o-mast__nav-sections {
+    border-bottom-color: #E8E8E8;
+    top: 0; } }
+
+@media (max-width: 56rem) {
+  .o-mast__nav-actions {
+    bottom: 0;
+    left: 0;
     position: absolute;
-    text-transform: uppercase;
-    top: 0.6rem; }
-    @media (max-width: 56rem) {
-      .o-mast__mobile-menu-toggler {
-        display: block; } }
+    right: 0; } }
+
+.o-mast__branding {
+  margin-left: 0.9375rem; }
+  @media (max-width: 56rem) {
+    .o-mast__branding {
+      margin-left: 0;
+      text-align: center;
+      width: 100%; } }
+
+.o-mast__logo-link {
+  display: inline-block;
+  margin-top: .1875rem;
+  vertical-align: middle; }
+  @media (max-width: 56rem) {
+    .o-mast__logo-link {
+      border-bottom: 1px solid #E8E8E8;
+      display: block;
+      padding: 0.5rem 0; } }
+
+.o-mast__logo {
+  display: inline-block;
+  height: 22px;
+  width: 150px; }
+  @media (max-width: 56rem) {
+    .o-mast__logo {
+      height: 16px;
+      width: 107px; } }
+
+.o-mast__divider {
+  background-color: #E8E8E8;
+  display: inline-block;
+  height: 1.875rem;
+  margin: 0 1.125rem;
+  vertical-align: middle;
+  width: 1px; }
+  @media (max-width: 56rem) {
+    .o-mast__divider {
+      display: none; } }
+  .o-mast__divider--margin-sm {
+    margin: 0 0.5rem; }
+
+@media (max-width: 56rem) {
+  .o-mast__search-link {
+    padding: 0;
+    position: fixed;
+    right: 0.5rem;
+    top: 0.6rem; } }
+
+@media (max-width: 56rem) {
+  .o-mast__donate-link {
+    background-color: #CCEDF8;
+    border-top: 1px solid #31ABD4;
+    font-size: 1.125rem;
+    text-align: center; } }
+
+.o-mast__currently-airing {
+  font-size: 0.9375rem; }
+  @media (max-width: 56rem) {
+    .o-mast__currently-airing {
+      background-color: #F6F6F6;
+      display: block;
+      font-size: 0.78125rem;
+      padding: 0.5rem 0.25rem; } }
+
+@media (max-width: 56rem) {
+  .o-mast__currently-airing-label {
+    font-size: 0.78125rem; } }
+
+.o-mast__currently-airing-program {
+  color: #363636;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  text-transform: none; }
+  @media (max-width: 56rem) {
+    .o-mast__currently-airing-program {
+      font-size: 0.78125rem; } }
+
+.o-mast__mobile-menu-toggler {
+  border: 0;
+  color: #898989;
+  display: none;
+  font-weight: 500;
+  left: 0.25rem;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0.6rem; }
+  @media (max-width: 56rem) {
+    .o-mast__mobile-menu-toggler {
+      display: block; } }
 
 .js-mast__nav--active {
   display: block;
