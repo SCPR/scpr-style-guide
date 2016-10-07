@@ -995,11 +995,13 @@ button {
       position: absolute;
       top: 0.5em;
       width: .375rem; }
-  .c-list--bullet-light > *::before {
-    background-color: #E8E8E8; }
-  @media (min-width: 56rem) {
-    .c-list--bullet-offset {
-      padding: 0; } }
+
+.c-list--bullet-light > *::before {
+  background-color: #E8E8E8; }
+
+@media (min-width: 56rem) {
+  .c-list--bullet-offset {
+    padding: 0; } }
 
 .c-well {
   background: #F6F6F6;

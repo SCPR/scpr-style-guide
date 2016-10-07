@@ -61,20 +61,20 @@
         width: .375rem;
       }
     }
-
-    &-light {
-      > * {
-        &::before {
-          background-color: $color-gray-light;
-        }
-      }
-    }
-
-    &-offset {
-      @include media-min($media-tablet) {
-        padding: 0;
-      }
-    }
-
   }
+
+  &--bullet-light {
+    > * {
+      &::before {
+        background-color: $color-gray-light;
+      }
+    }
+  }
+
+  &--bullet-offset {
+    @include media-min($media-tablet) {
+      padding: 0;
+    }
+  }
+
 }
