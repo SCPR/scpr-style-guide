@@ -79,7 +79,7 @@
   }
 
 }
-
+x
 .o-mast__nav-actions {
 
   @include media-max($media-tablet) {
@@ -210,8 +210,10 @@
   text-transform: uppercase;
   top: 0.6rem;
 
-  @include media-max($media-tablet) {
-    display: block;
+  &:not(.js--hidden){
+    @include media-max($media-tablet) {
+      display: block;
+    }
   }
 
 }
