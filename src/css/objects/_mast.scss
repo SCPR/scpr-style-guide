@@ -79,7 +79,7 @@
   }
 
 }
-x
+
 .o-mast__nav-actions {
 
   @include media-max($media-tablet) {
@@ -161,12 +161,12 @@ x
   @include media-max($media-tablet) {
     background-color: $color-secondary-light;
     border-top: 1px solid $color-secondary;
-    box-sizing: border-box;
     bottom: 0;
-    left: 0;
+    box-sizing: border-box;
     font-size: ms(0);
-    text-align: center;
+    left: 0;
     position: fixed;
+    text-align: center;
     width: 100%;
   }
 
@@ -215,7 +215,7 @@ x
   text-transform: uppercase;
   top: 0.6rem;
 
-  &:not(.js--hidden){
+  &:not(.js--hidden) {
     @include media-max($media-tablet) {
       display: block;
     }
