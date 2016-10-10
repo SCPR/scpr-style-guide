@@ -161,8 +161,13 @@ x
   @include media-max($media-tablet) {
     background-color: $color-secondary-light;
     border-top: 1px solid $color-secondary;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
     font-size: ms(0);
     text-align: center;
+    position: fixed;
+    width: 100%;
   }
 
 }
