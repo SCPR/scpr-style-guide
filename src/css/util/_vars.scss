@@ -49,6 +49,11 @@ $font-size-default: 1.125rem;             // Equivalent to 18px
 $ms-base: $font-size-default;
 $ms-ratio: 1.2;   // Sets a "minor thid" modular scale
 
+// LAYOUT UNITS
+
+$gutter: $base-line-height;
+
+
 // MEDIA QUERIES
 
 $media-mobile: 30rem;

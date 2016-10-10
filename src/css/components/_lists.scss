@@ -6,6 +6,8 @@
 // .c-list--horiz               - Styles list for inline display.
 // .c-list--horiz-compact       - Inline list with tigher spacing between items.
 // .c-list--bullet              - Adds bullets to list items.
+// .c-list--bullet-light        - Gives bullets light-grey color.
+// .c-list--bullet-offset       - Makes bullets flow into gutter on large screens.
 //
 // Styleguide 0.1.0
 
@@ -14,7 +16,7 @@
   &--vert {
     > * {
       display: block;
-      margin-bottom: 1em;
+      margin-bottom: ($base-line-height / 2);
     }
   }
 
@@ -37,7 +39,7 @@
 
   &--horiz-compact {
     > * {
-      margin-right: 1rem;
+      margin-right: ($base-line-height / 2);
     }
   }
 
@@ -59,6 +61,20 @@
         width: .375rem;
       }
     }
-
   }
+
+  &--bullet-light {
+    > * {
+      &::before {
+        background-color: $color-gray-light;
+      }
+    }
+  }
+
+  &--bullet-offset {
+    @include media-min($media-tablet) {
+      padding: 0;
+    }
+  }
+
 }
