@@ -402,21 +402,6 @@
     font-size: ms(-2);
   }
 
-  .o-media__related-content {
-    margin-left: -2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-
-    @include media-max($media-tablet) {
-      margin-left: 0;
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .heading {
-      margin-bottom: 1.75rem;
-    }
-  }
 }
 
 .o-media--new-and-unread {
