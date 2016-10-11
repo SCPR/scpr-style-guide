@@ -432,8 +432,6 @@
   @extend .o-media__indicator;
   > .o-media__headline {
     &::before {
-      content: '';
-      display: block;
       width: 4px;
       height: 10px;
       border: solid $color-gray;
