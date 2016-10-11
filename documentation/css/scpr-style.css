@@ -1364,40 +1364,35 @@ button {
 .o-media--last {
   margin-bottom: 0; }
 
-.o-media__indicator > .o-media__headline, .o-media--new-and-unread > .o-media__headline, .o-media__indicator-visited > .o-media__headline {
-  margin: 0 0 1.875rem;
-  position: relative; }
-  .o-media__indicator > .o-media__headline::before, .o-media--new-and-unread > .o-media__headline::before, .o-media__indicator-visited > .o-media__headline::before {
-    content: '';
-    display: block;
-    height: 0.5rem;
-    left: -0.9375rem;
-    position: absolute;
-    top: 1rem;
-    width: 0.5rem; }
+.o-media__indicator > .o-media__headline::before, .o-media--new-and-unread > .o-media__headline::before, .o-media--visited-and-read > .o-media__headline::before {
+  content: '';
+  display: block;
+  height: 0.5rem;
+  left: -0.9375rem;
+  position: absolute;
+  top: 3.1rem;
+  width: 0.5rem; }
 
-.o-media__indicator > .o-media__label, .o-media--new-and-unread > .o-media__label, .o-media__indicator-visited > .o-media__label {
+.o-media__indicator > .o-media__label, .o-media--new-and-unread > .o-media__label, .o-media--visited-and-read > .o-media__label {
   font-size: 0.78125rem; }
 
-.o-media__indicator .o-media__related-content, .o-media--new-and-unread .o-media__related-content, .o-media__indicator-visited .o-media__related-content {
+.o-media__indicator .o-media__related-content, .o-media--new-and-unread .o-media__related-content, .o-media--visited-and-read .o-media__related-content {
   margin-left: -2rem;
   padding-left: 2rem;
   padding-right: 2rem; }
   @media (max-width: 56rem) {
-    .o-media__indicator .o-media__related-content, .o-media--new-and-unread .o-media__related-content, .o-media__indicator-visited .o-media__related-content {
+    .o-media__indicator .o-media__related-content, .o-media--new-and-unread .o-media__related-content, .o-media--visited-and-read .o-media__related-content {
       margin-left: 0;
       padding-left: 0;
       padding-right: 0; } }
-  .o-media__indicator .o-media__related-content .heading, .o-media--new-and-unread .o-media__related-content .heading, .o-media__indicator-visited .o-media__related-content .heading {
+  .o-media__indicator .o-media__related-content .heading, .o-media--new-and-unread .o-media__related-content .heading, .o-media--visited-and-read .o-media__related-content .heading {
     margin-bottom: 1.75rem; }
 
 .o-media--new-and-unread > .o-media__headline::before {
   background-color: #F87E21;
   border-radius: 50%; }
 
-.o-media__indicator-visited > .o-media__headline::before {
-  content: '';
-  display: block;
+.o-media--visited-and-read > .o-media__headline::before {
   width: 4px;
   height: 10px;
   border: solid #898989;

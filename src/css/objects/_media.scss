@@ -17,6 +17,9 @@
 //
 // .o-media__headline--h1-verbose     - size down longer headlines so they fit on no more than two lines
 //
+// .o-media--new-and-unread           - add dot indicator for unread status
+// .o-media--visited-and-read         - add checkmark indicator for visited status
+//
 // Styleguide 0.1.0
 
 .o-media {
@@ -383,8 +386,6 @@
 
 .o-media__indicator {
   > .o-media__headline {
-    margin: 0 0 $base-line-height;
-    position: relative;
 
     &::before {
       content: '';
@@ -392,7 +393,7 @@
       height: 0.5rem;
       left: $base-line-height / -2;
       position: absolute;
-      top: 1rem;
+      top: 3.1rem;
       width: 0.5rem;
     }
   }
@@ -428,7 +429,7 @@
   }
 }
 
-.o-media__indicator-visited {
+.o-media--visited-and-read {
   @extend .o-media__indicator;
   > .o-media__headline {
     &::before {
