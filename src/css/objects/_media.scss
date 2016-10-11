@@ -386,14 +386,14 @@
 
 .o-media__indicator {
   > .o-media__headline {
-
+    position: relative;
     &::before {
       content: '';
       display: block;
       height: 0.5rem;
       left: $base-line-height / -2;
       position: absolute;
-      top: 3.1rem;
+      transform: translateY(0.53em);
       width: 0.5rem;
     }
   }
@@ -437,7 +437,7 @@
       height: 10px;
       border: solid $color-gray;
       border-width: 0 1px 1px 0; 
-      transform: rotate(45deg);
+      transform: translateY(0.53em) rotate(45deg);
     }
   }
 }
