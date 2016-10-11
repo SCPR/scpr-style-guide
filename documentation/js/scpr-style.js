@@ -153,7 +153,7 @@ var s,
 };
 
 (function () {
-  if (document.getElementsByClassName("mast").length) {
+  if (document.getElementsByClassName("o-mast").length) {
     mast.init();
   }
 })();
