@@ -4,29 +4,20 @@ tags: object
 date: 2016/08/06
 pattern_number: 2.0
 ---
+<input type="checkbox" class="state-checkbox" id="o-mast__search-toggler-checkbox" />
+<input type="checkbox" id="o-mast__menu-toggler-checkbox" />
 <div class="o-mast">
-  <button class="o-mast__mobile-menu-toggler js-mast__menu-toggler">
-    <svg class="icon icon--size-med">
-      <use class="icon--line icon--color-gray-dark " xlink:href="#icon_line-menu"/>
-    </svg>
-    <label>Menu</label>
-  </button>
-  <button class="o-mast__mobile-menu-toggler js-mast__menu-close js--hidden">
-    <svg class="icon icon--size-med">
-      <use class="icon--line icon--color-gray-dark " xlink:href="#icon_line-close"/>
-    </svg>
-    <label>Close</label>
-  </button>
-  <div class="o-mast__branding">
-    <a href="/" class="o-mast__logo-link">
-      <svg class="o-mast__logo">
-        <use class="" xlink:href="/img/scpr-sprite.svg#logo_kpcc-black"/>
-      </svg>
-    </a>
-  </div>
-  <nav class="o-mast__nav js-mast__menu-mobile">
-    <ul class="c-nav o-mast__nav-sections js-search--hide">
-      <li class="c-nav__item">
+  <nav class="o-mast__nav">
+    <div class="o-mast__branding">
+      <a href="/" class="o-mast__logo-link">
+        <svg class="o-mast__logo">
+          <use class="" xlink:href="#logo_kpcc-black"/>
+        </svg>
+      </a>
+      <h6 class="o-mast__branding-caption b-heading b-heading--h6 b-heading--light">Member-supported news for Southern California</h6>
+    </div>
+    <ul class="c-nav o-mast__nav-sections">
+      <li class="c-nav__item c-nav__item--hover-highlight">
         <a class="c-nav__link" href="#">News</a>
         <div class="c-nav__dropdown text--small">
           <div class="l-container">
@@ -116,7 +107,7 @@ pattern_number: 2.0
           </div>
         </div>
       </li>
-      <li class="c-nav__item">
+      <li class="c-nav__item c-nav__item--hover-highlight">
         <a class="c-nav__link" href="#">Programs</a>
         <div class="c-nav__dropdown text--small">
           <div class="l-container">
@@ -155,7 +146,7 @@ pattern_number: 2.0
           </div>
         </div>
       </li>
-      <li class="c-nav__item">
+      <li class="c-nav__item c-nav__item--hover-highlight">
         <a class="c-nav__link" href="#">Events</a>
         <div class="c-nav__dropdown text--small">
           <div class="l-container">
@@ -186,7 +177,7 @@ pattern_number: 2.0
           </div>
         </div>
       </li>
-      <li class="c-nav__item">
+      <li class="c-nav__item c-nav__item--hover-highlight">
         <a class="c-nav__link" href="#">Support Us</a>
         <div class="c-nav__dropdown text--small">
           <div class="l-container">
@@ -220,7 +211,7 @@ pattern_number: 2.0
         </div>        
       </li>
 
-      <li class="c-nav__item">
+      <li class="c-nav__item c-nav__item--hover-highlight">
         <a class="c-nav__link" href="#">About Us</a>
         <div class="c-nav__dropdown text--small">
           <div class="l-container">
@@ -276,13 +267,13 @@ pattern_number: 2.0
           </div>
         </div>
       </li>
-
     </ul>
+    
     <ul class="c-nav o-mast__nav-actions">
-      <li class="c-nav__item">
-        <div class="c-search js-search js--hidden">
+      <li class="c-nav__item o-mast__search">
+        <div class="c-search">
           <form method="get" action="/search/" id="site-search">
-            <input type="text" class=" input-text input--wide input--align-bottom input--focused-placeholder" placeholder="Enter your search here" name="q" id="q" />
+            <input type="text" class=" input-text input--align-bottom input--focused-placeholder" placeholder="Enter your search here" name="q" id="q" />
             <button type="submit" class="c-btn c-btn--icon c-btn--outline-secondary">
               <svg class="icon icon--size-med">
                 <use class="icon--line icon--color-link" xlink:href="#icon_line-search"/>
@@ -290,19 +281,32 @@ pattern_number: 2.0
             </button>
           </form>
         </div>
-        <a class="o-mast__search-link c-nav__link js-search--toggle js-search--hide" href="#">
-          <svg class="icon icon--size-med icon--size-med@mobile-tablet">
+        <label for="o-mast__search-toggler-checkbox" class="o-mast__search-link c-nav__link" href="#">
+          <svg class="icon icon--search-open icon--size-med icon--size-med@mobile-tablet">
             <use class="icon--line icon--color-gray" xlink:href="#icon_line-search"/>
           </svg>
-        </a>
+          <svg class="icon icon--search-close icon--size-med icon--size-med@mobile-tablet">
+            <use class="icon--line icon--color-gray" xlink:href="#icon_line-close"/>
+          </svg>
+        </label>
       </li>
       <li class="c-nav__item">
         <a class="o-mast__donate-link c-nav__link c-nav__link--action" href="#">
           <svg class="icon icon--size-med icon--left">
             <use class="icon--line icon--color-link" xlink:href="#icon_line-donate"/>
           </svg>
-          Donate
+          <span class="c-nav__item-caption">Donate</span>
         </a>
+      </li>
+      <li class="c-nav__item">
+        <label class="c-nav__link o-mast__menu-toggler" for="o-mast__menu-toggler-checkbox">
+          <span class="o-mast__menu-toggler-open">
+            <svg class="icon icon--size-med">
+              <use class="icon--line icon--color-gray-dark " xlink:href="#icon_line-menu"/>
+            </svg>
+            <span class="c-nav__item-caption">Menu</span>
+          </span>
+        </label>
       </li>
     </ul>
   </nav>

@@ -5,30 +5,44 @@
 //
 // Styleguide 0.2.0
 
+#o-mast__menu-toggler-checkbox {
+  display: none;
+  .o-mst_menu-toggler-close {
+    display: none;
+  }
+}
+
+.state-checkbox {
+  display: none;
+}
+
 .o-mast {
   align-items: center;
   border-bottom: 1px solid $color-gray-light;
   display: flex;
   min-height: $base-line-height * 1.5;
   position: relative;
-
-  @include media-max($media-wide) {
-    margin-bottom: (1rem * 2.5);
-  }
+  background: white;
 
   @include media-max($media-tablet) {
     margin-bottom: 0;
     min-height: ($base-line-height * 2) - 1rem;
   }
 
-  .o-mast--open {
+  .o-mast__menu-toggler {
+    user-select: none;
+    display: none;
     @include media-max($media-tablet) {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: white;
+      display: block;
     }
   }
+
+  .c-nav__item-caption {
+    @include media-max($media-mobile) {
+      display: none;
+    }
+  }
+
 }
 
 .o-mast--top {
@@ -40,68 +54,84 @@
 
 .o-mast__nav {
   margin-left: auto;
-
   @include media-max($media-tablet) {
-    background-color: $color-gray-lightest;
-    bottom: 0;
-    display: none;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 2.6rem;
-    overflow-y: scroll;
-
-    .c-nav__dropdown {
-      opacity: 1;
-      max-height: 24rem;
-      min-height: 13.125rem;
-      padding: $gutter;  
-      box-sizing: border-box;
-      z-index: 9999;
-      position: relative;
+    // This stuff prevents line breaking, for the most part.
+    display: flex;
+    justify-content: space-between;
+    .o-mast__nav-actions {
+      display: flex;
+      justify-content: space-between;      
     }
-
   }
-
 }
 
 .o-mast__nav-sections {
 
+  float: left;
+
   @include media-max($media-tablet) {
+    display: none;
     border-bottom-color: $color-gray-light;
     top: 0;
     width: 100%;
+  }
+
+  .c-nav__link {
+    @include media-max($media-tablet) {
+      border-bottom: solid 2px $color-primary-lightest;
+    }
   }
 
 }
 
 .o-mast__nav-actions {
   float: right;
-  @include media-max($media-tablet) {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
+  .c-nav__link {
+    @include media-max($media-tablet) {
+      font-size: 0.7rem;
+    }
   }
-
 }
 
 .o-mast__branding {
-  margin-left: ($base-line-height / 2);
+  display: flex;
+  float: left;
+  // margin-left: ($base-line-height / 2);
+  padding: 0.6rem;
   @include media-max($media-tablet) {
-    margin-left: 0;
-    width: 100%;
+    padding: 0.4rem;
   }
+}
 
+.o-mast__branding-caption {
+  display: block;
+  padding-left: 5%;
+  padding-right: 0;
+  font-size: 0.9rem;
+  width: 10rem;
+  margin-bottom: 0;
+  @include media-min($media-tablet) {
+    transform: translateY(-0.3rem);
+  }
+  @include media-max($media-tablet) {
+    display: none;
+    //
+    // revisit this
+    //
+    // transform: translateY(0.3rem);
+    // font-size: 0.7rem;
+    // width: 8rem;
+  }
 }
 
 .o-mast__logo-link {
+  float:  left;
   display: inline-block;
   margin-top: .1875rem;
   vertical-align: middle;
 
   @include media-max($media-tablet) {
-    border-bottom: 1px solid $color-gray-light;
+    // border-bottom: 1px solid $color-gray-light;
     display: block;
     padding: 0.5rem 0;
   }
@@ -134,25 +164,6 @@
 
   &--margin-sm {
     margin: 0 0.5rem;
-  }
-
-}
-
-.o-mast__search-link {
-
-  @include media-max($media-tablet) {
-    padding: 0;
-    position: fixed;
-    right: 0.5rem;
-    top: 0.6rem;
-  }
-
-}
-
-.o-mast__donate-link {
-
-  @include media-max($media-tablet) {
-    display: none;
   }
 
 }
@@ -196,32 +207,159 @@
   left: 0.25rem;
   margin: 0;
   padding: 0;
-  // position: absolute;
   float: right;
   text-transform: uppercase;
   margin-top: 0.6rem;
+}
 
-  &:not(.js--hidden) {
-    @include media-max($media-tablet) {
-      display: block;
+
+// SEARCH
+
+.c-search {
+  position: relative;
+  float: right;
+  display: none;
+}
+
+.o-mast__search-link {
+  float: right;
+  &:focus {
+    // display: none;
+    & ~ .c-search {
+      position: initial;
+      top: initial;
+      left: initial;
     }
+  }
+}
+
+.c-search:focus {
+  position: initial;
+  top: initial;
+  left: initial;
+  & ~ .o-mast .c-nav {
+    display: none;
+  }
+}
+
+.icon--search-close {
+  display: none;
+}
+
+#o-mast__search-toggler-checkbox:checked ~ .o-mast {
+  // if search box open
+
+  .c-nav__item:not(.o-mast__search) {
+    display: none;
+  }
+
+  @include media-max($media-tablet) {
+    .o-mast__nav > * {
+      transform: translateY(0.2rem);
+    }
+    .o-mast__branding {
+      display: none;
+    }    
+
+    .o-mast__logo-link {
+      margin-top: 0;
+    }
+
+  }
+
+  @include media-max($media-desktop){
+    .o-mast__branding-caption {
+      display: none;
+    }
+  }
+
+  .c-nav {
+    .o-mast__search {
+      // switch the menu toggle icon
+      .icon--search-close {
+        display: block
+      }
+      .icon--search-open {
+        display: none;
+      }
+    }
+    .c-nav__item .c-search {
+      display: block;
+      form {
+        display: flex;
+      }
+    }    
   }
 
 }
 
-.js-mast {
-  &__nav--active {
-    @include media-max($media-tablet){
-      display: block;
-      position: fixed;
-      background: white;
-      top: 0;
-      width: 100%;
+#o-mast__search-toggler-checkbox:checked ~ #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__nav-sections .c-nav__item {
+  // we don't want to hide the section items 
+  // when the menu is down on mobile.
+  @include media-max($media-tablet) {
+    display: block !important;
+  }
+}
+
+
+// MENU
+
+#o-mast__menu-toggler-checkbox:checked ~ .o-mast {
+
+  &:before {
+    content: "";
+    background: white;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 2.75rem;
+    left: 0;
+  }
+
+  @include media-max($media-tablet) {
+    .o-mast__nav {
+      background-color: $color-gray-lightest;
+      bottom: 0;
       left: 0;
-      z-index: 200;
-      .o-mast__nav {
-        display: block;
+      position: fixed;
+      right: 0;
+      top: 2.75rem;
+      overflow-y: scroll;
+    }
+
+    .c-nav__dropdown {
+      opacity: 1;
+      max-height: 24rem;
+      min-height: 13.125rem;
+      padding: $gutter;  
+      box-sizing: border-box;
+      z-index: 9999;
+      position: relative;
+    }
+
+    .o-mast__branding {
+      position: fixed;
+      top: 0;
+    }
+
+    .o-mast__nav-sections {
+      display: block;
+    }
+
+    .o-mast__nav-sections .c-nav__item {
+      width: 100%;
+      &:hover {
+        box-shadow: none;
       }
     }
+
+    .o-mast__nav-actions {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 2.75rem;
+    }
+
   }
+
 }
