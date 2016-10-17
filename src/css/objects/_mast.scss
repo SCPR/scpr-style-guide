@@ -7,6 +7,7 @@
 
 #o-mast__menu-toggler-checkbox {
   display: none;
+
   .o-mst_menu-toggler-close {
     display: none;
   }
@@ -18,11 +19,11 @@
 
 .o-mast {
   align-items: center;
+  background: #ffffff;
   border-bottom: 1px solid $color-gray-light;
   display: flex;
   min-height: $base-line-height * 1.5;
   position: relative;
-  background: white;
 
   @include media-max($media-tablet) {
     margin-bottom: 0;
@@ -30,8 +31,9 @@
   }
 
   .o-mast__menu-toggler {
-    user-select: none;
     display: none;
+    user-select: none;
+
     @include media-max($media-tablet) {
       display: block;
     }
@@ -54,13 +56,15 @@
 
 .o-mast__nav {
   margin-left: auto;
+
   @include media-max($media-tablet) {
     // This stuff prevents line breaking, for the most part.
     display: flex;
     justify-content: space-between;
+
     .o-mast__nav-actions {
       display: flex;
-      justify-content: space-between;      
+      justify-content: space-between; 
     }
   }
 }
@@ -70,8 +74,8 @@
   float: left;
 
   @include media-max($media-tablet) {
-    display: none;
     border-bottom-color: $color-gray-light;
+    display: none;
     top: 0;
     width: 100%;
   }
@@ -86,6 +90,7 @@
 
 .o-mast__nav-actions {
   float: right;
+
   .c-nav__link {
     @include media-max($media-tablet) {
       font-size: 0.7rem;
@@ -96,8 +101,8 @@
 .o-mast__branding {
   display: flex;
   float: left;
-  // margin-left: ($base-line-height / 2);
   padding: 0.6rem;
+
   @include media-max($media-tablet) {
     padding: 0.4rem;
   }
@@ -110,9 +115,11 @@
   font-size: 0.9rem;
   width: 10rem;
   margin-bottom: 0;
+
   @include media-min($media-tablet) {
     transform: translateY(-0.3rem);
   }
+
   @include media-max($media-tablet) {
     display: none;
     //
@@ -125,8 +132,8 @@
 }
 
 .o-mast__logo-link {
-  float:  left;
   display: inline-block;
+  float: left;
   margin-top: .1875rem;
   vertical-align: middle;
 
@@ -203,40 +210,42 @@
   border: 0;
   color: $color-gray;
   display: none;
+  float: right;
   font-weight: 500;
   left: 0.25rem;
   margin: 0;
-  padding: 0;
-  float: right;
-  text-transform: uppercase;
   margin-top: 0.6rem;
+  padding: 0;
+  text-transform: uppercase;
 }
 
 
 // SEARCH
 
 .c-search {
-  position: relative;
   float: right;
   display: none;
+  position: relative;
 }
 
 .o-mast__search-link {
   float: right;
+
   &:focus {
     // display: none;
     & ~ .c-search {
+      left: initial;
       position: initial;
       top: initial;
-      left: initial;
     }
   }
 }
 
 .c-search:focus {
+  left: initial;
   position: initial;
   top: initial;
-  left: initial;
+
   & ~ .o-mast .c-nav {
     display: none;
   }
@@ -248,10 +257,6 @@
 
 #o-mast__search-toggler-checkbox:checked ~ .o-mast {
   // if search box open
-
-  .c-nav__item:not(.o-mast__search) {
-    display: none;
-  }
 
   @include media-max($media-tablet) {
     .o-mast__nav > * {
@@ -271,6 +276,10 @@
     .o-mast__branding-caption {
       display: none;
     }
+  }
+
+  .c-nav__item:not(.o-mast__search) {
+    display: none;
   }
 
   .c-nav {
@@ -308,7 +317,7 @@
 
   &:before {
     content: "";
-    background: white;
+    background: #ffffff;
     top: 0;
     position: fixed;
     width: 100%;

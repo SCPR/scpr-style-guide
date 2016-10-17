@@ -418,11 +418,11 @@
   @extend .o-media__indicator;
   > .o-media__headline {
     &::before {
-      width: 4px;
-      height: 10px;
       border: solid $color-gray;
       border-width: 0 1px 1px 0; 
+      height: 10px;
       transform: translateY(0.53em) rotate(45deg);
+      width: 4px;
     }
   }
 }
