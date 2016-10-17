@@ -4,6 +4,7 @@ var s,
 mast = {
 
   settings: {
+    root: document.getElementsByClassName("o-mast"),
     mobileMenu: document.getElementsByClassName("js-mast__menu-mobile"),
     mobileMenuToggleBtn: document.getElementsByClassName("js-mast__menu-toggler"),
     mobileMenuCloseBtn: document.getElementsByClassName("js-mast__menu-close"),
@@ -59,23 +60,23 @@ mast = {
   },
 
   showMobileMenu: function() {
-    mast.forEach(s.mobileMenu, function (index, element) {
+    mast.forEach(s.root, function (index, element) {
       element.classList.add("js-mast__nav--active");
     });
 
     // Prevent content underneath menu from scrolling when menu is engaged
-    document.addEventListener('touchmove', function(e) {
+    document.addEventListener('touchmove scroll', function(e) {
     	e.preventDefault();
     }, false);
   },
 
   hideMobileMenu: function() {
-    mast.forEach(s.mobileMenu, function (index, element) {
+    mast.forEach(s.root, function (index, element) {
       element.classList.remove("js-mast__nav--active");
     });
 
     // Reset document scrolling
-    document.addEventListener('touchmove', function(e) {
+    document.addEventListener('touchmove scroll', function(e) {
     	return true;
     }, false);
   },

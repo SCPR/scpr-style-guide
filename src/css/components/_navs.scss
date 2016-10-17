@@ -10,11 +10,14 @@
 
 .c-nav__item {
   display: inline-block;
-  position: relative;
   vertical-align: middle;
 
   @include media-max($media-tablet) {
     display: block;
+  }
+
+  &:hover {
+    box-shadow: inset 0px -4px 0px 0px $color-primary;
   }
 
 }
@@ -28,11 +31,6 @@
   padding: 1rem ($base-line-height / 2);
   text-decoration: none;
   text-transform: uppercase;
-
-  &:hover {
-    background-color: $color-gray-lightest;
-    color: $color-primary;
-  }
 
   &:active {
     color: $color-black;
@@ -54,4 +52,102 @@
       color: $color-secondary-dark;
     }
   }
+}
+
+
+
+
+
+.o-mast__nav {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position:relative;
+}
+
+.c-nav {
+  list-style:none;
+  margin: 0;
+}
+
+$dropdown-fade-time: 0.1s;
+$dropdown-fade-out-delay: 0.2s;
+
+.c-nav__dropdown.open {
+  opacity: 1;
+  max-height: 24rem;
+  min-height: 13.125rem;
+  padding: $gutter;  
+  z-index: 9999;
+}
+
+.c-nav__item:hover > .c-nav__dropdown {
+  @include media-min($media-tablet) {
+    transition: padding 0s linear 0s, min-height 0s linear 0s, max-height 0s linear 0s, opacity $dropdown-fade-time ease-in $dropdown-fade-out-delay;
+    opacity: 1;
+    max-height: 24rem;
+    min-height: 13.125rem;
+    padding: $gutter;  
+    z-index: 9999;
+  }
+}
+
+.c-nav__link {
+  @include media-max($media-tablet) {
+    border-bottom: solid 2px $color-primary-lightest;
+    padding-bottom: 0.3125rem;
+    margin-bottom: 0.3125rem * 2;
+  }  
+}
+
+.c-nav__section-heading {
+  @extend .b-heading--h6;
+  @extend .u-text-color--gray;
+  @extend .b-heading--bold;
+  @include media-min($media-tablet) {
+    border-bottom: solid 2px $color-primary-lightest;
+    padding-bottom: 0.3125rem;
+    margin-bottom: 0.3125rem * 2;
+  }
+  @include media-max($media-tablet) {
+    font-size: 0.9rem;
+    color: $color-gray-dark;
+  }
+}
+
+.c-nav__dropdown {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  background-color: $color-gray-lightest;
+
+  @include media-min($media-tablet) {
+    // hover effect should only happen on large screens
+    opacity: 0;
+    padding: 0%;
+    min-height: 0;
+    max-height: 0;
+    z-index: 9998;
+    box-shadow: 0px 1px 3px $color-gray-light;
+    $dropdown-fade-out-delay: 0.4s;
+    transition: opacity $dropdown-fade-time ease-in-out $dropdown-fade-out-delay, padding 0s linear ($dropdown-fade-out-delay + $dropdown-fade-time), min-height 0s ($dropdown-fade-out-delay + $dropdown-fade-time), max-height 0s ($dropdown-fade-out-delay + $dropdown-fade-time);
+  }
+
+  ul.c-list {
+    li {
+      margin: 0;
+      padding-top: ($base-line-height / 2);
+    }
+  }
+  .l-container {
+    // remove this when done with style guide
+    color: black;
+    text-align: left;
+    background-color: $color-gray-lightest;
+  }
+}
+
+.c-nav__section {
+  margin-bottom: ($base-line-height / 2);
 }

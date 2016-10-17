@@ -20,6 +20,15 @@
     margin-bottom: 0;
     min-height: ($base-line-height * 2) - 1rem;
   }
+
+  .o-mast--open {
+    @include media-max($media-tablet) {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+    }
+  }
 }
 
 .o-mast--top {
@@ -40,48 +49,34 @@
     position: fixed;
     right: 0;
     top: 2.6rem;
+    overflow-y: scroll;
+
+    .c-nav__dropdown {
+      opacity: 1;
+      max-height: 24rem;
+      min-height: 13.125rem;
+      padding: $gutter;  
+      box-sizing: border-box;
+      z-index: 9999;
+      position: relative;
+    }
+
   }
 
 }
 
 .o-mast__nav-sections {
 
-  @include media-max($media-wide) {
-    border-bottom: 1px solid darken($color-gray-light, 10%);
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 3.5rem;
-
-    a {
-      padding-bottom: 0.5rem;
-      padding-top: 0.5rem;
-
-      @include media-max($media-tablet) {
-        border-bottom: 1px solid $color-gray-light;
-        font-size: ms(0);
-        padding-bottom: ($base-line-height / 1.5);
-        padding-top: ($base-line-height / 1.5);
-
-        &:hover {
-          background-color: $color-white;
-        }
-
-      }
-
-    }
-
-  }
-
   @include media-max($media-tablet) {
     border-bottom-color: $color-gray-light;
     top: 0;
+    width: 100%;
   }
 
 }
 
 .o-mast__nav-actions {
-
+  float: right;
   @include media-max($media-tablet) {
     bottom: 0;
     left: 0;
@@ -93,10 +88,8 @@
 
 .o-mast__branding {
   margin-left: ($base-line-height / 2);
-
   @include media-max($media-tablet) {
     margin-left: 0;
-    text-align: center;
     width: 100%;
   }
 
@@ -159,15 +152,7 @@
 .o-mast__donate-link {
 
   @include media-max($media-tablet) {
-    background-color: $color-secondary-light;
-    border-top: 1px solid $color-secondary;
-    bottom: 0;
-    box-sizing: border-box;
-    font-size: ms(0);
-    left: 0;
-    position: fixed;
-    text-align: center;
-    width: 100%;
+    display: none;
   }
 
 }
@@ -211,9 +196,10 @@
   left: 0.25rem;
   margin: 0;
   padding: 0;
-  position: absolute;
+  // position: absolute;
+  float: right;
   text-transform: uppercase;
-  top: 0.6rem;
+  margin-top: 0.6rem;
 
   &:not(.js--hidden) {
     @include media-max($media-tablet) {
@@ -225,7 +211,17 @@
 
 .js-mast {
   &__nav--active {
-    display: block;
-    z-index: 200;
+    @include media-max($media-tablet){
+      display: block;
+      position: fixed;
+      background: white;
+      top: 0;
+      width: 100%;
+      left: 0;
+      z-index: 200;
+      .o-mast__nav {
+        display: block;
+      }
+    }
   }
 }
