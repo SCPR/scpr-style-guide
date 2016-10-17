@@ -520,10 +520,6 @@ button {
   .b-heading--inline {
     display: inline-block;
     margin-bottom: 0; }
-  .b-heading--underline {
-    border-bottom: solid 2px #f8dac3;
-    padding-bottom: 0.3125rem;
-    margin-bottom: 0.625rem; }
 
 .rule {
   background: #E8E8E8;
@@ -1772,12 +1768,12 @@ button {
   border-radius: 50%; }
 
 .o-media--visited-and-read > .o-media__headline::before {
-  width: 4px;
-  height: 10px;
   border: solid #898989;
   border-width: 0 1px 1px 0;
+  height: 10px;
   -webkit-transform: translateY(0.53em) rotate(45deg);
-          transform: translateY(0.53em) rotate(45deg); }
+          transform: translateY(0.53em) rotate(45deg);
+  width: 4px; }
 
 #o-mast__menu-toggler-checkbox {
   display: none; }
@@ -1791,23 +1787,23 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #ffffff;
   border-bottom: 1px solid #E8E8E8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   min-height: 2.8125rem;
-  position: relative;
-  background: white; }
+  position: relative; }
   @media (max-width: 56rem) {
     .o-mast {
       margin-bottom: 0;
       min-height: 2.75rem; } }
   .o-mast .o-mast__menu-toggler {
+    display: none;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
-            user-select: none;
-    display: none; }
+            user-select: none; }
     @media (max-width: 56rem) {
       .o-mast .o-mast__menu-toggler {
         display: block; } }
@@ -1843,8 +1839,8 @@ button {
   float: left; }
   @media (max-width: 56rem) {
     .o-mast__nav-sections {
-      display: none;
       border-bottom-color: #E8E8E8;
+      display: none;
       top: 0;
       width: 100%; } }
   @media (max-width: 56rem) {
@@ -1869,11 +1865,11 @@ button {
 
 .o-mast__branding-caption {
   display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0;
   padding-left: 5%;
   padding-right: 0;
-  font-size: 0.9rem;
-  width: 10rem;
-  margin-bottom: 0; }
+  width: 10rem; }
   @media (min-width: 56rem) {
     .o-mast__branding-caption {
       -webkit-transform: translateY(-0.3rem);
@@ -1883,8 +1879,8 @@ button {
       display: none; } }
 
 .o-mast__logo-link {
-  float: left;
   display: inline-block;
+  float: left;
   margin-top: .1875rem;
   vertical-align: middle; }
   @media (max-width: 56rem) {
@@ -1940,37 +1936,34 @@ button {
   border: 0;
   color: #898989;
   display: none;
+  float: right;
   font-weight: 500;
   left: 0.25rem;
   margin: 0;
+  margin-top: 0.6rem;
   padding: 0;
-  float: right;
-  text-transform: uppercase;
-  margin-top: 0.6rem; }
+  text-transform: uppercase; }
 
 .c-search {
-  position: relative;
+  display: none;
   float: right;
-  display: none; }
+  position: relative; }
 
 .o-mast__search-link {
   float: right; }
   .o-mast__search-link:focus ~ .c-search {
+    left: initial;
     position: initial;
-    top: initial;
-    left: initial; }
+    top: initial; }
 
 .c-search:focus {
+  left: initial;
   position: initial;
-  top: initial;
-  left: initial; }
+  top: initial; }
   .c-search:focus ~ .o-mast .c-nav {
     display: none; }
 
 .icon--search-close {
-  display: none; }
-
-#o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav__item:not(.o-mast__search) {
   display: none; }
 
 @media (max-width: 56rem) {
@@ -1986,26 +1979,29 @@ button {
   #o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__branding-caption {
     display: none; } }
 
+#o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav__item:not(.o-mast__search) {
+  display: none; }
+
 #o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav .o-mast__search .icon--search-close {
   display: block; }
 
 #o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav .o-mast__search .icon--search-open {
   display: none; }
 
-#o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav .c-nav__item .c-search {
+#o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav__item .c-search {
   display: block; }
-  #o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav .c-nav__item .c-search form {
+  #o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav__item .c-search form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
 
 @media (max-width: 56rem) {
   #o-mast__search-toggler-checkbox:checked ~ #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__nav-sections .c-nav__item {
-    display: block !important; } }
+    display: block; } }
 
 #o-mast__menu-toggler-checkbox:checked ~ .o-mast:before {
   content: "";
-  background: white;
+  background: #ffffff;
   top: 0;
   position: fixed;
   width: 100%;

@@ -54,8 +54,8 @@
   top: 0;
 }
 
+
 .o-mast__nav {
-  margin-left: auto;
 
   @include media-max($media-tablet) {
     // This stuff prevents line breaking, for the most part.
@@ -64,9 +64,15 @@
 
     .o-mast__nav-actions {
       display: flex;
-      justify-content: space-between; 
+      justify-content: space-between;
     }
   }
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  position: relative;
 }
 
 .o-mast__nav-sections {
@@ -110,11 +116,11 @@
 
 .o-mast__branding-caption {
   display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0;
   padding-left: 5%;
   padding-right: 0;
-  font-size: 0.9rem;
   width: 10rem;
-  margin-bottom: 0;
 
   @include media-min($media-tablet) {
     transform: translateY(-0.3rem);
@@ -223,8 +229,8 @@
 // SEARCH
 
 .c-search {
-  float: right;
   display: none;
+  float: right;
   position: relative;
 }
 
@@ -233,7 +239,7 @@
 
   &:focus {
     // display: none;
-    & ~ .c-search {
+    ~ .c-search {
       left: initial;
       position: initial;
       top: initial;
@@ -246,7 +252,7 @@
   position: initial;
   top: initial;
 
-  & ~ .o-mast .c-nav {
+  ~ .o-mast .c-nav {
     display: none;
   }
 }
@@ -262,9 +268,10 @@
     .o-mast__nav > * {
       transform: translateY(0.2rem);
     }
+
     .o-mast__branding {
       display: none;
-    }    
+    }
 
     .o-mast__logo-link {
       margin-top: 0;
@@ -272,7 +279,7 @@
 
   }
 
-  @include media-max($media-desktop){
+  @include media-max($media-desktop) {
     .o-mast__branding-caption {
       display: none;
     }
@@ -283,30 +290,31 @@
   }
 
   .c-nav {
-    .o-mast__search {
-      // switch the menu toggle icon
-      .icon--search-close {
-        display: block
-      }
-      .icon--search-open {
-        display: none;
-      }
-    }
-    .c-nav__item .c-search {
+    // switch the menu toggle icon
+    .o-mast__search .icon--search-close {
       display: block;
-      form {
-        display: flex;
-      }
-    }    
+    }
+
+    .o-mast__search .icon--search-open {
+      display: none;
+    }
+
+  }
+
+  .c-nav__item .c-search {
+    display: block;
+    form {
+      display: flex;
+    }
   }
 
 }
 
 #o-mast__search-toggler-checkbox:checked ~ #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__nav-sections .c-nav__item {
-  // we don't want to hide the section items 
+  // we don't want to hide the section items
   // when the menu is down on mobile.
   @include media-max($media-tablet) {
-    display: block !important;
+    display: block;
   }
 }
 
@@ -314,16 +322,6 @@
 // MENU
 
 #o-mast__menu-toggler-checkbox:checked ~ .o-mast {
-
-  &:before {
-    content: "";
-    background: #ffffff;
-    top: 0;
-    position: fixed;
-    width: 100%;
-    height: 2.75rem;
-    left: 0;
-  }
 
   @include media-max($media-tablet) {
     .o-mast__nav {
@@ -337,13 +335,13 @@
     }
 
     .c-nav__dropdown {
-      opacity: 1;
+      box-sizing: border-box;
       max-height: 24rem;
       min-height: 13.125rem;
-      padding: $gutter;  
-      box-sizing: border-box;
-      z-index: 9999;
+      opacity: 1;
+      padding: $gutter;
       position: relative;
+      z-index: 9999;
     }
 
     .o-mast__branding {
@@ -357,18 +355,29 @@
 
     .o-mast__nav-sections .c-nav__item {
       width: 100%;
+
       &:hover {
         box-shadow: none;
       }
     }
 
     .o-mast__nav-actions {
-      position: fixed;
-      top: 0;
-      right: 0;
       height: 2.75rem;
+      position: fixed;
+      right: 0;
+      top: 0;
     }
 
+  }
+
+  &::before {
+    background: #ffffff;
+    content: '';
+    height: 2.75rem;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 
 }
