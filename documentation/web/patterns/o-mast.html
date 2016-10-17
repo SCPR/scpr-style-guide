@@ -4,51 +4,276 @@ tags: object
 date: 2016/08/06
 pattern_number: 2.0
 ---
+<input type="checkbox" class="state-checkbox" id="o-mast__search-toggler-checkbox" />
+<input type="checkbox" id="o-mast__menu-toggler-checkbox" />
 <div class="o-mast">
-  <button class="o-mast__mobile-menu-toggler js-mast__menu-toggler">
-    <svg class="icon icon--size-med">
-      <use class="icon--line icon--color-gray-dark " xlink:href="#icon_line-menu"/>
-    </svg>
-    <label>Menu</label>
-  </button>
-  <button class="o-mast__mobile-menu-toggler js-mast__menu-close js--hidden">
-    <svg class="icon icon--size-med">
-      <use class="icon--line icon--color-gray-dark " xlink:href="#icon_line-close"/>
-    </svg>
-    <label>Close</label>
-  </button>
-  <div class="o-mast__branding">
-    <a href="/" class="o-mast__logo-link">
-      <svg class="o-mast__logo">
-        <use class="" xlink:href="/img/scpr-sprite.svg#logo_kpcc-black"/>
-      </svg>
-    </a>
-    <span class="o-mast__divider"></span>
-    <ul class="o-mast__currently-airing c-nav js-search--hide">
-      <li class="c-nav__item">
-        <a class="o-mast__currently-airing-label c-nav__link c-nav__link--action c-nav__link--inline" href="#">
-          <svg class="icon icon--size-lg icon--size-lg@mobile-tablet icon--left">
-            <use class="icon--line icon--color-link" xlink:href="#icon_line-listen-live"/>
-          </svg>
-          Listen Live
-          <span class="o-mast__currently-airing-program">- A Prairie Home Companion</span>
-        </a>
+  <nav class="o-mast__nav">
+    <div class="o-mast__branding">
+      <a href="/" class="o-mast__logo-link">
+        <svg class="o-mast__logo">
+          <use class="" xlink:href="#logo_kpcc-black"/>
+        </svg>
+      </a>
+      <h6 class="o-mast__branding-caption b-heading b-heading--h6 b-heading--light">Member-supported news for Southern California</h6>
+    </div>
+    <ul class="c-nav o-mast__nav-sections">
+      <li class="c-nav__item c-nav__item--hover-highlight">
+        <a class="c-nav__link" href="#">News</a>
+        <div class="c-nav__dropdown text--small">
+          <div class="l-container">
+            <div class="l-row l-row--sm-between">
+              <div class="c-nav__section l-col--sm-6">
+                <h6 class="c-nav__section-heading">Covering SoCal</h6>
+                <ul class="c-list c-list--vert text-columns--sm-2 text-columns--med-3">
+                  <li>
+                    <a href="#">Changing Neighborhoods & Affordability</a>
+                  </li>
+                  <li>
+                    <a href="#">Commuting</a>
+                  </li>
+                  <li>
+                    <a href="#">Immigration 3.0</a>
+                  </li>
+                  <li>
+                    <a href="#">Infrastructure</a>
+                  </li>
+                  <li>
+                    <a href="#">Orange County</a>
+                  </li>
+                  <li>
+                    <a href="#">Public Safety</a>
+                  </li>
+                  <li>
+                    <a href="#">SoCal Economy</a>
+                  </li>
+                  <li>
+                    <a href="#">SoCal Politics</a>
+                  </li>
+                  <li>
+                    <a href="#">The Social Safety Net</a>
+                  </li>
+                  <li>
+                    <a href="#">Vets</a>
+                  </li>
+                  <li>
+                    <a href="#">Workplace</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="c-nav__section l-col--sm-4">
+                <h6 class="c-nav__section-heading">Categories</h6>
+                <ul class="c-list c-list--vert text-columns--sm-2">
+                  <li>
+                    <a href="#">Local</a>
+                  </li>
+                  <li>
+                    <a href="#">US & World</a>
+                  </li>
+                  <li>
+                    <a href="#">Politics</a>
+                  </li>
+                  <li>
+                    <a href="#">Science</a>
+                  </li>
+                  <li>
+                    <a href="#">Arts & Entertainment</a>
+                  </li>
+                  <li>
+                    <a href="#">Business</a>
+                  </li>
+                  <li>
+                    <a href="#">Crime & Justice</a>
+                  </li>
+                  <li>
+                    <a href="#">Education</a>
+                  </li>
+                  <li>
+                    <a href="#">Health</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="c-nav__section l-col--sm-2">
+                <h6 class="c-nav__section-heading">More</h6>
+                <ul class="c-list c-list--vert">
+                  <li>
+                    <a href="#">Blogs</a>
+                  </li>
+                  <li>
+                    <a href="#">Archive</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="c-nav__item c-nav__item--hover-highlight">
+        <a class="c-nav__link" href="#">Programs</a>
+        <div class="c-nav__dropdown text--small">
+          <div class="l-container">
+            <div class="l-row l-row--sm-between">
+              <div class="c-nav__section l-col--sm-6">
+                <h6 class="c-nav__section-heading">Featured Programs</h6>
+                <ul class="c-list c-list--vert">
+                  <li>
+                    <a href="#">Take Two</a></li>
+                  <li>
+                    <a href="#">Offramp</a></li>
+                  <li>
+                    <a href="#">Airtalk</a></li>
+                  <li>
+                    <a href="#">The Frame</a></li>
+                </ul>
+              </div>
+              <div class="c-nav__section l-col--sm-6">
+                <h6 class="c-nav__section-heading">All Programs</h6>
+                <ul class="c-list c-list--vert">
+                  <li>
+                    <a href="#">Programs A-Z</a>
+                  </li>
+                  <li>
+                    <a href="#">Program Schedule</a>
+                  </li>
+                  <li>
+                    <a href="#">Podcasts</a>
+                  </li>
+                  <li>
+                    <a href="#">Archive</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="c-nav__item c-nav__item--hover-highlight">
+        <a class="c-nav__link" href="#">Events</a>
+        <div class="c-nav__dropdown text--small">
+          <div class="l-container">
+            <div class="l-row l-row--sm-between">
+              <div class="c-nav__section l-col--sm-6">
+                <h6 class="c-nav__section-heading">KPCC In Person</h6>
+                <ul class="c-list c-list--vert">
+                  <li>
+                    <a href="#">Upcoming Events</a>
+                  </li>
+                  <li>
+                    <a href="#">The Crawford Family Forum</a>
+                  </li>
+                  <li>
+                    <a href="#">KPCC Events Newsletter</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="c-nav__section l-col--sm-6">
+                <h6 class="c-nav__section-heading">More to do in SoCal</h6>
+                <ul class="c-list c-list--vert">
+                  <li>
+                    <a href="#">Sponsored Events</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="c-nav__item c-nav__item--hover-highlight">
+        <a class="c-nav__link" href="#">Support Us</a>
+        <div class="c-nav__dropdown text--small">
+          <div class="l-container">
+            <div class="l-row l-row--sm-between">
+              <div class="c-nav__section l-col--sm-6">
+                <h6 class="c-nav__section-heading">Membership</h6>
+                <div class="l-row l-row--sm-vertical l-row--sm-between">
+                  <a href="#">
+                    <div class="l-col--sm-8 c-btn c-btn--outline-secondary">Become a Sustainer</div>
+                  </a>
+                  <a href="#">
+                    <div class="l-col--sm-8 c-btn c-btn--outline-secondary">Become a Member</div>
+                  </a>
+                </div>
+              </div>
+              <div class="c-nav__section l-col--sm-6">
+                <ul class="c-list c-list--vert">
+                  <li>
+                    <a href="#">About sustaining membership</a>
+                  </li>
+                  <li>
+                    <a href="#">Update your credit card</a>
+                  </li>
+                  <li>
+                    <a href="#">Member benefits</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </li>
+
+      <li class="c-nav__item c-nav__item--hover-highlight">
+        <a class="c-nav__link" href="#">About Us</a>
+        <div class="c-nav__dropdown text--small">
+          <div class="l-container">
+            <div class="l-row l-row--sm-between">
+              <div class="c-nav__section l-col--sm-6">
+                <div class="c-nav__section l-col--sm-12">
+                  <h6 class="c-nav__section-heading">Connect with KPCC</h6>
+                  <ul class="c-list c-list--vert">
+                    <li>
+                      <a href="#">Contact Us</a>
+                    </li>
+                    <li>
+                      <a href="#">Become a source</a>
+                    </li>
+                    <li>
+                      <a href="#">Share a news tip</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-nav__section l-col--sm-12">
+                  <h6 class="c-nav__section-heading">Learn more about us</h6>
+                  <ul class="c-list c-list--vert">
+                    <li>
+                      <a href="#">About KPCC</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="c-nav__section l-col--sm-6">
+                <h6 class="c-nav__section-heading">People</h6>
+                <ul class="c-list c-list--vert">
+                  <li>
+                    <a href="#">Staff Directory</a>
+                  </li>
+                  <li>
+                    <a href="#">Executive leadership</a>
+                  </li>
+                  <li>
+                    <a href="#">Board of Trustees</a>
+                  </li>
+                  <li>
+                    <a href="#">Regional Advisory Council</a>
+                  </li>
+                  <li>
+                    <a href="#">Leadership Councils</a>
+                  </li>
+                  <li>
+                    <a href="#">Careers</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </li>
     </ul>
-  </div>
-  <nav class="o-mast__nav js-mast__menu-mobile">
-    <ul class="c-nav o-mast__nav-sections js-search--hide">
-      <li class="c-nav__item"><a class="c-nav__link" href="#">News</a></li>
-      <li class="c-nav__item"><a class="c-nav__link" href="#">Programs</a></li>
-      <li class="c-nav__item"><a class="c-nav__link" href="#">Events</a></li>
-      <li class="c-nav__item"><a class="c-nav__link" href="#">Support</a></li>
-      <li class="c-nav__item"><a class="c-nav__link" href="#">About</a></li>
-    </ul>
+    
     <ul class="c-nav o-mast__nav-actions">
-      <li class="c-nav__item">
-        <div class="c-search js-search js--hidden">
+      <li class="c-nav__item o-mast__search">
+        <div class="c-search">
           <form method="get" action="/search/" id="site-search">
-            <input type="text" class=" input-text input--wide input--align-bottom input--focused-placeholder" placeholder="Enter your search here" name="q" id="q" />
+            <input type="text" class=" input-text input--align-bottom input--focused-placeholder" placeholder="Enter your search here" name="q" id="q" />
             <button type="submit" class="c-btn c-btn--icon c-btn--outline-secondary">
               <svg class="icon icon--size-med">
                 <use class="icon--line icon--color-link" xlink:href="#icon_line-search"/>
@@ -56,22 +281,32 @@ pattern_number: 2.0
             </button>
           </form>
         </div>
-        <a class="o-mast__search-link c-nav__link js-search--toggle js-search--hide" href="#">
-          <svg class="icon icon--size-med icon--size-med@mobile-tablet">
+        <label for="o-mast__search-toggler-checkbox" class="o-mast__search-link c-nav__link clickable" href="#">
+          <svg class="icon icon--search-open icon--size-med icon--size-med@mobile-tablet">
             <use class="icon--line icon--color-gray" xlink:href="#icon_line-search"/>
           </svg>
-        </a>
-      </li>
-      <li class="c-nav__item">
-        <span class="o-mast__divider o-mast__divider--margin-sm"></span>
+          <svg class="icon icon--search-close icon--size-med icon--size-med@mobile-tablet">
+            <use class="icon--line icon--color-gray" xlink:href="#icon_line-close"/>
+          </svg>
+        </label>
       </li>
       <li class="c-nav__item">
         <a class="o-mast__donate-link c-nav__link c-nav__link--action" href="#">
           <svg class="icon icon--size-med icon--left">
             <use class="icon--line icon--color-link" xlink:href="#icon_line-donate"/>
           </svg>
-          Donate
+          <span class="c-nav__item-caption">Donate</span>
         </a>
+      </li>
+      <li class="c-nav__item">
+        <label class="c-nav__link o-mast__menu-toggler clickable" for="o-mast__menu-toggler-checkbox">
+          <span class="o-mast__menu-toggler-open">
+            <svg class="icon icon--size-med">
+              <use class="icon--line icon--color-gray-dark " xlink:href="#icon_line-menu"/>
+            </svg>
+            <span class="c-nav__item-caption">Menu</span>
+          </span>
+        </label>
       </li>
     </ul>
   </nav>

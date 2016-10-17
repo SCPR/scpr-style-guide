@@ -3,6 +3,8 @@
 // Text styles are used exclusively outside articles; articles have their own
 // content styling for body copy
 //
+// .text                                     - Provides styling for text.
+// .text-columns--(sm|med|lg|xl)-(1-12)      - Specifies the number of columns to flow text into for breakpoints.
 //
 // Styleguide 0.2.1
 
@@ -57,4 +59,17 @@
     font-family: $font-sans-alt;
   }
 
+}
+
+
+@each $breakpoint, $breakpoint-size in $grid-breakpoints {
+  @include media-min($breakpoint-size) {
+    $max-columns: 12;
+    @for $i from 2 through $max-columns {
+      .text-columns--#{$breakpoint}-#{$i} {
+        column-count: $i;
+        column-gap: $gutter;
+      }
+    }
+  }
 }

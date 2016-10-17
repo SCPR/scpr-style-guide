@@ -6,20 +6,31 @@
 
 .c-nav {
   display: inline-block;
+  list-style: none;
+  margin: 0;
 }
 
 .c-nav__item {
   display: inline-block;
-  position: relative;
   vertical-align: middle;
 
-  @include media-max($media-tablet) {
-    display: block;
+  &--hover-highlight:hover {
+    box-shadow: inset 0 -4px 0 0 $color-primary;
   }
 
 }
 
 .c-nav__link {
+
+  @include media-max($media-desktop) {
+    padding: 1rem 0.3rem;
+  }
+
+  @include media-max($media-tablet) {
+    margin-bottom: 0.3125rem * 2;
+    padding-bottom: 0.3125rem;
+  }
+
   color: $color-gray-warm;
   display: block;
   font-size: ms(-1);
@@ -29,10 +40,9 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  &:hover {
-    background-color: $color-gray-lightest;
-    color: $color-primary;
-  }
+  // @include media-max($media-tablet) {
+  //   padding: 1rem ($base-line-height / 5);
+  // }
 
   &:active {
     color: $color-black;
@@ -54,4 +64,82 @@
       color: $color-secondary-dark;
     }
   }
+}
+
+$dropdown-fade-time: 0.1s;
+$dropdown-fade-out-delay: 0.2s;
+
+.c-nav__dropdown.open {
+  max-height: 24rem;
+  min-height: 13.125rem;
+  opacity: 1;
+  padding: $gutter;
+  z-index: 9999;
+}
+
+.c-nav__item:hover > .c-nav__dropdown {
+  @include media-min($media-tablet) {
+    opacity: 1;
+    max-height: 24rem;
+    min-height: 13.125rem;
+    padding: $gutter;
+    transition: padding 0s linear 0s, min-height 0s linear 0s, max-height 0s linear 0s, opacity $dropdown-fade-time ease-in $dropdown-fade-out-delay;
+    z-index: 9999;
+  }
+}
+
+.c-nav__section-heading {
+  @extend .b-heading--h6;
+  @extend .u-text-color--gray;
+  @extend .b-heading--bold;
+
+  @include media-min($media-tablet) {
+    border-bottom: solid 2px $color-primary-lightest;
+    padding-bottom: 0.3125rem;
+    margin-bottom: 0.3125rem * 2;
+  }
+
+  @include media-max($media-tablet) {
+    font-size: 0.9rem;
+    color: $color-gray-dark;
+  }
+}
+
+.c-nav__dropdown {
+
+  @include media-min($media-tablet) {
+    // hover effect should only happen on large screens
+    box-shadow: 0 1px 3px $color-gray-light;
+    min-height: 0;
+    max-height: 0;
+    opacity: 0;
+    padding: 0%;
+    $dropdown-fade-out-delay: 0.4s;
+    transition: opacity $dropdown-fade-time ease-in-out $dropdown-fade-out-delay, padding 0s linear ($dropdown-fade-out-delay + $dropdown-fade-time), min-height 0s ($dropdown-fade-out-delay + $dropdown-fade-time), max-height 0s ($dropdown-fade-out-delay + $dropdown-fade-time);
+    z-index: 9998;
+  }
+
+  background-color: $color-gray-lightest;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100% - $gutter;
+
+  ul.c-list {
+    li {
+      margin: 0;
+      padding-top: ($base-line-height / 2);
+    }
+  }
+  
+  .l-container {
+    // remove this when done with style guide
+    color: $color-black;
+    text-align: left;
+    background-color: $color-gray-lightest;
+  }
+}
+
+.c-nav__section {
+  margin-bottom: ($base-line-height / 2);
 }
