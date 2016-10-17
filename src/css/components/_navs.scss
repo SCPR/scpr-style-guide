@@ -131,9 +131,10 @@ $dropdown-fade-out-delay: 0.2s;
       padding-top: ($base-line-height / 2);
     }
   }
+  
   .l-container {
     // remove this when done with style guide
-    color: black;
+    color: $color-black;
     text-align: left;
     background-color: $color-gray-lightest;
   }

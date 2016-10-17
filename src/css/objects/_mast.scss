@@ -17,6 +17,11 @@
   display: none;
 }
 
+.clickable {
+  cursor: pointer;
+  cursor: hand;
+}
+
 .o-mast {
   align-items: center;
   background: #ffffff;
@@ -68,11 +73,11 @@
     }
   }
 
-  width: 100%;
-  padding: 0;
   margin: 0;
   margin-left: auto;
+  padding: 0;
   position: relative;
+  width: 100%;
 }
 
 .o-mast__nav-sections {
@@ -332,6 +337,10 @@
       right: 0;
       top: 2.75rem;
       overflow-y: scroll;
+    }
+
+    .o-mast__nav > .o-mast__branding, .o-mast__nav > .o-mast__nav-actions {
+      transform: translateY(-0.2rem);
     }
 
     .c-nav__dropdown {
