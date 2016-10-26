@@ -5,9 +5,13 @@
 // Styleguide 0.2.0
 
 .c-search {
+  display: flex;
+  // height: 2.5rem;
+  transition: width 0s linear 0.5s;
+  // width: 1rem;
 
   @include media-max($media-mobile) {
-    background-color: $color-white;
+    // background-color: $color-white;
     left: 0;
     // padding: 0.5rem 0;
     position: fixed;

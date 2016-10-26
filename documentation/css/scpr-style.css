@@ -1400,9 +1400,6 @@ button {
   padding: 1rem 0.9375rem;
   text-decoration: none;
   text-transform: uppercase; }
-  @media (max-width: 64rem) {
-    .c-nav__link {
-      padding: 1rem 0.3rem; } }
   @media (max-width: 56rem) {
     .c-nav__link {
       margin-bottom: 0.625rem;
@@ -1431,8 +1428,8 @@ button {
     max-height: 24rem;
     min-height: 13.125rem;
     padding: 3.16742%;
-    -webkit-transition: padding 0s linear 0s, min-height 0s linear 0s, max-height 0s linear 0s, opacity 0.1s ease-in 0.2s;
-    transition: padding 0s linear 0s, min-height 0s linear 0s, max-height 0s linear 0s, opacity 0.1s ease-in 0.2s;
+    -webkit-transition: padding 0s linear 0.5s, min-height 0s linear 0.5s, max-height 0s linear 0.5s, opacity 0.1s ease-in 0.2s;
+    transition: padding 0s linear 0.5s, min-height 0s linear 0.5s, max-height 0s linear 0.5s, opacity 0.1s ease-in 0.2s;
     z-index: 9999; } }
 
 @media (min-width: 56rem) {
@@ -1473,14 +1470,19 @@ button {
 .c-nav__section {
   margin-bottom: 0.9375rem; }
 
-@media (max-width: 30rem) {
-  .c-search {
-    background-color: #FFFFFF;
-    left: 0;
-    position: fixed;
-    right: 0;
-    text-align: center;
-    top: 0; } }
+.c-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: width 0s linear 0.5s;
+  transition: width 0s linear 0.5s; }
+  @media (max-width: 30rem) {
+    .c-search {
+      left: 0;
+      position: fixed;
+      right: 0;
+      text-align: center;
+      top: 0; } }
 
 .js--hidden {
   display: none; }
@@ -1799,6 +1801,7 @@ button {
 .o-mast__nav {
   margin: 0;
   margin-left: auto;
+  min-height: 3.375rem;
   padding: 0;
   position: relative;
   width: 100%; }
@@ -1897,11 +1900,33 @@ button {
 #o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav .o-mast__search .icon--search-open {
   display: none; }
 
-#o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav__item .c-search form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  float: right; }
+#o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav .o-mast__search {
+  margin-top: 0.5rem;
+  position: absolute;
+  right: 0; }
+
+#o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav__item .c-search {
+  padding: 0; }
+  #o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav__item .c-search form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    float: right;
+    width: 75%; }
+  #o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav__item .c-search label {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 3rem; }
+
+#o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__nav .o-mast__nav-actions {
+  float: right;
+  display: block;
+  width: 50%; }
+  #o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__nav .o-mast__nav-actions .o-mast__search {
+    float: right; }
 
 #o-mast__menu-toggler-checkbox:checked ~ .o-mast::before {
   background: #ffffff;
@@ -1913,8 +1938,9 @@ button {
   width: 100%; }
 
 @media (max-width: 64rem) {
-  #o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__branding-caption {
-    display: none; } }
+  .c-nav__link {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem; } }
 
 @media (max-width: 56rem) {
   .o-mast {

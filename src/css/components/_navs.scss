@@ -22,9 +22,9 @@
 
 .c-nav__link {
 
-  @include media-max($media-desktop) {
-    padding: 1rem 0.3rem;
-  }
+  // @include media-max($media-desktop) {
+  //   padding: 1rem 0.3rem;
+  // }
 
   @include media-max($media-tablet) {
     margin-bottom: 0.3125rem * 2;
@@ -83,7 +83,7 @@ $dropdown-fade-out-delay: 0.2s;
     max-height: 24rem;
     min-height: 13.125rem;
     padding: $gutter;
-    transition: padding 0s linear 0s, min-height 0s linear 0s, max-height 0s linear 0s, opacity $dropdown-fade-time ease-in $dropdown-fade-out-delay;
+    transition: padding 0s linear 0.5s, min-height 0s linear 0.5s, max-height 0s linear 0.5s, opacity $dropdown-fade-time ease-in $dropdown-fade-out-delay;
     z-index: 9999;
   }
 }

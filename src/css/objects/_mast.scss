@@ -41,6 +41,7 @@
 .o-mast__nav {
   margin: 0;
   margin-left: auto;
+  min-height: 3.375rem;
   padding: 0;
   position: relative;
   width: 100%;
@@ -160,6 +161,7 @@
 
   .c-nav {
     // switch the menu toggle icon
+
     .o-mast__search .icon--search-close {
       display: block;
     }
@@ -168,11 +170,40 @@
       display: none;
     }
 
+    .o-mast__search {
+      margin-top: 0.5rem;
+      position: absolute;
+      right: 0;
+    }
+
   }
 
   .c-nav__item .c-search {
+    padding: 0;
+    // height: 1rem;
+    // margin-top: 0.3125rem;
+
     form {
       display: flex;
+      float: right;
+      width: 75%;
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      bottom: 50%;
+      transform: translate(-50%, -50%);      
+      width: 3rem;
+    }
+
+  }
+
+  .o-mast__nav .o-mast__nav-actions {
+    float: right;
+    display: block;
+    width: 50%;
+    .o-mast__search {
       float: right;
     }
   }
@@ -200,9 +231,14 @@
 @include media-max($media-desktop) {
   #o-mast__search-toggler-checkbox:checked ~ .o-mast {
     // if search box open
-    .o-mast__branding-caption {
-      display: none;
-    }
+    // .o-mast__branding-caption {
+    //   display: none;
+    // }
+  }
+
+  .c-nav__link {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
   }
 }
 
@@ -224,6 +260,8 @@
     // This stuff prevents line breaking, for the most part.
     display: flex;
     justify-content: space-between;
+    // min-height: initial;
+    // max-height: 2.5zrem;
 
     .o-mast__nav-actions {
       display: flex;

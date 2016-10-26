@@ -271,7 +271,15 @@ pattern_number: 2.0
     
     <ul class="c-nav o-mast__nav-actions">
       <li class="c-nav__item o-mast__search">
-        <div class="c-search">
+        <div class="c-search c-nav__link">
+          <label for="o-mast__search-toggler-checkbox" class="o-mast__search-link clickable" href="#">
+            <svg class="icon icon--search-open icon--size-med icon--size-med@mobile-tablet">
+              <use class="icon--line icon--color-gray" xlink:href="#icon_line-search"/>
+            </svg>
+            <svg class="icon icon--search-close icon--size-med icon--size-med@mobile-tablet">
+              <use class="icon--line icon--color-gray" xlink:href="#icon_line-close"/>
+            </svg>
+          </label>
           <form method="get" action="/search/" id="site-search">
             <input type="text" class=" input-text input--align-bottom input--focused-placeholder" placeholder="Enter your search here" name="q" id="q" />
             <button type="submit" class="c-btn c-btn--icon c-btn--outline-secondary">
@@ -280,14 +288,6 @@ pattern_number: 2.0
               </svg>
             </button>
           </form>
-          <label for="o-mast__search-toggler-checkbox" class="o-mast__search-link c-nav__link clickable" href="#">
-            <svg class="icon icon--search-open icon--size-med icon--size-med@mobile-tablet">
-              <use class="icon--line icon--color-gray" xlink:href="#icon_line-search"/>
-            </svg>
-            <svg class="icon icon--search-close icon--size-med icon--size-med@mobile-tablet">
-              <use class="icon--line icon--color-gray" xlink:href="#icon_line-close"/>
-            </svg>
-          </label>
         </div>
       </li>
       <li class="c-nav__item">
