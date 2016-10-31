@@ -24,11 +24,6 @@
   min-height: $base-line-height * 1.5;
   position: relative;
 
-  .o-mast__menu-toggler {
-    display: none;
-    user-select: none;
-  }
-
 }
 
 .o-mast--top {
@@ -51,8 +46,21 @@
   float: left;
 }
 
+.o-mast__nav-actions .c-nav__item, .o-mast__nav-sections .c-nav__item, .o-mast__branding {
+  > *:first-child {
+    height: 28px;
+    display: flex;
+    align-items: center;
+  }
+}
+
 .o-mast__nav-actions {
   float: right;
+}
+
+.o-mast__nav-actions .c-nav__item .o-mast__menu-toggler {
+  display: none;
+  user-select: none;
 }
 
 .o-mast__branding {
@@ -68,6 +76,19 @@
   padding-left: 5%;
   padding-right: 0;
   width: 10rem;
+}
+
+.o-mast__menu-toggler * {
+  float: left;
+}
+
+.o-mast__menu-toggler-caption {
+  &--closed {
+    display: block;
+  }
+  &--opened {
+    display: none;
+  }
 }
 
 .o-mast__logo-link {
@@ -155,7 +176,12 @@
 #o-mast__search-toggler-checkbox:checked ~ .o-mast {
   // if search box open
 
-  .c-nav__item:not(.o-mast__search) {
+  .o-mast__search {
+    position: absolute;
+    top: 0;
+  }
+
+  .o-mast__nav-actions .c-nav__item:not(.o-mast__search) {
     display: none;
   }
 
@@ -180,6 +206,7 @@
 
   .c-nav__item .c-search {
     padding: 0;
+    left: 1.25rem;
     // height: 1rem;
     // margin-top: 0.3125rem;
 
@@ -210,16 +237,46 @@
 
 }
 
+.o-mast__menu-icon--closed {
+  display: block;
+}
+
+.o-mast__menu-icon--opened {
+  display: none;
+}
+
 #o-mast__menu-toggler-checkbox:checked ~ .o-mast {
+  // if menu is open on any screen size
 
   &::before {
-    background: #ffffff;
+    background: $color-gray-lightest;
     content: '';
-    height: 2.75rem;
+    height: 1.32rem;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
+  }
+
+  .o-mast__menu-toggler {
+    margin-right: 1rem;
+  }
+
+  .o-mast__menu-icon--closed {
+    display: none;
+  }
+
+  .o-mast__menu-icon--opened {
+    display: block;
+    margin-right: 0.2rem;
+  }
+
+  .o-mast__menu-toggler-caption--closed {
+    display: none;
+  }
+
+  .o-mast__menu-toggler-caption--opened {
+    display: block;
   }
 
 }
@@ -249,12 +306,12 @@
   .o-mast {
     margin-bottom: 0;
     min-height: ($base-line-height * 2) - 1rem;
-
-    .o-mast__menu-toggler {
-      display: block;
-    }
   }
 
+  .o-mast__nav-actions .c-nav__item .o-mast__menu-toggler {
+    display: flex;
+    align-items: center;
+  }
 
   .o-mast__nav {
     // This stuff prevents line breaking, for the most part.
@@ -337,10 +394,6 @@
       transform: translateY(0.2rem);
     }
 
-    // .o-mast__branding {
-    //   display: none;
-    // }
-
     .o-mast__logo-link {
       margin-top: 0;
     }
@@ -354,6 +407,7 @@
   }
 
   #o-mast__menu-toggler-checkbox:checked ~ .o-mast {
+    // if menu open at max-size of tablet
 
     .o-mast__nav {
       background-color: $color-gray-lightest;
@@ -361,7 +415,7 @@
       left: 0;
       position: fixed;
       right: 0;
-      top: 2.75rem;
+      top: 1.32rem;
       overflow-y: scroll;
     }
 
@@ -371,7 +425,7 @@
 
     .c-nav__dropdown {
       box-sizing: border-box;
-      max-height: 24rem;
+      max-height: initial;
       min-height: 13.125rem;
       opacity: 1;
       padding: $gutter;
@@ -379,9 +433,10 @@
       z-index: 9999;
     }
 
-    .o-mast__branding {
-      position: fixed;
-      top: 0;
+    .o-mast__branding, .o-mast__nav-actions .c-nav__item:not(.o-mast__menu) {
+      // only display the close button for the menu
+      // when the menu is open on small screens
+      display: none;
     }
 
     .o-mast__nav-sections {
@@ -414,6 +469,15 @@
   .o-mast {
     .c-nav__item-caption {
       display: none;
+    }
+  }
+  #o-mast__search-toggler-checkbox:checked ~ .o-mast {
+    .o-mast__search {
+      right: 5px;
+      top: -5px;
+      form input {
+        width: 8rem;
+      }
     }
   }
 }

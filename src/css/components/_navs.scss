@@ -66,7 +66,7 @@
   }
 }
 
-$dropdown-fade-time: 0.1s;
+$dropdown-fade-time: 0.05s;
 $dropdown-fade-out-delay: 0.2s;
 
 .c-nav__dropdown.open {
@@ -83,7 +83,7 @@ $dropdown-fade-out-delay: 0.2s;
     max-height: 24rem;
     min-height: 13.125rem;
     padding: $gutter;
-    transition: padding 0s linear 0.5s, min-height 0s linear 0.5s, max-height 0s linear 0.5s, opacity $dropdown-fade-time ease-in $dropdown-fade-out-delay;
+    transition: padding 0s linear 0.2s, min-height 0s linear 0.2s, max-height 0s linear 0.2s, opacity $dropdown-fade-time ease-in ($dropdown-fade-out-delay + 0.2);
     z-index: 9999;
   }
 }
@@ -109,13 +109,13 @@ $dropdown-fade-out-delay: 0.2s;
 
   @include media-min($media-tablet) {
     // hover effect should only happen on large screens
-    box-shadow: 0 1px 3px $color-gray-light;
+    box-shadow: 0 1px 3px $color-gray;
     min-height: 0;
     max-height: 0;
     opacity: 0;
     padding: 0%;
     $dropdown-fade-out-delay: 0.4s;
-    transition: opacity $dropdown-fade-time ease-in-out $dropdown-fade-out-delay, padding 0s linear ($dropdown-fade-out-delay + $dropdown-fade-time), min-height 0s ($dropdown-fade-out-delay + $dropdown-fade-time), max-height 0s ($dropdown-fade-out-delay + $dropdown-fade-time);
+    // transition: opacity $dropdown-fade-time ease-in-out $dropdown-fade-out-delay, padding 0s linear ($dropdown-fade-out-delay + $dropdown-fade-time), min-height 0s ($dropdown-fade-out-delay + $dropdown-fade-time), max-height 0s ($dropdown-fade-out-delay + $dropdown-fade-time);
     z-index: 9998;
   }
 

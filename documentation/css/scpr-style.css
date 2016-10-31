@@ -1428,8 +1428,8 @@ button {
     max-height: 24rem;
     min-height: 13.125rem;
     padding: 3.16742%;
-    -webkit-transition: padding 0s linear 0.5s, min-height 0s linear 0.5s, max-height 0s linear 0.5s, opacity 0.1s ease-in 0.2s;
-    transition: padding 0s linear 0.5s, min-height 0s linear 0.5s, max-height 0s linear 0.5s, opacity 0.1s ease-in 0.2s;
+    -webkit-transition: padding 0s linear 0.2s, min-height 0s linear 0.2s, max-height 0s linear 0.2s, opacity 0.05s ease-in 0.4s;
+    transition: padding 0s linear 0.2s, min-height 0s linear 0.2s, max-height 0s linear 0.2s, opacity 0.05s ease-in 0.4s;
     z-index: 9999; } }
 
 @media (min-width: 56rem) {
@@ -1451,13 +1451,11 @@ button {
   width: 96.83258%; }
   @media (min-width: 56rem) {
     .c-nav__dropdown {
-      box-shadow: 0 1px 3px #E8E8E8;
+      box-shadow: 0 1px 3px #898989;
       min-height: 0;
       max-height: 0;
       opacity: 0;
       padding: 0%;
-      -webkit-transition: opacity 0.1s ease-in-out 0.4s, padding 0s linear 0.5s, min-height 0s 0.5s, max-height 0s 0.5s;
-      transition: opacity 0.1s ease-in-out 0.4s, padding 0s linear 0.5s, min-height 0s 0.5s, max-height 0s 0.5s;
       z-index: 9998; } }
   .c-nav__dropdown ul.c-list li {
     margin: 0;
@@ -1785,12 +1783,6 @@ button {
   display: flex;
   min-height: 2.8125rem;
   position: relative; }
-  .o-mast .o-mast__menu-toggler {
-    display: none;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none; }
 
 .o-mast--top {
   left: 0;
@@ -1809,8 +1801,24 @@ button {
 .o-mast__nav-sections {
   float: left; }
 
+.o-mast__nav-actions .c-nav__item > *:first-child, .o-mast__nav-sections .c-nav__item > *:first-child, .o-mast__branding > *:first-child {
+  height: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .o-mast__nav-actions {
   float: right; }
+
+.o-mast__nav-actions .c-nav__item .o-mast__menu-toggler {
+  display: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
 
 .o-mast__branding {
   display: -webkit-box;
@@ -1826,6 +1834,15 @@ button {
   padding-left: 5%;
   padding-right: 0;
   width: 10rem; }
+
+.o-mast__menu-toggler * {
+  float: left; }
+
+.o-mast__menu-toggler-caption--closed {
+  display: block; }
+
+.o-mast__menu-toggler-caption--opened {
+  display: none; }
 
 .o-mast__logo-link {
   display: inline-block;
@@ -1891,7 +1908,11 @@ button {
 .icon--search-close {
   display: none; }
 
-#o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav__item:not(.o-mast__search) {
+#o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__search {
+  position: absolute;
+  top: 0; }
+
+#o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__nav-actions .c-nav__item:not(.o-mast__search) {
   display: none; }
 
 #o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav .o-mast__search .icon--search-close {
@@ -1906,7 +1927,8 @@ button {
   right: 0; }
 
 #o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav__item .c-search {
-  padding: 0; }
+  padding: 0;
+  left: 1.25rem; }
   #o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav__item .c-search form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1928,14 +1950,36 @@ button {
   #o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__nav .o-mast__nav-actions .o-mast__search {
     float: right; }
 
+.o-mast__menu-icon--closed {
+  display: block; }
+
+.o-mast__menu-icon--opened {
+  display: none; }
+
 #o-mast__menu-toggler-checkbox:checked ~ .o-mast::before {
-  background: #ffffff;
+  background: #F6F6F6;
   content: '';
-  height: 2.75rem;
+  height: 1.32rem;
   left: 0;
   position: fixed;
   top: 0;
   width: 100%; }
+
+#o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__menu-toggler {
+  margin-right: 1rem; }
+
+#o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__menu-icon--closed {
+  display: none; }
+
+#o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__menu-icon--opened {
+  display: block;
+  margin-right: 0.2rem; }
+
+#o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__menu-toggler-caption--closed {
+  display: none; }
+
+#o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__menu-toggler-caption--opened {
+  display: block; }
 
 @media (max-width: 64rem) {
   .c-nav__link {
@@ -1946,8 +1990,13 @@ button {
   .o-mast {
     margin-bottom: 0;
     min-height: 2.75rem; }
-    .o-mast .o-mast__menu-toggler {
-      display: block; }
+  .o-mast__nav-actions .c-nav__item .o-mast__menu-toggler {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .o-mast__nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2007,22 +2056,21 @@ button {
     left: 0;
     position: fixed;
     right: 0;
-    top: 2.75rem;
+    top: 1.32rem;
     overflow-y: scroll; }
   #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__nav > .o-mast__branding, #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__nav > .o-mast__nav-actions {
     -webkit-transform: translateY(-0.2rem);
             transform: translateY(-0.2rem); }
   #o-mast__menu-toggler-checkbox:checked ~ .o-mast .c-nav__dropdown {
     box-sizing: border-box;
-    max-height: 24rem;
+    max-height: initial;
     min-height: 13.125rem;
     opacity: 1;
     padding: 3.16742%;
     position: relative;
     z-index: 9999; }
-  #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__branding {
-    position: fixed;
-    top: 0; }
+  #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__branding, #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__nav-actions .c-nav__item:not(.o-mast__menu) {
+    display: none; }
   #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__nav-sections {
     display: block; }
   #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__nav-sections .c-nav__item {
@@ -2037,7 +2085,12 @@ button {
 
 @media (max-width: 30rem) {
   .o-mast .c-nav__item-caption {
-    display: none; } }
+    display: none; }
+  #o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__search {
+    right: 5px;
+    top: -5px; }
+    #o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__search form input {
+      width: 8rem; } }
 
 .o-footer {
   background-color: #212121;
