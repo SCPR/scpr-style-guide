@@ -119,11 +119,13 @@ $dropdown-fade-out-delay: 0.2s;
     z-index: 9998;
   }
 
+  box-sizing: border-box;
+  width: 100%;
   background-color: $color-gray-lightest;
   left: 0;
   overflow: hidden;
   position: absolute;
-  width: 100% - $gutter;
+  // width: 100% - $gutter;
 
   ul.c-list {
     li {

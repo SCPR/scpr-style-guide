@@ -658,18 +658,23 @@ button {
       height: 1.375rem;
       width: 1.375rem; }
   .icon--color-primary {
+    color: #F87E21;
     fill: #F87E21;
     stroke: #F87E21; }
   .icon--color-link {
+    color: #01AED5;
     fill: #01AED5;
     stroke: #01AED5; }
   .icon--color-gray {
+    color: #898989;
     fill: #898989;
     stroke: #898989; }
   .icon--color-gray-dark {
+    color: #363636;
     fill: #363636;
     stroke: #363636; }
   .icon--color-white {
+    color: #FFFFFF;
     fill: #FFFFFF;
     stroke: #FFFFFF; }
 
@@ -1444,11 +1449,12 @@ button {
     color: #363636; } }
 
 .c-nav__dropdown {
+  box-sizing: border-box;
+  width: 100%;
   background-color: #F6F6F6;
   left: 0;
   overflow: hidden;
-  position: absolute;
-  width: 96.83258%; }
+  position: absolute; }
   @media (min-width: 56rem) {
     .c-nav__dropdown {
       box-shadow: 0 1px 3px #898989;
@@ -1793,7 +1799,6 @@ button {
 .o-mast__nav {
   margin: 0;
   margin-left: auto;
-  min-height: 3.375rem;
   padding: 0;
   position: relative;
   width: 100%; }
@@ -1922,7 +1927,7 @@ button {
   display: none; }
 
 #o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav .o-mast__search {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   position: absolute;
   right: 0; }
 
@@ -1955,15 +1960,6 @@ button {
 
 .o-mast__menu-icon--opened {
   display: none; }
-
-#o-mast__menu-toggler-checkbox:checked ~ .o-mast::before {
-  background: #F6F6F6;
-  content: '';
-  height: 1.32rem;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%; }
 
 #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__menu-toggler {
   margin-right: 1rem; }
@@ -2011,6 +2007,16 @@ button {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between; }
+  #o-mast__menu-toggler-checkbox:checked ~ .o-mast::before {
+    background: #F6F6F6;
+    content: '';
+    height: 2.2rem;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%; }
+  .o-mast__nav-sections .c-nav__dropdown .c-nav__section {
+    margin-bottom: 2rem; }
   .o-mast__nav-sections {
     border-bottom-color: #E8E8E8;
     display: none;
@@ -2034,6 +2040,8 @@ button {
     width: 107px; }
   .o-mast__divider {
     display: none; }
+  #o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__search {
+    margin-top: 0.7rem; }
   .o-mast__currently-airing {
     background-color: #F6F6F6;
     display: block;
@@ -2043,6 +2051,8 @@ button {
     font-size: 0.78125rem; }
   .o-mast__currently-airing-program {
     font-size: 0.78125rem; }
+  #o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__nav {
+    min-height: 3.375rem; }
   #o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__nav > * {
     -webkit-transform: translateY(0.2rem);
             transform: translateY(0.2rem); }
@@ -2056,7 +2066,7 @@ button {
     left: 0;
     position: fixed;
     right: 0;
-    top: 1.32rem;
+    top: 2.2rem;
     overflow-y: scroll; }
   #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__nav > .o-mast__branding, #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__nav > .o-mast__nav-actions {
     -webkit-transform: translateY(-0.2rem);
@@ -2064,11 +2074,9 @@ button {
   #o-mast__menu-toggler-checkbox:checked ~ .o-mast .c-nav__dropdown {
     box-sizing: border-box;
     max-height: initial;
-    min-height: 13.125rem;
     opacity: 1;
     padding: 3.16742%;
-    position: relative;
-    z-index: 9999; }
+    position: relative; }
   #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__branding, #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__nav-actions .c-nav__item:not(.o-mast__menu) {
     display: none; }
   #o-mast__menu-toggler-checkbox:checked ~ .o-mast .o-mast__nav-sections {
@@ -2086,11 +2094,15 @@ button {
 @media (max-width: 30rem) {
   .o-mast .c-nav__item-caption {
     display: none; }
-  #o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__search {
-    right: 5px;
-    top: -5px; }
-    #o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__search form input {
-      width: 8rem; } }
+  #o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__nav .o-mast__nav-actions {
+    width: 100%; }
+  #o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav__item .o-mast__search {
+    width: 100%;
+    position: relative; }
+    #o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav__item .o-mast__search form, #o-mast__search-toggler-checkbox:checked ~ .o-mast .c-nav__item .o-mast__search form input {
+      width: 100%; }
+  #o-mast__search-toggler-checkbox:checked ~ .o-mast .o-mast__branding {
+    display: none; } }
 
 .o-footer {
   background-color: #212121;

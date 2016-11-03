@@ -67,26 +67,31 @@
   }
 
   &--color-primary {
+    color: $color-primary;
     fill: $color-primary;
     stroke: $color-primary;
   }
 
   &--color-link {
+    color: $color-link;
     fill: $color-link;
     stroke: $color-link;
   }
 
   &--color-gray {
+    color: $color-gray;
     fill: $color-gray;
     stroke: $color-gray;
   }
 
   &--color-gray-dark {
+    color: $color-gray-dark;
     fill: $color-gray-dark;
     stroke: $color-gray-dark;
   }
 
   &--color-white {
+    color: $color-white;
     fill: $color-white;
     stroke: $color-white;
   }
