@@ -1,0 +1,429 @@
+// Media Objects: Media objects wrap up a global design pattern for
+// image + copy used to represent a piece of content.
+//
+// .o-media                           - a media object
+// .o-media--sm                       - a media object with a small float-left asset & short headline
+// .o-media--med                      - a media object with a medium float-left asset & full content details, and adapts to screen width
+// .o-media--lg                       - a media object with a large full-width asset & full content details
+//
+// .o-media--last                     - utility to remove bottom marging from the last media object in a list
+// .o-media--new-and-unread           - marks a media object as new and unread
+// .o-media--block                    - block asset with full media content details
+// .o-media--block-simple             - block asset with short headline
+//
+// .o-media__figure--cinematic        - 2.35:1 aspect ratio images
+// .o-media__figure--four-by-three    - 4:3 aspect ratio images
+// .o-media__figure--widescreen       - 16:9 aspect ratio images
+//
+// .o-media__headline--h1-verbose     - size down longer headlines so they fit on no more than two lines
+//
+// .o-media--new-and-unread           - add dot indicator for unread status
+// .o-media--visited-and-read         - add checkmark indicator for visited status
+//
+// Styleguide 0.1.0
+
+.o-media {
+  @include clearfix;
+
+  display: block;
+  margin: 0;
+}
+
+.o-media__figure {
+  $width: 100%;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  max-width: $width;
+  overflow: hidden;
+  position: relative;
+  width: $width;
+
+  &--cinematic {
+    padding-top: $width / 2.35;
+  }
+
+  &--four-by-three {
+    padding-top: $width / 1.33333;
+  }
+
+  &--widescreen {
+    padding-top: $width / 1.77778;
+  }
+
+  &::before {
+    box-sizing: border-box;
+    content: '';
+    display: block;
+    position: relative;
+  }
+}
+
+[class*='o-media__figure--'] {
+  .o-media__img {
+    box-sizing: border-box;
+    left: 50%;
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.o-media__related-content {
+  border-top: 2px solid lighten($color-primary, 40%);
+  margin: $base-line-height 0 0;
+  padding: $base-line-height 0 0;
+
+  .o-media__headline {
+    font-size: 1.14rem;
+    font-weight: 500;
+  }
+
+  > .heading {
+    margin-bottom: 1.375rem;
+    text-transform: uppercase;
+  }
+}
+
+.o-media__meta {
+  display: block;
+  margin: 1rem 0 0.25rem;
+}
+
+.o-media__headline {
+  font-family: $font-serif-titling;
+  line-height: 1.1em;
+  margin: 0 0 1.125rem;
+
+  &--h1 {
+    font-size: ms(6);
+    font-weight: 800;
+
+    @include media-max($media-mobile) {
+      font-size: ms(4);
+    }
+  }
+
+  &--h1-verbose {
+    font-size: ms(5);
+    font-weight: 800;
+
+    @include media-max($media-mobile) {
+      font-size: ms(4);
+    }
+  }
+
+  &--h2 {
+    font-size: ms(5);
+    font-weight: 800;
+  }
+
+  &--h3 {
+    font-size: ms(4);
+    line-height: 1.22222em;
+
+    @include media-max($media-mobile) {
+      font-size: ms(3);
+    }
+  }
+
+  &--h4 {
+    font-family: $font-sans-base;
+    font-size: ms(1);
+    line-height: 1.22222em;
+  }
+
+  &--h5 {
+    font-family: $font-sans-base;
+    font-size: ms(1);
+    line-height: 1.22222em;
+  }
+}
+
+.o-media__headline-link {
+  position: relative;
+
+  &:hover {
+    @include link-underline(darken($color-gray-light, 10%));
+  }
+
+  &:visited {
+    .o-media__indicator-visited path {
+      fill: $color-gray;
+      stroke: $color-gray;
+    }
+  }
+}
+
+.o-media__title {
+  color: $color-gray-dark;
+  line-height: 1.1em;
+  margin: 0 0 1rem;
+
+  &--h2 {
+    font-size: ms(2);
+  }
+
+  &--h3 {
+    font-size: ms(-1);
+    line-height: 1.33333em;
+  }
+}
+
+.o-media__entityTitle {
+  display: inline-block;
+  font-size: ms(-1);
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &--small {
+    font-size: ms(-2);
+  }
+}
+
+.o-media__overline {
+  color: $color-secondary;
+  display: block;
+  font-size: ms(0);
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+
+  &--block {
+    margin-top: 0.25rem;
+  }
+}
+
+.o-media__label {
+  color: $color-primary;
+  display: inline-block;
+  font-size: ms(-1);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.o-media__byline {
+  color: $color-gray-dark;
+  display: block;
+  font-size: ms(-2);
+  font-weight: 500;
+}
+
+.o-media__timestamp, .o-media__source {
+  color: $color-gray;
+  font-size: ms(-2);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.o-media__dek {
+  color: $color-gray;
+  font-size: ms(1);
+  line-height: 1.47059em;
+  margin-bottom: 1em;
+}
+
+.o-media__teaser {
+  color: $color-gray-dark;
+  font-size: ms(0);
+  line-height: 1.66667em;
+
+  > * {
+    font-size: ms(0);
+    line-height: 1.66667em;
+  }
+
+  &--small {
+    font-size: ms(-2);
+  }
+
+  &--bullet {
+    margin-bottom: 1em;
+  }
+}
+
+
+// MEDIA OBJECT MODIFIERS
+//
+// Breaking out modifiers into their own SCSS blocks and selectively overriding
+// element styles to create different flavors of our media object.
+//
+// We're bending some BEM rules here by having 1-deep nested selectors, but in
+// exchange for that we get a single common markup pattern for media objects.
+
+.o-media--sm {
+  align-items: center;
+  display: flex;
+  margin: 0 0 $base-line-height;
+
+  .o-media__headline, .o-media__title {
+    margin: 0;
+    width: 80%;
+  }
+
+  > .o-media__figure {
+    $width: 4.5rem;
+    margin-right: 3.55505%;
+    min-width: $width;
+    width: $width;
+
+    &--cinematic {
+      padding-top: $width / 2.35;
+    }
+
+    &--four-by-three {
+      padding-top: $width / 1.33333;
+    }
+
+    &--widescreen {
+      padding-top: $width / 1.77778;
+    }
+
+  }
+
+  .o-media__bylineText {
+    border-bottom: 4px solid $color-gray-light;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.o-media--med {
+  position: relative;
+
+  @include media-min($media-tablet) {
+    .o-media__figure + .o-media__teaser, .o-media__meta {
+      float: right;
+      width: 57.434%;
+    }
+  }
+
+  @include media-max($media-tablet) {
+    border-top: 1px solid $color-gray-light;
+    display: flex;
+    flex-direction: column;
+
+    .o-media__figure {
+      order: -1;
+      width: 100%;
+
+      .o-media__img {
+        margin: 0 auto;
+        width: 100%;
+      }
+
+    }
+  }
+
+  .o-media__figure {
+    margin-bottom: 1.375rem;
+
+    @include media-min($media-tablet) {
+      $width: 35.817%;
+      margin-right: 6.5%;
+      max-width: $width;
+
+      &--cinematic {
+        padding-top: $width / 2.35;
+      }
+
+      &--four-by-three {
+        padding-top: $width / 1.33333;
+      }
+
+      &--widescreen {
+        padding-top: $width / 1.77778;
+      }
+    }
+  }
+}
+
+.o-media--lg {
+  margin-top: $base-line-height;
+
+  > .o-media__content {
+    @include media-max($media-tablet) {
+      box-shadow: none;
+      max-height: 11.25rem;
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+
+  .o-media__figure {
+    border-bottom: 6px solid $color-primary-alt;
+    margin-bottom: 2.5rem;
+    width: 100%;
+  }
+
+  > .o-media__headline {
+    margin: 0 0 $base-line-height;
+  }
+
+  .o-media__label {
+    font-size: ms(-2);
+  }
+
+  .o-media__overline {
+    color: $color-secondary;
+  }
+}
+
+.o-media--block {
+  .o-media__figure {
+    border-bottom: 4px solid $color-primary;
+  }
+}
+
+.o-media--block-simple {
+  .o-media__headline {
+    margin-top: 0.5rem;
+  }
+}
+
+.o-media--last {
+  margin-bottom: 0;
+}
+
+.o-media__indicator {
+  > .o-media__headline {
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      height: 0.5rem;
+      left: $base-line-height / -2;
+      position: absolute;
+      transform: translateY(0.53em);
+      width: 0.5rem;
+    }
+  }
+
+  > .o-media__label {
+    font-size: ms(-2);
+  }
+
+}
+
+.o-media--new-and-unread {
+  @extend .o-media__indicator;
+  > .o-media__headline {
+    &::before {
+      background-color: $color-primary;
+      border-radius: 50%;
+    }
+  }
+}
+
+.o-media--visited-and-read {
+  @extend .o-media__indicator;
+  > .o-media__headline {
+    &::before {
+      border: solid $color-gray;
+      border-width: 0 1px 1px 0; 
+      height: 10px;
+      transform: translateY(0.53em) rotate(45deg);
+      width: 4px;
+    }
+  }
+}

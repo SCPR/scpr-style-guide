@@ -1,12 +1,9 @@
 ---
 engines:
-  bundler-audit:
-    enabled: true
   duplication:
     enabled: true
     config:
       languages:
-      - ruby
       - javascript
   rubocop:
     enabled: true
@@ -35,10 +32,8 @@ engines:
 ratings:
   paths:
   - src/**
-  - Gemfile.lock
   - "**.js"
   - "**.jsx"
-  - "**.rb"
 exclude_paths:
 - build/**/*
 - documentation/**/*

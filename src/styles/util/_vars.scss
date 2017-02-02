@@ -1,0 +1,76 @@
+
+// COLOR VARIABLES
+
+$color-primary:               #F87E21; // KPCC brand orange
+$color-primary-alt:           #D15904; // dark orange
+$color-primary-light:         #f8b27c; // light orange
+$color-primary-lightest:      #f8dac3; // lightest orange
+
+$color-secondary:             #31ABD4; // bright blue
+$color-secondary-dark:        #007397; // dark blue
+$color-secondary-darkest:     #0F1620; // midnight blue
+$color-secondary-light:       #CCEDF8; // light blue
+
+$color-tertiary:              #388B90; // medium green
+$color-tertiary-dark:         #1F5154; // dark green
+$color-tertiary-light:        #BBCACB; // light green
+
+$color-link:                  #01AED5; // link blue
+$color-hover:                 $color-secondary-dark; // dark blue
+
+$color-gray:                  #898989;
+$color-gray-warm:             #6C7579;
+$color-gray-light:            #E8E8E8;
+$color-gray-lightest:         #F6F6F6;
+$color-gray-dark:             #363636;
+$color-gray-darkest:          #212121;
+
+$color-base:                  #212121; // base "black" for typesetting text
+$color-white:                 #FFFFFF;
+$color-black:                 #000000;
+
+$color-alert:                 #D31D1D;
+$color-success:               #07C571;
+
+
+// FONT STACKS
+
+$font-sans-base:              "franklin-gothic-urw", "Avenir Next", "Avenir", Arial, sans-serif;
+$font-sans-alt:               "fira-sans", Arial, sans-serif;
+$font-serif-text:             "abril-text", Georgia, serif;
+$font-serif-titling:          "abril-titling", Georgia, serif;
+$font-family-default:         $font-sans-base;
+
+
+// BASE SIZES
+
+$base-number:       6px;                        // Important Number is 6px
+$base-line-height:  ($base-number * 5);    // Equivalent to 30px line height
+$font-size-root:    16px;                    // Root size, only for html tag.
+$font-size-default: 18px;
+
+// MODULAR TYPE SCALE
+// set overrides for Modular Scale (docs at https://github.com/modularscale/modularscale-sass)
+
+$ms-base:  $font-size-default;
+$ms-ratio: 1.2;   // Sets a "minor thid" modular scale
+
+
+// MEDIA QUERIES
+
+$media-mobile:  480px;
+$media-tablet:  896px;
+$media-desktop: 1024px;
+$media-wide:    1334px;
+
+// LAYOUT UNITS
+
+$col:              5.4298643%;        // 1326 (max xl container width) / 72 (max column width) =  5.4298643%
+$col-in-pixels:    72px;
+$col-in-rems:      4.5rem;
+$gutter:           3.1674208%;        // 1326 (max xl container width) / 42 (max gutter width) = 3.1674208%
+$gutter-in-rems:   2.625rem;          // 42 (max gutter width) / 16 (1 rem) = 2.625
+$gutter-in-pixels: 42px;
+$grid-columns:     12;
+$grid-breakpoints: (sm: 0, med: $media-tablet, lg: $media-desktop, xl: $media-wide);
+$margin:           57px;

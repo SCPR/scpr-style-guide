@@ -1,0 +1,1447 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="documentation.css">
+    <script src="https://use.typekit.net/cka2qre.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+    <header>
+      <h1>KPCC Design System</h1>
+    </header>
+
+    <main>
+
+
+      <section id="base">
+        <h2>Base</h2>
+
+        <h3>Headings - Default</h3>
+        <hr>   
+        <xmp>
+          <h1 class="b-heading b-heading--h1">I am an H1 heading</h1>
+          <h2 class="b-heading b-heading--h2">I am an H2 heading</h2>
+          <h3 class="b-heading b-heading--h3">I am an H3 heading</h3>
+          <h4 class="b-heading b-heading--h4">I am an H4 heading</h4>
+          <h5 class="b-heading b-heading--h5">I am an H5 heading</h5>
+          <h6 class="b-heading b-heading--h6">I am an H6 heading</h6>
+        </xmp>
+
+        <h3>Headings - Weights</h3>
+        <hr>
+        <xmp>
+          <h4 class="b-heading b-heading--h4 b-heading--light">I am a light H4 heading</h4>
+          <h4 class="b-heading b-heading--h4 b-heading--medium">I am a medium H4 heading</h4>
+          <h4 class="b-heading b-heading--h4 b-heading--bold">I am a bold H4 heading</h4>
+          <h4 class="b-heading b-heading--h4 b-heading--extrabold">I am an extrabold H4 heading</h4>
+        </xmp>
+
+        <h3>Headings - Styles</h3>
+        <hr>
+        <xmp>
+          <h4 class="b-heading b-heading--h5 b-heading--uppercase">I am an uppercase H5 heading</h4>
+          <h4 class="b-heading b-heading--h5 b-heading--italic">I am an italicized H5 heading</h4>
+        </xmp>
+
+        <h3>Headings - Serif</h3>
+        <hr>
+        <xmp>
+          <h1 class="b-heading b-heading--h1 b-heading--serif">I am a serif H1 heading</h1>
+          <h2 class="b-heading b-heading--h2 b-heading--serif">I am a serif H2 heading</h2>
+          <h3 class="b-heading b-heading--h3 b-heading--serif">I am a serif H3 heading</h3>
+          <h4 class="b-heading b-heading--h4 b-heading--serif">I am a serif H4 heading</h4>
+          <h5 class="b-heading b-heading--h5 b-heading--serif">I am a serif H5 heading</h5>
+          <h6 class="b-heading b-heading--h6 b-heading--serif">I am a serif H6 heading</h6>
+        </xmp>
+
+        <h3>Link</h3>
+        <hr>
+        <xmp>
+          <a class="link" href="#">I am a basic link</a>
+        </xmp>
+
+        <h3>Link - Callout</h3>
+        <hr>
+        <xmp>
+          <a class="link link--callout" href="#">I am a callout link</a>
+        </xmp>
+
+        <h3>Link - Callout + Icon</h3>
+        <hr>
+        <xmp>
+          <a href="#">
+            <svg class="icon icon--size-med icon--left">
+              <use class="icon--line icon--color-link" xlink:href="scpr-sprite.svg#icon_line-article"/>
+            </svg>
+            <span class="link link--callout">I am a callout link</span>
+          </a>      
+        </xmp>
+
+        <h3>Horizontal Rule - Default</h3>
+        <hr>
+        <xmp>
+          <hr class="rule" />
+        </xmp>
+
+        <h3>Horizontal Rule - Primary</h3>
+        <hr>
+        <xmp>
+          <hr class="rule rule--primary" />
+        </xmp>
+
+        <h3>Horizontal Rule - Dark</h3>
+        <hr>
+        <xmp>
+          <hr class="rule rule--dark" />
+        </xmp>
+
+        <h3>Horizontal Rule - Darker</h3>
+        <hr>
+        <xmp>
+          <hr class="rule rule--darker" />
+        </xmp>
+
+      </section>
+
+
+      <section id="layout">
+
+        <h2>Layout</h2>
+
+        <h3>Container - Small</h3>
+        <hr>
+        <div class="l-container l-container--sm">I am a small container</div>
+        <xmp>
+          <div class="l-container l-container--sm">I am a small container</div>
+        </xmp>
+
+        <h3>Container - Medium</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container--med">I am a medium container</div>
+        </xmp>
+
+        <h3>Container - Large</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container--lg">I am a large container</div>
+        </xmp>
+
+        <h3>Container - Extra Large</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container--xl">I am an extra large container</div>
+        </xmp>
+
+        <h3>Row - Default</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container--xl">
+            <div class="l-row">
+              <div class="l-col l-col--sm-4">
+                This is
+              </div>
+              <div class="l-col l-col--sm-4">
+                a default
+              </div>
+              <div class="l-col l-col--sm-4">
+                grid row.
+              </div>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Row - Align Start</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row l-row--sm-start">
+              <div class="l-col l-col--sm-6">
+                start
+              </div>
+            </div>
+          </div>
+        </xmp> 
+
+        <h3>Row - Align Center</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row l-row--sm-center">
+              <div class="l-col l-col--sm-6">
+                center
+              </div>
+            </div>
+          </div>
+        </xmp> 
+
+        <h3>Row - Align End</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row l-row--sm-end">
+              <div class="l-col l-col--sm-6">
+                end
+              </div>
+            </div>
+          </div>
+        </xmp> 
+
+        <h3>Row - Align Top</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row l-row--sm-top">
+              <div class="l-col l-col--sm-6">
+                top
+              </div>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Row - Align Middle</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row l-row--sm-middle">
+              <div class="l-col l-col--sm-6">
+                middle
+              </div>
+            </div>
+          </div>
+        </xmp> 
+
+        <h3>Row - Align Bottom</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row l-row--sm-bottom">
+              <div class="l-col l-col--sm-6">
+                bottom
+              </div>
+            </div>
+          </div>
+        </xmp> 
+
+        <h3>Row - Space Around</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row l-row--sm-around">
+              <div class="l-col l-col--sm-2">
+                  around
+              </div>
+              <div class="l-col l-col--sm-2">
+                  around
+              </div>
+              <div class="l-col l-col--sm-2">
+                  around
+              </div>
+              <div class="l-col l-col--sm-2">
+                  around
+              </div>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Row - Space Between</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row l-row--sm-between">
+              <div class="l-col l-col--sm-2">
+                  between
+              </div>
+              <div class="l-col l-col--sm-2">
+                  between
+              </div>
+              <div class="l-col l-col--sm-2">
+                  between
+              </div>
+              <div class="l-col l-col--sm-2">
+                  between
+              </div>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Row - Vertical</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row l-row--sm-vertical" style="height: 10em;">
+              <div class="l-col l-col--sm-2">
+                  look
+              </div>
+              <div class="l-col l-col--sm-2">
+                  just
+              </div>
+              <div class="l-col l-col--sm-2">
+                  ma
+              </div>
+              <div class="l-col l-col--sm-2">
+                  one row
+              </div>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Row - Reverse</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row l-row--sm-reverse">
+              <div class="l-col l-col--sm-2">
+                1
+              </div>
+              <div class="l-col l-col--sm-2">
+                2
+              </div>
+              <div class="l-col l-col--sm-2">
+                3
+              </div>
+              <div class="l-col l-col--sm-2">
+                4
+              </div>
+              <div class="l-col l-col--sm-2">
+                5
+              </div>
+              <div class="l-col l-col--sm-2">
+                6
+              </div>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Row - Wrap Reverse</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row l-row--sm-wrap-reverse">
+              <div class="l-col l-col--sm-12">
+                one
+              </div>
+              <div class="l-col l-col--sm-12">
+                two
+              </div>
+              <div class="l-col l-col--sm-12">
+                three
+              </div>
+              <div class="l-col l-col--sm-12">
+                four
+              </div>
+              <div class="l-col l-col--sm-12">
+                five
+              </div>
+              <div class="l-col l-col--sm-12">
+                six
+              </div>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Row - No Wrap</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row l-row--sm-nowrap">
+              <div class="l-col l-col--sm-12">
+                This
+              </div>
+              <div class="l-col l-col--sm-12">
+                should
+              </div>
+              <div class="l-col l-col--sm-12">
+                all
+              </div>
+              <div class="l-col l-col--sm-12">
+                be
+              </div>
+              <div class="l-col l-col--sm-12">
+                on
+              </div>
+              <div class="l-col l-col--sm-12">
+                one
+              </div>
+              <div class="l-col l-col--sm-12">
+                line
+              </div>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Row - Noflex</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row l-row--sm-noflex">
+              <div class="l-col l-col--sm-3">
+                no flex
+              </div>
+              <div class="l-col l-col--sm-3">
+                to be
+              </div>
+              <div class="l-col l-col--sm-3">
+                found here
+              </div>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Column</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container--xl">
+            <div class="l-row">
+              <div class="l-col l-col--sm-12">
+                column
+              </div>
+            </div>
+            <div class="l-row">
+              <div class="l-col l-col--sm-1">
+                column
+              </div>
+              <div class="l-col l-col--sm-11">
+                column
+              </div>
+            </div>
+            <div class="l-row">
+              <div class="l-col l-col--sm-2">
+                column
+              </div>
+              <div class="l-col l-col--sm-10">
+                column
+              </div>
+            </div>
+            <div class="l-row">
+              <div class="l-col l-col--sm-3">
+                column
+              </div>
+              <div class="l-col l-col--sm-9">
+                column
+              </div>
+            </div>
+            <div class="l-row">
+              <div class="l-col l-col--sm-4">
+                column
+              </div>
+              <div class="l-col l-col--sm-8">
+                column
+              </div>
+            </div>
+            <div class="l-row">
+              <div class="l-col l-col--sm-5">
+                column
+              </div>
+              <div class="l-col l-col--sm-7">
+                column
+              </div>
+            </div>
+            <div class="l-row">
+              <div class="l-col l-col--sm-6">
+                column
+              </div>
+              <div class="l-col l-col--sm-6">
+                column
+              </div>
+            </div>
+            <div class="l-row">
+              <div class="l-col l-col--sm-2">
+                column
+              </div>
+              <div class="l-col l-col--sm-6">
+                column
+              </div>
+              <div class="l-col l-col--sm-4">
+                column
+              </div>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Column - First</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row">
+              <div class="l-col l-col--sm-2">
+                1
+              </div>
+              <div class="l-col l-col--sm-2">
+                2
+              </div>
+              <div class="l-col l-col--sm-2">
+                3
+              </div>
+              <div class="l-col l-col--sm-2">
+                4
+              </div>
+              <div class="l-col l-col--sm-2">
+                5
+              </div>
+              <div class="l-col l-col--sm-2 l-col--sm-first">
+                6
+              </div>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Column - Last</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row">
+              <div class="l-col l-col--sm-2 l-col--sm-last">
+                1
+              </div>
+              <div class="l-col l-col--sm-2">
+                2
+              </div>
+              <div class="l-col l-col--sm-2">
+                3
+              </div>
+              <div class="l-col l-col--sm-2">
+                4
+              </div>
+              <div class="l-col l-col--sm-2">
+                5
+              </div>
+              <div class="l-col l-col--sm-2">
+                6
+              </div>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Column - Offset</h3>
+        <hr>
+        <xmp>
+          <div class="l-container l-container-xl">
+            <div class="l-row">
+              <div class="l-col l-col--sm-1 l-col--sm-offset-11">
+                offset11
+              </div>
+              <div class="l-col l-col--sm-2 l-col--sm-offset-10">
+                offset10
+              </div>
+              <div class="l-col l-col--sm-3 l-col--sm-offset-9">
+                offset9
+              </div>
+              <div class="l-col l-col--sm-4 l-col--sm-offset-8">
+                offset8
+              </div>
+              <div class="l-col l-col--sm-5 l-col--sm-offset-7">
+                offset7
+              </div>
+              <div class="l-col l-col--sm-6 l-col--sm-offset-6">
+                offset6
+              </div>
+              <div class="l-col l-col--sm-7 l-col--sm-offset-5">
+                offset5
+              </div>
+              <div class="l-col l-col--sm-8 l-col--sm-offset-4">
+                offset4
+              </div>
+              <div class="l-col l-col--sm-9 l-col--sm-offset-3">
+                offset3
+              </div>
+              <div class="l-col l-col--sm-10 l-col--sm-offset-2">
+                offset2
+              </div>
+              <div class="l-col l-col--sm-11 l-col--sm-offset-1">
+                offset1
+              </div>
+            </div>
+          </div>
+        </xmp>
+
+      </section>
+
+
+      <section id="components">
+
+        <h2>Components</h2>
+
+        <h3>Buttons - Default</h3>
+        <hr>
+        <xmp>
+          <a href="#" class="c-btn c-btn--large">Large default button</a>
+          <a href="#" class="c-btn">Regular default button</a>
+          <a href="#" class="c-btn c-btn--small">Small default button</a>
+        </xmp>
+
+        <h3>Buttons - Primary</h3>
+        <hr>
+        <xmp>
+          <a href="#" class="c-btn c-btn--primary c-btn--large">Large primary button</a>
+          <a href="#" class="c-btn c-btn--primary">Primary button</a>
+          <a href="#" class="c-btn c-btn--primary c-btn--small">Small primary button</a>
+        </xmp>
+
+        <h3>Buttons - Secondary</h3>
+        <hr>
+        <xmp>
+          <a href="#" class="c-btn c-btn--secondary c-btn--large">Large secondary button</a>
+          <a href="#" class="c-btn c-btn--secondary">Secondary button</a>
+          <a href="#" class="c-btn c-btn--secondary c-btn--small">Small secondary button</a>
+        </xmp>
+
+        <h3>Buttons - Outline</h3>
+        <hr>
+        <xmp>
+          <a href="#" class="c-btn c-btn--outline">Default outline button</a>
+          <a href="#" class="c-btn c-btn--outline-primary">Primary outline button</a>
+          <a href="#" class="c-btn c-btn--outline-secondary">Secondary outline button</a>
+        </xmp>
+
+        <h3>Buttons - Rounded</h3>
+        <hr>
+        <xmp>
+          <a href="#" class="c-btn c-btn--rounded c-btn--outline-secondary">Outline rounded button</a>
+          <a href="#" class="c-btn c-btn--rounded c-btn--secondary">Solid rounded button</a>
+        </xmp>
+
+        <h3>List - Default</h3>
+        <hr>
+        <xmp>
+          <ul class="c-list">
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+          </ul>
+        </xmp>
+
+        <h3>List - Vertical</h3>
+        <hr>
+        <xmp>
+          <ul class="c-list c-list--vert">
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+          </ul>
+        </xmp>
+
+        <h3>List - Bullet</h3>
+        <hr>
+        <xmp>
+          <ul class="c-list c-list--vert c-list--bullet">
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+          </ul>
+        </xmp>
+
+        <h3>List - Horizontal</h3>
+        <hr>
+        <xmp>
+          <ul class="c-list c-list--horiz">
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+          </ul>
+        </xmp>
+
+        <h3>Text Input - Default</h3>
+        <hr>
+        <xmp>
+          <input type="text" class="input-text" placeholder="First Name" />
+          <input type="text" class="input-text input--narrow" placeholder="Middle Initial" />
+          <input type="text" class="input-text input--wide" placeholder="Last Name" />
+        </xmp>
+
+        <h3>Text Input + Label</h3>
+        <hr>
+        <xmp>
+          <label class="input-group">
+            <input type="text" class="input-text" placeholder="First Name" />
+            <span class="input-label">First Name</span>
+          </label>
+        </xmp>
+
+        <h3>Text Input - Error State</h3>
+        <hr>
+        <xmp>
+          <label class="input-group">
+            <span class="input-help input-help--error">* letters only</span>
+            <input type="text" class="input-text input--error" placeholder="First Name" value="12345" />
+            <span class="input-label">First Name</span>
+          </label>
+        </xmp>
+
+        <h3>Ad Unit - Default</h3>
+        <hr>
+        <xmp>
+          <aside class="c-ad">
+            <div class="c-ad__container">
+              <img class="c-ad__banner" src="http://placehold.it/300x250" />
+              <a class="c-ad__attribution" href="http://www.scpr.org/support/underwriting/">Become a KPCC Sponsor</a>
+            </div>
+          </aside>
+        </xmp>
+
+        <h3>Ad Unit - XL Padding</h3>
+        <hr>
+        <xmp>
+          <aside class="c-ad c-ad--x-pad">
+            <div class="c-ad__container">
+              <img class="c-ad__banner" src="http://placehold.it/300x250" />
+              <a class="c-ad__attribution" href="http://www.scpr.org/support/underwriting/">Become a KPCC Sponsor</a>
+            </div>
+          </aside>
+        </xmp>
+
+        <h3>Well - Default</h3>
+        <hr>
+        <xmp>
+          <div class="c-well">
+            <p>Well content goes here</p>
+          </div>
+        </xmp>
+
+        <h3>Well - Informational</h3>
+        <hr>
+        <xmp>
+          <div class="c-well c-well--info">
+            <p>This is an informational well.</p>
+          </div>
+        </xmp>
+
+        <h3>Well - Alert</h3>
+        <hr>
+        <xmp>
+          <div class="c-well c-well--alert">
+            <p>This is an alert well.</p>
+          </div>
+        </xmp>
+
+        <h3>Well - Dark</h3>
+        <hr>
+        <xmp>
+          <div class="c-well c-well--dark">
+            <p>This is a dark well.</p>
+          </div>
+        </xmp>
+
+        <h3>Well - Large</h3>
+        <hr>
+        <xmp>
+          <div class="c-well c-well--dark c-well--xl-padding u-text-align--center">
+            <div class="container container--med">
+              <div class="l-section">
+                <h2 class="heading heading--h1 heading--serif heading--italic heading--extrabold">The Voice of Southern California.</h2>
+                <p class="text text--sans-alt text--large">Angelenos rely on KPCC’s member-supported news to stay informed.</p>
+                <p class="text text--sans-alt text--large text--light">Listen to our broadcast, check out our top stories below, or sign up for vital news delivered to your inbox every afternoon.</p>
+              </div>
+              <a href="#" class="c-btn c-btn--primary">Show me the news now</a>
+              &nbsp;
+              <a href="#" class="c-btn c-btn--primary">Send news to my inbox</a>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Well - Dismissable</h3>
+        <description>
+          A well that can be dismissed by a user, with the option to set a cookie so the well is permanently hidden if a user dismisses it or views it a certain number of times.
+        </description>
+        <hr>
+        <xmp>
+          <div class="c-well c-well--dark c-well--dismissible js-well js-well--dismissible" data-name="example-well" data-views="300">
+            <p>This is a dismissible well.</p>
+            <button class="c-well__dismiss-btn js-well--dismiss-btn">
+              <svg class="icon icon--size-med">
+                <use class="icon--line icon--color-gray " xlink:href="scpr-sprite.svg#icon_line-close"/>
+              </svg>
+            </button>
+            </span>
+          </div>
+        </xmp>
+
+      </section>
+
+
+      <section id="objects">
+
+        <h2>Objects</h2>
+
+        <h3>Media - Block</h3>
+        <hr>
+        <xmp>
+          <div class="o-media o-media--block">
+            <div class="o-media__figure o-media__figure--four-by-three">
+              <a href="#">
+                <img class="o-media__img" src="http://placehold.it/640x480">
+              </a>
+            </div>
+            <div class="o-media__content">
+              <h6 class="o-media__overline o-media__overline--block">Overline Ipsum</h6>
+              <h3 class="o-media__headline o-media__headline--h3">
+                <a class="o-media__headline-link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+              </h3>
+              <div class="o-media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</div>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Media - Small</h3>
+        <hr>
+        <xmp>
+          <div class="o-media o-media--horizontal o-media--sm">
+            <div class="o-media__figure">
+              <img class="o-media__img" src="http://placehold.it/450x338">
+            </div>
+            <h4 class="o-media__headline o-media__headline--h5"><a href="#">Related headline ipsum sit amet dolor quando nonumy</a></h4>
+          </div>
+        </xmp>
+
+        <h3>Media - Small, No Asset</h3>
+        <hr>
+        <xmp>
+          <div class="o-media o-media--small">
+            <h4 class="o-media__headline o-media__headline--h5"><a href="#">Related headline ipsum sit amet dolor quando nonumy</a></h4>
+          </div>
+        </xmp>
+
+        <h3>Media - Medium</h3>
+        <hr>
+        <xmp>
+          <div class="o-media o-media--med">
+            <h6 class="o-media__overline">Overline Ipsum</h6>
+            <h3 class="o-media__headline o-media__headline--h3">
+              <a class="o-media__headline-link" href="#">
+                Headline ipsum sit amet dolor quando nonumy quaerend tortor
+              </a>
+            </h3>
+            <div class="o-media__figure">
+              <a href="#">
+                <img class="o-media__img" src="http://placehold.it/298x180">
+              </a>
+            </div>
+            <div class="o-media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.Teaser ipsum sit amet dolor quando nonumy quaerend.</div>
+            <div class="o-media__meta">
+              <span class="o-media__label">
+                <svg class="icon icon--size-sm icon--left">
+                  <use class="icon--line icon--color-primary" xlink:href="scpr-sprite.svg#icon_line-audio"/>
+                </svg>
+                Audio
+              </span>
+            </div>
+          </div>
+        </xmp>     
+
+        <h3>Media - Medium + Related Content</h3>
+        <hr>
+        <xmp>
+          <div class="o-media o-media--med">
+            <h6 class="o-media__overline">Overline Ipsum</h6>
+            <h3 class="o-media__headline o-media__headline--h3">
+              <a class="o-media__headline-link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+            </h3>
+            <div class="o-media__figure o-media__figure--widescreen">
+              <a href="#">
+                <img class="o-media__img" src="http://placehold.it/640x426">
+              </a>
+            </div>
+            <div class="o-media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</div>
+            <div class="o-media__meta">
+              <span class="o-media__label">
+                <svg class="icon icon--size-sm icon--left">
+                  <use class="icon--line icon--color-primary" xlink:href="scpr-sprite.svg#icon_line-audio"/>
+                </svg>
+                Audio
+              </span>
+            </div>
+          </div>
+          <div class="o-media__related-content">
+            <h5 class="heading heading--h5 heading--uppercase u-text-color--gray">More in Arts and Entertainment</h6>
+            <ul class="c-list c-list--vert c-list--bullet c-list--bullet-light c-list--bullet-offset">
+              <li class="o-media__teaser o-media__teaser--bullet">
+                <div class="o-media o-media--sm">
+                  <h4 class="o-media__headline o-media__headline--h5"><a href="#">Related headline ipsum sit amet dolor quando nonumy</a></h4>
+                </div>          
+              </li>
+              <li class="o-media__teaser o-media__teaser--bullet">
+                <div class="o-media o-media--sm o-media--last">
+                  <h4 class="o-media__headline o-media__headline--h5"><a href="#">Related headline ipsum sit amet dolor quando nonumy</a></h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </xmp>
+
+        <h3>Media - Medium, New and Unread</h3>
+        <hr>
+        <xmp>
+          <div class="o-media o-media--med o-media--new-and-unread">
+            <h6 class="o-media__overline">Overline Ipsum</h6>
+            <h3 class="o-media__headline o-media__headline--h3">
+              <a class="o-media__headline-link" href="#">
+                Headline ipsum sit amet dolor quando nonumy quaerend tortor
+              </a>
+            </h3>
+            <div class="o-media__figure o-media__figure--widescreen">
+              <a href="#">
+                <img class="o-media__img" src="http://placehold.it/298x180">
+              </a>
+            </div>
+            <div class="o-media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</div>
+            <div class="o-media__meta">
+              <span class="o-media__label">
+                <svg class="icon icon--size-sm icon--left">
+                  <use class="icon--line icon--color-primary" xlink:href="scpr-sprite.svg#icon_line-audio"/>
+                </svg>
+                Audio
+              </span>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Media - Medium, No Asset, Recently Published</h3>
+        <hr>
+        <xmp>
+          <div class="o-media o-media--med">
+            <h6 class="o-media__overline">Overline Ipsum</h6>
+            <h3 class="o-media__headline o-media__headline--h3">
+              <a class="o-media__headline-link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+            </h3>
+            <div class="o-media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</div>
+            <div class="o-media__meta">
+              <span class="o-media__timestamp">Last updated 30 minutes ago</span>
+            </div>
+          </div>
+        </xmp>      
+
+        <h3>Media - Medium, No Asset, Dek + Teaser</h3>
+        <hr>
+        <xmp>
+          <div class="o-media o-media--med">
+            <h6 class="o-media__overline">Overline Ipsum</h6>
+            <h3 class="o-media__headline o-media__headline--h3">
+              <a class="o-media__headline-link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+            </h3>
+            <p class="o-media__dek">Dek suas mandamus ut, illum legere at per, consul insolens nam te. Ut duo wisi appetere, debet volutpat in nec. Ex vidit vituperata posidonium has, cum movet nemore no.</p>
+            <div class="o-media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</div>
+            <div class="o-media__meta">
+              <span class="o-media__timestamp">Last updated 30 minutes ago</span>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Media - Medium, No Asset, Curated Content, Bulleted Summary</h3>
+        <hr>
+        <xmp>
+          <div class="o-media o-media--med">
+            <h6 class="o-media__overline">Overline Ipsum</h6>
+            <h3 class="o-media__headline o-media__headline--h3">
+              <a class="o-media__headline-link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+            </h3>
+            <ul class="c-list c-list--vert c-list--bullet">
+              <li class="o-media__teaser o-media__teaser--bullet">Luvaret noluisse accusata cu sea, illum possit impedit has ad. Qui putant dissentias te, ea vim dolore dicunt platonem.</li>
+              <li class="o-media__teaser o-media__teaser--bullet">Pri sumo habeo ancillae in, cu vim cibo posse, has ei novum sadipscing. Te sed sale adolescens, no per prima copiosae.</li>
+            </ul>
+            <div class="o-media__meta">
+              <span class="o-media__label">
+                <svg class="icon icon--size-sm icon--right">
+                  <use class="icon--line icon--color-gray" xlink:href="scpr-sprite.svg#icon_line-outbound-link"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Media - Medium, No Asset, Visited</h3>
+        <hr>
+        <xmp>
+          <div class="o-media o-media--med o-media--visited-and-read">
+            <h6 class="o-media__overline">Overline Ipsum</h6>
+            <h3 class="o-media__headline o-media__headline--h3">
+              <a class="o-media__headline-link" href="http://www.scpr.org/">
+                Headline ipsum sit amet dolor quando nonumy quaerend tortor
+              </a>
+            </h3>
+            <div class="o-media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</div>
+          </div>
+        </xmp>
+
+        <h3>Media - Large Asset</h3>
+        <hr>
+        <xmp>
+          <div class="o-media o-media--lg">
+            <div class="o-media__figure o-media__figure--widescreen">
+              <a href="#">
+                <img class="o-media__img" src="http://placehold.it/1024x576">
+              </a>
+            </div>
+            <h6 class="o-media__overline">Overline Ipsum</h6>
+            <h3 class="o-media__headline o-media__headline--h2">
+              <a class="o-media__headline-link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend tortor</a>
+            </h3>
+            <div class="o-media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.</div>
+          </div>
+        </xmp>
+
+        <h3>Media - Large Asset Top, Story</h3>
+        <hr>
+        <xmp>
+          <div class="o-media o-media--lg">
+            <div class="o-media__figure o-media__figure--widescreen">
+              <a href="#">
+                <img class="o-media__img" src="http://placehold.it/1024x576">
+              </a>
+            </div>
+            <h6 class="o-media__overline">Overline Ipsum</h6>
+            <h1 class="o-media__headline o-media__headline--h1">
+              <a class="o-media__headline-link" href="#">Headline ipsum sit amet dolor quando nonumy quaerend id simul sapientem</a>
+            </h1>
+            <div class="o-media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio. Deleniti patrioque eu pro, esse graeco imperdiet est ex, nam stet recteque in.</div>
+            <div class="o-media__meta">
+              <span class="o-media__timestamp">Last updated 30 minutes ago</span>
+            </div>
+          </div>
+        </xmp>
+
+        <h3>Masthead - Full</h3>
+        <hr>
+        <xmp>
+          <input type="checkbox" class="state-checkbox" id="o-mast__search-toggler-checkbox" />
+          <input type="checkbox" class="state-checkbox" id="o-mast__menu-toggler-checkbox" />
+          <div class="o-mast">
+            <nav class="o-mast__nav">
+              <div class="o-mast__branding">
+                <a href="/" class="o-mast__logo-link">
+                  <svg class="o-mast__logo">
+                    <use class="" xlink:href="scpr-sprite.svg#logo_kpcc-black"/>
+                  </svg>
+                </a>
+              </div>
+              <ul class="c-nav o-mast__nav-sections">
+                <li class="c-nav__item c-nav__item--hover-highlight">
+                  <a class="c-nav__link" href="#">News</a>
+                  <div class="c-nav__dropdown text--small">
+                    <div class="l-container">
+                      <div class="l-row l-row--sm-between">
+                        <div class="c-nav__section l-col--med-6 l-col--sm-12">
+                          <h6 class="c-nav__section-heading">Covering SoCal</h6>
+                          <ul class="c-list c-list--vert text-columns--sm-2 text-columns--med-3">
+                            <li>
+                              <a href="#">Changing Neighborhoods & Affordability</a>
+                            </li>
+                            <li>
+                              <a href="#">Commuting</a>
+                            </li>
+                            <li>
+                              <a href="#">Immigration 3.0</a>
+                            </li>
+                            <li>
+                              <a href="#">Infrastructure</a>
+                            </li>
+                            <li>
+                              <a href="#">Orange County</a>
+                            </li>
+                            <li>
+                              <a href="#">Public Safety</a>
+                            </li>
+                            <li>
+                              <a href="#">SoCal Economy</a>
+                            </li>
+                            <li>
+                              <a href="#">SoCal Politics</a>
+                            </li>
+                            <li>
+                              <a href="#">The Social Safety Net</a>
+                            </li>
+                            <li>
+                              <a href="#">Vets</a>
+                            </li>
+                            <li>
+                              <a href="#">Workplace</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="c-nav__section l-col--med-4 l-col--sm-12">
+                          <h6 class="c-nav__section-heading">Categories</h6>
+                          <ul class="c-list c-list--vert text-columns--sm-2">
+                            <li>
+                              <a href="#">Local</a>
+                            </li>
+                            <li>
+                              <a href="#">US & World</a>
+                            </li>
+                            <li>
+                              <a href="#">Politics</a>
+                            </li>
+                            <li>
+                              <a href="#">Science</a>
+                            </li>
+                            <li>
+                              <a href="#">Arts & Entertainment</a>
+                            </li>
+                            <li>
+                              <a href="#">Business</a>
+                            </li>
+                            <li>
+                              <a href="#">Crime & Justice</a>
+                            </li>
+                            <li>
+                              <a href="#">Education</a>
+                            </li>
+                            <li>
+                              <a href="#">Health</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="c-nav__section l-col--med-2  l-col--sm-12">
+                          <h6 class="c-nav__section-heading">More</h6>
+                          <ul class="c-list c-list--vert">
+                            <li>
+                              <a href="#">Blogs</a>
+                            </li>
+                            <li>
+                              <a href="#">Archive</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c-nav__item c-nav__item--hover-highlight">
+                  <a class="c-nav__link" href="#">Programs</a>
+                  <div class="c-nav__dropdown text--small">
+                    <div class="l-container">
+                      <div class="l-row l-row--sm-between">
+                        <div class="c-nav__section l-col--sm-6">
+                          <h6 class="c-nav__section-heading">Featured Programs</h6>
+                          <ul class="c-list c-list--vert">
+                            <li>
+                              <a href="#">Take Two</a></li>
+                            <li>
+                              <a href="#">Offramp</a></li>
+                            <li>
+                              <a href="#">Airtalk</a></li>
+                            <li>
+                              <a href="#">The Frame</a></li>
+                          </ul>
+                        </div>
+                        <div class="c-nav__section l-col--sm-6">
+                          <h6 class="c-nav__section-heading">All Programs</h6>
+                          <ul class="c-list c-list--vert">
+                            <li>
+                              <a href="#">Programs A-Z</a>
+                            </li>
+                            <li>
+                              <a href="#">Program Schedule</a>
+                            </li>
+                            <li>
+                              <a href="#">Podcasts</a>
+                            </li>
+                            <li>
+                              <a href="#">Archive</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c-nav__item c-nav__item--hover-highlight">
+                  <a class="c-nav__link" href="#">Events</a>
+                  <div class="c-nav__dropdown text--small">
+                    <div class="l-container">
+                      <div class="l-row l-row--sm-between">
+                        <div class="c-nav__section l-col--sm-6">
+                          <h6 class="c-nav__section-heading">KPCC In Person</h6>
+                          <ul class="c-list c-list--vert">
+                            <li>
+                              <a href="#">Upcoming Events</a>
+                            </li>
+                            <li>
+                              <a href="#">The Crawford Family Forum</a>
+                            </li>
+                            <li>
+                              <a href="#">KPCC Events Newsletter</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="c-nav__section l-col--sm-6">
+                          <h6 class="c-nav__section-heading">More to do in SoCal</h6>
+                          <ul class="c-list c-list--vert">
+                            <li>
+                              <a href="#">Sponsored Events</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c-nav__item c-nav__item--hover-highlight">
+                  <a class="c-nav__link" href="#">Support Us</a>
+                  <div class="c-nav__dropdown text--small">
+                    <div class="l-container">
+                      <div class="l-row l-row--sm-between">
+                        <div class="c-nav__section l-col--sm-6">
+                          <h6 class="c-nav__section-heading">Membership</h6>
+                          <ul class="c-list c-list--vert">
+                            <li>
+                              <a href="#">
+                                <div class="l-col--sm-8 c-btn c-btn--outline-secondary">Become a Sustainer</div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#">
+                                <div class="l-col--sm-8 c-btn c-btn--outline-secondary">Become a Member</div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="c-nav__section l-col--sm-6">
+                          <ul class="c-list c-list--vert">
+                            <li>
+                              <a href="#">About sustaining membership</a>
+                            </li>
+                            <li>
+                              <a href="#">Update your credit card</a>
+                            </li>
+                            <li>
+                              <a href="#">Member benefits</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>        
+                </li>
+
+                <li class="c-nav__item c-nav__item--hover-highlight">
+                  <a class="c-nav__link" href="#">About Us</a>
+                  <div class="c-nav__dropdown text--small">
+                    <div class="l-container">
+                      <div class="l-row l-row--sm-between">
+                        <div class="c-nav__section l-col--sm-6">
+                          <div class="c-nav__section l-col--sm-12">
+                            <h6 class="c-nav__section-heading">Connect with KPCC</h6>
+                            <ul class="c-list c-list--vert">
+                              <li>
+                                <a href="#">Contact Us</a>
+                              </li>
+                              <li>
+                                <a href="#">Become a source</a>
+                              </li>
+                              <li>
+                                <a href="#">Share a news tip</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="c-nav__section l-col--sm-12">
+                            <h6 class="c-nav__section-heading">Learn more about us</h6>
+                            <ul class="c-list c-list--vert">
+                              <li>
+                                <a href="#">About KPCC</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="c-nav__section l-col--sm-6">
+                          <h6 class="c-nav__section-heading">People</h6>
+                          <ul class="c-list c-list--vert">
+                            <li>
+                              <a href="#">Staff Directory</a>
+                            </li>
+                            <li>
+                              <a href="#">Executive leadership</a>
+                            </li>
+                            <li>
+                              <a href="#">Board of Trustees</a>
+                            </li>
+                            <li>
+                              <a href="#">Regional Advisory Council</a>
+                            </li>
+                            <li>
+                              <a href="#">Leadership Councils</a>
+                            </li>
+                            <li>
+                              <a href="#">Careers</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              
+              <ul class="c-nav o-mast__nav-actions">
+                <li class="c-nav__item o-mast__search">
+                  <div class="c-search c-nav__link">
+                    <label for="o-mast__search-toggler-checkbox" class="o-mast__search-link clickable" href="#">
+                      <svg class="icon icon--search-open icon--size-med icon--size-med@mobile-tablet">
+                        <use class="icon--line icon--color-gray" xlink:href="scpr-sprite.svg#icon_line-search"/>
+                      </svg>
+                      <svg class="icon icon--search-close icon--size-med icon--size-med@mobile-tablet">
+                        <use class="icon--line icon--color-gray" xlink:href="scpr-sprite.svg#icon_line-close"/>
+                      </svg>
+                    </label>
+                    <form method="get" action="/search/" id="site-search">
+                      <input type="text" class=" input-text input--align-bottom input--focused-placeholder" placeholder="Enter your search here" name="q" id="q" />
+                      <button type="submit" class="c-btn c-btn--icon c-btn--outline-secondary">
+                        <svg class="icon icon--size-med">
+                          <use class="icon--line icon--color-link" xlink:href="scpr-sprite.svg#icon_line-search"/>
+                        </svg>
+                      </button>
+                    </form>
+                  </div>
+                </li>
+                <li class="c-nav__item o-mast__donate">
+                  <a class="o-mast__donate-link c-nav__link c-nav__link--action" href="#">
+                    <svg class="icon icon--size-med icon--left">
+                      <use class="icon--line icon--color-link" xlink:href="scpr-sprite.svg#icon_line-donate"/>
+                    </svg>
+                    <span class="c-nav__item-caption">Donate</span>
+                  </a>
+                </li>
+                <li class="c-nav__item o-mast__menu">
+                  <label class="c-nav__link o-mast__menu-toggler clickable" for="o-mast__menu-toggler-checkbox">
+                    <svg class="icon icon--size-lg o-mast__menu-icon--closed">
+                      <use class="icon--line  icon--color-gray-dark " xlink:href="scpr-sprite.svg#icon_line-menu"/>
+                    </svg>
+                    <svg class="icon icon--size-sm o-mast__menu-icon--opened">
+                      <use class="icon--line  icon--color-gray-dark " xlink:href="scpr-sprite.svg#icon_line-close"/>
+                    </svg>
+                    <span class="o-mast__menu-toggler-caption c-nav__item-caption o-mast__menu-toggler-caption--closed">Menu</span>
+                    <span class="o-mast__menu-toggler-caption c-nav__item-caption o-mast__menu-toggler-caption--opened">Close</span>
+                  </label>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </xmp>
+
+        <h3>Footer - Default</h3>
+        <hr>
+        <xmp>
+          <footer class="o-footer">
+            <div class="l-section--margin-sm l-row l-row--lg l-between l-bottom">
+              <div class="l-col l-center@media-desktop">
+                <a href="/">
+                  <svg class="o-footer__logo icon--left">
+                    <use class="" xlink:href="scpr-sprite.svg#logo_kpcc-white"/>
+                  </svg>
+                </a>
+                <span class="o-footer__tagline text text--semibold u-text-color--gray">The Voice of Southern California</span>
+              </div>
+              <div class="l-col l-end l-center@media-desktop">
+                <a href="https://scprcontribute.scpr.org/">
+                  <svg class="icon icon--size-med icon--left">
+                    <use class="icon--line icon--color-white" xlink:href="scpr-sprite.svg#icon_line-donate"/>
+                  </svg>
+                  <span class="link link--white-dark-bg text">Support the voices you trust. <b class="text--semibold">Donate&nbsp;now.</b></span>
+                </a>
+              </div>
+            </div>
+            <hr class="rule rule--primary" />
+            <nav class="o-footer__nav o-footer__nav--expanded u-text-align--center">
+              <div class="l-section--margin-sm">
+                <ul class="c-list--horiz c-list--divider text text--bold">
+                  <li><a class="link link--white-dark-bg" href="#">Local</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">US & World</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Arts & Entertainment</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Crime & Justice</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Science</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Politics</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Health</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Business</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Education</a></li>
+                </ul>
+              </div>
+              <div class="l-section--margin-sm">
+                <ul class="c-list--horiz text">
+                  <li><a class="link link--white-dark-bg" href="#">Take Two</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">AirTalk</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Off-Ramp</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">The Frame</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Program Schedule</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Programs A-Z</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">KPCC In Person</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">About KPCC</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Contact Us</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Staff Directory</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Careers</a></li>
+                </ul>
+              </div>
+            </nav>
+            <nav class="o-footer__nav o-footer__nav--compact u-text-align--center">
+              <div class="l-section--margin-sm">
+                <ul class="c-list--horiz c-list--divider text text--bold">
+                  <li><a class="link link--white-dark-bg" href="#">News</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Programs</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Events</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">Support</a></li>
+                  <li><a class="link link--white-dark-bg" href="#">About</a></li>
+                </ul>
+              </div>
+            </nav>
+            <div class="l-section--margin-sm l-row l-row--xl l-between l-bottom">
+              <div class="l-col l-center@media-wide">
+                <ul class="c-list--horiz c-list--horiz-compact">
+                  <li class="o-footer__partner-label"><span class="u-text-color--gray text text--uppercase text--semibold">Our Partners</span></li>
+                  <li>
+                    <svg width="106" class="o-footer__partner-logo icon icon--left">
+                      <use class="icon--fill icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-apm"/>
+                    </svg>
+                  </li>
+                  <li class="o-footer__partner">
+                    <svg width="62" class="o-footer__partner-logo icon icon--left">
+                      <use class="icon--fill icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-npr"/>
+                    </svg>
+                  </li>
+                  <li class="o-footer__partner">
+                    <svg width="71" class="o-footer__partner-logo icon icon--left">
+                      <use class="icon--fill icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-bbc"/>
+                    </svg>
+                  </li>
+                  <li class="o-footer__partner">
+                    <svg width="86" class="o-footer__partner-logo icon icon--left">
+                      <use class="icon--fill icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-pri"/>
+                    </svg>
+                  </li>
+                  <li class="o-footer__partner">
+                    <svg width="28" class="o-footer__partner-logo icon icon--left">
+                      <use class="icon--fill icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-nbc4"/>
+                    </svg>
+                  </li>
+                  <li class="o-footer__partner">
+                    <svg width="57" class="o-footer__partner-logo icon icon--left">
+                      <use class="icon--fill icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-pcc"/>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <nav class="l-col l-end l-center@media-wide">
+                <ul class="c-list--horiz text text--small u-text-color--gray">
+                  <li><a class="link link--gray-dark-bg" href="/terms/">Terms &amp; Conditions</a></li>
+                  <li><a class="link link--gray-dark-bg" href="/privacy/">Privacy</a></li>
+                  <li><a class="link link--gray-dark-bg" href="/web_site_feedback/">Feedback</a></li>
+                  <li>&copy; 2016 Southern California Public Radio</li>
+                </ul>
+              </nav>
+            </div>
+          </footer>
+        </xmp>
+
+      </section>
+
+    </main>
+
+    <script src="documentation.js"></script>
+    <script src="index.js"></script>
+    
+  </body>
+</html>
+
+
+
+
+
