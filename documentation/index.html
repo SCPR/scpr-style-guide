@@ -1272,7 +1272,6 @@
                   </div>
                 </li>
               </ul>
-              
               <ul class="c-nav o-mast__nav-actions">
                 <li class="c-nav__item o-mast__search">
                   <div class="c-search c-nav__link">
@@ -1318,6 +1317,278 @@
             </nav>
           </div>
         </xmp>
+
+
+        <h3>Masthead - Redux</h3>
+        <description>
+          On small screens, this masthead uses checkboxes to maintain the state of the menu.  This works without JavaScript.
+        </description>
+        <hr>
+        <xmp>
+          <input type="checkbox" class="state-checkbox" id="x-mast__search-toggler-checkbox" />
+          <input type="checkbox" class="state-checkbox" id="x-mast__menu-toggler-checkbox" />
+          <nav class="x-mast">
+            <div class="x-mast__branding">
+              <a href="/" class="x-mast__logo-link">
+                <svg class="x-mast__logo">
+                  <use class="" xlink:href="scpr-sprite.svg#logo_kpcc-black"/>
+                </svg>
+              </a>
+            </div>
+            <ul class="x-mast__sections">
+
+              <li class="x-mast__item">
+                <a class="x-mast__nav-link" href="#">News</a>
+                <div class="x-mast__item-details">
+                  <div class="x-mast__section">
+                    <h6 class="x-mast__section-heading">Categories</h6>
+                    <ul class="x-mast__section-list text-columns--sm-2">
+                      <li>
+                        <a href="#">Local</a>
+                      </li>
+                      <li>
+                        <a href="#">US & World</a>
+                      </li>
+                      <li>
+                        <a href="#">Politics</a>
+                      </li>
+                      <li>
+                        <a href="#">Science</a>
+                      </li>
+                      <li>
+                        <a href="#">Arts & Entertainment</a>
+                      </li>
+                      <li>
+                        <a href="#">Business</a>
+                      </li>
+                      <li>
+                        <a href="#">Crime & Justice</a>
+                      </li>
+                      <li>
+                        <a href="#">Education</a>
+                      </li>
+                      <li>
+                        <a href="#">Health</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="x-mast__section">
+                    <h6 class="x-mast__section-heading">More</h6>
+                    <ul class="x-mast__section-list">
+                      <li>
+                        <a href="#">Blogs</a>
+                      </li>
+                      <li>
+                        <a href="#">Archive</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="x-mast__item">
+                <a class="x-mast__nav-link" href="#">Programs</a>
+                <div class="x-mast__item-details">
+                  <div class="x-mast__section">
+                    <h6 class="x-mast__section-heading">Featured Programs</h6>
+                    <ul class="x-mast__section-list">
+                      <li>
+                        <a href="#">Take Two</a>
+                      </li>
+                      <li>
+                        <a href="#">Offramp</a>
+                      </li>
+                      <li>
+                        <a href="#">Airtalk</a>
+                      </li>
+                      <li><a href="#">The Frame</a></li>
+                    </ul>
+                  </div>
+                  <div class="x-mast__section">
+                    <h6 class="x-mast__section-heading">All Programs</h6>
+                    <ul class="x-mast__section-list">
+                      <li>
+                        <a href="#">Programs A-Z</a>
+                      </li>
+                      <li>
+                        <a href="#">Program Schedule</a>
+                      </li>
+                      <li>
+                        <a href="#">Podcasts</a>
+                      </li>
+                      <li>
+                        <a href="#">Archive</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="x-mast__item">
+                <a class="x-mast__nav-link" href="#">Events</a>
+                <div class="x-mast__item-details inspect">
+                  <div class="x-mast__section">
+                    <h6 class="x-mast__section-heading">KPCC In Person</h6>
+                    <ul class="x-mast__section-list">
+                      <li>
+                        <a href="#">Upcoming Events</a>
+                      </li>
+                      <li>
+                        <a href="#">The Crawford Family Forum</a>
+                      </li>
+                      <li>
+                        <a href="#">KPCC Events Newsletter</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="x-mast__section">
+                    <h6 class="x-mast__section-heading">More to do in SoCal</h6>
+                    <ul class="x-mast__section-list">
+                      <li>
+                        <a href="#">Sponsored Events</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="x-mast__item">
+                <a class="x-mast__nav-link" href="#">Support Us</a>
+                <div class="x-mast__item-details">
+                  <div class="x-mast__section">
+                    <h6 class="x-mast__section-heading">Membership</h6>
+                    <ul class="x-mast__section-list text-columns--sm-2">
+                      <li>
+                        <a href="#">
+                          Become a Sustainer
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          Become a Member
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">About sustaining membership</a>
+                      </li>
+                      <li>
+                        <a href="#">Update your credit card</a>
+                      </li>
+                      <li>
+                        <a href="#">Member benefits</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                </div>
+                </div>        
+              </li>
+
+              <li class="x-mast__item">
+                <a class="x-mast__nav-link" href="#">About Us</a>
+                <div class="x-mast__item-details">
+                  <div class="x-mast__section">
+                    <div class="x-mast__section">
+                      <h6 class="x-mast__section-heading">Connect with KPCC</h6>
+                      <ul class="x-mast__section-list">
+                        <li>
+                          <a href="#">Contact Us</a>
+                        </li>
+                        <li>
+                          <a href="#">Become a source</a>
+                        </li>
+                        <li>
+                          <a href="#">Share a news tip</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="x-mast__section">
+                      <h6 class="x-mast__section-heading">Learn more about us</h6>
+                      <ul class="x-mast__section-list">
+                        <li>
+                          <a href="#">About KPCC</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="x-mast__section">
+                    <h6 class="x-mast__section-heading">People</h6>
+                    <ul class="x-mast__section-list">
+                      <li>
+                        <a href="#">Staff Directory</a>
+                      </li>
+                      <li>
+                        <a href="#">Executive leadership</a>
+                      </li>
+                      <li>
+                        <a href="#">Board of Trustees</a>
+                      </li>
+                      <li>
+                        <a href="#">Regional Advisory Council</a>
+                      </li>
+                      <li>
+                        <a href="#">Leadership Councils</a>
+                      </li>
+                      <li>
+                        <a href="#">Careers</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+
+
+            <ul class="x-mast__actions">
+
+              <li class="x-mast__action x-mast__search">
+                <div class="c-search">
+                  <label for="x-mast__search-toggler-checkbox" class="x-mast__search-link clickable" href="#">
+                    <svg class="icon icon--search-open icon--size-med icon--size-med@mobile-tablet">
+                      <use class="icon--line icon--color-gray" xlink:href="scpr-sprite.svg#icon_line-search"/>
+                    </svg>
+                    <svg class="icon icon--search-close icon--size-med icon--size-med@mobile-tablet">
+                      <use class="icon--line icon--color-gray" xlink:href="scpr-sprite.svg#icon_line-close"/>
+                    </svg>
+                  </label>
+                  <form method="get" action="/search/" id="site-search">
+                    <input type="text" class=" input-text input--align-bottom input--focused-placeholder" placeholder="Enter your search here" name="q" id="q" />
+                    <button type="submit" class="c-btn c-btn--icon c-btn--outline-secondary">
+                      <svg class="icon icon--size-med">
+                        <use class="icon--line icon--color-link" xlink:href="scpr-sprite.svg#icon_line-search"/>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </li>
+
+              <li class="x-mast__action x-mast__donate">
+                <a class="x-mast__donate-link" href="#">
+                  <svg class="icon icon--size-med icon--left">
+                    <use class="icon--line icon--color-link" xlink:href="scpr-sprite.svg#icon_line-donate"/>
+                  </svg>
+                  <span class="x-mast__item-caption">Donate</span>
+                </a>
+              </li>
+
+              <li class="x-mast__action x-mast__menu">
+                <label class="x-mast__menu-toggler" for="x-mast__menu-toggler-checkbox">
+                  <svg class="icon icon--size-lg x-mast__menu-icon--closed">
+                    <use class="icon--line  icon--color-gray-dark " xlink:href="scpr-sprite.svg#icon_line-menu"/>
+                  </svg>
+                  <svg class="icon icon--size-sm x-mast__menu-icon--opened">
+                    <use class="icon--line  icon--color-gray-dark " xlink:href="scpr-sprite.svg#icon_line-close"/>
+                  </svg>
+                  <span class="x-mast__item-caption x-mast__menu-toggler-caption x-mast__item-caption x-mast__menu-toggler-caption--closed">Menu</span>
+                  <span class="x-mast__item-caption x-mast__menu-toggler-caption x-mast__item-caption x-mast__menu-toggler-caption--opened">Close</span>
+                </label>
+              </li>
+            </ul>
+
+          </nav>
+        </xmp>
+
 
         <h3>Footer - Default</h3>
         <hr>
@@ -1437,7 +1708,7 @@
 
     <script src="documentation.js"></script>
     <script src="index.js"></script>
-    
+
   </body>
 </html>
 
