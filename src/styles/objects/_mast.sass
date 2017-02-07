@@ -1,7 +1,5 @@
-
 // Mast: Wraps branding and navigation elements for site wayfinding.
 //
-// .mast--top       - Fixes the positioning of the masthead to the top of the page.
 //
 // Styleguide 0.2.0
 
@@ -10,40 +8,55 @@
 .state-checkbox
   display: none
 
+$o-mast-full-height: 60px
 
-@mixin x-mast-defaults
+@mixin o-mast-defaults
   align-items: center
   background: $color-white
   border-bottom: 1px solid $color-gray-light
   display: flex
-  height: 60px
+  height: $o-mast-full-height
   position: relative
 
-  .x-mast__branding
+  .o-mast__branding
+    align-items: center
+    display: flex
     float: left
     padding: 9.6px
+    min-width: 150px // IE & safari fix
+    transition: min-width 0.5s
+    @media (max-width: $media-tablet)
+      min-width: 107px // IE & safari fix
 
-  .x-mast__logo
+  .o-mast__logo
     height: 22px
+    transition: width 0.5s
     width: 150px
     @media (max-width: $media-tablet)
       height: 16px
       width: 107px
 
-  .x-mast__sections
+  .o-mast__caption
+    display: none
+    font-size: 11.2px
+    overflow-x: hidden
+    padding-left: $gutter
+    width: 133px
+
+  .o-mast__sections
     display: flex
-    > .x-mast__actions
+    > .o-mast__actions
       display: none
 
-  .x-mast__item
+  .o-mast__item
     align-items: center
     display: flex
-    height: 100%
+    height: $o-mast-full-height  // because internet explorer
     vertical-align: middle
     &:hover
       box-shadow: inset 0 -4px 0 0 $color-primary
 
-  .x-mast__item-details
+  .o-mast__item-details
     background-color: $color-gray-lightest
     box-shadow: 0 1px 3px $color-gray
     box-sizing: border-box
@@ -60,20 +73,20 @@
     padding: $gutter
     position: absolute
     text-align: start
-    top: 60px
+    top: $o-mast-full-height
     width: 100%
     z-index: 9999
 
-  .x-mast__item:hover > .x-mast__item-details
+  .o-mast__item:hover > .o-mast__item-details
     display: block
     display: flex
 
-  .x-mast__section
+  .o-mast__section
     margin-bottom: 15px
     margin-right: $gutter
     min-width: 15%
 
-  .x-mast__section-heading
+  .o-mast__section-heading
     border-bottom: solid 2px $color-primary-lightest
     color: $color-gray
     font-family: $font-sans-base
@@ -82,7 +95,7 @@
     font-size: 18px
     font-weight: 700
 
-  .x-mast__section-list
+  .o-mast__section-list
     color: $color-black
     display: block
     font-family: $font-sans-base
@@ -90,7 +103,7 @@
     > li
       padding-top: 15px
 
-  .x-mast__nav-link
+  .o-mast__nav-link
     color: $color-gray-warm
     font-size: 15px
     font-weight: 500
@@ -98,24 +111,22 @@
     padding-right: 15px
     text-decoration: none
     text-transform: uppercase
+    white-space: nowrap
     @media (max-width: $media-wide)
       padding-left: 10px
       padding-right: 10px
 
-  .x-mast__actions
+  .o-mast__actions
     align-items: center
     display: flex
     float: right
     font-size: 15px
-    // justify-content: space-between
     justify-content: flex-end
     margin-left: auto
     @media (max-width: $media-tablet)
       font-size: 11.2px
-    // > *
-    //   height: 54px
 
-  .x-mast__action
+  .o-mast__action
     $side-padding: 16px ($base-line-height / 2)
     align-items: center
     color: $color-gray-warm
@@ -123,7 +134,6 @@
     display: flex
     font-weight: 500
     height: 18px
-    // padding: $side-padding
     padding-left: 15px
     padding-right: 15px
     text-decoration: none
@@ -143,11 +153,11 @@
     @media (max-width: $media-tablet)
       padding: 9.6px
 
-  .x-mast__item-caption
+  .o-mast__item-caption
     @media (max-width: $media-mobile)
       display: none
 
-  .x-mast__search
+  .o-mast__search
     height: 100%
     form
       margin-bottom: 0
@@ -157,74 +167,87 @@
         border-color: $color-secondary
         transition: width 0.5s
         width: 0%
-      .x-mast__search-link
-        @extend .clickable
+        &::placeholder
+          @media (max-width: $media-desktop)
+            font-size: 13px
+          @media (max-width: $media-mobile)
+            font-size: 11px
+      .o-mast__search-link
         padding: 6.4px
         transition: all 0.5s
+        &:hover
+          cursor: pointer
         .icon
           height: 20px
           width: 20px
         .icon use
           @extend .icon--line, .icon--color-gray
 
-
-  .x-mast__donate
+  .o-mast__donate
     color: $color-secondary
     &:hover
       color: $color-secondary-dark
 
-  .x-mast__menu
+  .o-mast__menu
     display: none
 
-  .x-mast__menu-toggler
+  .o-mast__menu-toggler
     align-items: center
     user-select: none
 
-  .x-mast__menu-icon--opened
+  .o-mast__menu-icon--opened
     margin-right: 3.2px
 
-  .x-mast__menu-toggler-caption
-    display: block
-    @media (max-width: $media-mobile)
+
+
+
+@mixin o-mast-compact
+
+  .o-mast__caption
+    @media (min-width: $media-mobile)
+      // there's no room for this on mobile
+      display: inline-block
+    @media (max-width: $media-tablet)
       display: none
 
-
-
-@mixin x-mast-compact
-
-  .x-mast__menu
+  .o-mast__menu
     display: block
     display: flex
 
-  .x-mast__sections
+  .o-mast__sections
     background-color: $color-gray-lightest
     box-shadow: 0 1px 3px $color-gray
     box-sizing: border-box
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    left: 0
+    opacity: 0
     padding: $gutter
     padding-top: $gutter / 2
     position: absolute
     top: 0
     transform: translateY(-101%)
-    transition: transform 0.5s
+    transition: transform 0.5s, opacity 0s linear 0.5s
     width: 100%
     z-index: 5
 
-  .x-mast__sections > .x-mast__actions
+  .o-mast__sections > .o-mast__actions
     display: block
     display: flex
     justify-content: flex-end
     width: 100%
 
-  .x-mast__item
+  .o-mast__item
     display: block
+    height: 100%
     width: 50% - $gutter
+    @media (max-width: $media-mobile)
+      width: 100%
     &:hover
       box-shadow: none
 
-  .x-mast__nav-link
+  .o-mast__nav-link
     border-bottom: solid 2px #f8dac3
     box-sizing: border-box
     color: $color-gray-warm
@@ -233,46 +256,61 @@
     margin-bottom: 10px
     padding-left: 0
 
-  .x-mast__item-details
-    background: initial
-    box-shadow: initial
+  .o-mast__item-details
+    background: none
+    box-shadow: none
     box-sizing: border-box
     display: flex
-    max-height: initial
+    max-height: none
     padding: $gutter
     position: relative
-    top: initial
+    top: 0
 
-  .x-mast__section
+  .o-mast__section
     margin-bottom: 32px
     margin-right: $gutter-in-pixels
 
-  .x-mast__section-heading
-    border-bottom: initial
+  .o-mast__section-heading
+    border-bottom: none
     color: $color-black
     font-size: 14.4px
-    margin-bottom: initial
+    margin-bottom: none
 
 
 
-#x-mast__menu-toggler-checkbox:checked ~ .x-mast
-  .x-mast__sections
+#o-mast__menu-toggler-checkbox:checked ~ .o-mast
+  .o-mast__sections
+    opacity: 1
     transform: translateY(0%)
+    transition: transform 0.5s, opacity 0s linear 0s
 
 
-#x-mast__search-toggler-checkbox:checked ~ .x-mast
-  .x-mast__search input
+#o-mast__search-toggler-checkbox:checked ~ .o-mast
+  .o-mast__search input
     width: 100%
-  .x-mast__search-link
-    // @extend .c-btn, .c-btn--icon, .c-btn--outline-secondary
+  .o-mast__search-link
     box-shadow: inset 0 0 0 1px $color-secondary
     .icon use
       @extend .icon--line, .icon--color-link
+  .o-mast__logo
+    @media (max-width: ($media-mobile + $media-tablet) / 2)
+      // there's a place between both screen sizes
+      // where it works well to hide the logo
+      // for the search input
+      width: 0px
+    @media (min-width: $media-desktop)
+      width: 0px
+  .o-mast__caption
+    @media (max-width: $media-tablet)
+      display: none
+  .o-mast__branding
+    min-width: 0px
 
-.x-mast
-  @include x-mast-defaults
+
+.o-mast
+  @include o-mast-defaults
   @media (max-width: $media-desktop)
-    @include x-mast-compact
-.x-mast.x-mast--compact
-  @include x-mast-defaults
-  @include x-mast-compact
+    @include o-mast-compact
+.o-mast.o-mast--compact
+  @include o-mast-defaults
+  @include o-mast-compact
