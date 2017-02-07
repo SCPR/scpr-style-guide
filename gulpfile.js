@@ -58,11 +58,6 @@ gulp.task('build:sprite', () => {
     .pipe(gulp.dest('./documentation/'))
 });
 
-// gulp.task('build:doc:css', () => {
-//   return gulp.src('./dist/index.css')
-//     .pipe(gulp.dest('./documentation'))
-// })
-
 gulp.task('build', ['build:sass', 'build:js']);
 
 gulp.task('serve', ['build:doc:sass', 'build:js', 'build:sprite'], () => {
@@ -77,30 +72,7 @@ gulp.task('serve', ['build:doc:sass', 'build:js', 'build:sprite'], () => {
 
 gulp.task('default', ['serve']);
 
-// gulp.task('compile:html', (cb) => {
-//   return gulp.src('./index.html')
-//     .pipe(gulp.dest('./build')); 
-// })
 
-// gulp.task('compile:css', () => {
-//   return gulp.src(['./index.css'])
-//     .pipe(md5(10, './build/index.html'))
-//     .pipe(cleanCSS({compatibility: 'ie11'}))
-//     .pipe(gulp.dest('./build'));
-// });
-
-// gulp.task('compile:js', () => {
-//   return gulp.src(['./index.js'])
-//     .pipe(md5(10, './build/index.html'))
-//     .pipe(uglify())
-//     .pipe(gulp.dest('./build'));
-// });
-
-// gulp.task('compile:images', () => {
-//   return gulp.src(['./images/**/*'])
-//     .pipe(md5(10, ['./build/index.html', './build/index_*.css']))
-//     .pipe(gulp.dest('./build/images'));
-// });
 
 gulp.task('clean', () => {
   // return del(['./build/**/*', '!./build/.git/']);
