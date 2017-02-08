@@ -22,7 +22,6 @@ Once installed, all the assets from scpr-style-guide have to be consumed by your
 cp ./node_modules/scpr-style-guide/js/* ./public/js
 cp ./node_modules/scpr-style-guide/css/* ./public/css
 cp -R ./node_modules/scpr-style-guide/img/**/* ./public/img
-cp -R ./node_modules/scpr-style-guide/font/**/* ./public/font
 ```
 
 Another possibility for importing the JS and SCSS is to use Browserify and SASS to import them into the project.
@@ -32,7 +31,7 @@ require('scpr-style-guide');
 ```
 
 ```css
-@import './node_modules/scpr-style-guide/src/css/main.scss';
+@import './node_modules/scpr-style-guide/src/css/index.scss';
 ```
 
 ### Configuring asset paths for your project

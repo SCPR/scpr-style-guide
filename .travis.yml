@@ -1,17 +1,10 @@
-language: ruby
-rvm:
-- 2.2.3
+language: node_js
 before_install:
 - nvm install 4.2.3
 - npm install
 - npm install gulp-cli
 - npm run build
-install:
-- bundle install
-script: bundle exec middleman build
-after_script:
-- gem install percy-cli
-- percy snapshot _site/
+script: gulp compile
 deploy:
   provider: npm
   email: scprdev@scpr.org
