@@ -28,3 +28,19 @@ document.querySelectorAll('.o-mast__search').forEach(function (s) {
   searchField.addEventListener('blur', uncheck, true);
 
 });
+
+document.querySelectorAll('.o-mast__nav-link').forEach(function(l) {
+  l.addEventListener('click', function(e){
+    // e.preventDefault();
+    // return false;
+    // ^^ uncomment above when implementing
+    // sliding submenus
+  });
+  // l.children.forEach(function(c){
+  //   c.addEventListener('click', function(e){
+  //     e.preventDefault();
+  //     return false;
+  //   });
+
+  // })
+});

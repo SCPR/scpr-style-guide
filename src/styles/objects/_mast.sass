@@ -9,6 +9,8 @@
   display: none
 
 $o-mast-full-height: 60px
+$o-mast-logo-full-width: 150px
+$o-mast-logo-mobile-width: 107px
 
 @mixin o-mast-defaults
   align-items: center
@@ -18,76 +20,25 @@ $o-mast-full-height: 60px
   height: $o-mast-full-height
   position: relative
 
-  .o-mast__branding
-    align-items: center
-    display: flex
+  .o-mast__logo
     float: left
     padding: 9.6px
-    min-width: 150px // IE & safari fix
-    transition: min-width 0.5s
-    @media (max-width: $media-tablet)
-      min-width: 107px // IE & safari fix
-
-  .o-mast__logo
     height: 22px
-    transition: width 0.5s
-    width: 150px
+    opacity: 1
+    transition: opacity 0.5s
     @media (max-width: $media-tablet)
-      height: 16px
-      width: 107px
-
-  .o-mast__caption
-    display: none
-    font-size: 11.2px
-    overflow-x: hidden
-    padding-left: $gutter
-    width: 133px
-
-  .o-mast__sections
-    display: flex
-    > .o-mast__actions
-      display: none
-
-  .o-mast__item
-    align-items: center
-    display: flex
-    height: $o-mast-full-height  // because internet explorer
-    vertical-align: middle
-    &:hover
-      box-shadow: inset 0 -4px 0 0 $color-primary
-
-  .o-mast__item-details
-    background-color: $color-gray-lightest
-    box-shadow: 0 1px 3px $color-gray
-    box-sizing: border-box
-    color: $color-black
-    display: none
-    font-size: 13px
-    justify-content: flex-start
-    left: 0
-    overflow: hidden
-    margin-left: auto
-    margin-right: auto
-    max-height: 384px
-    min-height: 210px
-    padding: $gutter
-    position: absolute
-    text-align: start
-    top: $o-mast-full-height
-    width: 100%
-    z-index: 9999
-
-  .o-mast__item:hover > .o-mast__item-details
-    display: block
-    display: flex
-
-  .o-mast__section
-    margin-bottom: 15px
-    margin-right: $gutter
-    min-width: 15%
+      display: flex
+      align-items: center
+    svg
+      height: 100%
+      min-width: $o-mast-logo-full-width // IE & safari fix
+      transition: width 0.5s, min-width 0.5s
+      width: $o-mast-logo-full-width
+      @media (max-width: $media-tablet)
+        height: 16px
+        width: 107px
 
   .o-mast__section-heading
-    border-bottom: solid 2px $color-primary-lightest
     color: $color-gray
     font-family: $font-sans-base
     padding-bottom: 5px
@@ -116,22 +67,19 @@ $o-mast-full-height: 60px
       padding-left: 10px
       padding-right: 10px
 
-  .o-mast__actions
-    align-items: center
-    display: flex
-    float: right
-    font-size: 15px
-    justify-content: flex-end
-    margin-left: auto
-    @media (max-width: $media-tablet)
-      font-size: 11.2px
+  // .o-mast__actions
+  //   align-items: center
+  //   display: flex
+  //   float: right
+  //   justify-content: flex-end
+  //   margin-left: auto
 
   .o-mast__action
-    $side-padding: 16px ($base-line-height / 2)
     align-items: center
     color: $color-gray-warm
     display: block
     display: flex
+    font-size: 15px
     font-weight: 500
     height: 18px
     padding-left: 15px
@@ -150,12 +98,9 @@ $o-mast-full-height: 60px
       cursor: hand
       display: flex
       justify-content: flex-end
-    @media (max-width: $media-tablet)
-      padding: 9.6px
-
-  .o-mast__item-caption
-    @media (max-width: $media-mobile)
-      display: none
+    // @media (max-width: $media-tablet)
+    //   font-size: 11.2px
+    //   padding: 9.6px
 
   .o-mast__search
     height: 100%
@@ -164,6 +109,7 @@ $o-mast-full-height: 60px
       input
         @extend .input-text, .input--align-bottom, .input--focused-placeholder
         align-self: flex-end
+        background: $color-white
         border-color: $color-secondary
         transition: width 0.5s
         width: 0%
@@ -188,9 +134,6 @@ $o-mast-full-height: 60px
     &:hover
       color: $color-secondary-dark
 
-  .o-mast__menu
-    display: none
-
   .o-mast__menu-toggler
     align-items: center
     user-select: none
@@ -198,17 +141,95 @@ $o-mast-full-height: 60px
   .o-mast__menu-icon--opened
     margin-right: 3.2px
 
+  // .o-mast__menu .o-mast__menu-icon--opened
+  //   display: none
 
 
 
-@mixin o-mast-compact
+
+
+
+
+
+
+
+@mixin o-mast--lg
+  padding-left: 0px
+  .o-mast__caption
+    display: none
+
+  .o-mast__sections
+    display: flex
+    margin-right: auto
+    > .o-mast__actions
+      display: none
+
+  .o-mast__item-details
+    background-color: $color-gray-lightest
+    box-shadow: 0 1px 3px $color-gray
+    box-sizing: border-box
+    color: $color-black
+    display: none
+    font-size: 13px
+    justify-content: flex-start
+    left: 0
+    overflow: hidden
+    margin-left: auto
+    margin-right: auto
+    max-height: 384px
+    min-height: 210px
+    padding: $gutter
+    position: absolute
+    text-align: start
+    top: $o-mast-full-height
+    width: 100%
+    z-index: 9999
+
+  .o-mast__item
+    align-items: center
+    display: flex
+    height: $o-mast-full-height  // because internet explorer
+    vertical-align: middle
+    &:hover
+      box-shadow: inset 0 -4px 0 0 $color-primary
+
+  .o-mast__item:hover > .o-mast__item-details
+    display: block
+    display: flex
+
+  .o-mast__section
+    margin-bottom: 15px
+    margin-right: $gutter
+    min-width: 15%
+
+  .o-mast__section-heading
+    border-bottom: solid 2px $color-primary-lightest
+
+  .o-mast__menu
+    display: none
+
+  // .o-mast__menu 
+  //   .o-mast__menu-toggler-caption--opened, .o-mast__menu-toggler--opened
+  //   display: none
+
+@mixin o-mast--med
+  padding-left: 30px
 
   .o-mast__caption
+    font-size: 11.2px
+    flex-shrink: 0
+    overflow-x: hidden
+    width: 133px
+    margin-right: auto
     @media (min-width: $media-mobile)
       // there's no room for this on mobile
       display: inline-block
     @media (max-width: $media-tablet)
       display: none
+
+  .o-mast__action
+    @media (max-width: $media-desktop)
+      font-size: 12px
 
   .o-mast__menu
     display: block
@@ -236,7 +257,12 @@ $o-mast-full-height: 60px
     display: block
     display: flex
     justify-content: flex-end
+    padding-top: 5px
+    padding-bottom: 5px
     width: 100%
+
+  .o-mast__sections .o-mast__actions .o-mast__menu-icon--opened
+    margin-right: 10px
 
   .o-mast__item
     display: block
@@ -274,7 +300,79 @@ $o-mast-full-height: 60px
     border-bottom: none
     color: $color-black
     font-size: 14.4px
-    margin-bottom: none
+    margin-bottom: 0px
+
+  > .o-mast__action:nth-child(3)
+    margin-left: auto
+
+  > .o-mast__menu 
+    .o-mast__menu-icon--opened, .o-mast__menu-toggler-caption--opened
+      display: none
+
+  > .o-mast__action 
+    @media (max-width: 490px)
+      padding-left: 6px
+      padding-right: 6px
+
+  > .o-mast__action .o-mast__item-caption
+    @media (max-width: 700px)
+      display: none
+
+@mixin o-mast--sm
+  justify-content: space-between
+  // flex-direction: column
+  padding-left: 0px
+  align-items: center
+  height: 50px
+  .o-mast__logo
+    left: 50%
+    order: 1
+    position: absolute
+    transform: translateX(-50%)
+    z-index: 5
+  .o-mast__caption
+    display: none
+  .o-mast__item-caption
+    display: none
+  .o-mast__search
+    order: 2
+    z-index: 5
+  .o-mast__donate
+    display: none
+  .o-mast__menu
+    order: 0
+    z-index: 5
+  .o-mast__sections
+    padding: 0
+    transform: translateY(-125%)
+    top: 50px
+    z-index: 6
+    .o-mast__actions
+      display: none
+  .o-mast__item
+    display: block
+    height: 100%
+    width: 100%
+    &:hover
+      box-shadow: none
+  .o-mast__item-caption
+    @media (max-width: 945px)
+      display: none
+  .o-mast__nav-link
+    border: none
+    border-top: 1px solid $color-gray-light
+    display: flex
+    align-items: center
+    height: 60px
+    margin-bottom: 0
+    padding: 0
+    padding-left: $gutter
+  .o-mast__item:hover > .o-mast__item-details
+    // to override the fullsize hover
+    display: none
+  .o-mast__item-details
+    display: none
+
 
 
 
@@ -283,6 +381,11 @@ $o-mast-full-height: 60px
     opacity: 1
     transform: translateY(0%)
     transition: transform 0.5s, opacity 0s linear 0s
+  @media (max-width: $media-tablet)
+    .o-mast__menu .o-mast__menu-icon--opened
+      display: block
+    .o-mast__menu .o-mast__menu-icon--closed
+      display: none
 
 
 #o-mast__search-toggler-checkbox:checked ~ .o-mast
@@ -292,25 +395,35 @@ $o-mast-full-height: 60px
     box-shadow: inset 0 0 0 1px $color-secondary
     .icon use
       @extend .icon--line, .icon--color-link
-  .o-mast__logo
-    @media (max-width: ($media-mobile + $media-tablet) / 2)
-      // there's a place between both screen sizes
-      // where it works well to hide the logo
-      // for the search input
+  // .o-mast__logo svg
+  //   @media (min-width: $media-desktop) and (max-width: 1255px)
+  //     min-width: 0px
+  //     width: 0px
+    @media (max-width: 780px)
+      min-width: 0px
       width: 0px
-    @media (min-width: $media-desktop)
-      width: 0px
+    @media (max-width: $media-mobile)
+      min-width: 0px
+      opacity: 0
+      width: inherit
+      z-index: 0
   .o-mast__caption
     @media (max-width: $media-tablet)
       display: none
-  .o-mast__branding
-    min-width: 0px
-
+  .o-mast__logo
+    @media (max-width: 605px)
+      opacity: 0
 
 .o-mast
   @include o-mast-defaults
-  @media (max-width: $media-desktop)
-    @include o-mast-compact
-.o-mast.o-mast--compact
-  @include o-mast-defaults
-  @include o-mast-compact
+.o-mast--mobile
+  @include o-mast--med
+  @media (max-width: $media-tablet)
+    @include o-mast--sm
+.o-mast--sm
+  @include o-mast--med
+  @include o-mast--sm
+.o-mast--med
+  @include o-mast--med
+.o-mast--lg
+  @include o-mast--lg
