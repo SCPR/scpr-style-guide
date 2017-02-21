@@ -766,6 +766,31 @@
 
         <h2>Objects</h2>
 
+        <h3>Figure - Widescreen</h3>
+        <hr>
+        <xmp>
+          <figure class="o-figure o-figure--widescreen">
+            <img class="o-figure__img" src="http://placehold.it/640x480" style="background-image: url(http://placehold.it/640x480);">
+          </figure>
+        </xmp>
+
+        <h3>Figure - Emphasized</h3>
+        <hr>
+        <xmp>
+          <figure class="o-figure o-figure--widescreen o-figure--emphasized">
+            <img class="o-figure__img" src="http://placehold.it/640x480" style="background-image: url(http://placehold.it/640x480);">
+          </figure>
+        </xmp>
+
+        <h3>Figure - Caption</h3>
+        <hr>
+        <xmp>
+          <figure class="o-figure o-figure--widescreen">
+            <img class="o-figure__img" src="http://placehold.it/640x480" style="background-image: url(http://placehold.it/640x480);">
+            <figcaption class="o-figure__caption">This is a caption. <span class="o-figure__attribution">Some guy/KPCC</span></figcaption>
+          </figure>
+        </xmp>
+
         <h3>Media - Block</h3>
         <hr>
         <xmp>
@@ -1011,22 +1036,22 @@
         <xmp>
           <input type="checkbox" class="state-checkbox" id="o-mast__search-toggler-checkbox" />
           <input type="checkbox" class="state-checkbox" id="o-mast__menu-toggler-checkbox" />
-          <nav class="o-mast">
-            <div class="o-mast__branding">
+          <nav class="o-mast o-mast--mobile">
+            <div class="o-mast__logo">
               <a href="/" class="o-mast__logo-link">
-                <svg class="o-mast__logo">
+                <svg>
                   <use class="" xlink:href="scpr-sprite.svg#logo_kpcc-black"/>
                 </svg>
               </a>
-              <span class="o-mast__caption">Member-supported news for Southern California</span>
             </div>
+            <span class="o-mast__caption">Member-supported news for Southern California</span>
             <ul class="o-mast__sections">
 
               <ul class="o-mast__actions">
                 <li class="o-mast__action o-mast__menu">
                   <label class="o-mast__menu-toggler" for="o-mast__menu-toggler-checkbox">
                     <svg class="icon icon--size-sm o-mast__menu-icon--opened">
-                      <use class="icon--line  icon--color-gray-dark " xlink:href="scpr-sprite.svg#icon_line-close"/>
+                      <use class="icon--line  icon--color-gray " xlink:href="scpr-sprite.svg#icon_line-close"/>
                     </svg>
                     <span class="o-mast__item-caption o-mast__menu-toggler-caption o-mast__item-caption o-mast__menu-toggler-caption--opened">Close</span>
                   </label>
@@ -1236,39 +1261,44 @@
             </ul>
 
 
-            <ul class="o-mast__actions">
 
-              <li class="o-mast__action o-mast__search">
 
-                <form method="get" action="/search/">
-                  <input type="text" placeholder="Enter your search here" name="q" id="q" />
-                  <label for="o-mast__search-toggler-checkbox" class="o-mast__search-link" href="#">
-                    <svg class="icon icon--search-open">
-                      <use class="icon--line icon--color-gray" xlink:href="scpr-sprite.svg#icon_line-search"/>
-                    </svg>
-                  </label>
-                </form>
+            <div class="o-mast__action o-mast__search">
 
-              </li>
-
-              <li class="o-mast__action o-mast__donate">
-                <a class="o-mast__donate-link" href="#">
-                  <svg class="icon icon--size-med icon--left">
-                    <use class="icon--line icon--color-link" xlink:href="scpr-sprite.svg#icon_line-donate"/>
+              <form method="get" action="/search/">
+                <input type="text" placeholder="Enter your search here" name="q" id="q" />
+                <label for="o-mast__search-toggler-checkbox" class="o-mast__search-link" href="#">
+                  <svg class="icon icon--search-open">
+                    <use class="icon--line icon--color-gray" xlink:href="scpr-sprite.svg#icon_line-search"/>
                   </svg>
-                  <span class="o-mast__item-caption">Donate</span>
-                </a>
-              </li>
-
-              <li class="o-mast__action o-mast__menu">
-                <label class="o-mast__menu-toggler" for="o-mast__menu-toggler-checkbox">
-                  <svg class="icon icon--size-lg o-mast__menu-icon--closed">
-                    <use class="icon--line  icon--color-gray-dark " xlink:href="scpr-sprite.svg#icon_line-menu"/>
-                  </svg>
-                  <span class="o-mast__item-caption o-mast__menu-toggler-caption o-mast__item-caption o-mast__menu-toggler-caption--closed">Menu</span>
                 </label>
-              </li>
-            </ul>
+              </form>
+
+            </div>
+
+            <div class="o-mast__action o-mast__donate">
+              <a class="o-mast__donate-link" href="#">
+                <svg class="icon icon--size-med icon--left">
+                  <use class="icon--line icon--color-link" xlink:href="scpr-sprite.svg#icon_line-donate"/>
+                </svg>
+                <span class="o-mast__item-caption">Donate</span>
+              </a>
+            </div>
+
+            <div class="o-mast__action o-mast__menu">
+              <label class="o-mast__menu-toggler" for="o-mast__menu-toggler-checkbox">
+                <svg class="icon icon--size-lg o-mast__menu-icon--closed">
+                  <use class="icon--line  icon--color-gray-dark " xlink:href="scpr-sprite.svg#icon_line-menu"/>
+                </svg>
+                <span class="o-mast__item-caption o-mast__menu-toggler-caption o-mast__item-caption o-mast__menu-toggler-caption--closed">Menu</span>
+                <svg class="icon icon--size-sm o-mast__menu-icon--opened">
+                  <use class="icon--line  icon--color-gray-dark " xlink:href="scpr-sprite.svg#icon_line-close"/>
+                </svg>
+                <span class="o-mast__item-caption o-mast__menu-toggler-caption o-mast__item-caption o-mast__menu-toggler-caption--opened">Close</span>
+              </label>
+            </div>
+
+
 
           </nav>
         </xmp>

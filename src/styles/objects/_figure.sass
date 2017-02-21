@@ -1,0 +1,37 @@
+.o-figure
+  box-sizing: border-box
+  display: block
+  max-width: 100%
+  margin-bottom: 45px
+
+.o-figure--widescreen .o-figure__img
+  padding-top: (100 / 1.77778) * 1%
+
+.o-figure--four-by-three .o-figure__img
+  padding-top: (100 / 1.33333) * 1%
+
+.o-figure--cinematic .o-figure__img
+  padding-top: (100 / 2.35) * 1%
+
+.o-figure--emphasized .o-figure__img
+  border-bottom: 4px solid $color-primary
+
+.o-figure__img
+  display: block
+  box-sizing: border-box
+  background-size: cover
+  background-position: center
+  height: 0px
+  width: 100%
+
+.o-figure__caption
+  color: $color-gray
+  display: inline-block
+  font-size: 12px
+  margin-top: 13px
+
+.o-figure__attribution
+  color: $color-secondary
+  display: inline-block
+  font-style: normal
+  text-transform: uppercase
