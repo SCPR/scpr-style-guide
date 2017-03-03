@@ -2,11 +2,11 @@
 // Links: Styling for hyperlinks.
 // Excludes hyperlinks inside articles, whose appearence are scoped to content styling.
 //
-// .link--callout       - Styles a link
+// .b-link--callout       - Styles a link
 //
 // Styleguide 0.1.0
 
-.link {
+.b-link {
   color: $color-base;
 
   &:hover {

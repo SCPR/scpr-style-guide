@@ -4,7 +4,7 @@
 //
 // Styleguide 0.2.0
 
-.input-text {
+.b-input__text {
   background: transparent;
   border: 0;
   border-bottom: 1px solid $color-gray;
@@ -32,7 +32,7 @@
 
 }
 
-.input {
+.b-input {
   &--wide {
     width: 22rem;
 
@@ -46,7 +46,7 @@
     width: 10rem;
   }
 
-  &--error, .input--error:focus {
+  &--error, .b-input--error:focus {
     border-bottom: 1px solid $color-alert;
   }
 
@@ -62,7 +62,7 @@
 
 }
 
-.input-label {
+.b-input__label {
   color: $color-gray;
   display: block;
   font-size: ms(-1);
@@ -74,21 +74,21 @@
 
 }
 
-.input-group {
+.b-input__group {
   display: flex;
   flex-direction: column-reverse;
 
-  .input-text:placeholder-shown + .input-label {
+  .b-input__text:placeholder-shown + .b-input__label {
     opacity: 0;
   }
 
-  .input-text:focus + .input-label {
+  .b-input__text:focus + .b-input__label {
     opacity: 1;
   }
 
 }
 
-.input-help {
+.b-input__help {
   font-size: ms(-2);
   margin-top: 3px;
 

@@ -56,48 +56,48 @@
         <h3>Link</h3>
         <hr>
         <xmp>
-          <a class="link" href="#">I am a basic link</a>
+          <a class="b-link" href="#">I am a basic link</a>
         </xmp>
 
         <h3>Link - Callout</h3>
         <hr>
         <xmp>
-          <a class="link link--callout" href="#">I am a callout link</a>
+          <a class="b-link b-link--callout" href="#">I am a callout link</a>
         </xmp>
 
         <h3>Link - Callout + Icon</h3>
         <hr>
         <xmp>
           <a href="#">
-            <svg class="icon icon--size-med icon--left">
-              <use class="icon--line icon--color-link" xlink:href="scpr-sprite.svg#icon_line-article"/>
+            <svg class="b-icon b-icon--size-med b-icon--left">
+              <use class="b-icon--line b-icon--color-link" xlink:href="scpr-sprite.svg#icon_line-article"/>
             </svg>
-            <span class="link link--callout">I am a callout link</span>
+            <span class="b-link b-link--callout">I am a callout link</span>
           </a>      
         </xmp>
 
         <h3>Horizontal Rule - Default</h3>
         <hr>
         <xmp>
-          <hr class="rule" />
+          <hr class="b-rule" />
         </xmp>
 
         <h3>Horizontal Rule - Primary</h3>
         <hr>
         <xmp>
-          <hr class="rule rule--primary" />
+          <hr class="b-rule b-rule--primary" />
         </xmp>
 
         <h3>Horizontal Rule - Dark</h3>
         <hr>
         <xmp>
-          <hr class="rule rule--dark" />
+          <hr class="b-rule b-rule--dark" />
         </xmp>
 
         <h3>Horizontal Rule - Darker</h3>
         <hr>
         <xmp>
-          <hr class="rule rule--darker" />
+          <hr class="b-rule b-rule--darker" />
         </xmp>
 
       </section>
@@ -647,16 +647,16 @@
         <h3>Text Input - Default</h3>
         <hr>
         <xmp>
-          <input type="text" class="input-text" placeholder="First Name" />
-          <input type="text" class="input-text input--narrow" placeholder="Middle Initial" />
-          <input type="text" class="input-text input--wide" placeholder="Last Name" />
+          <input type="text" class="b-input__text" placeholder="First Name" />
+          <input type="text" class="b-input__text input--narrow" placeholder="Middle Initial" />
+          <input type="text" class="b-input__text input--wide" placeholder="Last Name" />
         </xmp>
 
         <h3>Text Input + Label</h3>
         <hr>
         <xmp>
           <label class="input-group">
-            <input type="text" class="input-text" placeholder="First Name" />
+            <input type="text" class="b-input__text" placeholder="First Name" />
             <span class="input-label">First Name</span>
           </label>
         </xmp>
@@ -666,7 +666,7 @@
         <xmp>
           <label class="input-group">
             <span class="input-help input-help--error">* letters only</span>
-            <input type="text" class="input-text input--error" placeholder="First Name" value="12345" />
+            <input type="text" class="b-input__text input--error" placeholder="First Name" value="12345" />
             <span class="input-label">First Name</span>
           </label>
         </xmp>
@@ -732,8 +732,8 @@
             <div class="container container--med">
               <div class="l-section">
                 <h2 class="heading heading--h1 heading--serif heading--italic heading--extrabold">The Voice of Southern California.</h2>
-                <p class="text text--sans-alt text--large">Angelenos rely on KPCC’s member-supported news to stay informed.</p>
-                <p class="text text--sans-alt text--large text--light">Listen to our broadcast, check out our top stories below, or sign up for vital news delivered to your inbox every afternoon.</p>
+                <p class="b-text b-text--sans-alt b-text--large">Angelenos rely on KPCC’s member-supported news to stay informed.</p>
+                <p class="b-text b-text--sans-alt b-text--large b-text--light">Listen to our broadcast, check out our top stories below, or sign up for vital news delivered to your inbox every afternoon.</p>
               </div>
               <a href="#" class="c-btn c-btn--primary">Show me the news now</a>
               &nbsp;
@@ -751,8 +751,8 @@
           <div class="c-well c-well--dark c-well--dismissible js-well js-well--dismissible" data-name="example-well" data-views="300">
             <p>This is a dismissible well.</p>
             <button class="c-well__dismiss-btn js-well--dismiss-btn">
-              <svg class="icon icon--size-med">
-                <use class="icon--line icon--color-gray " xlink:href="scpr-sprite.svg#icon_line-close"/>
+              <svg class="b-icon b-icon--size-med">
+                <use class="b-icon--line b-icon--color-gray " xlink:href="scpr-sprite.svg#icon_line-close"/>
               </svg>
             </button>
             </span>
@@ -767,6 +767,9 @@
         <h2>Objects</h2>
 
         <h3>Figure - Widescreen</h3>
+        <description>
+          Figures are implemented using normal HTML5 figure elements, except they use zero-height, padding, and a background-image property to achieve nice cropping with minimal markup.  Image tags should be used with both the source and the background-image as an inline style in order to make sure the images are recognized by crawlers.  This is a good implementation because it allows for the most adaptive resizing.
+        </description>
         <hr>
         <xmp>
           <figure class="o-figure o-figure--widescreen">
@@ -843,8 +846,8 @@
             <div class="o-media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.Teaser ipsum sit amet dolor quando nonumy quaerend.
               <div class="o-media__meta">
                 <span class="o-media__label">
-                  <svg class="icon icon--size-sm icon--left">
-                    <use class="icon--line icon--color-primary" xlink:href="scpr-sprite.svg#icon_line-audio"/>
+                  <svg class="b-icon b-icon--size-sm b-icon--left">
+                    <use class="b-icon--line b-icon--color-primary" xlink:href="scpr-sprite.svg#icon_line-audio"/>
                   </svg>
                   Audio
                 </span>
@@ -869,8 +872,8 @@
             <div class="o-media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.Teaser ipsum sit amet dolor quando nonumy quaerend.
               <div class="o-media__meta">
                 <span class="o-media__label">
-                  <svg class="icon icon--size-sm icon--left">
-                    <use class="icon--line icon--color-primary" xlink:href="scpr-sprite.svg#icon_line-audio"/>
+                  <svg class="b-icon b-icon--size-sm b-icon--left">
+                    <use class="b-icon--line b-icon--color-primary" xlink:href="scpr-sprite.svg#icon_line-audio"/>
                   </svg>
                   Audio
                 </span>
@@ -878,7 +881,7 @@
             </div>
           </div>
           <div class="o-media__related-content">
-            <h5 class="heading heading--h5 heading--uppercase u-text-color--gray">More in Arts and Entertainment</h6>
+            <h5 class="b-heading b-heading--h5 b-heading--uppercase u-text-color--gray">More in Arts and Entertainment</h6>
             <ul class="c-list c-list--vert c-list--bullet c-list--bullet-light c-list--bullet-offset">
               <li class="o-media__teaser o-media__teaser--bullet">
                 <div class="o-media o-media--sm">
@@ -910,8 +913,8 @@
             <div class="o-media__teaser">Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.Teaser ipsum sit amet dolor quando nonumy quaerend. In purus tortor, tincidunt consequat dolor vitae, commodo sagittis odio.Teaser ipsum sit amet dolor quando nonumy quaerend.
               <div class="o-media__meta">
                 <span class="o-media__label">
-                  <svg class="icon icon--size-sm icon--left">
-                    <use class="icon--line icon--color-primary" xlink:href="scpr-sprite.svg#icon_line-audio"/>
+                  <svg class="b-icon b-icon--size-sm b-icon--left">
+                    <use class="b-icon--line b-icon--color-primary" xlink:href="scpr-sprite.svg#icon_line-audio"/>
                   </svg>
                   Audio
                 </span>
@@ -968,8 +971,8 @@
               </ul>
               <div class="o-media__meta">
                 <span class="o-media__label">
-                  <svg class="icon icon--size-sm icon--right">
-                    <use class="icon--line icon--color-gray" xlink:href="scpr-sprite.svg#icon_line-outbound-link"/>
+                  <svg class="b-icon b-icon--size-sm b-icon--right">
+                    <use class="b-icon--line b-icon--color-gray" xlink:href="scpr-sprite.svg#icon_line-outbound-link"/>
                   </svg>
                 </span>
               </div>
@@ -1047,8 +1050,8 @@
               <ul class="o-mast__actions">
                 <li class="o-mast__action o-mast__menu">
                   <label class="o-mast__menu-toggler" for="o-mast__menu-toggler-checkbox">
-                    <svg class="icon icon--size-sm o-mast__menu-icon--opened">
-                      <use class="icon--line  icon--color-gray " xlink:href="scpr-sprite.svg#icon_line-close"/>
+                    <svg class="b-icon b-icon--size-sm o-mast__menu-b-icon--opened">
+                      <use class="b-icon--line  b-icon--color-gray " xlink:href="scpr-sprite.svg#icon_line-close"/>
                     </svg>
                     <span class="o-mast__item-caption o-mast__menu-toggler-caption o-mast__item-caption o-mast__menu-toggler-caption--opened">Close</span>
                   </label>
@@ -1265,8 +1268,8 @@
               <form method="get" action="/search/">
                 <input type="text" placeholder="Enter your search here" name="q" id="q" />
                 <label for="o-mast__search-toggler-checkbox" class="o-mast__search-link" href="#">
-                  <svg class="icon icon--search-open">
-                    <use class="icon--line icon--color-gray" xlink:href="scpr-sprite.svg#icon_line-search"/>
+                  <svg class="b-icon b-icon--search-open">
+                    <use class="b-icon--line b-icon--color-gray" xlink:href="scpr-sprite.svg#icon_line-search"/>
                   </svg>
                 </label>
               </form>
@@ -1275,8 +1278,8 @@
 
             <div class="o-mast__action o-mast__donate">
               <a class="o-mast__donate-link" href="#">
-                <svg class="icon icon--size-med icon--left">
-                  <use class="icon--line icon--color-link" xlink:href="scpr-sprite.svg#icon_line-donate"/>
+                <svg class="b-icon b-icon--size-med b-icon--left">
+                  <use class="b-icon--line b-icon--color-link" xlink:href="scpr-sprite.svg#icon_line-donate"/>
                 </svg>
                 <span class="o-mast__item-caption">Donate</span>
               </a>
@@ -1287,12 +1290,12 @@
 
             <div class="o-mast__action o-mast__menu">
               <label class="o-mast__menu-toggler" for="o-mast__menu-toggler-checkbox">
-                <svg class="icon icon--size-lg o-mast__menu-icon--closed">
-                  <use class="icon--line  icon--color-gray-dark " xlink:href="scpr-sprite.svg#icon_line-menu"/>
+                <svg class="b-icon b-icon--size-lg o-mast__menu-icon--closed">
+                  <use class="b-icon--line  b-icon--color-gray-dark " xlink:href="scpr-sprite.svg#icon_line-menu"/>
                 </svg>
                 <span class="o-mast__item-caption o-mast__menu-toggler-caption o-mast__item-caption o-mast__menu-toggler-caption--closed">Menu</span>
-                <svg class="icon icon--size-sm o-mast__menu-icon--opened">
-                  <use class="icon--line  icon--color-gray-dark " xlink:href="scpr-sprite.svg#icon_line-close"/>
+                <svg class="b-icon b-icon--size-sm o-mast__menu-icon--opened">
+                  <use class="b-icon--line  b-icon--color-gray-dark " xlink:href="scpr-sprite.svg#icon_line-close"/>
                 </svg>
                 <span class="o-mast__item-caption o-mast__menu-toggler-caption o-mast__item-caption o-mast__menu-toggler-caption--opened">Close</span>
               </label>
@@ -1311,7 +1314,7 @@
             <div class="l-section--margin-sm l-row l-row--lg l-between l-bottom">
               <div class="l-col l-center@media-desktop">
                 <a href="/">
-                  <svg class="o-footer__logo icon--left">
+                  <svg class="o-footer__logo b-icon--left">
                     <use class="" xlink:href="scpr-sprite.svg#logo_kpcc-white"/>
                   </svg>
                 </a>
@@ -1319,96 +1322,96 @@
               </div>
               <div class="l-col l-end l-center@media-desktop">
                 <a href="https://scprcontribute.scpr.org/">
-                  <svg class="icon icon--size-med icon--left">
-                    <use class="icon--line icon--color-white" xlink:href="scpr-sprite.svg#icon_line-donate"/>
+                  <svg class="b-icon b-icon--size-med b-icon--left">
+                    <use class="b-icon--line b-icon--color-white" xlink:href="scpr-sprite.svg#icon_line-donate"/>
                   </svg>
                   <span class="link link--white-dark-bg text">Support the voices you trust. <b class="text--semibold">Donate&nbsp;now.</b></span>
                 </a>
               </div>
             </div>
-            <hr class="rule rule--primary" />
+            <hr class="b-rule b-rule--primary" />
             <nav class="o-footer__nav o-footer__nav--expanded u-text-align--center">
               <div class="l-section--margin-sm">
-                <ul class="c-list--horiz c-list--divider text text--bold">
-                  <li><a class="link link--white-dark-bg" href="#">Local</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">US & World</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Arts & Entertainment</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Crime & Justice</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Science</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Politics</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Health</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Business</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Education</a></li>
+                <ul class="c-list--horiz c-list--divider b-text b-text--bold">
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Local</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">US & World</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Arts & Entertainment</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Crime & Justice</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Science</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Politics</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Health</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Business</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Education</a></li>
                 </ul>
               </div>
               <div class="l-section--margin-sm">
-                <ul class="c-list--horiz text">
-                  <li><a class="link link--white-dark-bg" href="#">Take Two</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">AirTalk</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Off-Ramp</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">The Frame</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Program Schedule</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Programs A-Z</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">KPCC In Person</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">About KPCC</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Contact Us</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Staff Directory</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Careers</a></li>
+                <ul class="c-list--horiz b-text">
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Take Two</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">AirTalk</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Off-Ramp</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">The Frame</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Program Schedule</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Programs A-Z</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">KPCC In Person</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">About KPCC</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Contact Us</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Staff Directory</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Careers</a></li>
                 </ul>
               </div>
             </nav>
             <nav class="o-footer__nav o-footer__nav--compact u-text-align--center">
               <div class="l-section--margin-sm">
-                <ul class="c-list--horiz c-list--divider text text--bold">
-                  <li><a class="link link--white-dark-bg" href="#">News</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Programs</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Events</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">Support</a></li>
-                  <li><a class="link link--white-dark-bg" href="#">About</a></li>
+                <ul class="c-list--horiz c-list--divider b-text b-text--bold">
+                  <li><a class="b-link b-link--white-dark-bg" href="#">News</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Programs</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Events</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">Support</a></li>
+                  <li><a class="b-link b-link--white-dark-bg" href="#">About</a></li>
                 </ul>
               </div>
             </nav>
             <div class="l-section--margin-sm l-row l-row--xl l-between l-bottom">
               <div class="l-col l-center@media-wide">
                 <ul class="c-list--horiz c-list--horiz-compact">
-                  <li class="o-footer__partner-label"><span class="u-text-color--gray text text--uppercase text--semibold">Our Partners</span></li>
+                  <li class="o-footer__partner-label"><span class="u-text-color--gray b-text b-text--uppercase b-text--semibold">Our Partners</span></li>
                   <li>
-                    <svg width="106" class="o-footer__partner-logo icon icon--left">
-                      <use class="icon--fill icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-apm"/>
+                    <svg width="106" class="o-footer__partner-logo b-icon b-icon--left">
+                      <use class="b-icon--fill b-icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-apm"/>
                     </svg>
                   </li>
                   <li class="o-footer__partner">
-                    <svg width="62" class="o-footer__partner-logo icon icon--left">
-                      <use class="icon--fill icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-npr"/>
+                    <svg width="62" class="o-footer__partner-logo b-icon b-icon--left">
+                      <use class="b-icon--fill b-icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-npr"/>
                     </svg>
                   </li>
                   <li class="o-footer__partner">
-                    <svg width="71" class="o-footer__partner-logo icon icon--left">
-                      <use class="icon--fill icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-bbc"/>
+                    <svg width="71" class="o-footer__partner-logo b-icon b-icon--left">
+                      <use class="b-icon--fill b-icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-bbc"/>
                     </svg>
                   </li>
                   <li class="o-footer__partner">
-                    <svg width="86" class="o-footer__partner-logo icon icon--left">
-                      <use class="icon--fill icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-pri"/>
+                    <svg width="86" class="o-footer__partner-logo b-icon b-icon--left">
+                      <use class="b-icon--fill b-icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-pri"/>
                     </svg>
                   </li>
                   <li class="o-footer__partner">
-                    <svg width="28" class="o-footer__partner-logo icon icon--left">
-                      <use class="icon--fill icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-nbc4"/>
+                    <svg width="28" class="o-footer__partner-logo b-icon b-icon--left">
+                      <use class="b-icon--fill b-icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-nbc4"/>
                     </svg>
                   </li>
                   <li class="o-footer__partner">
-                    <svg width="57" class="o-footer__partner-logo icon icon--left">
-                      <use class="icon--fill icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-pcc"/>
+                    <svg width="57" class="o-footer__partner-logo b-icon b-icon--left">
+                      <use class="b-icon--fill b-icon--color-gray" xlink:href="scpr-sprite.svg#logo_partner-pcc"/>
                     </svg>
                   </li>
                 </ul>
               </div>
               <nav class="l-col l-end l-center@media-wide">
-                <ul class="c-list--horiz text text--small u-text-color--gray">
-                  <li><a class="link link--gray-dark-bg" href="/terms/">Terms &amp; Conditions</a></li>
-                  <li><a class="link link--gray-dark-bg" href="/privacy/">Privacy</a></li>
-                  <li><a class="link link--gray-dark-bg" href="/web_site_feedback/">Feedback</a></li>
+                <ul class="c-list--horiz b-text b-text--small u-text-color--gray">
+                  <li><a class="b-link b-link--gray-dark-bg" href="/terms/">Terms &amp; Conditions</a></li>
+                  <li><a class="b-link b-link--gray-dark-bg" href="/privacy/">Privacy</a></li>
+                  <li><a class="b-link b-link--gray-dark-bg" href="/web_site_feedback/">Feedback</a></li>
                   <li>&copy; 2016 Southern California Public Radio</li>
                 </ul>
               </nav>

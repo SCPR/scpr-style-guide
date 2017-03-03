@@ -3,12 +3,12 @@
 // Text styles are used exclusively outside articles; articles have their own
 // content styling for body copy
 //
-// .text                                     - Provides styling for text.
-// .text-columns--(sm|med|lg|xl)-(1-12)      - Specifies the number of columns to flow text into for breakpoints.
+// .b-text                                     - Provides styling for text.
+// .b-text-columns--(sm|med|lg|xl)-(1-12)      - Specifies the number of columns to flow text into for breakpoints.
 //
 // Styleguide 0.2.1
 
-.text {
+.b-text {
   font-size: modular-scale(-1);
   line-height: 1.466666667em;
 
@@ -45,11 +45,11 @@
     font-family: $font-serif-text;
     font-size: modular-scale(0);
 
-    &.text--large {
+    &.b-text--large {
       font-size: modular-scale(2);
     }
 
-    &.text--small {
+    &.b-text--small {
       font-size: modular-scale(-1);
     }
 
@@ -66,7 +66,7 @@
   @include media-min($breakpoint-size) {
     $max-columns: 12;
     @for $i from 2 through $max-columns {
-      .text-columns--#{$breakpoint}-#{$i} {
+      .b-text-columns--#{$breakpoint}-#{$i} {
         column-count: $i;
         column-gap: $gutter;
       }
