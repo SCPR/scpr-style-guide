@@ -141,8 +141,8 @@ $o-mast-logo-mobile-width: 107px
   .o-mast__menu-icon--opened
     margin-right: 3.2px
 
-  // .o-mast__menu .o-mast__menu-icon--opened
-  //   display: none
+  .o-mast__pipe
+    display: none
 
 
 
@@ -204,7 +204,8 @@ $o-mast-logo-mobile-width: 107px
 
   .o-mast__section-heading
     border-bottom: solid 2px $color-primary-lightest
-
+  .o-mast__pipe
+    display: none
   .o-mast__menu
     display: none
 
@@ -305,6 +306,13 @@ $o-mast-logo-mobile-width: 107px
   > .o-mast__action:nth-child(3)
     margin-left: auto
 
+  .o-mast__pipe
+    $o-mast__pipe-width: 2px
+    border-left: $o-mast__pipe-width solid $color-gray-light
+    display: block
+    height: 58%
+    width: $o-mast__pipe-width
+
   > .o-mast__menu 
     .o-mast__menu-icon--opened, .o-mast__menu-toggler-caption--opened
       display: none
@@ -338,6 +346,8 @@ $o-mast-logo-mobile-width: 107px
     order: 2
     z-index: 5
   .o-mast__donate
+    display: none
+  .o-mast__pipe
     display: none
   .o-mast__menu
     order: 0
