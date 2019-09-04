@@ -99,8 +99,8 @@ button {
 .link {
   color: #212121; }
   .link:hover {
-    background: -webkit-linear-gradient(#FFFFFF, #FFFFFF), -webkit-linear-gradient(#FFFFFF, #FFFFFF), -webkit-linear-gradient(#E8E8E8, #E8E8E8);
-    background: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#E8E8E8, #E8E8E8);
+    background: -webkit-linear-gradient(to left, #FFFFFF, #FFFFFF), -webkit-linear-gradient(to left, #FFFFFF, #FFFFFF), -webkit-linear-gradient(to left, #E8E8E8, #E8E8E8);
+    background: linear-gradient(to left, #FFFFFF, #FFFFFF), linear-gradient(to left, #FFFFFF, #FFFFFF), linear-gradient(to left, #E8E8E8, #E8E8E8);
     background-position: 0 90%, 100% 90%, 0 90%;
     background-repeat: no-repeat, no-repeat, repeat-x;
     background-size: .05em 1px, .05em 1px, 1px 1px;
@@ -109,8 +109,8 @@ button {
   .link--white-dark-bg {
     color: #FFFFFF; }
     .link--white-dark-bg:hover {
-      background: -webkit-linear-gradient(#212121, #212121), -webkit-linear-gradient(#212121, #212121), -webkit-linear-gradient(#FFFFFF, #FFFFFF);
-      background: linear-gradient(#212121, #212121), linear-gradient(#212121, #212121), linear-gradient(#FFFFFF, #FFFFFF);
+      background: -webkit-linear-gradient(to left, #212121, #212121), -webkit-linear-gradient(to left, #212121, #212121), -webkit-linear-gradient(to left, #FFFFFF, #FFFFFF);
+      background: linear-gradient(to left, #212121, #212121), linear-gradient(to left, #212121, #212121), linear-gradient(to left, #FFFFFF, #FFFFFF);
       background-position: 0 90%, 100% 90%, 0 90%;
       background-repeat: no-repeat, no-repeat, repeat-x;
       background-size: .05em 1px, .05em 1px, 1px 1px;
@@ -119,8 +119,8 @@ button {
   .link--gray-dark-bg {
     color: #898989; }
     .link--gray-dark-bg:hover {
-      background: -webkit-linear-gradient(#212121, #212121), -webkit-linear-gradient(#212121, #212121), -webkit-linear-gradient(#898989, #898989);
-      background: linear-gradient(#212121, #212121), linear-gradient(#212121, #212121), linear-gradient(#898989, #898989);
+      background: -webkit-linear-gradient(to left, #212121, #212121), -webkit-linear-gradient(to left, #212121, #212121), -webkit-linear-gradient(to left, #898989, #898989);
+      background: linear-gradient(to left, #212121, #212121), linear-gradient(to left, #212121, #212121), linear-gradient(to left, #898989, #898989);
       background-position: 0 90%, 100% 90%, 0 90%;
       background-repeat: no-repeat, no-repeat, repeat-x;
       background-size: .05em 1px, .05em 1px, 1px 1px;
@@ -131,8 +131,8 @@ button {
     font-size: 1.125rem;
     font-weight: 500; }
     .link--callout:hover {
-      background: -webkit-linear-gradient(#FFFFFF, #FFFFFF), -webkit-linear-gradient(#FFFFFF, #FFFFFF), -webkit-linear-gradient(#007397, #007397);
-      background: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#007397, #007397);
+      background: -webkit-linear-gradient(to left, #FFFFFF, #FFFFFF), -webkit-linear-gradient(to left, #FFFFFF, #FFFFFF), -webkit-linear-gradient(to left, #007397, #007397);
+      background: linear-gradient(to left, #FFFFFF, #FFFFFF), linear-gradient(to left, #FFFFFF, #FFFFFF), linear-gradient(to left, #007397, #007397);
       background-position: 0 90%, 100% 90%, 0 90%;
       background-repeat: no-repeat, no-repeat, repeat-x;
       background-size: .05em 1px, .05em 1px, 1px 1px;
@@ -1579,8 +1579,8 @@ button {
 .o-media__headline-link {
   position: relative; }
   .o-media__headline-link:hover {
-    background: -webkit-linear-gradient(#FFFFFF, #FFFFFF), -webkit-linear-gradient(#FFFFFF, #FFFFFF), -webkit-linear-gradient(#cfcfcf, #cfcfcf);
-    background: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#cfcfcf, #cfcfcf);
+    background: -webkit-linear-gradient(to left, #FFFFFF, #FFFFFF), -webkit-linear-gradient(to left, #FFFFFF, #FFFFFF), -webkit-linear-gradient(to left, #cfcfcf, #cfcfcf);
+    background: linear-gradient(to left, #FFFFFF, #FFFFFF), linear-gradient(to left, #FFFFFF, #FFFFFF), linear-gradient(to left, #cfcfcf, #cfcfcf);
     background-position: 0 90%, 100% 90%, 0 90%;
     background-repeat: no-repeat, no-repeat, repeat-x;
     background-size: .05em 1px, .05em 1px, 1px 1px;

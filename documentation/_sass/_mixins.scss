@@ -14,7 +14,7 @@
 // Sweet, sexy underlines for hyperlinks
 
 @mixin link-underline($underline-color, $bg-color: $color-white) {
-  background: linear-gradient($bg-color, $bg-color), linear-gradient($bg-color, $bg-color), linear-gradient($underline-color, $underline-color);
+  background: linear-gradient(to left, $bg-color, $bg-color), linear-gradient(to left, $bg-color, $bg-color), linear-gradient(to left, $underline-color, $underline-color);
   background-position: 0 90%, 100% 90%, 0 90%;
   background-repeat: no-repeat, no-repeat, repeat-x;
   background-size: .05em 1px, .05em 1px, 1px 1px;
