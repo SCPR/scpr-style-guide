@@ -1,6 +1,6 @@
 {
   "name": "scpr-style-guide",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Product Style Guide for KPCC (Southern California Public Radio).",
   "main": "src/js/main.js",
   "scripts": {
