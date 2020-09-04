@@ -38,7 +38,7 @@
     "gulp": "^3.9.0",
     "gulp-cli": "^1.2.0",
     "gulp-svg-sprite": "^1.2.19",
-    "node-sass": "^3.4.2",
+    "node-sass": "^4.13.1",
     "postcss": "^5.0.14",
     "postcss-cli": "^2.3.3",
     "postcss-copy-assets": "^0.3.0",
