@@ -35,7 +35,7 @@
     "babelify": "^7.3.0",
     "browserify": "^13.0.0",
     "clean-css": "^3.4.9",
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.2",
     "gulp-cli": "^1.2.0",
     "gulp-svg-sprite": "^1.2.19",
     "node-sass": "^4.13.1",
