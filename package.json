@@ -32,7 +32,7 @@
   "homepage": "https://github.com/SCPR/scpr-style-guide#readme",
   "devDependencies": {
     "autoprefixer": "^6.2.3",
-    "babelify": "^7.3.0",
+    "babelify": "^10.0.0",
     "browserify": "^13.0.0",
     "clean-css": "^3.4.9",
     "gulp": "^3.9.0",
